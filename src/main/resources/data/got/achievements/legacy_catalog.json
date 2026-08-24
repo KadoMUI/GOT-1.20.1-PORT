@@ -1,0 +1,2744 @@
+{
+  "source": "Game of Thrones 24.08.29",
+  "categories": [
+    "TITLES",
+    "GENERAL",
+    "KILL",
+    "WEAR",
+    "ENTER",
+    "LEGENDARY"
+  ],
+  "count": 390,
+  "entries": [
+    {
+      "field": "combineSmithScrolls",
+      "code": "COMBINE_SMITH_SCROLLS",
+      "category": "GENERAL",
+      "title": "Pen pineapple apple pen",
+      "description": "Connect several scrolls"
+    },
+    {
+      "field": "craftCargocart",
+      "code": "CRAFT_CARGOCART",
+      "category": "GENERAL",
+      "title": "Wagon",
+      "description": "Craft a cart"
+    },
+    {
+      "field": "craftConcretePowder",
+      "code": "CRAFT_CONCRETE_POWDER",
+      "category": "GENERAL",
+      "title": "1.12?",
+      "description": "Stelle Beton her"
+    },
+    {
+      "field": "craftPlowcart",
+      "code": "CRAFT_PLOWCART",
+      "category": "GENERAL",
+      "title": "Efficient farming",
+      "description": "Craft a plow"
+    },
+    {
+      "field": "craftPouch",
+      "code": "CRAFT_POUCH",
+      "category": "GENERAL",
+      "title": "More, that earlier",
+      "description": "Get pouch"
+    },
+    {
+      "field": "craftSaddle",
+      "code": "CRAFT_SADDLE",
+      "category": "GENERAL",
+      "title": "Lonesome cowboy",
+      "description": "Create a saddle"
+    },
+    {
+      "field": "craftWildFire",
+      "code": "CRAFT_WILD_FIRE",
+      "category": "GENERAL",
+      "title": "Really wild",
+      "description": "Craft a wild fire jar"
+    },
+    {
+      "field": "defeatInvasion",
+      "code": "DEFEAT_INVASION",
+      "category": "GENERAL",
+      "title": "Blitzkrieg",
+      "description": "Defeat invasion"
+    },
+    {
+      "field": "doMiniquest",
+      "code": "DO_MINIQUEST",
+      "category": "GENERAL",
+      "title": "Helper",
+      "description": "Do quest"
+    },
+    {
+      "field": "doMiniquestHunter5",
+      "code": "DO_MINIQUEST_HUNTER5",
+      "category": "GENERAL",
+      "title": "Hitman",
+      "description": "Execute a kill order (5)"
+    },
+    {
+      "field": "doMiniquestHunter",
+      "code": "DO_MINIQUEST_HUNTER",
+      "category": "GENERAL",
+      "title": "Petrov and Boshirov",
+      "description": "Execute a kill order"
+    },
+    {
+      "field": "doMiniquestLegendary",
+      "code": "DO_MINIQUEST_LEGENDARY",
+      "category": "GENERAL",
+      "title": "Made history",
+      "description": "Do legendary quest"
+    },
+    {
+      "field": "drinkPlantainBrew",
+      "code": "DRINK_PLANTAIN_BREW",
+      "category": "GENERAL",
+      "title": "Traditional medicine",
+      "description": "Drink the tincture on plantain"
+    },
+    {
+      "field": "drinkPoppyMilk",
+      "code": "DRINK_POPPY_MILK",
+      "category": "GENERAL",
+      "title": "Glycine",
+      "description": "Drink poppy milk"
+    },
+    {
+      "field": "drinkShadeEvening",
+      "code": "DRINK_SHADE_EVENING",
+      "category": "GENERAL",
+      "title": "Bags under the eyes",
+      "description": "Drink evening shade"
+    },
+    {
+      "field": "drinkTermiteTequila",
+      "code": "DRINK_TERMITE_TEQUILA",
+      "category": "GENERAL",
+      "title": "Russian Roulette",
+      "description": "Drink termite tequila"
+    },
+    {
+      "field": "drinkUnsulliedTonic",
+      "code": "DRINK_UNSULLIED_TONIC",
+      "category": "GENERAL",
+      "title": "Nothing will fall off?",
+      "description": "Drink the unsullied tonic"
+    },
+    {
+      "field": "drinkWildFire",
+      "code": "DRINK_WILD_FIRE",
+      "category": "GENERAL",
+      "title": "You're dumber than you look",
+      "description": "Drink wild fire"
+    },
+    {
+      "field": "earnManyCoins",
+      "code": "EARN_MANY_COINS",
+      "category": "GENERAL",
+      "title": "Moishe Rabinowitz",
+      "description": "Earn 1000 coins in 1 click"
+    },
+    {
+      "field": "engraveOwnership",
+      "code": "ENGRAVE_OWNERSHIP",
+      "category": "GENERAL",
+      "title": "The fate of Ehnaton",
+      "description": "Take the owner's name off the item"
+    },
+    {
+      "field": "enterAlwaysWinter",
+      "code": "ENTER_ALWAYS_WINTER",
+      "category": "LEGENDARY",
+      "title": "Among the eternal ice",
+      "description": "Visit Lands of Always Winter"
+    },
+    {
+      "field": "enterArryn",
+      "code": "ENTER_ARRYN",
+      "category": "LEGENDARY",
+      "title": "High as honor",
+      "description": "Visit Arryn Vale"
+    },
+    {
+      "field": "enterArrynMountains",
+      "code": "ENTER_ARRYN_MOUNTAINS",
+      "category": "ENTER",
+      "title": "The highest moutains of Westeros",
+      "description": "Visit Mountains of the Moon"
+    },
+    {
+      "field": "enterArrynMountainsFoothills",
+      "code": "ENTER_ARRYN_MOUNTAINS_FOOTHILLS",
+      "category": "ENTER",
+      "title": "Rough road",
+      "description": "Visit Foothills of the Moon"
+    },
+    {
+      "field": "enterArrynTown",
+      "code": "ENTER_ARRYN_TOWN",
+      "category": "ENTER",
+      "title": "Fresh as sea air",
+      "description": "Visit Gull town"
+    },
+    {
+      "field": "enterBleedingSea",
+      "code": "ENTER_BLEEDING_SEA",
+      "category": "ENTER",
+      "title": "Elizabeth Bathory",
+      "description": "Visit Bleeding Sea"
+    },
+    {
+      "field": "enterBoneMountains",
+      "code": "ENTER_BONE_MOUNTAINS",
+      "category": "ENTER",
+      "title": "Country of Goguen",
+      "description": "Visit Bone Mountains"
+    },
+    {
+      "field": "enterBraavos",
+      "code": "ENTER_BRAAVOS",
+      "category": "ENTER",
+      "title": "Black and white house",
+      "description": "Visit Braavos"
+    },
+    {
+      "field": "enterCannibalSands",
+      "code": "ENTER_CANNIBAL_SANDS",
+      "category": "ENTER",
+      "title": "Joker's trap",
+      "description": "Visit Cannibal Sands"
+    },
+    {
+      "field": "enterFrozenShore",
+      "code": "ENTER_FROZEN_SHORE",
+      "category": "ENTER",
+      "title": "Walruses and people",
+      "description": "Visit Cold coast"
+    },
+    {
+      "field": "enterCrownlands",
+      "code": "ENTER_CROWNLANDS",
+      "category": "ENTER",
+      "title": "Apple of Discord",
+      "description": "Visit Crownlands"
+    },
+    {
+      "field": "enterCrownlandsTown",
+      "code": "ENTER_CROWNLANDS_TOWN",
+      "category": "ENTER",
+      "title": "Snake's nest",
+      "description": "Visit King's Landing"
+    },
+    {
+      "field": "enterDisputedLands",
+      "code": "ENTER_DISPUTED_LANDS",
+      "category": "ENTER",
+      "title": "Is that for me?",
+      "description": "Visit Disputed Lands"
+    },
+    {
+      "field": "enterDorne",
+      "code": "ENTER_DORNE",
+      "category": "ENTER",
+      "title": "Unbowed, Unbent, Unbroken",
+      "description": "Visit Dorne"
+    },
+    {
+      "field": "enterDorneDesert",
+      "code": "ENTER_DORNE_DESERT",
+      "category": "ENTER",
+      "title": "The Fear Of The Targaryens",
+      "description": "Visit Dorne Desert"
+    },
+    {
+      "field": "enterDorneMesa",
+      "code": "ENTER_DORNE_MESA",
+      "category": "ENTER",
+      "title": "Access level: 3",
+      "description": "Visit Dorne Mesa"
+    },
+    {
+      "field": "enterDorneMountains",
+      "code": "ENTER_DORNE_MOUNTAINS",
+      "category": "ENTER",
+      "title": "Granite, granite, granite",
+      "description": "Visit Red Mountains"
+    },
+    {
+      "field": "enterDothrakiSea",
+      "code": "ENTER_DOTHRAKI_SEA",
+      "category": "ENTER",
+      "title": "Sea of grass",
+      "description": "Visit Dothraki Sea"
+    },
+    {
+      "field": "enterDragonstone",
+      "code": "ENTER_DRAGONSTONE",
+      "category": "ENTER",
+      "title": "The fiefdom of the true king",
+      "description": "Visit Dragonstone"
+    },
+    {
+      "field": "enterEssosMountains",
+      "code": "ENTER_ESSOS_MOUNTAINS",
+      "category": "ENTER",
+      "title": "Rhyolite expanses",
+      "description": "Visit Essos Mountains"
+    },
+    {
+      "field": "enterFrostfangs",
+      "code": "ENTER_FROSTFANGS",
+      "category": "ENTER",
+      "title": "Mountains of ice and stone",
+      "description": "Visit Frostfangs"
+    },
+    {
+      "field": "enterGhiscar",
+      "code": "ENTER_GHISCAR",
+      "category": "ENTER",
+      "title": "Slaver's Bay",
+      "description": "Visit Ghiscar"
+    },
+    {
+      "field": "enterGhiscarAstapor",
+      "code": "ENTER_GHISCAR_ASTAPOR",
+      "category": "ENTER",
+      "title": "The City of Unsullied",
+      "description": "Visit Astapor"
+    },
+    {
+      "field": "enterGhiscarColony",
+      "code": "ENTER_GHISCAR_COLONY",
+      "category": "ENTER",
+      "title": "Desperate corsair",
+      "description": "Visit Ghiscar Colony"
+    },
+    {
+      "field": "enterGhiscarMeereen",
+      "code": "ENTER_GHISCAR_MEEREEN",
+      "category": "ENTER",
+      "title": "The City of Harpies",
+      "description": "Visit Meereen"
+    },
+    {
+      "field": "enterGhiscarNewGhis",
+      "code": "ENTER_GHISCAR_NEW_GHIS",
+      "category": "ENTER",
+      "title": "Wannabes of the Empire",
+      "description": "Visit New Ghis"
+    },
+    {
+      "field": "enterGhiscarYunkai",
+      "code": "ENTER_GHISCAR_YUNKAI",
+      "category": "ENTER",
+      "title": "The City of Wise Lords",
+      "description": "Visit Yunkai"
+    },
+    {
+      "field": "enterGiftNew",
+      "code": "ENTER_GIFT_NEW",
+      "category": "ENTER",
+      "title": "To the North!",
+      "description": "Visit New Gift"
+    },
+    {
+      "field": "enterGiftOld",
+      "code": "ENTER_GIFT_OLD",
+      "category": "ENTER",
+      "title": "To the Wall!",
+      "description": "Visit Old Gift"
+    },
+    {
+      "field": "enterHauntedForest",
+      "code": "ENTER_HAUNTED_FOREST",
+      "category": "ENTER",
+      "title": "Wildlings, mammoths and giants",
+      "description": "Visit Haunted Forest"
+    },
+    {
+      "field": "enterIbben",
+      "code": "ENTER_IBBEN",
+      "category": "ENTER",
+      "title": "Whaler's Island",
+      "description": "Visit Ibben"
+    },
+    {
+      "field": "enterIbbenColony",
+      "code": "ENTER_IBBEN_COLONY",
+      "category": "ENTER",
+      "title": "Even they have colonies, and you...",
+      "description": "Visit Ibben Colony"
+    },
+    {
+      "field": "enterIbbenMountains",
+      "code": "ENTER_IBBEN_MOUNTAINS",
+      "category": "ENTER",
+      "title": "The Big Mountains of Little Island",
+      "description": "Visit Ibben Mountains"
+    },
+    {
+      "field": "enterIbbenTaiga",
+      "code": "ENTER_IBBEN_TAIGA",
+      "category": "ENTER",
+      "title": "Unusual Trees",
+      "description": "Visit Ibben Taiga"
+    },
+    {
+      "field": "enterIfekevronForest",
+      "code": "ENTER_IFEKEVRON_FOREST",
+      "category": "ENTER",
+      "title": "Who's here?",
+      "description": "Visit Ifekevron Forest"
+    },
+    {
+      "field": "enterIronIslands",
+      "code": "ENTER_IRON_ISLANDS",
+      "category": "ENTER",
+      "title": "We don't sow",
+      "description": "Visit Iron Islands"
+    },
+    {
+      "field": "enterIsleOfFaces",
+      "code": "ENTER_ISLE_OF_FACES",
+      "category": "ENTER",
+      "title": "Beyond the weirwoods",
+      "description": "Visit Isle of faces"
+    },
+    {
+      "field": "enterJogosNhai",
+      "code": "ENTER_JOGOS_NHAI",
+      "category": "ENTER",
+      "title": "And again the plains",
+      "description": "Visit Jogos Nhai"
+    },
+    {
+      "field": "enterJogosNhaiDesert",
+      "code": "ENTER_JOGOS_NHAI_DESERT",
+      "category": "ENTER",
+      "title": "Dry sea",
+      "description": "Visit Great Sand Sea"
+    },
+    {
+      "field": "enterKingswood",
+      "code": "ENTER_KINGSWOOD",
+      "category": "ENTER",
+      "title": "Schrodinger's Winter",
+      "description": "Visit Kingswood"
+    },
+    {
+      "field": "enterKnownWorld",
+      "code": "ENTER_KNOWN_WORLD",
+      "category": "GENERAL",
+      "title": "Game of Thrones",
+      "description": "Enter Game of Thrones World"
+    },
+    {
+      "field": "enterLhazar",
+      "code": "ENTER_LHAZAR",
+      "category": "ENTER",
+      "title": "Country of sheep farmers",
+      "description": "Visit Lhazar"
+    },
+    {
+      "field": "enterLongSummer",
+      "code": "ENTER_LONG_SUMMER",
+      "category": "ENTER",
+      "title": "Scorched earth",
+      "description": "Visit Lands of Long Summer"
+    },
+    {
+      "field": "enterLorath",
+      "code": "ENTER_LORATH",
+      "category": "ENTER",
+      "title": "God-forsaken city",
+      "description": "Visit Lorath"
+    },
+    {
+      "field": "enterLorathMaze",
+      "code": "ENTER_LORATH_MAZE",
+      "category": "ENTER",
+      "title": "One does not simply walk...",
+      "description": "Visit Lorath Maze"
+    },
+    {
+      "field": "enterLys",
+      "code": "ENTER_LYS",
+      "category": "ENTER",
+      "title": "Country of love and passion",
+      "description": "Visit Lys"
+    },
+    {
+      "field": "enterMossovy",
+      "code": "ENTER_MOSSOVY",
+      "category": "ENTER",
+      "title": "Demonic presence",
+      "description": "Visit Mossovy"
+    },
+    {
+      "field": "enterMossovyMarshes",
+      "code": "ENTER_MOSSOVY_MARSHES",
+      "category": "ENTER",
+      "title": "Sus lights",
+      "description": "Visit Mossovy Marshes"
+    },
+    {
+      "field": "enterMossovyMountains",
+      "code": "ENTER_MOSSOVY_MOUNTAINS",
+      "category": "ENTER",
+      "title": "Far East",
+      "description": "Visit Mossovy Mountains"
+    },
+    {
+      "field": "enterMossovyTaiga",
+      "code": "ENTER_MOSSOVY_TAIGA",
+      "category": "ENTER",
+      "title": "Deep dark fantasies",
+      "description": "Visit Mossovy Taiga"
+    },
+    {
+      "field": "enterMyr",
+      "code": "ENTER_MYR",
+      "category": "ENTER",
+      "title": "War and Myr",
+      "description": "Visit Myr"
+    },
+    {
+      "field": "enterNeck",
+      "code": "ENTER_NECK",
+      "category": "ENTER",
+      "title": "A bad flood",
+      "description": "Visit Neck"
+    },
+    {
+      "field": "enterNorth",
+      "code": "ENTER_NORTH",
+      "category": "ENTER",
+      "title": "Winter is coming",
+      "description": "Visit North"
+    },
+    {
+      "field": "enterNorthBarrows",
+      "code": "ENTER_NORTH_BARROWS",
+      "category": "ENTER",
+      "title": "Black diggers are not welcome here",
+      "description": "Visit North Barrows"
+    },
+    {
+      "field": "enterNorthForestIrontree",
+      "code": "ENTER_NORTH_FOREST_IRONTREE",
+      "category": "ENTER",
+      "title": "Irontrees!",
+      "description": "Visit Forrester's Forest"
+    },
+    {
+      "field": "enterNorthMountains",
+      "code": "ENTER_NORTH_MOUNTAINS",
+      "category": "ENTER",
+      "title": "Northern mountains",
+      "description": "Visit North Mountains"
+    },
+    {
+      "field": "enterNorthTown",
+      "code": "ENTER_NORTH_TOWN",
+      "category": "ENTER",
+      "title": "To the sea!",
+      "description": "Visit White Harbor"
+    },
+    {
+      "field": "enterNorthWild",
+      "code": "ENTER_NORTH_WILD",
+      "category": "ENTER",
+      "title": "Across the mountains",
+      "description": "Visit Wild North"
+    },
+    {
+      "field": "enterNorvos",
+      "code": "ENTER_NORVOS",
+      "category": "ENTER",
+      "title": "Among the hills",
+      "description": "Visit Norvos"
+    },
+    {
+      "field": "enterPentos",
+      "code": "ENTER_PENTOS",
+      "category": "ENTER",
+      "title": "Opposite King's landing",
+      "description": "Visit Pentos"
+    },
+    {
+      "field": "enterQarth",
+      "code": "ENTER_QARTH",
+      "category": "ENTER",
+      "title": "Country of merchants",
+      "description": "Visit Qarth"
+    },
+    {
+      "field": "enterQarthColony",
+      "code": "ENTER_QARTH_COLONY",
+      "category": "ENTER",
+      "title": "Eastern Colonizers",
+      "description": "Visit Qarth Colony"
+    },
+    {
+      "field": "enterQarthDesert",
+      "code": "ENTER_QARTH_DESERT",
+      "category": "ENTER",
+      "title": "Red sands",
+      "description": "Visit Red Desert"
+    },
+    {
+      "field": "enterQohor",
+      "code": "ENTER_QOHOR",
+      "category": "ENTER",
+      "title": "Golden Forest",
+      "description": "Visit Qohor"
+    },
+    {
+      "field": "enterReach",
+      "code": "ENTER_REACH",
+      "category": "ENTER",
+      "title": "Growing up - we get stronger",
+      "description": "Visit Reach"
+    },
+    {
+      "field": "enterReachArbor",
+      "code": "ENTER_REACH_ARBOR",
+      "category": "ENTER",
+      "title": "Viticultural region",
+      "description": "Visit Arbor"
+    },
+    {
+      "field": "enterReachFireField",
+      "code": "ENTER_REACH_FIRE_FIELD",
+      "category": "ENTER",
+      "title": "Rose Valley",
+      "description": "Visit Highgarden"
+    },
+    {
+      "field": "enterReachTown",
+      "code": "ENTER_REACH_TOWN",
+      "category": "ENTER",
+      "title": "Center of science and culture",
+      "description": "Visit Oldtown"
+    },
+    {
+      "field": "enterRiverlands",
+      "code": "ENTER_RIVERLANDS",
+      "category": "ENTER",
+      "title": "Family, duty, honor",
+      "description": "Visit Riverlands"
+    },
+    {
+      "field": "enterShadowLand",
+      "code": "ENTER_SHADOW_LAND",
+      "category": "ENTER",
+      "title": "Black earth",
+      "description": "Visit Lands of the Shadow"
+    },
+    {
+      "field": "enterShadowMountains",
+      "code": "ENTER_SHADOW_MOUNTAINS",
+      "category": "ENTER",
+      "title": "Shading the sun",
+      "description": "Visit Dawn Mountains"
+    },
+    {
+      "field": "enterShadowTown",
+      "code": "ENTER_SHADOW_TOWN",
+      "category": "ENTER",
+      "title": "City of necromancers",
+      "description": "Visit Asshai"
+    },
+    {
+      "field": "enterShrykesLand",
+      "code": "ENTER_SHRYKES_LAND",
+      "category": "ENTER",
+      "title": "Nibiru",
+      "description": "Visit Lands of the Shrykes"
+    },
+    {
+      "field": "enterSkagos",
+      "code": "ENTER_SKAGOS",
+      "category": "ENTER",
+      "title": "In search of a woolly rhinoceros",
+      "description": "Visit Skagos"
+    },
+    {
+      "field": "enterSothoryosBushland",
+      "code": "ENTER_SOTHORYOS_BUSHLAND",
+      "category": "ENTER",
+      "title": "Caution: explosive",
+      "description": "Visit Sothoryos Bushlands"
+    },
+    {
+      "field": "enterSothoryosDesert",
+      "code": "ENTER_SOTHORYOS_DESERT",
+      "category": "ENTER",
+      "title": "In the footsteps of Jainara Belairis",
+      "description": "Visit Sothoryos Desert"
+    },
+    {
+      "field": "enterSothoryosDesertCold",
+      "code": "ENTER_SOTHORYOS_DESERT_COLD",
+      "category": "ENTER",
+      "title": "Where no man has ever set foot",
+      "description": "Visit Sothoryos Cold Desert"
+    },
+    {
+      "field": "enterSothoryosForest",
+      "code": "ENTER_SOTHORYOS_FOREST",
+      "category": "ENTER",
+      "title": "The untrodden paths",
+      "description": "Visit Sothoryos Forest"
+    },
+    {
+      "field": "enterSothoryosFrost",
+      "code": "ENTER_SOTHORYOS_FROST",
+      "category": "ENTER",
+      "title": "The other side of the world",
+      "description": "Visit Sothoryos Polar Sphere"
+    },
+    {
+      "field": "enterSothoryosHell",
+      "code": "ENTER_SOTHORYOS_HELL",
+      "category": "ENTER",
+      "title": "Coronavirus",
+      "description": "Visit Green Hell"
+    },
+    {
+      "field": "enterSothoryosJungle",
+      "code": "ENTER_SOTHORYOS_JUNGLE",
+      "category": "ENTER",
+      "title": "The third continent",
+      "description": "Visit Sothoryos Jungle"
+    },
+    {
+      "field": "enterSothoryosMangrove",
+      "code": "ENTER_SOTHORYOS_MANGROVE",
+      "category": "ENTER",
+      "title": "Mosquitoes and in Sothoryos, mosquitoes",
+      "description": "Visit Sothoryos Mangrove"
+    },
+    {
+      "field": "enterSothoryosMountains",
+      "code": "ENTER_SOTHORYOS_MOUNTAINS",
+      "category": "ENTER",
+      "title": "Lenin 's Mausoleum",
+      "description": "Visit Sothoryos Mountains"
+    },
+    {
+      "field": "enterSothoryosSavannah",
+      "code": "ENTER_SOTHORYOS_SAVANNAH",
+      "category": "ENTER",
+      "title": "About zero trees",
+      "description": "Visit Sothoryos Savannah"
+    },
+    {
+      "field": "enterSothoryosTaiga",
+      "code": "ENTER_SOTHORYOS_TAIGA",
+      "category": "ENTER",
+      "title": "Again mammoths?",
+      "description": "Visit Sothoryos Taiga"
+    },
+    {
+      "field": "enterStepstones",
+      "code": "ENTER_STEPSTONES",
+      "category": "ENTER",
+      "title": "Pirate expanse",
+      "description": "Visit Stepstones"
+    },
+    {
+      "field": "enterStoneyShore",
+      "code": "ENTER_STONEY_SHORE",
+      "category": "ENTER",
+      "title": "Apple of contention",
+      "description": "Visit Stone Coast"
+    },
+    {
+      "field": "enterStormlands",
+      "code": "ENTER_STORMLANDS",
+      "category": "ENTER",
+      "title": "Ours is the fury",
+      "description": "Visit Stormlands"
+    },
+    {
+      "field": "enterStormlandsTarth",
+      "code": "ENTER_STORMLANDS_TARTH",
+      "category": "ENTER",
+      "title": "Oh, sapphires!",
+      "description": "Visit Tarth"
+    },
+    {
+      "field": "enterSummerColony",
+      "code": "ENTER_SUMMER_COLONY",
+      "category": "ENTER",
+      "title": "Western Colonizers",
+      "description": "Visit Summer Islands Colony"
+    },
+    {
+      "field": "enterSummerIslands",
+      "code": "ENTER_SUMMER_ISLANDS",
+      "category": "ENTER",
+      "title": "South Islands",
+      "description": "Visit Summer Islands"
+    },
+    {
+      "field": "enterThennLand",
+      "code": "ENTER_THENN_LAND",
+      "category": "ENTER",
+      "title": "Volcanoes of the far North",
+      "description": "Visit Thenn"
+    },
+    {
+      "field": "enterTyrosh",
+      "code": "ENTER_TYROSH",
+      "category": "ENTER",
+      "title": "Small, but powerful",
+      "description": "Visit Tyrosh"
+    },
+    {
+      "field": "enterUlthos",
+      "code": "ENTER_ULTHOS",
+      "category": "ENTER",
+      "title": "Solitude",
+      "description": "Visit Ulthos"
+    },
+    {
+      "field": "enterUlthosDesert",
+      "code": "ENTER_ULTHOS_DESERT",
+      "category": "ENTER",
+      "title": "Well, at least there are no spiders somewhere",
+      "description": "Visit Ulthos Desert"
+    },
+    {
+      "field": "enterUlthosDesertCold",
+      "code": "ENTER_ULTHOS_DESERT_COLD",
+      "category": "ENTER",
+      "title": "The path, senseless and merciless",
+      "description": "Visit Ulthos Cold Desert"
+    },
+    {
+      "field": "enterUlthosForest",
+      "code": "ENTER_ULTHOS_FOREST",
+      "category": "ENTER",
+      "title": "A country to live in",
+      "description": "Visit Ulthos Forest"
+    },
+    {
+      "field": "enterUlthosFrost",
+      "code": "ENTER_ULTHOS_FROST",
+      "category": "ENTER",
+      "title": "Thermal Expansion",
+      "description": "Visit Ulthos Polar Region"
+    },
+    {
+      "field": "enterUlthosMarshes",
+      "code": "ENTER_ULTHOS_MARSHES",
+      "category": "ENTER",
+      "title": "Neck II",
+      "description": "Visit Ulthos Marshes"
+    },
+    {
+      "field": "enterUlthosMountains",
+      "code": "ENTER_ULTHOS_MOUNTAINS",
+      "category": "ENTER",
+      "title": "With a white border",
+      "description": "Visit Ulthos Mountains"
+    },
+    {
+      "field": "enterUlthosRedForest",
+      "code": "ENTER_ULTHOS_RED_FOREST",
+      "category": "ENTER",
+      "title": "Wine and blood",
+      "description": "Visit Ulthos Red Forest"
+    },
+    {
+      "field": "enterUlthosTaiga",
+      "code": "ENTER_ULTHOS_TAIGA",
+      "category": "ENTER",
+      "title": "There's a thicket, no spiders",
+      "description": "Visit Ulthos Taiga"
+    },
+    {
+      "field": "enterValyria",
+      "code": "ENTER_VALYRIA",
+      "category": "ENTER",
+      "title": "Ruins of the Empire",
+      "description": "Visit Valyrian Peninsula"
+    },
+    {
+      "field": "enterValyriaVolcano",
+      "code": "ENTER_VALYRIA_VOLCANO",
+      "category": "ENTER",
+      "title": "In search of ore",
+      "description": "Visit Valyrian Volcanoes"
+    },
+    {
+      "field": "enterVolantis",
+      "code": "ENTER_VOLANTIS",
+      "category": "ENTER",
+      "title": "The Heir of Valyria",
+      "description": "Visit Volantis"
+    },
+    {
+      "field": "enterWesterlands",
+      "code": "ENTER_WESTERLANDS",
+      "category": "ENTER",
+      "title": "Hear my roar",
+      "description": "Visit Westerlands"
+    },
+    {
+      "field": "enterWesterlandsTown",
+      "code": "ENTER_WESTERLANDS_TOWN",
+      "category": "ENTER",
+      "title": "Possession of the rich",
+      "description": "Visit Lannisport"
+    },
+    {
+      "field": "enterWesterosFrost",
+      "code": "ENTER_WESTEROS_FROST",
+      "category": "ENTER",
+      "title": "Behind the wall",
+      "description": "Visit Snowy Wasteland"
+    },
+    {
+      "field": "enterYeen",
+      "code": "ENTER_YEEN",
+      "category": "ENTER",
+      "title": "Obsidian plateau",
+      "description": "Visit Yeen"
+    },
+    {
+      "field": "enterYiTi",
+      "code": "ENTER_YI_TI",
+      "category": "ENTER",
+      "title": "The Golden Empire",
+      "description": "Visit Yi Ti"
+    },
+    {
+      "field": "enterYiTiBorderZone",
+      "code": "ENTER_YI_TI_BORDER_ZONE",
+      "category": "ENTER",
+      "title": "Five Forts",
+      "description": "Visit Yi Ti Border Zone"
+    },
+    {
+      "field": "factionConquest",
+      "code": "FACTION_CONQUEST",
+      "category": "GENERAL",
+      "title": "For the king!",
+      "description": "Pledge and conquer the land"
+    },
+    {
+      "field": "findFourLeafClover",
+      "code": "FIND_FOUR_LEAF_CLOVER",
+      "category": "GENERAL",
+      "title": "Lucky man",
+      "description": "Find four leaf clover"
+    },
+    {
+      "field": "fishRing",
+      "code": "FISH_RING",
+      "category": "GENERAL",
+      "title": "Real fishing",
+      "description": "Catch the ring with a fishing rod"
+    },
+    {
+      "field": "freeman",
+      "code": "FREEMAN",
+      "category": "GENERAL",
+      "title": "Dr. Freeman?",
+      "description": "Talk to Hummel009"
+    },
+    {
+      "field": "gainHighAlcoholTolerance",
+      "code": "GAIN_HIGH_ALCOHOL_TOLERANCE",
+      "category": "GENERAL",
+      "title": "Alcoholic",
+      "description": "Become an alcoholic"
+    },
+    {
+      "field": "getBronze",
+      "code": "GET_BRONZE",
+      "category": "GENERAL",
+      "title": "Stärker und wirtschaftlicher",
+      "description": "Schmelze Bronze"
+    },
+    {
+      "field": "getDrunk",
+      "code": "GET_DRUNK",
+      "category": "GENERAL",
+      "title": "Alcoholic",
+      "description": "Get drunk on alcohol"
+    },
+    {
+      "field": "getIce",
+      "code": "GET_ICE",
+      "category": "GENERAL",
+      "title": "The return of the legend",
+      "description": "Restore the sword Ice from two of Tywin's swords"
+    },
+    {
+      "field": "getValyrianSteel",
+      "code": "GET_VALYRIAN_STEEL",
+      "category": "GENERAL",
+      "title": "Extremely high temperature",
+      "description": "Smelt Valyrian steel"
+    },
+    {
+      "field": "hireGoldenCompany",
+      "code": "HIRE_GOLDEN_COMPANY",
+      "category": "GENERAL",
+      "title": "Corrupt creatures",
+      "description": "Hire 10 G.C. units"
+    },
+    {
+      "field": "hundreds",
+      "code": "HUNDREDS",
+      "category": "GENERAL",
+      "title": "With iron and blood!",
+      "description": "Hire 100 units"
+    },
+    {
+      "field": "killAeronGreyjoy",
+      "code": "KILL_AERON_GREYJOY",
+      "category": "LEGENDARY",
+      "title": "What is dead may never die",
+      "description": "Kill Aeron Greyjoy"
+    },
+    {
+      "field": "killAlliserThorne",
+      "code": "KILL_ALLISER_THORNE",
+      "category": "LEGENDARY",
+      "title": "Avenger",
+      "description": "Kill Alliser Thorne"
+    },
+    {
+      "field": "killAmoryLorch",
+      "code": "KILL_AMORY_LORCH",
+      "category": "LEGENDARY",
+      "title": "I choose Amory Lorch",
+      "description": "Kill Amory Lorch"
+    },
+    {
+      "field": "killAreoHotah",
+      "code": "KILL_AREO_HOTAH",
+      "category": "LEGENDARY",
+      "title": "Serve. Obey. Protect.",
+      "description": "Kill Areo Hotah"
+    },
+    {
+      "field": "killAryaStark",
+      "code": "KILL_ARYA_STARK",
+      "category": "LEGENDARY",
+      "title": "Half-boy, half-direwolf",
+      "description": "Kill Arya Stark"
+    },
+    {
+      "field": "killAsshaiArchmag",
+      "code": "KILL_ASSHAI_ARCHMAG",
+      "category": "LEGENDARY",
+      "title": "Legendary Killer II",
+      "description": "Kill Asshai Archmag"
+    },
+    {
+      "field": "killAsshaiShadowbinder",
+      "code": "KILL_ASSHAI_SHADOWBINDER",
+      "category": "KILL",
+      "title": "Survive the shockwave",
+      "description": "Kill the Asshai shadowbinder"
+    },
+    {
+      "field": "killAsshaiSpherebinder",
+      "code": "KILL_ASSHAI_SPHEREBINDER",
+      "category": "KILL",
+      "title": "Break through the defense",
+      "description": "Kill the Asshai spherebinder"
+    },
+    {
+      "field": "killBalonGreyjoy",
+      "code": "KILL_BALON_GREYJOY",
+      "category": "LEGENDARY",
+      "title": "I will be better king, that you",
+      "description": "Kill Balon Greyjoy"
+    },
+    {
+      "field": "killBarristanSelmy",
+      "code": "KILL_BARRISTAN_SELMY",
+      "category": "LEGENDARY",
+      "title": "Former Lord Commander",
+      "description": "Kill Barristan Selmy"
+    },
+    {
+      "field": "killBarrowWight",
+      "code": "KILL_BARROW_WIGHT",
+      "category": "KILL",
+      "title": "Tomb Raider",
+      "description": "Kill a barrow wight"
+    },
+    {
+      "field": "killBear",
+      "code": "KILL_BEAR",
+      "category": "KILL",
+      "title": "GOOOOOAL",
+      "description": "Kill a bear"
+    },
+    {
+      "field": "killBeaver",
+      "code": "KILL_BEAVER",
+      "category": "KILL",
+      "title": "Kurwa bober",
+      "description": "Ja pierdolę, jakie bydle"
+    },
+    {
+      "field": "killBenjenStark",
+      "code": "KILL_BENJEN_STARK",
+      "category": "LEGENDARY",
+      "title": "Cold Hands",
+      "description": "Kill Benjen Stark"
+    },
+    {
+      "field": "killBericDondarrion",
+      "code": "KILL_BERIC_DONDARRION",
+      "category": "LEGENDARY",
+      "title": "Wasted",
+      "description": "Kill Beric Dondarrion 6 times"
+    },
+    {
+      "field": "killBlizzard",
+      "code": "KILL_BLIZZARD",
+      "category": "KILL",
+      "title": "Another kind of walker?",
+      "description": "Kill the blizzard"
+    },
+    {
+      "field": "killBranStark",
+      "code": "KILL_BRAN_STARK",
+      "category": "LEGENDARY",
+      "title": "Threat to Humanity",
+      "description": "Kill Bran Stark"
+    },
+    {
+      "field": "killBrienneTarth",
+      "code": "KILL_BRIENNE_TARTH",
+      "category": "LEGENDARY",
+      "title": "Is it a woman?",
+      "description": "Kill Brienne Tarth"
+    },
+    {
+      "field": "killBronn",
+      "code": "KILL_BRONN",
+      "category": "LEGENDARY",
+      "title": "Dishonorable Combatant",
+      "description": "Kill Bronn"
+    },
+    {
+      "field": "killBryndenTully",
+      "code": "KILL_BRYNDEN_TULLY",
+      "category": "LEGENDARY",
+      "title": "Black Fisherman",
+      "description": "Kill Brynden Tully"
+    },
+    {
+      "field": "killBuGai",
+      "code": "KILL_BU_GAI",
+      "category": "LEGENDARY",
+      "title": "Legendary Jhattar",
+      "description": "Kill Bu Gau"
+    },
+    {
+      "field": "killCatelynStark",
+      "code": "KILL_CATELYN_STARK",
+      "category": "LEGENDARY",
+      "title": "All for the Children",
+      "description": "Kill Catelyn Stark"
+    },
+    {
+      "field": "killCerseiLannister",
+      "code": "KILL_CERSEI_LANNISTER",
+      "category": "LEGENDARY",
+      "title": "And then you will taste the ash in your mouth",
+      "description": "Kill Cersei Lannister"
+    },
+    {
+      "field": "killCraster",
+      "code": "KILL_CRASTER",
+      "category": "LEGENDARY",
+      "title": "Intruder",
+      "description": "Kill Craster"
+    },
+    {
+      "field": "killDaarioNaharis",
+      "code": "KILL_DAARIO_NAHARIS",
+      "category": "LEGENDARY",
+      "title": "Valar Dohaeris",
+      "description": "Kill Daario Naharis"
+    },
+    {
+      "field": "killDaenerysTargaryen",
+      "code": "KILL_DAENERYS_TARGARYEN",
+      "category": "LEGENDARY",
+      "title": "Targaryen Fighter",
+      "description": "Kill Daenerys Targaryen"
+    },
+    {
+      "field": "killDavosSeaworth",
+      "code": "KILL_DAVOS_SEAWORTH",
+      "category": "LEGENDARY",
+      "title": "You got me with your onion!",
+      "description": "Kill Davos Seaworth"
+    },
+    {
+      "field": "killDoranMartell",
+      "code": "KILL_DORAN_MARTELL",
+      "category": "LEGENDARY",
+      "title": "You was a bad prince",
+      "description": "Kill Doran Martell"
+    },
+    {
+      "field": "killDragon",
+      "code": "KILL_DRAGON",
+      "category": "KILL",
+      "title": "Dragonslayer",
+      "description": "Kill a dragon"
+    },
+    {
+      "field": "killEdmureTully",
+      "code": "KILL_EDMURE_TULLY",
+      "category": "LEGENDARY",
+      "title": "Bad Shooter",
+      "description": "Kill Edmure Tully"
+    },
+    {
+      "field": "killElephant",
+      "code": "KILL_ELEPHANT",
+      "category": "KILL",
+      "title": "Elephant Slayer",
+      "description": "Kill an elephant"
+    },
+    {
+      "field": "killEllaryaSand",
+      "code": "KILL_ELLARYA_SAND",
+      "category": "LEGENDARY",
+      "title": "Sand Snake Eater",
+      "description": "Kill Ellarya Sand"
+    },
+    {
+      "field": "killEuronGreyjoy",
+      "code": "KILL_EURON_GREYJOY",
+      "category": "LEGENDARY",
+      "title": "You won't be a good king",
+      "description": "Kill Euron Greyjoy"
+    },
+    {
+      "field": "killGarlanTyrell",
+      "code": "KILL_GARLAN_TYRELL",
+      "category": "LEGENDARY",
+      "title": "Ser, Gallant, Ser!",
+      "description": "Kill Garlan Tyrell"
+    },
+    {
+      "field": "killGendryBaratheon",
+      "code": "KILL_GENDRY_BARATHEON",
+      "category": "LEGENDARY",
+      "title": "Kill the bastards!",
+      "description": "Kill Gendry Baratheon"
+    },
+    {
+      "field": "killGhiscarGladiator",
+      "code": "KILL_GHISCAR_GLADIATOR",
+      "category": "KILL",
+      "title": "Training",
+      "description": "Kill the gladiator"
+    },
+    {
+      "field": "killGhiscarHarpy",
+      "code": "KILL_GHISCAR_HARPY",
+      "category": "KILL",
+      "title": "Counter-revolution",
+      "description": "Kill a Harpy Son"
+    },
+    {
+      "field": "killGiant",
+      "code": "KILL_GIANT",
+      "category": "KILL",
+      "title": "Giant Fighter",
+      "description": "Kill the giant"
+    },
+    {
+      "field": "killGregorClegane",
+      "code": "KILL_GREGOR_CLEGANE",
+      "category": "LEGENDARY",
+      "title": "Legendary Killer III",
+      "description": "Kill Gregor Clegane"
+    },
+    {
+      "field": "killGreyWorm",
+      "code": "KILL_GREY_WORM",
+      "category": "LEGENDARY",
+      "title": "Now He's Worm Food",
+      "description": "Kill Grey Worm"
+    },
+    {
+      "field": "killHarryStrickland",
+      "code": "KILL_HARRY_STRICKLAND",
+      "category": "LEGENDARY",
+      "title": "No More War Elephants!",
+      "description": "Kill Harry Strickland"
+    },
+    {
+      "field": "killHighSepton",
+      "code": "KILL_HIGH_SEPTON",
+      "category": "LEGENDARY",
+      "title": "The One Who Died in His Sleep",
+      "description": "Kill the High Septon"
+    },
+    {
+      "field": "killHizdahrZoLoraq",
+      "code": "KILL_HIZDAHR_ZO_LORAQ",
+      "category": "LEGENDARY",
+      "title": "Greetings from the Sons of the Harpy",
+      "description": "Kill Hizdahr zo Loraq"
+    },
+    {
+      "field": "killHodor",
+      "code": "KILL_HODOR",
+      "category": "LEGENDARY",
+      "title": "Hold the door!",
+      "description": "Kill Hodor"
+    },
+    {
+      "field": "killHosterTully",
+      "code": "KILL_HOSTER_TULLY",
+      "category": "LEGENDARY",
+      "title": "And Here He Vanished...",
+      "description": "Kill Hoster Tully"
+    },
+    {
+      "field": "killHowlandReed",
+      "code": "KILL_HOWLAND_REED",
+      "category": "LEGENDARY",
+      "title": "Found and killed",
+      "description": "Kill Howland Reed"
+    },
+    {
+      "field": "killHuntingPlayer",
+      "code": "KILL_HUNTING_PLAYER",
+      "category": "KILL",
+      "title": "Counter-Strike",
+      "description": "Kill the one who is hunting you"
+    },
+    {
+      "field": "killIceSpider",
+      "code": "KILL_ICE_SPIDER",
+      "category": "KILL",
+      "title": "Northern Arachnophobe",
+      "description": "Kill Ice Spider"
+    },
+    {
+      "field": "killIfekevron",
+      "code": "KILL_IFEKEVRON",
+      "category": "KILL",
+      "title": "Tree Wanderers",
+      "description": "Kill an Ifekevron"
+    },
+    {
+      "field": "killIllyrioMopatis",
+      "code": "KILL_ILLYRIO_MOPATIS",
+      "category": "LEGENDARY",
+      "title": "Hey, bro, nice eggs!",
+      "description": "Kill Illyrio Mopatis"
+    },
+    {
+      "field": "killIlynPayne",
+      "code": "KILL_ILYN_PAYNE",
+      "category": "LEGENDARY",
+      "title": "Executioner's Demise",
+      "description": "Kill Ilyn Payne"
+    },
+    {
+      "field": "killJaimeLannister",
+      "code": "KILL_JAIME_LANNISTER",
+      "category": "LEGENDARY",
+      "title": "Your father won't save you!",
+      "description": "Kill Jaime Lannister"
+    },
+    {
+      "field": "killJanosSlynt",
+      "code": "KILL_JANOS_SLYNT",
+      "category": "LEGENDARY",
+      "title": "He Was Lord of Harrenhal",
+      "description": "Kill Janos Slynt"
+    },
+    {
+      "field": "killJaqenHghar",
+      "code": "KILL_JAQEN_HGHAR",
+      "category": "LEGENDARY",
+      "title": "Valar Morgulis",
+      "description": "Kill Jaqen Hghar"
+    },
+    {
+      "field": "killJeorMormont",
+      "code": "KILL_JEOR_MORMONT",
+      "category": "LEGENDARY",
+      "title": "The impostor is kinda sus",
+      "description": "Kill Jeor Mormont"
+    },
+    {
+      "field": "killJoffreyBaratheon",
+      "code": "KILL_JOFFREY_BARATHEON",
+      "category": "LEGENDARY",
+      "title": "The King is Dead, Long Live the King!",
+      "description": "Kill Joffrey Baratheon"
+    },
+    {
+      "field": "killJohnUmber",
+      "code": "KILL_JOHN_UMBER",
+      "category": "LEGENDARY",
+      "title": "Greatjon",
+      "description": "Kill Jon Umber"
+    },
+    {
+      "field": "killJonSnow",
+      "code": "KILL_JON_SNOW",
+      "category": "LEGENDARY",
+      "title": "For Night's Watch!",
+      "description": "Kill Jon Snow"
+    },
+    {
+      "field": "killJorahMormont",
+      "code": "KILL_JORAH_MORMONT",
+      "category": "LEGENDARY",
+      "title": "Transcended the Friend Zone",
+      "description": "Kill Jorah Mormont"
+    },
+    {
+      "field": "killKevanLannister",
+      "code": "KILL_KEVAN_LANNISTER",
+      "category": "LEGENDARY",
+      "title": "Minus Hand of the King",
+      "description": "Kill Kevan Lannister"
+    },
+    {
+      "field": "killKingsguard",
+      "code": "KILL_KINGSGUARD",
+      "category": "KILL",
+      "title": "Threat to the State",
+      "description": "Kill a member of the Kingsguard"
+    },
+    {
+      "field": "killKraznysMoNakloz",
+      "code": "KILL_KRAZNYS_MO_NAKLOZ",
+      "category": "LEGENDARY",
+      "title": "Exchange the dragon for the army",
+      "description": "Kill Kraznys Mo Nakloz"
+    },
+    {
+      "field": "killLancelLannister",
+      "code": "KILL_LANCEL_LANNISTER",
+      "category": "LEGENDARY",
+      "title": "I choose violence",
+      "description": "Kill religious Lancel Lannister"
+    },
+    {
+      "field": "killLargeMobWithSlingshot",
+      "code": "KILL_LARGE_MOB_WITH_SLINGSHOT",
+      "category": "KILL",
+      "title": "Any means are good",
+      "description": "Beat the giant to death with pebbles"
+    },
+    {
+      "field": "killLegendaryNPC",
+      "code": "KILL_LEGENDARY_NPC",
+      "category": "LEGENDARY",
+      "title": "Legendary Killer",
+      "description": "Kill legendary NPC"
+    },
+    {
+      "field": "killLorasTyrell",
+      "code": "KILL_LORAS_TYRELL",
+      "category": "LEGENDARY",
+      "title": "Killer of the dishonest",
+      "description": "Kill Loras Tyrell"
+    },
+    {
+      "field": "killLuwin",
+      "code": "KILL_LUWIN",
+      "category": "LEGENDARY",
+      "title": "I shall give you one last counsel...",
+      "description": "Kill Luwin"
+    },
+    {
+      "field": "killLysaArryn",
+      "code": "KILL_LYSA_ARRYN",
+      "category": "LEGENDARY",
+      "title": "As naive as she is foolish",
+      "description": "Kill Lysa Arryn"
+    },
+    {
+      "field": "killMaceTyrell",
+      "code": "KILL_MACE_TYRELL",
+      "category": "LEGENDARY",
+      "title": "You will be burnt in wild wire!",
+      "description": "Kill Mace Tyrell"
+    },
+    {
+      "field": "killMaester",
+      "code": "KILL_MAESTER",
+      "category": "KILL",
+      "title": "He didn't like the school",
+      "description": "Kill the maester"
+    },
+    {
+      "field": "killMammoth",
+      "code": "KILL_MAMMOTH",
+      "category": "KILL",
+      "title": "Pre-historical poacher",
+      "description": "Kill the mammoth"
+    },
+    {
+      "field": "killManceRayder",
+      "code": "KILL_MANCE_RAYDER",
+      "category": "LEGENDARY",
+      "title": "Unsuccesfull Raid",
+      "description": "Kill Mance Rayder"
+    },
+    {
+      "field": "killManticore",
+      "code": "KILL_MANTICORE",
+      "category": "KILL",
+      "title": "The Nightmare of Qarth",
+      "description": "Kill the Manticore"
+    },
+    {
+      "field": "killMargaeryTyrell",
+      "code": "KILL_MARGAERY_TYRELL",
+      "category": "LEGENDARY",
+      "title": "Do you remember about Castamere?",
+      "description": "Kill Margaery Tyrell"
+    },
+    {
+      "field": "killMelisandra",
+      "code": "KILL_MELISANDRA",
+      "category": "LEGENDARY",
+      "title": "Demoralization",
+      "description": "Kill Melisandra"
+    },
+    {
+      "field": "killMerynTrant",
+      "code": "KILL_MERYN_TRANT",
+      "category": "LEGENDARY",
+      "title": "Too slow for a knight",
+      "description": "Kill Meryn Trant"
+    },
+    {
+      "field": "killMissandei",
+      "code": "KILL_MISSANDEI",
+      "category": "LEGENDARY",
+      "title": "Silence forever!",
+      "description": "Kill Missandei"
+    },
+    {
+      "field": "killMoqorro",
+      "code": "KILL_MOQORRO",
+      "category": "LEGENDARY",
+      "title": "Did not foresee his own death",
+      "description": "Kill Moqorro"
+    },
+    {
+      "field": "killMossovyWitcher",
+      "code": "KILL_MOSSOVY_WITCHER",
+      "category": "KILL",
+      "title": "Hunter for hunters",
+      "description": "Kill the hunter"
+    },
+    {
+      "field": "killMyrcellaBaratheon",
+      "code": "KILL_MYRCELLA_BARATHEON",
+      "category": "LEGENDARY",
+      "title": "An innocent child",
+      "description": "Kill Myrcella Baratheon"
+    },
+    {
+      "field": "killNPC",
+      "code": "KILL_NPC",
+      "category": "GENERAL",
+      "title": "Killer",
+      "description": "Kill NPC"
+    },
+    {
+      "field": "killNightKing",
+      "code": "KILL_NIGHT_KING",
+      "category": "LEGENDARY",
+      "title": "Legendary Killer I",
+      "description": "Kill Night King"
+    },
+    {
+      "field": "killOberynMartell",
+      "code": "KILL_OBERYN_MARTELL",
+      "category": "LEGENDARY",
+      "title": "Mountain",
+      "description": "Kill Oberyn Martell"
+    },
+    {
+      "field": "killOlennaTyrell",
+      "code": "KILL_OLENNA_TYRELL",
+      "category": "LEGENDARY",
+      "title": "The japes are over",
+      "description": "Kill Olenna Tyrell"
+    },
+    {
+      "field": "killOsha",
+      "code": "KILL_OSHA",
+      "category": "LEGENDARY",
+      "title": "The Wildling",
+      "description": "Kill Osha"
+    },
+    {
+      "field": "killPetyrBaelish",
+      "code": "KILL_PETYR_BAELISH",
+      "category": "LEGENDARY",
+      "title": "Chaos is a ladder",
+      "description": "Kill Petyr Baelish"
+    },
+    {
+      "field": "killPodrickPayne",
+      "code": "KILL_PODRICK_PAYNE",
+      "category": "LEGENDARY",
+      "title": "We'll never know his secret",
+      "description": "Kill Podrick Payne"
+    },
+    {
+      "field": "killPriest",
+      "code": "KILL_PRIEST",
+      "category": "KILL",
+      "title": "Atheist",
+      "description": "Kill the priest"
+    },
+    {
+      "field": "killProstitute",
+      "code": "KILL_PROSTITUTE",
+      "category": "KILL",
+      "title": "Ruthless pervert",
+      "description": "Kill the whore"
+    },
+    {
+      "field": "killQyburn",
+      "code": "KILL_QYBURN",
+      "category": "LEGENDARY",
+      "title": "A failed experiment",
+      "description": "Kill Qyburn"
+    },
+    {
+      "field": "killRamsayBolton",
+      "code": "KILL_RAMSAY_BOLTON",
+      "category": "LEGENDARY",
+      "title": "Preemptively",
+      "description": "Kill Ramsay Bolton"
+    },
+    {
+      "field": "killRandyllTarly",
+      "code": "KILL_RANDYLL_TARLY",
+      "category": "LEGENDARY",
+      "title": "Left no choice",
+      "description": "Kill Randyll Tarly"
+    },
+    {
+      "field": "killRedScorpion",
+      "code": "KILL_RED_SCORPION",
+      "category": "KILL",
+      "title": "The Nightmare of Dorne",
+      "description": "Kill the Red Scorpion"
+    },
+    {
+      "field": "killRenlyBaratheon",
+      "code": "KILL_RENLY_BARATHEON",
+      "category": "LEGENDARY",
+      "title": "The people's favorite",
+      "description": "Kill Renly Baratheon"
+    },
+    {
+      "field": "killRickardKarstark",
+      "code": "KILL_RICKARD_KARSTARK",
+      "category": "LEGENDARY",
+      "title": "Is this justice?",
+      "description": "Kill Rickard Karstark"
+    },
+    {
+      "field": "killRobbStark",
+      "code": "KILL_ROBB_STARK",
+      "category": "LEGENDARY",
+      "title": "Red Wedding",
+      "description": "Kill Robb Stark"
+    },
+    {
+      "field": "killRobinArryn",
+      "code": "KILL_ROBIN_ARRYN",
+      "category": "LEGENDARY",
+      "title": "Still a child",
+      "description": "Kill Robin Arryn"
+    },
+    {
+      "field": "killRooseBolton",
+      "code": "KILL_ROOSE_BOLTON",
+      "category": "LEGENDARY",
+      "title": "Warden of the North",
+      "description": "Kill Roose Bolton"
+    },
+    {
+      "field": "killSalladhorSaan",
+      "code": "KILL_SALLADHOR_SAAN",
+      "category": "LEGENDARY",
+      "title": "The fifth wedding will not be",
+      "description": "Kill Salladhor Saan"
+    },
+    {
+      "field": "killSamwellTarly",
+      "code": "KILL_SAMWELL_TARLY",
+      "category": "LEGENDARY",
+      "title": "His father will not regret",
+      "description": "Kill Samwell Tarly"
+    },
+    {
+      "field": "killSandorClegane",
+      "code": "KILL_SANDOR_CLEGANE",
+      "category": "LEGENDARY",
+      "title": "Doghunter",
+      "description": "Kill Sandor Clegane"
+    },
+    {
+      "field": "killSansaStark",
+      "code": "KILL_SANSA_STARK",
+      "category": "LEGENDARY",
+      "title": "You betrayed your father!",
+      "description": "Kill Sansa Stark"
+    },
+    {
+      "field": "killSelyseBaratheon",
+      "code": "KILL_SELYSE_BARATHEON",
+      "category": "LEGENDARY",
+      "title": "The Lord of Light did not save her",
+      "description": "Kill Selyse Baratheon"
+    },
+    {
+      "field": "killShae",
+      "code": "KILL_SHAE",
+      "category": "LEGENDARY",
+      "title": "I am not your lion",
+      "description": "Kill Shae"
+    },
+    {
+      "field": "killShireenBaratheon",
+      "code": "KILL_SHIREEN_BARATHEON",
+      "category": "LEGENDARY",
+      "title": "An inhumane act",
+      "description": "Kill Shireen Baratheon"
+    },
+    {
+      "field": "killShryke",
+      "code": "KILL_SHRYKE",
+      "category": "KILL",
+      "title": "Fighting reptiloids",
+      "description": "Kill a shryke"
+    },
+    {
+      "field": "killStannisBaratheon",
+      "code": "KILL_STANNIS_BARATHEON",
+      "category": "LEGENDARY",
+      "title": "The true king",
+      "description": "Kill Stannis Baratheon"
+    },
+    {
+      "field": "killStoneMan",
+      "code": "KILL_STONE_MAN",
+      "category": "KILL",
+      "title": "Mercy",
+      "description": "Kill Stone Man"
+    },
+    {
+      "field": "killTermite",
+      "code": "KILL_TERMITE",
+      "category": "KILL",
+      "title": "Getting ahead",
+      "description": "Kill the termite"
+    },
+    {
+      "field": "killTheonGreyjoy",
+      "code": "KILL_THEON_GREYJOY",
+      "category": "LEGENDARY",
+      "title": "It's just a sausage",
+      "description": "Torment Theon Greyjoy"
+    },
+    {
+      "field": "killThievingBandit",
+      "code": "KILL_THIEVING_BANDIT",
+      "category": "KILL",
+      "title": "Three hundred bucks...",
+      "description": "Kill the bandit who robbed you"
+    },
+    {
+      "field": "killThoros",
+      "code": "KILL_THOROS",
+      "category": "LEGENDARY",
+      "title": "He will not save you anymore",
+      "description": "Kill Thoros"
+    },
+    {
+      "field": "killThreeEyedRaven",
+      "code": "KILL_THREE_EYED_RAVEN",
+      "category": "LEGENDARY",
+      "title": "I foresaw this...",
+      "description": "Kill the Three-Eyed Raven"
+    },
+    {
+      "field": "killTobhoMott",
+      "code": "KILL_TOBHO_MOTT",
+      "category": "LEGENDARY",
+      "title": "Mentor of the bastard",
+      "description": "Kill Tobho Mott"
+    },
+    {
+      "field": "killTommenBaratheon",
+      "code": "KILL_TOMMEN_BARATHEON",
+      "category": "LEGENDARY",
+      "title": "Pawn of the West",
+      "description": "Kill Tommen Baratheon"
+    },
+    {
+      "field": "killTormund",
+      "code": "KILL_TORMUND",
+      "category": "LEGENDARY",
+      "title": "The Sword in the Night",
+      "description": "Kill Tormund"
+    },
+    {
+      "field": "killTrystaneMartell",
+      "code": "KILL_TRYSTANE_MARTELL",
+      "category": "LEGENDARY",
+      "title": "Worthless heir",
+      "description": "Kill Trystane Martell"
+    },
+    {
+      "field": "killTugarKhan",
+      "code": "KILL_TUGAR_KHAN",
+      "category": "LEGENDARY",
+      "title": "Legendary Emperor",
+      "description": "Kill Tugar Khan"
+    },
+    {
+      "field": "killTychoNestoris",
+      "code": "KILL_TYCHO_NESTORIS",
+      "category": "LEGENDARY",
+      "title": "Locking in profits",
+      "description": "Kill Tycho Nestoris"
+    },
+    {
+      "field": "killTyrionLannister",
+      "code": "KILL_TYRION_LANNISTER",
+      "category": "LEGENDARY",
+      "title": "How do you want to die, Tyrion, son of Tywin?",
+      "description": "Kill Tyrion Lannister"
+    },
+    {
+      "field": "killTywinLannister",
+      "code": "KILL_TYWIN_LANNISTER",
+      "category": "LEGENDARY",
+      "title": "Statham",
+      "description": "Kill Tywin Lannister"
+    },
+    {
+      "field": "killUlthosSpider",
+      "code": "KILL_ULTHOS_SPIDER",
+      "category": "KILL",
+      "title": "Arachnophobe",
+      "description": "Kill Ulthos Spider"
+    },
+    {
+      "field": "killUnsullied",
+      "code": "KILL_UNSULLIED",
+      "category": "KILL",
+      "title": "And who is unsullied?",
+      "description": "Kill the Unsullied"
+    },
+    {
+      "field": "killUsingOnlyPlates",
+      "code": "KILL_USING_ONLY_PLATES",
+      "category": "KILL",
+      "title": "Kitchen brawler",
+      "description": "Kill someone by throwing plates"
+    },
+    {
+      "field": "killVarys",
+      "code": "KILL_VARYS",
+      "category": "LEGENDARY",
+      "title": "Some doors are permanently closed",
+      "description": "Kill Varys"
+    },
+    {
+      "field": "killVictarionGreyjoy",
+      "code": "KILL_VICTARION_GREYJOY",
+      "category": "LEGENDARY",
+      "title": "Defender of the North",
+      "description": "Kill Victarion Greyjoy"
+    },
+    {
+      "field": "killWalderFrey",
+      "code": "KILL_WALDER_FREY",
+      "category": "LEGENDARY",
+      "title": "Master of weddings",
+      "description": "Kill Walder Frey"
+    },
+    {
+      "field": "killWalrus",
+      "code": "KILL_WALRUS",
+      "category": "KILL",
+      "title": "The bony hand of famine",
+      "description": "Kill the walrus"
+    },
+    {
+      "field": "killWerewolf",
+      "code": "KILL_WEREWOLF",
+      "category": "KILL",
+      "title": "Toss a coin to your player",
+      "description": "Kill the werewolf"
+    },
+    {
+      "field": "killWhileDrunk",
+      "code": "KILL_WHILE_DRUNK",
+      "category": "KILL",
+      "title": "On adrenaline",
+      "description": "Kill while drunk"
+    },
+    {
+      "field": "killWhiteWalker",
+      "code": "KILL_WHITE_WALKER",
+      "category": "KILL",
+      "title": "Valyrian Warrior",
+      "description": "Kill the white walker"
+    },
+    {
+      "field": "killWight",
+      "code": "KILL_WIGHT",
+      "category": "KILL",
+      "title": "With fire and sword",
+      "description": "Kill the wight"
+    },
+    {
+      "field": "killWightGiant",
+      "code": "KILL_WIGHT_GIANT",
+      "category": "KILL",
+      "title": "With fire and sword II",
+      "description": "Kill the wight giant"
+    },
+    {
+      "field": "killWillasTyrell",
+      "code": "KILL_WILLAS_TYRELL",
+      "category": "LEGENDARY",
+      "title": "Ruthless",
+      "description": "Kill Willas Tyrell"
+    },
+    {
+      "field": "killWymanManderly",
+      "code": "KILL_WYMAN_MANDERLY",
+      "category": "LEGENDARY",
+      "title": "Ten thousand eels",
+      "description": "Kill Wyman Manderly"
+    },
+    {
+      "field": "killWyvern",
+      "code": "KILL_WYVERN",
+      "category": "KILL",
+      "title": "Pride of Ghiscar",
+      "description": "Kill the wyvern"
+    },
+    {
+      "field": "killXaroXhoanDaxos",
+      "code": "KILL_XARO_XHOAN_DAXOS",
+      "category": "LEGENDARY",
+      "title": "Locked in the vault",
+      "description": "Kill Xaro Xhoan Daxos"
+    },
+    {
+      "field": "killYaraGreyjoy",
+      "code": "KILL_YARA_GREYJOY",
+      "category": "LEGENDARY",
+      "title": "You will be my gift for Queen",
+      "description": "Kill Yara Greyjoy"
+    },
+    {
+      "field": "killYgritte",
+      "code": "KILL_YGRITTE",
+      "category": "LEGENDARY",
+      "title": "I know everything Ygritte",
+      "description": "Kill Ygritte"
+    },
+    {
+      "field": "killYiTiBombardier",
+      "code": "KILL_YI_TI_BOMBARDIER",
+      "category": "KILL",
+      "title": "Counter-Terrorists win",
+      "description": "Kill the bombardier"
+    },
+    {
+      "field": "killYohnRoyce",
+      "code": "KILL_YOHN_ROYCE",
+      "category": "LEGENDARY",
+      "title": "Anti-bronze Warrior",
+      "description": "Kill Yohn Royce"
+    },
+    {
+      "field": "killYoren",
+      "code": "KILL_YOREN",
+      "category": "LEGENDARY",
+      "title": "The Call Has Ended",
+      "description": "Kill Yoren"
+    },
+    {
+      "field": "killYoungGriff",
+      "code": "KILL_YOUNG_GRIFF",
+      "category": "LEGENDARY",
+      "title": "False Dmitri?",
+      "description": "Kill Young Griff"
+    },
+    {
+      "field": "marry",
+      "code": "MARRY",
+      "category": "GENERAL",
+      "title": "Matchmaker",
+      "description": "Have a wedding"
+    },
+    {
+      "field": "pickpocket",
+      "code": "PICKPOCKET",
+      "category": "GENERAL",
+      "title": "Ah shit, here we go again",
+      "description": "Steal something"
+    },
+    {
+      "field": "pledgeService",
+      "code": "PLEDGE_SERVICE",
+      "category": "GENERAL",
+      "title": "Pledged!",
+      "description": "Pledge a faction"
+    },
+    {
+      "field": "reforge",
+      "code": "REFORGE",
+      "category": "GENERAL",
+      "title": "Second life",
+      "description": "Reforge an item"
+    },
+    {
+      "field": "rideCamel",
+      "code": "RIDE_CAMEL",
+      "category": "GENERAL",
+      "title": "Slowly but surely",
+      "description": "Ride a camel"
+    },
+    {
+      "field": "rideDragon",
+      "code": "RIDE_DRAGON",
+      "category": "GENERAL",
+      "title": "Targaryen",
+      "description": "Ride a dragon"
+    },
+    {
+      "field": "rideElephant",
+      "code": "RIDE_ELEPHANT",
+      "category": "GENERAL",
+      "title": "Cersei's dream",
+      "description": "Ride an elephant"
+    },
+    {
+      "field": "rideIceSpider",
+      "code": "RIDE_ICE_SPIDER",
+      "category": "GENERAL",
+      "title": "Can you ride them?",
+      "description": "Ride an ice spider"
+    },
+    {
+      "field": "rideMammoth",
+      "code": "RIDE_MAMMOTH",
+      "category": "GENERAL",
+      "title": "Ready to storm the Wall",
+      "description": "Ride a mammoth"
+    },
+    {
+      "field": "rideRhino",
+      "code": "RIDE_RHINO",
+      "category": "GENERAL",
+      "title": "Battering ram on legs",
+      "description": "Ride a rhinoceros"
+    },
+    {
+      "field": "rideUlthosSpider",
+      "code": "RIDE_ULTHOS_SPIDER",
+      "category": "GENERAL",
+      "title": "The right direction",
+      "description": "Ride an Ulthos spider"
+    },
+    {
+      "field": "rideWoolyRhino",
+      "code": "RIDE_WOOLY_RHINO",
+      "category": "GENERAL",
+      "title": "Why not?",
+      "description": "Ride a woolly rhinoceros"
+    },
+    {
+      "field": "rideZebra",
+      "code": "RIDE_ZEBRA",
+      "category": "GENERAL",
+      "title": "Pride of Jogos Nhai",
+      "description": "Ride a Zorse"
+    },
+    {
+      "field": "stealArborGrapes",
+      "code": "STEAL_ARBOR_GRAPES",
+      "category": "GENERAL",
+      "title": "It's mine!",
+      "description": "Steal grapes in Arbor"
+    },
+    {
+      "field": "trade",
+      "code": "TRADE",
+      "category": "GENERAL",
+      "title": "Start a business",
+      "description": "Trade with somebody"
+    },
+    {
+      "field": "travel100",
+      "code": "TRAVEL100",
+      "category": "GENERAL",
+      "title": "Traveller V",
+      "description": "Visit 100 biomes"
+    },
+    {
+      "field": "travel20",
+      "code": "TRAVEL20",
+      "category": "GENERAL",
+      "title": "Traveller I",
+      "description": "Visit 20 biomes"
+    },
+    {
+      "field": "travel40",
+      "code": "TRAVEL40",
+      "category": "GENERAL",
+      "title": "Traveller II",
+      "description": "Visit 40 biomes"
+    },
+    {
+      "field": "travel60",
+      "code": "TRAVEL60",
+      "category": "GENERAL",
+      "title": "Traveller III",
+      "description": "Visit 60 biomes"
+    },
+    {
+      "field": "travel80",
+      "code": "TRAVEL80",
+      "category": "GENERAL",
+      "title": "Traveller IV",
+      "description": "Visit 80 biomes"
+    },
+    {
+      "field": "useAlloyForge",
+      "code": "USE_ALLOY_FORGE",
+      "category": "GENERAL",
+      "title": "Special alloys",
+      "description": "Use the blast furnace"
+    },
+    {
+      "field": "useAsshaiArchmagStaff",
+      "code": "USE_ASSHAI_ARCHMAG_STAFF",
+      "category": "GENERAL",
+      "title": "This staff is just OP!",
+      "description": "Use the Asshai Archmage's staff"
+    },
+    {
+      "field": "useAsshaiShadowbinderStaff",
+      "code": "USE_ASSHAI_SHADOWBINDER_STAFF",
+      "category": "GENERAL",
+      "title": "Thirtieth birthday",
+      "description": "Use the Asshai Shadowbinder's staff"
+    },
+    {
+      "field": "useBanner",
+      "code": "USE_BANNER",
+      "category": "GENERAL",
+      "title": "Our ancestral lands",
+      "description": "Conquer territory"
+    },
+    {
+      "field": "useBarrel",
+      "code": "USE_BARREL",
+      "category": "GENERAL",
+      "title": "Alcoholic",
+      "description": "Brew drink in barrel"
+    },
+    {
+      "field": "useBeacon",
+      "code": "USE_BEACON",
+      "category": "GENERAL",
+      "title": "Curfew",
+      "description": "Light the signal fires"
+    },
+    {
+      "field": "useBomb",
+      "code": "USE_BOMB",
+      "category": "GENERAL",
+      "title": "Terrorists win",
+      "description": "Explode a bomb using a torch"
+    },
+    {
+      "field": "useButterflyJar",
+      "code": "USE_BUTTERFLY_JAR",
+      "category": "GENERAL",
+      "title": "Remember childhood",
+      "description": "Catch a butterfly"
+    },
+    {
+      "field": "useCrossbow",
+      "code": "USE_CROSSBOW",
+      "category": "GENERAL",
+      "title": "Be on trend",
+      "description": "Use a crossbow"
+    },
+    {
+      "field": "useFirePot",
+      "code": "USE_FIRE_POT",
+      "category": "GENERAL",
+      "title": "Greek fire",
+      "description": "Use a fire pot"
+    },
+    {
+      "field": "useIronBank",
+      "code": "USE_IRON_BANK",
+      "category": "GENERAL",
+      "title": "Invested in...",
+      "description": "Use the Iron Bank branch"
+    },
+    {
+      "field": "useKebabStand",
+      "code": "USE_KEBAB_STAND",
+      "category": "GENERAL",
+      "title": "Delicious, period",
+      "description": "Prepare a kebab"
+    },
+    {
+      "field": "useLingeringPotion",
+      "code": "USE_LINGERING_POTION",
+      "category": "GENERAL",
+      "title": "1.9?",
+      "description": "Use a lingering potion"
+    },
+    {
+      "field": "useMillstone",
+      "code": "USE_MILLSTONE",
+      "category": "GENERAL",
+      "title": "Grinding",
+      "description": "Use a millstone"
+    },
+    {
+      "field": "useOven",
+      "code": "USE_OVEN",
+      "category": "GENERAL",
+      "title": "Fast food",
+      "description": "Use a kitchen oven"
+    },
+    {
+      "field": "useSarbacane",
+      "code": "USE_SARBACANE",
+      "category": "GENERAL",
+      "title": "Exotic archery",
+      "description": "Use a blowgun and darts"
+    },
+    {
+      "field": "useSpear",
+      "code": "USE_SPEAR",
+      "category": "GENERAL",
+      "title": "Time to break lances",
+      "description": "Use a spear"
+    },
+    {
+      "field": "useTermite",
+      "code": "USE_TERMITE",
+      "category": "GENERAL",
+      "title": "Catch the grenade!",
+      "description": "Use an exploding termite"
+    },
+    {
+      "field": "useThrowingAxe",
+      "code": "USE_THROWING_AXE",
+      "category": "GENERAL",
+      "title": "Let us throw it!",
+      "description": "Use a throwing axe"
+    },
+    {
+      "field": "useUnsmeltery",
+      "code": "USE_UNSMELTERY",
+      "category": "GENERAL",
+      "title": "Util",
+      "description": "Unsmelt unneeded equipment"
+    },
+    {
+      "field": "wearFullArryn",
+      "code": "WEAR_FULL_ARRYN",
+      "category": "WEAR",
+      "title": "Guard of Arryn Vale",
+      "description": "Wear full set of Arryn Vale"
+    },
+    {
+      "field": "wearFullArrynguard",
+      "code": "WEAR_FULL_ARRYNGUARD",
+      "category": "WEAR",
+      "title": "Captain of Gulltown",
+      "description": "Wear full set of Arryn Vale guards"
+    },
+    {
+      "field": "wearFullAsshai",
+      "code": "WEAR_FULL_ASSHAI",
+      "category": "WEAR",
+      "title": "Guard of Asshai",
+      "description": "Wear full set of Asshai"
+    },
+    {
+      "field": "wearFullBone",
+      "code": "WEAR_FULL_BONE",
+      "category": "WEAR",
+      "title": "Safety: 100",
+      "description": "Wear full set of bone armor"
+    },
+    {
+      "field": "wearFullBraavos",
+      "code": "WEAR_FULL_BRAAVOS",
+      "category": "WEAR",
+      "title": "Guard of Braavos",
+      "description": "Wear full set of Braavos"
+    },
+    {
+      "field": "wearFullBronze",
+      "code": "WEAR_FULL_BRONZE",
+      "category": "WEAR",
+      "title": "Copper + tin",
+      "description": "Wear full set of bronze armor"
+    },
+    {
+      "field": "wearFullBronzeChainmail",
+      "code": "WEAR_FULL_BRONZE_CHAINMAIL",
+      "category": "WEAR",
+      "title": "Saved a good bit",
+      "description": "Wear full set of bronze chainmail"
+    },
+    {
+      "field": "wearFullIron",
+      "code": "WEAR_FULL_IRON",
+      "category": "WEAR",
+      "title": "Default Standard",
+      "description": "Wear full set of iron armor"
+    },
+    {
+      "field": "wearFullIronChainmail",
+      "code": "WEAR_FULL_IRON_CHAINMAIL",
+      "category": "WEAR",
+      "title": "Well forgotten old",
+      "description": "Wear full set of iron chainmail"
+    },
+    {
+      "field": "wearFullCrownlands",
+      "code": "WEAR_FULL_CROWNLANDS",
+      "category": "WEAR",
+      "title": "Captain of King's Landing",
+      "description": "Wear full set of Golden Cloaks"
+    },
+    {
+      "field": "wearFullDorne",
+      "code": "WEAR_FULL_DORNE",
+      "category": "WEAR",
+      "title": "Guard of Dorne",
+      "description": "Wear full set of Dorne"
+    },
+    {
+      "field": "wearFullDothraki",
+      "code": "WEAR_FULL_DOTHRAKI",
+      "category": "WEAR",
+      "title": "The Sea of Grass",
+      "description": "Wear full set of dothraki"
+    },
+    {
+      "field": "wearFullDragonstone",
+      "code": "WEAR_FULL_DRAGONSTONE",
+      "category": "WEAR",
+      "title": "Guard of Dragonstone",
+      "description": "Wear full set of Dragonstone"
+    },
+    {
+      "field": "wearFullFur",
+      "code": "WEAR_FULL_FUR",
+      "category": "WEAR",
+      "title": "Wildling",
+      "description": "Wear full set of fur armor"
+    },
+    {
+      "field": "wearFullGhiscar",
+      "code": "WEAR_FULL_GHISCAR",
+      "category": "WEAR",
+      "title": "Guard of Ghiscar",
+      "description": "Wear full set of Ghiscar"
+    },
+    {
+      "field": "wearFullGift",
+      "code": "WEAR_FULL_GIFT",
+      "category": "WEAR",
+      "title": "Guard of the Wall",
+      "description": "Wear full set of Night's Watch"
+    },
+    {
+      "field": "wearFullGoldenCompany",
+      "code": "WEAR_FULL_GOLDEN_COMPANY",
+      "category": "WEAR",
+      "title": "Golden Company",
+      "description": "Wear full set of Golden Company"
+    },
+    {
+      "field": "wearFullHillmen",
+      "code": "WEAR_FULL_HILLMEN",
+      "category": "WEAR",
+      "title": "Madness of Moon Mountains",
+      "description": "Wear full set of Hill Tribes"
+    },
+    {
+      "field": "wearFullIbben",
+      "code": "WEAR_FULL_IBBEN",
+      "category": "WEAR",
+      "title": "It seems to fit...",
+      "description": "Wear full set of Ibben"
+    },
+    {
+      "field": "wearFullIronborn",
+      "code": "WEAR_FULL_IRONBORN",
+      "category": "WEAR",
+      "title": "Guard of Iron Islands",
+      "description": "Wear full set of Iron Islands"
+    },
+    {
+      "field": "wearFullJogosNhai",
+      "code": "WEAR_FULL_JOGOS_NHAI",
+      "category": "WEAR",
+      "title": "Eastern Horde",
+      "description": "Wear full set of Jogos Nhai"
+    },
+    {
+      "field": "wearFullKingsguard",
+      "code": "WEAR_FULL_KINGSGUARD",
+      "category": "WEAR",
+      "title": "Long live the King!",
+      "description": "Wear full set of Kingsguard"
+    },
+    {
+      "field": "wearFullLhazar",
+      "code": "WEAR_FULL_LHAZAR",
+      "category": "WEAR",
+      "title": "Leatherman",
+      "description": "Wear full set of Lhazar"
+    },
+    {
+      "field": "wearFullLorath",
+      "code": "WEAR_FULL_LORATH",
+      "category": "WEAR",
+      "title": "Guard of Lorath",
+      "description": "Wear full set of Lorath"
+    },
+    {
+      "field": "wearFullLys",
+      "code": "WEAR_FULL_LYS",
+      "category": "WEAR",
+      "title": "Guard of Lys",
+      "description": "Wear full set of Lys"
+    },
+    {
+      "field": "wearFullMossovy",
+      "code": "WEAR_FULL_MOSSOVY",
+      "category": "WEAR",
+      "title": "Guard of Mossovy",
+      "description": "Wear full set of Mossovy"
+    },
+    {
+      "field": "wearFullMyr",
+      "code": "WEAR_FULL_MYR",
+      "category": "WEAR",
+      "title": "Guard of Myr",
+      "description": "Wear full set of Myr"
+    },
+    {
+      "field": "wearFullNorth",
+      "code": "WEAR_FULL_NORTH",
+      "category": "WEAR",
+      "title": "Guard of North",
+      "description": "Wear full set of North"
+    },
+    {
+      "field": "wearFullNorthguard",
+      "code": "WEAR_FULL_NORTHGUARD",
+      "category": "WEAR",
+      "title": "Captain of White Harbour",
+      "description": "Wear full set of North guards"
+    },
+    {
+      "field": "wearFullNorvos",
+      "code": "WEAR_FULL_NORVOS",
+      "category": "WEAR",
+      "title": "Guard of Norvos",
+      "description": "Wear full set of Norvos"
+    },
+    {
+      "field": "wearFullPentos",
+      "code": "WEAR_FULL_PENTOS",
+      "category": "WEAR",
+      "title": "Guard of Pentos",
+      "description": "Wear full set of Pentos"
+    },
+    {
+      "field": "wearFullQarth",
+      "code": "WEAR_FULL_QARTH",
+      "category": "WEAR",
+      "title": "Guard of Qarth",
+      "description": "Wear full set of Qarth"
+    },
+    {
+      "field": "wearFullQohor",
+      "code": "WEAR_FULL_QOHOR",
+      "category": "WEAR",
+      "title": "Guard of Qohor",
+      "description": "Wear full set of Qohor"
+    },
+    {
+      "field": "wearFullReach",
+      "code": "WEAR_FULL_REACH",
+      "category": "WEAR",
+      "title": "Guard of Reach",
+      "description": "Wear full set of Reach"
+    },
+    {
+      "field": "wearFullReachguard",
+      "code": "WEAR_FULL_REACHGUARD",
+      "category": "WEAR",
+      "title": "Captain of Reach",
+      "description": "Wear full set of Reach guards"
+    },
+    {
+      "field": "wearFullRiverlands",
+      "code": "WEAR_FULL_RIVERLANDS",
+      "category": "WEAR",
+      "title": "Guard of Riverlands",
+      "description": "Wear full set of Riverlands"
+    },
+    {
+      "field": "wearFullRobes",
+      "code": "WEAR_FULL_ROBES",
+      "category": "WEAR",
+      "title": "Allah Akbar",
+      "description": "Wear full set of robes"
+    },
+    {
+      "field": "wearFullSothoryos",
+      "code": "WEAR_FULL_SOTHORYOS",
+      "category": "WEAR",
+      "title": "Aboba",
+      "description": "Wear full set of Sothoryos"
+    },
+    {
+      "field": "wearFullStormlands",
+      "code": "WEAR_FULL_STORMLANDS",
+      "category": "WEAR",
+      "title": "Guard of Stormlands",
+      "description": "Wear full set of Stormlands"
+    },
+    {
+      "field": "wearFullSummer",
+      "code": "WEAR_FULL_SUMMER",
+      "category": "WEAR",
+      "title": "Guard of Summer Islands",
+      "description": "Wear full set of Summer Islands"
+    },
+    {
+      "field": "wearFullTargaryen",
+      "code": "WEAR_FULL_TARGARYEN",
+      "category": "WEAR",
+      "title": "Drakarys!",
+      "description": "Wear full set of Targaryen"
+    },
+    {
+      "field": "wearFullTyrosh",
+      "code": "WEAR_FULL_TYROSH",
+      "category": "WEAR",
+      "title": "Guard of Tyrosh",
+      "description": "Wear full set of Tyrosh"
+    },
+    {
+      "field": "wearFullUnsullied",
+      "code": "WEAR_FULL_UNSULLIED",
+      "category": "WEAR",
+      "title": "War eunuch",
+      "description": "Wear full set of Unsullied"
+    },
+    {
+      "field": "wearFullValyrian",
+      "code": "WEAR_FULL_VALYRIAN",
+      "category": "WEAR",
+      "title": "More expensive, than money",
+      "description": "Wear full set of valyrian steel"
+    },
+    {
+      "field": "wearFullValyrianChainmail",
+      "code": "WEAR_FULL_VALYRIAN_CHAINMAIL",
+      "category": "WEAR",
+      "title": "Frodo?",
+      "description": "Wear full set of valyrian chainmail"
+    },
+    {
+      "field": "wearFullVolantis",
+      "code": "WEAR_FULL_VOLANTIS",
+      "category": "WEAR",
+      "title": "Guard of Volantis",
+      "description": "Wear full set of Volantis"
+    },
+    {
+      "field": "wearFullWesterlands",
+      "code": "WEAR_FULL_WESTERLANDS",
+      "category": "WEAR",
+      "title": "Guard of Westerlands",
+      "description": "Wear full set of Westerlands"
+    },
+    {
+      "field": "wearFullWesterlandsguard",
+      "code": "WEAR_FULL_WESTERLANDSGUARD",
+      "category": "WEAR",
+      "title": "Captain of Westerlands",
+      "description": "Wear full set of Westerlands guard"
+    },
+    {
+      "field": "wearFullWhiteWalkers",
+      "code": "WEAR_FULL_WHITE_WALKERS",
+      "category": "WEAR",
+      "title": "Mint Orbit",
+      "description": "Wear full set of White Walkers"
+    },
+    {
+      "field": "wearFullYiti",
+      "code": "WEAR_FULL_YI_TI",
+      "category": "WEAR",
+      "title": "Guard of Yi Ti",
+      "description": "Wear full set of Yi Ti"
+    },
+    {
+      "field": "wearFullYitiBombardier",
+      "code": "WEAR_FULL_YI_TI_BOMBARDIER",
+      "category": "WEAR",
+      "title": "One does not simply walk into Yi Ti",
+      "description": "Wear full set of Yi Ti Bombardier"
+    },
+    {
+      "field": "wearFullYitiSamurai",
+      "code": "WEAR_FULL_YI_TI_SAMURAI",
+      "category": "WEAR",
+      "title": "Yi Ti Samurai",
+      "description": "Wear full set of Yi Ti Samurai"
+    },
+    {
+      "field": "brandEntity",
+      "code": "BRAND_ENTITY",
+      "category": "GENERAL",
+      "title": "Number on the hand",
+      "description": "Name a mob using a brand"
+    },
+    {
+      "field": "smoke",
+      "code": "SMOKE",
+      "category": "GENERAL",
+      "title": "Sweetly puffed",
+      "description": "Smoke tobacco from a pipe"
+    },
+    {
+      "field": "poisonBarrel",
+      "code": "POISON_BARREL",
+      "category": "GENERAL",
+      "title": "Rat's Cup II",
+      "description": "Poison a barrel with a bottle of poison"
+    },
+    {
+      "field": "poisonMug",
+      "code": "POISON_MUG",
+      "category": "GENERAL",
+      "title": "Rat's Cup I",
+      "description": "Poison a mug with a bottle of poison"
+    },
+    {
+      "field": "throwSlingIntoWater",
+      "code": "THROW_SLING_INTO_WATER",
+      "category": "GENERAL",
+      "title": "Reverted to childhood",
+      "description": "Throw a pebble into the water"
+    },
+    {
+      "field": "throwConker",
+      "code": "THROW_CONKER",
+      "category": "GENERAL",
+      "title": "Can it be more than just roasted?",
+      "description": "Throw a chestnut as a projectile"
+    },
+    {
+      "field": "wearFullOryx",
+      "code": "WEAR_FULL_ORYX",
+      "category": "WEAR",
+      "title": "Almost leather",
+      "description": "Wear full set of Oryx skin"
+    },
+    {
+      "field": "wearFullCopper",
+      "code": "WEAR_FULL_COPPER",
+      "category": "ENTER",
+      "title": "Corrosion",
+      "description": "Wear full set of copper armor"
+    },
+    {
+      "field": "wearFullCopperChainmail",
+      "code": "WEAR_FULL_COPPER_CHAINMAIL",
+      "category": "ENTER",
+      "title": "wearFullCopperChainmail",
+      "description": "Wear full set of copper chainmail"
+    },
+    {
+      "field": "wearFullGold",
+      "code": "WEAR_FULL_GOLD",
+      "category": "WEAR",
+      "title": "Gypsy Baron",
+      "description": "Wear full set of gold armor"
+    },
+    {
+      "field": "wearFullGoldChainmail",
+      "code": "WEAR_FULL_GOLD_CHAINMAIL",
+      "category": "WEAR",
+      "title": "Worst Armor",
+      "description": "Wear full set of gold chainmail"
+    },
+    {
+      "field": "wearFullAlloySteel",
+      "code": "WEAR_FULL_ALLOY_STEEL",
+      "category": "WEAR",
+      "title": "Still not Valyrian",
+      "description": "Wear full set of alloy steel armor"
+    },
+    {
+      "field": "wearFullAlloySteelChainmail",
+      "code": "WEAR_FULL_ALLOY_STEEL_CHAINMAIL",
+      "category": "WEAR",
+      "title": "Like iron, but stronger",
+      "description": "Wear full set of alloy steel chainmail"
+    }
+  ]
+}

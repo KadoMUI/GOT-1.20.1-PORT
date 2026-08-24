@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:rhyolite_pillar"
+    }
+  },
+  "result": {
+    "item": "got:rhyolite_pillar_slab",
+    "count": 6
+  }
+}

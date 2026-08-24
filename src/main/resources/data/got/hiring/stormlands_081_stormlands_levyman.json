@@ -1,0 +1,11 @@
+{
+  "roles": [
+    "stormlands_levyman"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 55.0,
+  "pledge_exclusive": false,
+  "initial_cost": 5,
+  "legacy_entity": "GOTEntityStormlandsLevyman",
+  "legacy_group": "STORMLANDS"
+}

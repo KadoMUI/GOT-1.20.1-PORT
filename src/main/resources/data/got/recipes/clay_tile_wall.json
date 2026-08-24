@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:terracotta_roof_tiles"
+    }
+  },
+  "result": {
+    "item": "got:clay_tile_wall",
+    "count": 6
+  }
+}

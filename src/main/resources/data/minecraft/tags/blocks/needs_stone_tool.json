@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "got:tin_ore",
+    "got:deepslate_tin_ore",
+    "got:tin_block",
+    "got:bronze_block",
+    "got:sulfur_ore",
+    "got:saltpeter_ore",
+    "got:salt_ore",
+    "got:glowstone_ore",
+    "got:alloy_forge",
+    "got:oven",
+    "got:millstone"
+  ]
+}

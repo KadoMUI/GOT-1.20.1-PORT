@@ -1,0 +1,48 @@
+{
+  "pass": "Commands/Misc Pass 1 - GOT menu restoration",
+  "buttons_restored": [
+    "Titles",
+    "Alignment",
+    "Settings"
+  ],
+  "titles": {
+    "original_behavior_recovered": [
+      "unlocked title list",
+      "select/remove title",
+      "select text color"
+    ],
+    "modern_unlock_source": "faction rank thresholds already present in port",
+    "persistence": "server player persistent data",
+    "colors": [
+      "white",
+      "gray",
+      "dark_gray",
+      "red",
+      "gold",
+      "yellow",
+      "green",
+      "aqua",
+      "blue",
+      "light_purple"
+    ]
+  },
+  "alignment": {
+    "source": "existing server-authoritative faction alignment sync",
+    "display": "all playable factions sorted by alignment with current rank"
+  },
+  "settings": {
+    "original_options_restored": [
+      "Friendly Fire",
+      "Hired NPC Death Messages",
+      "Show Alignment",
+      "Show Map Location",
+      "Conquest Kills",
+      "Feminine Ranks"
+    ],
+    "additional_existing_port_options": [
+      "Immersive Speech",
+      "Speech in Chat"
+    ],
+    "persistence": "server player persistent data"
+  }
+}

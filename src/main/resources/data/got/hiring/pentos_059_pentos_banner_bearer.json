@@ -1,0 +1,11 @@
+{
+  "roles": [
+    "pentos_banner_bearer"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 60.0,
+  "pledge_exclusive": false,
+  "initial_cost": 10,
+  "legacy_entity": "GOTEntityPentosBannerBearer",
+  "legacy_group": "PENTOS"
+}

@@ -1,0 +1,16 @@
+{
+  "source": "Game of Thrones 24.08.29 en_US.lang",
+  "original_got_keys": 3681,
+  "modern_keys_after_pass": 11432,
+  "original_keys_added": 0,
+  "existing_values_restored_to_original": 17,
+  "modern_values_preserved_intentionally": 6,
+  "original_fellowship_or_pact_related_keys_skipped": 99,
+  "pact_terminology": {
+    "required_term_singular": "Pact",
+    "required_term_plural": "Pacts",
+    "legacy_fellowship_gui_alias": "Pacts",
+    "current_pact_gui": "Pacts"
+  },
+  "remaining_placeholder_like_values": {}
+}

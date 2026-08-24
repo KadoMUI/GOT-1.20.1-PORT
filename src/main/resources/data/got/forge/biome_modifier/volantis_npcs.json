@@ -1,0 +1,5 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#got:spawns_volantis_npcs",
+  "spawners": [{ "type": "got:volantis_npc", "weight": 10, "minCount": 1, "maxCount": 2 }]
+}

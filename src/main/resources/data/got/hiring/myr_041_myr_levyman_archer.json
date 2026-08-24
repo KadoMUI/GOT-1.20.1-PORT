@@ -1,0 +1,11 @@
+{
+  "roles": [
+    "myr_levyman_archer"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 55.0,
+  "pledge_exclusive": false,
+  "initial_cost": 10,
+  "legacy_entity": "GOTEntityMyrLevymanArcher",
+  "legacy_group": "MYR"
+}

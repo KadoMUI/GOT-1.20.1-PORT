@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:cracked_red_bricks"
+  },
+  "result": "got:cracked_brick_slab",
+  "count": 2
+}

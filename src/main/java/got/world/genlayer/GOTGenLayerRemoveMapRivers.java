@@ -1,0 +1,1 @@
+package got.world.genlayer; public class GOTGenLayerRemoveMapRivers extends GOTGenLayer {public GOTGenLayerRemoveMapRivers(long s,GOTGenLayer p){super(s);gotParent=p;}public int[] getInts(int x,int z,int w,int h){int[] o=gotParent.getInts(x,z,w,h);for(int i=0;i<o.length;i++)if(GOTBiomeMapData.isRiver(o[i]))o[i]=GOTBiomeMapData.fallbackLand();return o;}}

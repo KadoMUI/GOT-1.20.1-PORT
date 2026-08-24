@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "got:item/drinks/mug_poppy_milk_ceramic_mug"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "title": "quest.got.stormlands_supplies.title", "description": "quest.got.stormlands_supplies.description",
+  "offer": "quest.got.stormlands_supplies.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.stormlands_supplies.complete",
+  "icon": "minecraft:oak_log", "color": "#4D673E", "weight": 5, "repeatable": true, "cooldown_ticks": 24000,
+  "giver": { "factions": ["stormlands"], "roles": ["stormlands_man", "stormlands_farmhand"], "maximum_active_for_faction": 5 },
+  "objectives": [{ "type": "collect", "target": "minecraft:oak_log", "count": 20, "consume": true, "label": "quest.got.stormlands_supplies.objective.0" }],
+  "rewards": { "alignment": { "stormlands": 8.0 }, "coins": 16, "experience": 10 }
+}

@@ -1,0 +1,17 @@
+{
+  "source": "Game of Thrones 24.08.29",
+  "classes": [
+    "GOTMiniQuest",
+    "GOTMiniQuestBounty",
+    "GOTMiniQuestCollect",
+    "GOTMiniQuestCollectBase",
+    "GOTMiniQuestEvent",
+    "GOTMiniQuestFactory",
+    "GOTMiniQuestKill",
+    "GOTMiniQuestKillEntity",
+    "GOTMiniQuestKillFaction",
+    "GOTMiniQuestPickpocket",
+    "GOTMiniQuestSelector",
+    "GOTMiniQuestWelcome"
+  ]
+}

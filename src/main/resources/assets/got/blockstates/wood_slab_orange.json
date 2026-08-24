@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/wood_slab_orange"
+    },
+    "type=double": {
+      "model": "got:block/orange_planks"
+    },
+    "type=top": {
+      "model": "got:block/wood_slab_orange_top"
+    }
+  }
+}

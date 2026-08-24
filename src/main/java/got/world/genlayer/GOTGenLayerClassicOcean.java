@@ -1,0 +1,1 @@
+package got.world.genlayer; public class GOTGenLayerClassicOcean extends GOTGenLayer {public GOTGenLayerClassicOcean(long s){super(s);}public int[] getInts(int x,int z,int w,int h){int[] o=new int[w*h];for(int dz=0;dz<h;dz++)for(int dx=0;dx<w;dx++){initChunkSeed(x+dx,z+dz);o[dx+dz*w]=nextInt(10)==0?0:1;}return o;}}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "minecraft:block/obsidian",
+    "front": "got:block/sarbacane_trap_obsidian_face",
+    "side": "minecraft:block/obsidian"
+  }
+}

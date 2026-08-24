@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "got:block/wood_beam2_holly_top",
+    "side": "got:block/wood_beam2_holly_side"
+  }
+}

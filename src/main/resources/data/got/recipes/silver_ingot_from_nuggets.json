@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "got:silver_nugget"
+    }
+  },
+  "result": {
+    "item": "got:silver_ingot",
+    "count": 1
+  }
+}

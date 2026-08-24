@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:labradorite"
+  },
+  "result": "got:labradorite_wall",
+  "count": 1
+}

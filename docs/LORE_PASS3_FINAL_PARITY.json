@@ -1,0 +1,33 @@
+{
+  "system": "Lore",
+  "status": "framework_and_original_corpus_ported",
+  "original_text_files": 502,
+  "parsed_catalog_entries": 502,
+  "rewardable_entries_detected": 0,
+  "categories": {
+    "de": 21,
+    "en": 21,
+    "fr": 97,
+    "pl": 21,
+    "ru": 146,
+    "tr": 21,
+    "uk": 145,
+    "zh": 30
+  },
+  "complete": [
+    "original lore text corpus preserved",
+    "metadata parser for proven original directives",
+    "category manifest",
+    "runtime resource registry",
+    "per-player discovery persistence",
+    "discovery notification hook",
+    "rewardable-entry persistence hook",
+    "client lore view model",
+    "localization/presentation hooks"
+  ],
+  "not_invented": [
+    "reward type/value where not proven",
+    "unlock trigger for entries where not proven",
+    "formatting semantics beyond recovered directives"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "render_type": "cutout",
+  "textures": {
+    "bottom": "got:block/door_mahogany_lower",
+    "top": "got:block/door_mahogany_upper"
+  }
+}

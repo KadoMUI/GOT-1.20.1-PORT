@@ -1,0 +1,39 @@
+{
+  "source": "Game of Thrones 24.08.29",
+  "reforge_call": "applyRandomEnchantments(stack, random, true, true)",
+  "modifier_count_distribution": {
+    "2_modifiers": 0.15,
+    "1_modifier": 0.65,
+    "0_modifiers": 0.2
+  },
+  "eligible_random_modifiers": 45,
+  "excluded_zero_weight_specials": [
+    "FIRE",
+    "CHILL",
+    "HEADHUNTING"
+  ],
+  "harmful_modifiers_restored": [
+    "WEAK_1",
+    "WEAK_2",
+    "WEAK_3",
+    "MELEE_SLOW_1",
+    "MELEE_UNREACH_1",
+    "TOOL_SLOW_1",
+    "PROTECT_WEAK_1",
+    "PROTECT_WEAK_2",
+    "RANGED_WEAK_1",
+    "RANGED_WEAK_2"
+  ],
+  "cost_rule": {
+    "base_non_armor": 2,
+    "base_armor": 3,
+    "damage_surcharge": "one matching material per quarter-durability repair step"
+  },
+  "other_original_behavior": [
+    "repairs item to full durability",
+    "clears/replaces previous GOT modifiers",
+    "resets GOTRepairCost to 0",
+    "awards REFORGE / Second life achievement",
+    "server-authoritative button action"
+  ]
+}

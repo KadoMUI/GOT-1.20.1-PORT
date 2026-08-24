@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "got:block/millstone"
+    },
+    "facing=east": {
+      "model": "got:block/millstone",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "got:block/millstone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "got:block/millstone",
+      "y": 270
+    }
+  }
+}

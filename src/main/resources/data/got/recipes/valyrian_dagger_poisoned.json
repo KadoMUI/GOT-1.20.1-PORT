@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "got:valyrian_dagger"
+    },
+    {
+      "item": "got:bottle_poison"
+    }
+  ],
+  "result": {
+    "item": "got:valyrian_dagger_poisoned"
+  }
+}

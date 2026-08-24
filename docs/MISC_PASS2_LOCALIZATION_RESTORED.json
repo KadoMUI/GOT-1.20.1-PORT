@@ -1,0 +1,70 @@
+{
+  "got.achievement.ENGRAVE_OWNERSHIP.desc": {
+    "before": "Engrave your ownership onto an item",
+    "after": "Take the owner's name off the item"
+  },
+  "got.achievement.ENGRAVE_OWNERSHIP.title": {
+    "before": "Mine!",
+    "after": "The fate of Ehnaton"
+  },
+  "got.achievement.category.ENTER": {
+    "before": "Exploration",
+    "after": "Biomes"
+  },
+  "got.achievement.category.WEAR": {
+    "before": "Equipment",
+    "after": "Armor"
+  },
+  "got.enchant.protectWeak1": {
+    "before": "Thin",
+    "after": "Shattered I"
+  },
+  "got.enchant.protectWeak2": {
+    "before": "Shattered",
+    "after": "Shattered II"
+  },
+  "got.enchant.rangedWeak1": {
+    "before": "Weak",
+    "after": "Weak I"
+  },
+  "got.enchant.rangedWeak2": {
+    "before": "Feeble",
+    "after": "Weak II"
+  },
+  "got.enchant.toolSlow1": {
+    "before": "Cumbersome",
+    "after": "Inconvenient"
+  },
+  "got.enchant.weak1": {
+    "before": "Bent",
+    "after": "Bent I"
+  },
+  "got.enchant.weak2": {
+    "before": "Dull",
+    "after": "Bent II"
+  },
+  "got.enchant.weak3": {
+    "before": "Blunt",
+    "after": "Bent III"
+  },
+  "got.gui.redBook.page.miniquests": {
+    "before": "Miniquests",
+    "after": "Mini-Quests"
+  },
+  "got.gui.titles.currentTitle": {
+    "before": "Current Title: %s",
+    "after": "Current title: %s"
+  },
+  "got.gui.titles.remove": {
+    "before": "Remove",
+    "after": "Remove Title"
+  },
+  "got.gui.titles.select": {
+    "before": "Select",
+    "after": "Select Title"
+  },
+  "got.menu.title": {
+    "before": "Game of Thrones",
+    "after": "Game of Thrones Mod: Bringing the World of Ice and Fire to Minecraft"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "got:valyrian_steel_ingot"
+    }
+  },
+  "result": {
+    "item": "got:valyrian_steel_block",
+    "count": 1
+  }
+}

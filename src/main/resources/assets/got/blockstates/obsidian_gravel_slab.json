@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/obsidian_gravel_slab"
+    },
+    "type=double": {
+      "model": "got:block/obsidian_gravel"
+    },
+    "type=top": {
+      "model": "got:block/obsidian_gravel_slab_top"
+    }
+  }
+}

@@ -1,0 +1,3317 @@
+{
+  "source": "Game of Thrones 24.08.29",
+  "entries": [
+    {
+      "path": "got/common/GOTLore$LoreCategory.class",
+      "extension": ".class",
+      "basename": "GOTLore$LoreCategory",
+      "kind": "class"
+    },
+    {
+      "path": "got/common/GOTLore.class",
+      "extension": ".class",
+      "basename": "GOTLore",
+      "kind": "class"
+    },
+    {
+      "path": "assets/got/texts/de/lore/",
+      "extension": "",
+      "basename": "lore",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/arryn.txt",
+      "extension": ".txt",
+      "basename": "arryn",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/asshai.txt",
+      "extension": ".txt",
+      "basename": "asshai",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/braavos.txt",
+      "extension": ".txt",
+      "basename": "braavos",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/crownlands.txt",
+      "extension": ".txt",
+      "basename": "crownlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/dorne.txt",
+      "extension": ".txt",
+      "basename": "dorne",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/dragonstone.txt",
+      "extension": ".txt",
+      "basename": "dragonstone",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/ibben.txt",
+      "extension": ".txt",
+      "basename": "ibben",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/lorath.txt",
+      "extension": ".txt",
+      "basename": "lorath",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/lys.txt",
+      "extension": ".txt",
+      "basename": "lys",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/myr.txt",
+      "extension": ".txt",
+      "basename": "myr",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/north.txt",
+      "extension": ".txt",
+      "basename": "north",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/pentos.txt",
+      "extension": ".txt",
+      "basename": "pentos",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/qohor.txt",
+      "extension": ".txt",
+      "basename": "qohor",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/reach.txt",
+      "extension": ".txt",
+      "basename": "reach",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/riverlands.txt",
+      "extension": ".txt",
+      "basename": "riverlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/sothoryos.txt",
+      "extension": ".txt",
+      "basename": "sothoryos",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/stormlands.txt",
+      "extension": ".txt",
+      "basename": "stormlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/tyrosh.txt",
+      "extension": ".txt",
+      "basename": "tyrosh",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/volantis.txt",
+      "extension": ".txt",
+      "basename": "volantis",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/westerlands.txt",
+      "extension": ".txt",
+      "basename": "westerlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/de/lore/yi_ti.txt",
+      "extension": ".txt",
+      "basename": "yi_ti",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/",
+      "extension": "",
+      "basename": "lore",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/arryn.txt",
+      "extension": ".txt",
+      "basename": "arryn",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/asshai.txt",
+      "extension": ".txt",
+      "basename": "asshai",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/braavos.txt",
+      "extension": ".txt",
+      "basename": "braavos",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/crownlands.txt",
+      "extension": ".txt",
+      "basename": "crownlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/dorne.txt",
+      "extension": ".txt",
+      "basename": "dorne",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/dragonstone.txt",
+      "extension": ".txt",
+      "basename": "dragonstone",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/ibben.txt",
+      "extension": ".txt",
+      "basename": "ibben",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/lorath.txt",
+      "extension": ".txt",
+      "basename": "lorath",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/lys.txt",
+      "extension": ".txt",
+      "basename": "lys",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/myr.txt",
+      "extension": ".txt",
+      "basename": "myr",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/north.txt",
+      "extension": ".txt",
+      "basename": "north",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/pentos.txt",
+      "extension": ".txt",
+      "basename": "pentos",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/qohor.txt",
+      "extension": ".txt",
+      "basename": "qohor",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/reach.txt",
+      "extension": ".txt",
+      "basename": "reach",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/riverlands.txt",
+      "extension": ".txt",
+      "basename": "riverlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/sothoryos.txt",
+      "extension": ".txt",
+      "basename": "sothoryos",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/stormlands.txt",
+      "extension": ".txt",
+      "basename": "stormlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/tyrosh.txt",
+      "extension": ".txt",
+      "basename": "tyrosh",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/volantis.txt",
+      "extension": ".txt",
+      "basename": "volantis",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/westerlands.txt",
+      "extension": ".txt",
+      "basename": "westerlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/en/lore/yi_ti.txt",
+      "extension": ".txt",
+      "basename": "yi_ti",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/",
+      "extension": "",
+      "basename": "lore",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/alchemy_0.txt",
+      "extension": ".txt",
+      "basename": "alchemy_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/alchemy_1.txt",
+      "extension": ".txt",
+      "basename": "alchemy_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/alchemy_2.txt",
+      "extension": ".txt",
+      "basename": "alchemy_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/alchemy_3.txt",
+      "extension": ".txt",
+      "basename": "alchemy_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_0.txt",
+      "extension": ".txt",
+      "basename": "creatures_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_1.txt",
+      "extension": ".txt",
+      "basename": "creatures_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_10.txt",
+      "extension": ".txt",
+      "basename": "creatures_10",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_11.txt",
+      "extension": ".txt",
+      "basename": "creatures_11",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_12.txt",
+      "extension": ".txt",
+      "basename": "creatures_12",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_13.txt",
+      "extension": ".txt",
+      "basename": "creatures_13",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_14.txt",
+      "extension": ".txt",
+      "basename": "creatures_14",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_15.txt",
+      "extension": ".txt",
+      "basename": "creatures_15",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_2.txt",
+      "extension": ".txt",
+      "basename": "creatures_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_3.txt",
+      "extension": ".txt",
+      "basename": "creatures_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_4.txt",
+      "extension": ".txt",
+      "basename": "creatures_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_5.txt",
+      "extension": ".txt",
+      "basename": "creatures_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_6.txt",
+      "extension": ".txt",
+      "basename": "creatures_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_7.txt",
+      "extension": ".txt",
+      "basename": "creatures_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_8.txt",
+      "extension": ".txt",
+      "basename": "creatures_8",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/creatures_9.txt",
+      "extension": ".txt",
+      "basename": "creatures_9",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/legends_0.txt",
+      "extension": ".txt",
+      "basename": "legends_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/legends_1.txt",
+      "extension": ".txt",
+      "basename": "legends_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/legends_2.txt",
+      "extension": ".txt",
+      "basename": "legends_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/legends_3.txt",
+      "extension": ".txt",
+      "basename": "legends_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/legends_4.txt",
+      "extension": ".txt",
+      "basename": "legends_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_0.txt",
+      "extension": ".txt",
+      "basename": "letters_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_1.txt",
+      "extension": ".txt",
+      "basename": "letters_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_10.txt",
+      "extension": ".txt",
+      "basename": "letters_10",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_11.txt",
+      "extension": ".txt",
+      "basename": "letters_11",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_12.txt",
+      "extension": ".txt",
+      "basename": "letters_12",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_13.txt",
+      "extension": ".txt",
+      "basename": "letters_13",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_14.txt",
+      "extension": ".txt",
+      "basename": "letters_14",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_15.txt",
+      "extension": ".txt",
+      "basename": "letters_15",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_16.txt",
+      "extension": ".txt",
+      "basename": "letters_16",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_17.txt",
+      "extension": ".txt",
+      "basename": "letters_17",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_18.txt",
+      "extension": ".txt",
+      "basename": "letters_18",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_19.txt",
+      "extension": ".txt",
+      "basename": "letters_19",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_2.txt",
+      "extension": ".txt",
+      "basename": "letters_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_20.txt",
+      "extension": ".txt",
+      "basename": "letters_20",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_21.txt",
+      "extension": ".txt",
+      "basename": "letters_21",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_22.txt",
+      "extension": ".txt",
+      "basename": "letters_22",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_23.txt",
+      "extension": ".txt",
+      "basename": "letters_23",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_24.txt",
+      "extension": ".txt",
+      "basename": "letters_24",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_25.txt",
+      "extension": ".txt",
+      "basename": "letters_25",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_26.txt",
+      "extension": ".txt",
+      "basename": "letters_26",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_27.txt",
+      "extension": ".txt",
+      "basename": "letters_27",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_28.txt",
+      "extension": ".txt",
+      "basename": "letters_28",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_29.txt",
+      "extension": ".txt",
+      "basename": "letters_29",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_3.txt",
+      "extension": ".txt",
+      "basename": "letters_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_4.txt",
+      "extension": ".txt",
+      "basename": "letters_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_5.txt",
+      "extension": ".txt",
+      "basename": "letters_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_6.txt",
+      "extension": ".txt",
+      "basename": "letters_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_7.txt",
+      "extension": ".txt",
+      "basename": "letters_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_8.txt",
+      "extension": ".txt",
+      "basename": "letters_8",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/letters_9.txt",
+      "extension": ".txt",
+      "basename": "letters_9",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/magic_0.txt",
+      "extension": ".txt",
+      "basename": "magic_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/magic_1.txt",
+      "extension": ".txt",
+      "basename": "magic_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/magic_2.txt",
+      "extension": ".txt",
+      "basename": "magic_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/magic_3.txt",
+      "extension": ".txt",
+      "basename": "magic_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/magic_4.txt",
+      "extension": ".txt",
+      "basename": "magic_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/magic_5.txt",
+      "extension": ".txt",
+      "basename": "magic_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/magic_6.txt",
+      "extension": ".txt",
+      "basename": "magic_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/magic_7.txt",
+      "extension": ".txt",
+      "basename": "magic_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/medic_1.txt",
+      "extension": ".txt",
+      "basename": "medic_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/medic_2.txt",
+      "extension": ".txt",
+      "basename": "medic_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/medic_3.txt",
+      "extension": ".txt",
+      "basename": "medic_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/medic_4.txt",
+      "extension": ".txt",
+      "basename": "medic_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/medic_5.txt",
+      "extension": ".txt",
+      "basename": "medic_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/medic_6.txt",
+      "extension": ".txt",
+      "basename": "medic_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/medic_7.txt",
+      "extension": ".txt",
+      "basename": "medic_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/organization_0.txt",
+      "extension": ".txt",
+      "basename": "organization_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/organization_1.txt",
+      "extension": ".txt",
+      "basename": "organization_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/organization_2.txt",
+      "extension": ".txt",
+      "basename": "organization_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/organization_3.txt",
+      "extension": ".txt",
+      "basename": "organization_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/organization_4.txt",
+      "extension": ".txt",
+      "basename": "organization_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/organization_5.txt",
+      "extension": ".txt",
+      "basename": "organization_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/organization_6.txt",
+      "extension": ".txt",
+      "basename": "organization_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/organization_7.txt",
+      "extension": ".txt",
+      "basename": "organization_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/religion_0.txt",
+      "extension": ".txt",
+      "basename": "religion_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/religion_1.txt",
+      "extension": ".txt",
+      "basename": "religion_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/religion_10.txt",
+      "extension": ".txt",
+      "basename": "religion_10",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/religion_11.txt",
+      "extension": ".txt",
+      "basename": "religion_11",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/religion_12.txt",
+      "extension": ".txt",
+      "basename": "religion_12",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/religion_13.txt",
+      "extension": ".txt",
+      "basename": "religion_13",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/religion_2.txt",
+      "extension": ".txt",
+      "basename": "religion_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/religion_3.txt",
+      "extension": ".txt",
+      "basename": "religion_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/religion_4.txt",
+      "extension": ".txt",
+      "basename": "religion_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/religion_5.txt",
+      "extension": ".txt",
+      "basename": "religion_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/religion_6.txt",
+      "extension": ".txt",
+      "basename": "religion_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/religion_7.txt",
+      "extension": ".txt",
+      "basename": "religion_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/religion_8.txt",
+      "extension": ".txt",
+      "basename": "religion_8",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/religion_9.txt",
+      "extension": ".txt",
+      "basename": "religion_9",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/songs_0.txt",
+      "extension": ".txt",
+      "basename": "songs_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/songs_1.txt",
+      "extension": ".txt",
+      "basename": "songs_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/sothoryos_0.txt",
+      "extension": ".txt",
+      "basename": "sothoryos_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/sothoryos_1.txt",
+      "extension": ".txt",
+      "basename": "sothoryos_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/fr/lore/stannis_0.txt",
+      "extension": ".txt",
+      "basename": "stannis_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/",
+      "extension": "",
+      "basename": "lore",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/arryn.txt",
+      "extension": ".txt",
+      "basename": "arryn",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/asshai.txt",
+      "extension": ".txt",
+      "basename": "asshai",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/braavos.txt",
+      "extension": ".txt",
+      "basename": "braavos",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/crownlands.txt",
+      "extension": ".txt",
+      "basename": "crownlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/dorne.txt",
+      "extension": ".txt",
+      "basename": "dorne",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/dragonstone.txt",
+      "extension": ".txt",
+      "basename": "dragonstone",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/ibben.txt",
+      "extension": ".txt",
+      "basename": "ibben",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/lorath.txt",
+      "extension": ".txt",
+      "basename": "lorath",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/lys.txt",
+      "extension": ".txt",
+      "basename": "lys",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/myr.txt",
+      "extension": ".txt",
+      "basename": "myr",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/north.txt",
+      "extension": ".txt",
+      "basename": "north",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/pentos.txt",
+      "extension": ".txt",
+      "basename": "pentos",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/qohor.txt",
+      "extension": ".txt",
+      "basename": "qohor",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/reach.txt",
+      "extension": ".txt",
+      "basename": "reach",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/riverlands.txt",
+      "extension": ".txt",
+      "basename": "riverlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/sothoryos.txt",
+      "extension": ".txt",
+      "basename": "sothoryos",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/stormlands.txt",
+      "extension": ".txt",
+      "basename": "stormlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/tyrosh.txt",
+      "extension": ".txt",
+      "basename": "tyrosh",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/volantis.txt",
+      "extension": ".txt",
+      "basename": "volantis",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/westerlands.txt",
+      "extension": ".txt",
+      "basename": "westerlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/pl/lore/yi_ti.txt",
+      "extension": ".txt",
+      "basename": "yi_ti",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/",
+      "extension": "",
+      "basename": "lore",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/alchemy_0.txt",
+      "extension": ".txt",
+      "basename": "alchemy_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/alchemy_1.txt",
+      "extension": ".txt",
+      "basename": "alchemy_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/alchemy_2.txt",
+      "extension": ".txt",
+      "basename": "alchemy_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/alchemy_3.txt",
+      "extension": ".txt",
+      "basename": "alchemy_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_0.txt",
+      "extension": ".txt",
+      "basename": "creatures_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_1.txt",
+      "extension": ".txt",
+      "basename": "creatures_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_10.txt",
+      "extension": ".txt",
+      "basename": "creatures_10",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_11.txt",
+      "extension": ".txt",
+      "basename": "creatures_11",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_12.txt",
+      "extension": ".txt",
+      "basename": "creatures_12",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_13.txt",
+      "extension": ".txt",
+      "basename": "creatures_13",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_14.txt",
+      "extension": ".txt",
+      "basename": "creatures_14",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_15.txt",
+      "extension": ".txt",
+      "basename": "creatures_15",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_2.txt",
+      "extension": ".txt",
+      "basename": "creatures_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_3.txt",
+      "extension": ".txt",
+      "basename": "creatures_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_4.txt",
+      "extension": ".txt",
+      "basename": "creatures_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_5.txt",
+      "extension": ".txt",
+      "basename": "creatures_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_6.txt",
+      "extension": ".txt",
+      "basename": "creatures_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_7.txt",
+      "extension": ".txt",
+      "basename": "creatures_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_8.txt",
+      "extension": ".txt",
+      "basename": "creatures_8",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/creatures_9.txt",
+      "extension": ".txt",
+      "basename": "creatures_9",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/legends_0.txt",
+      "extension": ".txt",
+      "basename": "legends_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/legends_1.txt",
+      "extension": ".txt",
+      "basename": "legends_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/legends_2.txt",
+      "extension": ".txt",
+      "basename": "legends_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/legends_3.txt",
+      "extension": ".txt",
+      "basename": "legends_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/legends_4.txt",
+      "extension": ".txt",
+      "basename": "legends_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_0.txt",
+      "extension": ".txt",
+      "basename": "letters_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_1.txt",
+      "extension": ".txt",
+      "basename": "letters_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_10.txt",
+      "extension": ".txt",
+      "basename": "letters_10",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_11.txt",
+      "extension": ".txt",
+      "basename": "letters_11",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_12.txt",
+      "extension": ".txt",
+      "basename": "letters_12",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_13.txt",
+      "extension": ".txt",
+      "basename": "letters_13",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_14.txt",
+      "extension": ".txt",
+      "basename": "letters_14",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_15.txt",
+      "extension": ".txt",
+      "basename": "letters_15",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_16.txt",
+      "extension": ".txt",
+      "basename": "letters_16",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_17.txt",
+      "extension": ".txt",
+      "basename": "letters_17",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_18.txt",
+      "extension": ".txt",
+      "basename": "letters_18",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_19.txt",
+      "extension": ".txt",
+      "basename": "letters_19",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_2.txt",
+      "extension": ".txt",
+      "basename": "letters_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_20.txt",
+      "extension": ".txt",
+      "basename": "letters_20",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_21.txt",
+      "extension": ".txt",
+      "basename": "letters_21",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_22.txt",
+      "extension": ".txt",
+      "basename": "letters_22",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_23.txt",
+      "extension": ".txt",
+      "basename": "letters_23",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_24.txt",
+      "extension": ".txt",
+      "basename": "letters_24",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_25.txt",
+      "extension": ".txt",
+      "basename": "letters_25",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_26.txt",
+      "extension": ".txt",
+      "basename": "letters_26",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_27.txt",
+      "extension": ".txt",
+      "basename": "letters_27",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_28.txt",
+      "extension": ".txt",
+      "basename": "letters_28",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_29.txt",
+      "extension": ".txt",
+      "basename": "letters_29",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_3.txt",
+      "extension": ".txt",
+      "basename": "letters_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_30.txt",
+      "extension": ".txt",
+      "basename": "letters_30",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_31.txt",
+      "extension": ".txt",
+      "basename": "letters_31",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_32.txt",
+      "extension": ".txt",
+      "basename": "letters_32",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_33.txt",
+      "extension": ".txt",
+      "basename": "letters_33",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_34.txt",
+      "extension": ".txt",
+      "basename": "letters_34",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_35.txt",
+      "extension": ".txt",
+      "basename": "letters_35",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_36.txt",
+      "extension": ".txt",
+      "basename": "letters_36",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_38.txt",
+      "extension": ".txt",
+      "basename": "letters_38",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_4.txt",
+      "extension": ".txt",
+      "basename": "letters_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_40.txt",
+      "extension": ".txt",
+      "basename": "letters_40",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_41.txt",
+      "extension": ".txt",
+      "basename": "letters_41",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_42.txt",
+      "extension": ".txt",
+      "basename": "letters_42",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_43.txt",
+      "extension": ".txt",
+      "basename": "letters_43",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_44.txt",
+      "extension": ".txt",
+      "basename": "letters_44",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_45.txt",
+      "extension": ".txt",
+      "basename": "letters_45",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_46.txt",
+      "extension": ".txt",
+      "basename": "letters_46",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_47.txt",
+      "extension": ".txt",
+      "basename": "letters_47",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_48.txt",
+      "extension": ".txt",
+      "basename": "letters_48",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_49.txt",
+      "extension": ".txt",
+      "basename": "letters_49",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_5.txt",
+      "extension": ".txt",
+      "basename": "letters_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_50.txt",
+      "extension": ".txt",
+      "basename": "letters_50",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_51.txt",
+      "extension": ".txt",
+      "basename": "letters_51",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_52.txt",
+      "extension": ".txt",
+      "basename": "letters_52",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_53.txt",
+      "extension": ".txt",
+      "basename": "letters_53",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_54.txt",
+      "extension": ".txt",
+      "basename": "letters_54",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_55.txt",
+      "extension": ".txt",
+      "basename": "letters_55",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_56.txt",
+      "extension": ".txt",
+      "basename": "letters_56",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_57.txt",
+      "extension": ".txt",
+      "basename": "letters_57",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_58.txt",
+      "extension": ".txt",
+      "basename": "letters_58",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_59.txt",
+      "extension": ".txt",
+      "basename": "letters_59",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_6.txt",
+      "extension": ".txt",
+      "basename": "letters_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_60.txt",
+      "extension": ".txt",
+      "basename": "letters_60",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_61.txt",
+      "extension": ".txt",
+      "basename": "letters_61",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_62.txt",
+      "extension": ".txt",
+      "basename": "letters_62",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_63.txt",
+      "extension": ".txt",
+      "basename": "letters_63",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_64.txt",
+      "extension": ".txt",
+      "basename": "letters_64",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_65.txt",
+      "extension": ".txt",
+      "basename": "letters_65",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_66.txt",
+      "extension": ".txt",
+      "basename": "letters_66",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_67.txt",
+      "extension": ".txt",
+      "basename": "letters_67",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_68.txt",
+      "extension": ".txt",
+      "basename": "letters_68",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_69.txt",
+      "extension": ".txt",
+      "basename": "letters_69",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_7.txt",
+      "extension": ".txt",
+      "basename": "letters_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_70.txt",
+      "extension": ".txt",
+      "basename": "letters_70",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_71.txt",
+      "extension": ".txt",
+      "basename": "letters_71",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_72.txt",
+      "extension": ".txt",
+      "basename": "letters_72",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_73.txt",
+      "extension": ".txt",
+      "basename": "letters_73",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_74.txt",
+      "extension": ".txt",
+      "basename": "letters_74",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_75.txt",
+      "extension": ".txt",
+      "basename": "letters_75",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_76.txt",
+      "extension": ".txt",
+      "basename": "letters_76",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_77.txt",
+      "extension": ".txt",
+      "basename": "letters_77",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_78.txt",
+      "extension": ".txt",
+      "basename": "letters_78",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_79.txt",
+      "extension": ".txt",
+      "basename": "letters_79",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_8.txt",
+      "extension": ".txt",
+      "basename": "letters_8",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_80.txt",
+      "extension": ".txt",
+      "basename": "letters_80",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/letters_9.txt",
+      "extension": ".txt",
+      "basename": "letters_9",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/magic_0.txt",
+      "extension": ".txt",
+      "basename": "magic_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/magic_1.txt",
+      "extension": ".txt",
+      "basename": "magic_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/magic_2.txt",
+      "extension": ".txt",
+      "basename": "magic_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/magic_3.txt",
+      "extension": ".txt",
+      "basename": "magic_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/magic_4.txt",
+      "extension": ".txt",
+      "basename": "magic_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/magic_5.txt",
+      "extension": ".txt",
+      "basename": "magic_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/magic_6.txt",
+      "extension": ".txt",
+      "basename": "magic_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/magic_7.txt",
+      "extension": ".txt",
+      "basename": "magic_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/medic_1.txt",
+      "extension": ".txt",
+      "basename": "medic_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/medic_2.txt",
+      "extension": ".txt",
+      "basename": "medic_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/medic_3.txt",
+      "extension": ".txt",
+      "basename": "medic_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/medic_4.txt",
+      "extension": ".txt",
+      "basename": "medic_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/medic_5.txt",
+      "extension": ".txt",
+      "basename": "medic_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/medic_6.txt",
+      "extension": ".txt",
+      "basename": "medic_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/medic_7.txt",
+      "extension": ".txt",
+      "basename": "medic_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/organization_0.txt",
+      "extension": ".txt",
+      "basename": "organization_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/organization_1.txt",
+      "extension": ".txt",
+      "basename": "organization_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/organization_2.txt",
+      "extension": ".txt",
+      "basename": "organization_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/organization_3.txt",
+      "extension": ".txt",
+      "basename": "organization_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/organization_4.txt",
+      "extension": ".txt",
+      "basename": "organization_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/organization_5.txt",
+      "extension": ".txt",
+      "basename": "organization_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/organization_6.txt",
+      "extension": ".txt",
+      "basename": "organization_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/organization_7.txt",
+      "extension": ".txt",
+      "basename": "organization_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/religion_0.txt",
+      "extension": ".txt",
+      "basename": "religion_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/religion_1.txt",
+      "extension": ".txt",
+      "basename": "religion_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/religion_10.txt",
+      "extension": ".txt",
+      "basename": "religion_10",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/religion_11.txt",
+      "extension": ".txt",
+      "basename": "religion_11",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/religion_12.txt",
+      "extension": ".txt",
+      "basename": "religion_12",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/religion_13.txt",
+      "extension": ".txt",
+      "basename": "religion_13",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/religion_2.txt",
+      "extension": ".txt",
+      "basename": "religion_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/religion_3.txt",
+      "extension": ".txt",
+      "basename": "religion_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/religion_4.txt",
+      "extension": ".txt",
+      "basename": "religion_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/religion_5.txt",
+      "extension": ".txt",
+      "basename": "religion_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/religion_6.txt",
+      "extension": ".txt",
+      "basename": "religion_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/religion_7.txt",
+      "extension": ".txt",
+      "basename": "religion_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/religion_8.txt",
+      "extension": ".txt",
+      "basename": "religion_8",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/religion_9.txt",
+      "extension": ".txt",
+      "basename": "religion_9",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/songs_0.txt",
+      "extension": ".txt",
+      "basename": "songs_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/songs_1.txt",
+      "extension": ".txt",
+      "basename": "songs_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/sothoryos_0.txt",
+      "extension": ".txt",
+      "basename": "sothoryos_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/sothoryos_1.txt",
+      "extension": ".txt",
+      "basename": "sothoryos_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/ru/lore/stannis_0.txt",
+      "extension": ".txt",
+      "basename": "stannis_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/",
+      "extension": "",
+      "basename": "lore",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/arryn.txt",
+      "extension": ".txt",
+      "basename": "arryn",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/asshai.txt",
+      "extension": ".txt",
+      "basename": "asshai",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/braavos.txt",
+      "extension": ".txt",
+      "basename": "braavos",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/crownlands.txt",
+      "extension": ".txt",
+      "basename": "crownlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/dorne.txt",
+      "extension": ".txt",
+      "basename": "dorne",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/dragonstone.txt",
+      "extension": ".txt",
+      "basename": "dragonstone",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/ibben.txt",
+      "extension": ".txt",
+      "basename": "ibben",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/lorath.txt",
+      "extension": ".txt",
+      "basename": "lorath",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/lys.txt",
+      "extension": ".txt",
+      "basename": "lys",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/myr.txt",
+      "extension": ".txt",
+      "basename": "myr",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/north.txt",
+      "extension": ".txt",
+      "basename": "north",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/pentos.txt",
+      "extension": ".txt",
+      "basename": "pentos",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/qohor.txt",
+      "extension": ".txt",
+      "basename": "qohor",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/reach.txt",
+      "extension": ".txt",
+      "basename": "reach",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/riverlands.txt",
+      "extension": ".txt",
+      "basename": "riverlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/sothoryos.txt",
+      "extension": ".txt",
+      "basename": "sothoryos",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/stormlands.txt",
+      "extension": ".txt",
+      "basename": "stormlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/tyrosh.txt",
+      "extension": ".txt",
+      "basename": "tyrosh",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/volantis.txt",
+      "extension": ".txt",
+      "basename": "volantis",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/westerlands.txt",
+      "extension": ".txt",
+      "basename": "westerlands",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/tr/lore/yi_ti.txt",
+      "extension": ".txt",
+      "basename": "yi_ti",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/",
+      "extension": "",
+      "basename": "lore",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/alchemy_0.txt",
+      "extension": ".txt",
+      "basename": "alchemy_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/alchemy_1.txt",
+      "extension": ".txt",
+      "basename": "alchemy_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/alchemy_2.txt",
+      "extension": ".txt",
+      "basename": "alchemy_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/alchemy_3.txt",
+      "extension": ".txt",
+      "basename": "alchemy_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_0.txt",
+      "extension": ".txt",
+      "basename": "creatures_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_1.txt",
+      "extension": ".txt",
+      "basename": "creatures_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_10.txt",
+      "extension": ".txt",
+      "basename": "creatures_10",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_11.txt",
+      "extension": ".txt",
+      "basename": "creatures_11",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_12.txt",
+      "extension": ".txt",
+      "basename": "creatures_12",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_13.txt",
+      "extension": ".txt",
+      "basename": "creatures_13",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_14.txt",
+      "extension": ".txt",
+      "basename": "creatures_14",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_15.txt",
+      "extension": ".txt",
+      "basename": "creatures_15",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_2.txt",
+      "extension": ".txt",
+      "basename": "creatures_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_3.txt",
+      "extension": ".txt",
+      "basename": "creatures_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_4.txt",
+      "extension": ".txt",
+      "basename": "creatures_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_5.txt",
+      "extension": ".txt",
+      "basename": "creatures_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_6.txt",
+      "extension": ".txt",
+      "basename": "creatures_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_7.txt",
+      "extension": ".txt",
+      "basename": "creatures_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_8.txt",
+      "extension": ".txt",
+      "basename": "creatures_8",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/creatures_9.txt",
+      "extension": ".txt",
+      "basename": "creatures_9",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/legends_0.txt",
+      "extension": ".txt",
+      "basename": "legends_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/legends_1.txt",
+      "extension": ".txt",
+      "basename": "legends_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/legends_2.txt",
+      "extension": ".txt",
+      "basename": "legends_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/legends_3.txt",
+      "extension": ".txt",
+      "basename": "legends_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/legends_4.txt",
+      "extension": ".txt",
+      "basename": "legends_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_0.txt",
+      "extension": ".txt",
+      "basename": "letters_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_1.txt",
+      "extension": ".txt",
+      "basename": "letters_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_10.txt",
+      "extension": ".txt",
+      "basename": "letters_10",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_11.txt",
+      "extension": ".txt",
+      "basename": "letters_11",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_12.txt",
+      "extension": ".txt",
+      "basename": "letters_12",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_13.txt",
+      "extension": ".txt",
+      "basename": "letters_13",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_14.txt",
+      "extension": ".txt",
+      "basename": "letters_14",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_15.txt",
+      "extension": ".txt",
+      "basename": "letters_15",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_16.txt",
+      "extension": ".txt",
+      "basename": "letters_16",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_17.txt",
+      "extension": ".txt",
+      "basename": "letters_17",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_18.txt",
+      "extension": ".txt",
+      "basename": "letters_18",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_19.txt",
+      "extension": ".txt",
+      "basename": "letters_19",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_2.txt",
+      "extension": ".txt",
+      "basename": "letters_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_20.txt",
+      "extension": ".txt",
+      "basename": "letters_20",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_21.txt",
+      "extension": ".txt",
+      "basename": "letters_21",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_22.txt",
+      "extension": ".txt",
+      "basename": "letters_22",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_23.txt",
+      "extension": ".txt",
+      "basename": "letters_23",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_24.txt",
+      "extension": ".txt",
+      "basename": "letters_24",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_25.txt",
+      "extension": ".txt",
+      "basename": "letters_25",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_26.txt",
+      "extension": ".txt",
+      "basename": "letters_26",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_27.txt",
+      "extension": ".txt",
+      "basename": "letters_27",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_28.txt",
+      "extension": ".txt",
+      "basename": "letters_28",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_29.txt",
+      "extension": ".txt",
+      "basename": "letters_29",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_3.txt",
+      "extension": ".txt",
+      "basename": "letters_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_30.txt",
+      "extension": ".txt",
+      "basename": "letters_30",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_31.txt",
+      "extension": ".txt",
+      "basename": "letters_31",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_32.txt",
+      "extension": ".txt",
+      "basename": "letters_32",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_33.txt",
+      "extension": ".txt",
+      "basename": "letters_33",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_34.txt",
+      "extension": ".txt",
+      "basename": "letters_34",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_35.txt",
+      "extension": ".txt",
+      "basename": "letters_35",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_36.txt",
+      "extension": ".txt",
+      "basename": "letters_36",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_38.txt",
+      "extension": ".txt",
+      "basename": "letters_38",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_4.txt",
+      "extension": ".txt",
+      "basename": "letters_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_40.txt",
+      "extension": ".txt",
+      "basename": "letters_40",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_41.txt",
+      "extension": ".txt",
+      "basename": "letters_41",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_42.txt",
+      "extension": ".txt",
+      "basename": "letters_42",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_43.txt",
+      "extension": ".txt",
+      "basename": "letters_43",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_44.txt",
+      "extension": ".txt",
+      "basename": "letters_44",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_45.txt",
+      "extension": ".txt",
+      "basename": "letters_45",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_46.txt",
+      "extension": ".txt",
+      "basename": "letters_46",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_47.txt",
+      "extension": ".txt",
+      "basename": "letters_47",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_48.txt",
+      "extension": ".txt",
+      "basename": "letters_48",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_49.txt",
+      "extension": ".txt",
+      "basename": "letters_49",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_5.txt",
+      "extension": ".txt",
+      "basename": "letters_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_50.txt",
+      "extension": ".txt",
+      "basename": "letters_50",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_51.txt",
+      "extension": ".txt",
+      "basename": "letters_51",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_52.txt",
+      "extension": ".txt",
+      "basename": "letters_52",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_53.txt",
+      "extension": ".txt",
+      "basename": "letters_53",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_54.txt",
+      "extension": ".txt",
+      "basename": "letters_54",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_55.txt",
+      "extension": ".txt",
+      "basename": "letters_55",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_56.txt",
+      "extension": ".txt",
+      "basename": "letters_56",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_57.txt",
+      "extension": ".txt",
+      "basename": "letters_57",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_58.txt",
+      "extension": ".txt",
+      "basename": "letters_58",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_59.txt",
+      "extension": ".txt",
+      "basename": "letters_59",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_6.txt",
+      "extension": ".txt",
+      "basename": "letters_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_60.txt",
+      "extension": ".txt",
+      "basename": "letters_60",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_61.txt",
+      "extension": ".txt",
+      "basename": "letters_61",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_62.txt",
+      "extension": ".txt",
+      "basename": "letters_62",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_64.txt",
+      "extension": ".txt",
+      "basename": "letters_64",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_65.txt",
+      "extension": ".txt",
+      "basename": "letters_65",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_66.txt",
+      "extension": ".txt",
+      "basename": "letters_66",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_67.txt",
+      "extension": ".txt",
+      "basename": "letters_67",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_68.txt",
+      "extension": ".txt",
+      "basename": "letters_68",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_69.txt",
+      "extension": ".txt",
+      "basename": "letters_69",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_7.txt",
+      "extension": ".txt",
+      "basename": "letters_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_70.txt",
+      "extension": ".txt",
+      "basename": "letters_70",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_71.txt",
+      "extension": ".txt",
+      "basename": "letters_71",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_72.txt",
+      "extension": ".txt",
+      "basename": "letters_72",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_73.txt",
+      "extension": ".txt",
+      "basename": "letters_73",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_74.txt",
+      "extension": ".txt",
+      "basename": "letters_74",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_75.txt",
+      "extension": ".txt",
+      "basename": "letters_75",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_76.txt",
+      "extension": ".txt",
+      "basename": "letters_76",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_77.txt",
+      "extension": ".txt",
+      "basename": "letters_77",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_78.txt",
+      "extension": ".txt",
+      "basename": "letters_78",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_79.txt",
+      "extension": ".txt",
+      "basename": "letters_79",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_8.txt",
+      "extension": ".txt",
+      "basename": "letters_8",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_80.txt",
+      "extension": ".txt",
+      "basename": "letters_80",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/letters_9.txt",
+      "extension": ".txt",
+      "basename": "letters_9",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/magic_0.txt",
+      "extension": ".txt",
+      "basename": "magic_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/magic_1.txt",
+      "extension": ".txt",
+      "basename": "magic_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/magic_2.txt",
+      "extension": ".txt",
+      "basename": "magic_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/magic_3.txt",
+      "extension": ".txt",
+      "basename": "magic_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/magic_4.txt",
+      "extension": ".txt",
+      "basename": "magic_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/magic_5.txt",
+      "extension": ".txt",
+      "basename": "magic_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/magic_6.txt",
+      "extension": ".txt",
+      "basename": "magic_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/magic_7.txt",
+      "extension": ".txt",
+      "basename": "magic_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/medic_1.txt",
+      "extension": ".txt",
+      "basename": "medic_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/medic_2.txt",
+      "extension": ".txt",
+      "basename": "medic_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/medic_3.txt",
+      "extension": ".txt",
+      "basename": "medic_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/medic_4.txt",
+      "extension": ".txt",
+      "basename": "medic_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/medic_5.txt",
+      "extension": ".txt",
+      "basename": "medic_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/medic_6.txt",
+      "extension": ".txt",
+      "basename": "medic_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/medic_7.txt",
+      "extension": ".txt",
+      "basename": "medic_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/organization_0.txt",
+      "extension": ".txt",
+      "basename": "organization_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/organization_1.txt",
+      "extension": ".txt",
+      "basename": "organization_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/organization_2.txt",
+      "extension": ".txt",
+      "basename": "organization_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/organization_3.txt",
+      "extension": ".txt",
+      "basename": "organization_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/organization_4.txt",
+      "extension": ".txt",
+      "basename": "organization_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/organization_5.txt",
+      "extension": ".txt",
+      "basename": "organization_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/organization_6.txt",
+      "extension": ".txt",
+      "basename": "organization_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/organization_7.txt",
+      "extension": ".txt",
+      "basename": "organization_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/religion_0.txt",
+      "extension": ".txt",
+      "basename": "religion_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/religion_1.txt",
+      "extension": ".txt",
+      "basename": "religion_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/religion_10.txt",
+      "extension": ".txt",
+      "basename": "religion_10",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/religion_11.txt",
+      "extension": ".txt",
+      "basename": "religion_11",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/religion_12.txt",
+      "extension": ".txt",
+      "basename": "religion_12",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/religion_13.txt",
+      "extension": ".txt",
+      "basename": "religion_13",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/religion_2.txt",
+      "extension": ".txt",
+      "basename": "religion_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/religion_3.txt",
+      "extension": ".txt",
+      "basename": "religion_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/religion_4.txt",
+      "extension": ".txt",
+      "basename": "religion_4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/religion_5.txt",
+      "extension": ".txt",
+      "basename": "religion_5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/religion_6.txt",
+      "extension": ".txt",
+      "basename": "religion_6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/religion_7.txt",
+      "extension": ".txt",
+      "basename": "religion_7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/religion_8.txt",
+      "extension": ".txt",
+      "basename": "religion_8",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/religion_9.txt",
+      "extension": ".txt",
+      "basename": "religion_9",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/songs_0.txt",
+      "extension": ".txt",
+      "basename": "songs_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/songs_1.txt",
+      "extension": ".txt",
+      "basename": "songs_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/sothoryos_0.txt",
+      "extension": ".txt",
+      "basename": "sothoryos_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/sothoryos_1.txt",
+      "extension": ".txt",
+      "basename": "sothoryos_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/uk/lore/stannis_0.txt",
+      "extension": ".txt",
+      "basename": "stannis_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/",
+      "extension": "",
+      "basename": "lore",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/alchemy_0.txt",
+      "extension": ".txt",
+      "basename": "alchemy_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/alchemy_1.txt",
+      "extension": ".txt",
+      "basename": "alchemy_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/alchemy_2.txt",
+      "extension": ".txt",
+      "basename": "alchemy_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/alchemy_3.txt",
+      "extension": ".txt",
+      "basename": "alchemy_3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/arryn.txt",
+      "extension": ".txt",
+      "basename": "arryn",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/asshai_clothes.txt",
+      "extension": ".txt",
+      "basename": "asshai_clothes",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/asshai_plant.txt",
+      "extension": ".txt",
+      "basename": "asshai_plant",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/blood_rider.txt",
+      "extension": ".txt",
+      "basename": "blood_rider",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/dothraki_language.txt",
+      "extension": ".txt",
+      "basename": "dothraki_language",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/ghiscar.txt",
+      "extension": ".txt",
+      "basename": "ghiscar",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/ironborn.txt",
+      "extension": ".txt",
+      "basename": "ironborn",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/medic.txt",
+      "extension": ".txt",
+      "basename": "medic",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/plant.txt",
+      "extension": ".txt",
+      "basename": "plant",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/poem_dorne.txt",
+      "extension": ".txt",
+      "basename": "poem_dorne",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/poem_dothraki.txt",
+      "extension": ".txt",
+      "basename": "poem_dothraki",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/poem_fiveforts.txt",
+      "extension": ".txt",
+      "basename": "poem_fiveforts",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/poem_ironborn.txt",
+      "extension": ".txt",
+      "basename": "poem_ironborn",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/poem_winterfell.txt",
+      "extension": ".txt",
+      "basename": "poem_winterfell",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/poem_yin.txt",
+      "extension": ".txt",
+      "basename": "poem_yin",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/prophesy.txt",
+      "extension": ".txt",
+      "basename": "prophesy",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/raised_dragon.txt",
+      "extension": ".txt",
+      "basename": "raised_dragon",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/sothoryos_0.txt",
+      "extension": ".txt",
+      "basename": "sothoryos_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/sothoryos_1.txt",
+      "extension": ".txt",
+      "basename": "sothoryos_1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/sothoryos_2.txt",
+      "extension": ".txt",
+      "basename": "sothoryos_2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/story_yi_ti.txt",
+      "extension": ".txt",
+      "basename": "story_yi_ti",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/valiryan_0.txt",
+      "extension": ".txt",
+      "basename": "valiryan_0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/walker.txt",
+      "extension": ".txt",
+      "basename": "walker",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/waterdancer.txt",
+      "extension": ".txt",
+      "basename": "waterdancer",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/wineofcourage.txt",
+      "extension": ".txt",
+      "basename": "wineofcourage",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/texts/zh/lore/yi_ti_fire.txt",
+      "extension": ".txt",
+      "basename": "yi_ti_fire",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/banner/florent.png",
+      "extension": ".png",
+      "basename": "florent",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/banner/florentBook.png",
+      "extension": ".png",
+      "basename": "florentBook",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/",
+      "extension": "",
+      "basename": "colored",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/female/",
+      "extension": "",
+      "basename": "female",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/female/0.png",
+      "extension": ".png",
+      "basename": "0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/female/1.png",
+      "extension": ".png",
+      "basename": "1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/female/2.png",
+      "extension": ".png",
+      "basename": "2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/female/3.png",
+      "extension": ".png",
+      "basename": "3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/female/4.png",
+      "extension": ".png",
+      "basename": "4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/female/5.png",
+      "extension": ".png",
+      "basename": "5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/female/6.png",
+      "extension": ".png",
+      "basename": "6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/female/7.png",
+      "extension": ".png",
+      "basename": "7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/female/8.png",
+      "extension": ".png",
+      "basename": "8",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/femalechild/",
+      "extension": "",
+      "basename": "femalechild",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/femalechild/0.png",
+      "extension": ".png",
+      "basename": "0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/femalechild/1.png",
+      "extension": ".png",
+      "basename": "1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/femalechild/2.png",
+      "extension": ".png",
+      "basename": "2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/femalechild/3.png",
+      "extension": ".png",
+      "basename": "3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/femalechild/4.png",
+      "extension": ".png",
+      "basename": "4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/femalechild/5.png",
+      "extension": ".png",
+      "basename": "5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/femalechild/6.png",
+      "extension": ".png",
+      "basename": "6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/femalechild/7.png",
+      "extension": ".png",
+      "basename": "7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/femalechild/8.png",
+      "extension": ".png",
+      "basename": "8",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/male/",
+      "extension": "",
+      "basename": "male",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/male/0.png",
+      "extension": ".png",
+      "basename": "0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/male/1.png",
+      "extension": ".png",
+      "basename": "1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/male/2.png",
+      "extension": ".png",
+      "basename": "2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/male/3.png",
+      "extension": ".png",
+      "basename": "3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/male/4.png",
+      "extension": ".png",
+      "basename": "4",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/male/5.png",
+      "extension": ".png",
+      "basename": "5",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/male/6.png",
+      "extension": ".png",
+      "basename": "6",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/male/7.png",
+      "extension": ".png",
+      "basename": "7",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/male/8.png",
+      "extension": ".png",
+      "basename": "8",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/male/9.png",
+      "extension": ".png",
+      "basename": "9",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/malechild/",
+      "extension": "",
+      "basename": "malechild",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/malechild/0.png",
+      "extension": ".png",
+      "basename": "0",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/malechild/1.png",
+      "extension": ".png",
+      "basename": "1",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/malechild/2.png",
+      "extension": ".png",
+      "basename": "2",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/malechild/3.png",
+      "extension": ".png",
+      "basename": "3",
+      "kind": "resource"
+    },
+    {
+      "path": "assets/got/textures/entity/essos/colored/malechild/4.png",
+      "extension": ".png",
+      "basename": "4",
+      "kind": "resource"
+    }
+  ]
+}

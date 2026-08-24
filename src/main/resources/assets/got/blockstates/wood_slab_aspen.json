@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/wood_slab_aspen"
+    },
+    "type=double": {
+      "model": "got:block/aspen_planks"
+    },
+    "type=top": {
+      "model": "got:block/wood_slab_aspen_top"
+    }
+  }
+}

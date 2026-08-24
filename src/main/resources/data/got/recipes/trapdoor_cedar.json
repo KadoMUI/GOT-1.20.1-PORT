@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:cedar_planks"
+    }
+  },
+  "result": {
+    "item": "got:trapdoor_cedar",
+    "count": 2
+  }
+}

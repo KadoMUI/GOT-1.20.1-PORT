@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "got:block/model/unsmeltery/idle",
+    "front": "got:block/model/unsmeltery/idle",
+    "side": "got:block/model/unsmeltery/idle"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "got:dart"
+    },
+    {
+      "item": "got:bottle_poison"
+    }
+  ],
+  "result": {
+    "item": "got:dart_poisoned"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "got:block/weirwood_log"
+    },
+    "axis=x": {
+      "model": "got:block/weirwood_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=z": {
+      "model": "got:block/weirwood_log_horizontal",
+      "x": 90
+    }
+  }
+}

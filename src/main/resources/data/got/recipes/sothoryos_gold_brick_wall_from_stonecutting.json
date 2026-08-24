@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:sothoryos_gold_bricks"
+  },
+  "result": "got:sothoryos_gold_brick_wall",
+  "count": 1
+}

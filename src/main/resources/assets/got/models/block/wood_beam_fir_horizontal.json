@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "got:block/wood_beam4_fir_top",
+    "side": "got:block/wood_beam4_fir_side"
+  }
+}

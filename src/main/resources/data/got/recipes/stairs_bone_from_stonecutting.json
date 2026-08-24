@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:bone_block"
+  },
+  "result": "got:stairs_bone",
+  "count": 1
+}

@@ -1,0 +1,11 @@
+{
+  "roles": [
+    "qohor_farmhand"
+  ],
+  "task": "FARMER",
+  "required_alignment": 0.0,
+  "pledge_exclusive": false,
+  "initial_cost": 10,
+  "legacy_entity": "GOTEntityQohorFarmhand",
+  "legacy_group": "QOHOR_FARMER"
+}

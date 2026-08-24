@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "got:block/pillar2_yi_ti_red_face",
+    "side": "got:block/pillar2_yi_ti_red_side_bottom"
+  }
+}

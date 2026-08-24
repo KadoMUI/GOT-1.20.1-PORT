@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "got:bronze_dagger"
+    },
+    {
+      "item": "got:bottle_poison"
+    }
+  ],
+  "result": {
+    "item": "got:bronze_dagger_poisoned"
+  }
+}

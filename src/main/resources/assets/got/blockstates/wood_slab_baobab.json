@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/wood_slab_baobab"
+    },
+    "type=double": {
+      "model": "got:block/baobab_planks"
+    },
+    "type=top": {
+      "model": "got:block/wood_slab_baobab_top"
+    }
+  }
+}

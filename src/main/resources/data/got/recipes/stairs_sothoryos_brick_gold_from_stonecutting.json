@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:sothoryos_gold_bricks"
+  },
+  "result": "got:stairs_sothoryos_brick_gold",
+  "count": 1
+}

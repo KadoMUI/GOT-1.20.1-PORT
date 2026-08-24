@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "got:block/yellow_iris_lower"
+    },
+    "half=upper": {
+      "model": "got:block/yellow_iris_upper"
+    }
+  }
+}

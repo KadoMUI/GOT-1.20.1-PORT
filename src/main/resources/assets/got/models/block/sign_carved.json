@@ -1,0 +1,41 @@
+{
+  "textures": {
+    "particle": "got:block/weirwood_planks",
+    "all": "got:block/weirwood_planks"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        1,
+        6
+      ],
+      "to": [
+        16,
+        15,
+        10
+      ],
+      "faces": {
+        "down": {
+          "texture": "#all"
+        },
+        "up": {
+          "texture": "#all"
+        },
+        "north": {
+          "texture": "#all"
+        },
+        "south": {
+          "texture": "#all"
+        },
+        "west": {
+          "texture": "#all"
+        },
+        "east": {
+          "texture": "#all"
+        }
+      }
+    }
+  ],
+  "render_type": "cutout"
+}

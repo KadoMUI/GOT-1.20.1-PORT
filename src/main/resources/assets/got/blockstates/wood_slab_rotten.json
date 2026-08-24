@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/wood_slab_rotten"
+    },
+    "type=double": {
+      "model": "got:block/rotten_planks"
+    },
+    "type=top": {
+      "model": "got:block/wood_slab_rotten_top"
+    }
+  }
+}

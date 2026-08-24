@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=north,lit=false": { "model": "got:block/oven" },
+    "facing=east,lit=false":  { "model": "got:block/oven", "y": 90 },
+    "facing=south,lit=false": { "model": "got:block/oven", "y": 180 },
+    "facing=west,lit=false":  { "model": "got:block/oven", "y": 270 },
+    "facing=north,lit=true":  { "model": "got:block/oven_active" },
+    "facing=east,lit=true":   { "model": "got:block/oven_active", "y": 90 },
+    "facing=south,lit=true":  { "model": "got:block/oven_active", "y": 180 },
+    "facing=west,lit=true":   { "model": "got:block/oven_active", "y": 270 }
+  }
+}

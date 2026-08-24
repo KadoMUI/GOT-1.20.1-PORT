@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/scorched_stone_slab"
+    },
+    "type=double": {
+      "model": "got:block/scorched_stone"
+    },
+    "type=top": {
+      "model": "got:block/scorched_stone_slab_top"
+    }
+  }
+}

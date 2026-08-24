@@ -1,0 +1,11 @@
+{
+  "roles": [
+    "ironborn_soldier_archer"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 60.0,
+  "pledge_exclusive": false,
+  "initial_cost": 15,
+  "legacy_entity": "GOTEntityIronbornSoldierArcher",
+  "legacy_group": "IRONBORN"
+}

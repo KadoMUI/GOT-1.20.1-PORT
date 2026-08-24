@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "got:item/warhorn_base",
+    "layer1": "got:item/warhorn_overlay"
+  }
+}

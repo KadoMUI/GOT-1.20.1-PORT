@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "got:block/placed_drink_vessel"
+    },
+    "facing=south": {
+      "model": "got:block/placed_drink_vessel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "got:block/placed_drink_vessel",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "got:block/placed_drink_vessel",
+      "y": 90
+    }
+  }
+}

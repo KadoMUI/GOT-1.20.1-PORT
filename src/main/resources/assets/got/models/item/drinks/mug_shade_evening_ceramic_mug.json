@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "got:item/drinks/mug_shade_evening_ceramic_mug"
+  }
+}

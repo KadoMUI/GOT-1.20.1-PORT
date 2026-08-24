@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:sandstone_red_bricks"
+    }
+  },
+  "result": {
+    "item": "got:stairs_sandstone_brick_red",
+    "count": 4
+  }
+}

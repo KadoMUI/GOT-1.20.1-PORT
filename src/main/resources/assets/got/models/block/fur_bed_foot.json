@@ -1,0 +1,42 @@
+{
+  "textures": {
+    "particle": "got:block/fur_bed_feet_top",
+    "top": "got:block/fur_bed_feet_top",
+    "side": "got:block/fur_bed_feet_side",
+    "end": "got:block/fur_bed_feet_end"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        9,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#top"
+        },
+        "up": {
+          "texture": "#top"
+        },
+        "north": {
+          "texture": "#end"
+        },
+        "south": {
+          "texture": "#end"
+        },
+        "west": {
+          "texture": "#side"
+        },
+        "east": {
+          "texture": "#side"
+        }
+      }
+    }
+  ]
+}

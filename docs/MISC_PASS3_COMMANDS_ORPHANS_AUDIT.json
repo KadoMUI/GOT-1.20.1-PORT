@@ -1,0 +1,57 @@
+{
+  "original_command_classes": 28,
+  "original_command_class_names": [
+    "got.client.render.other.GOTRenderInvTableCommand",
+    "got.common.command.GOTCommandAchievement",
+    "got.common.command.GOTCommandAdminHideMap",
+    "got.common.command.GOTCommandAlignment",
+    "got.common.command.GOTCommandAlignmentSee",
+    "got.common.command.GOTCommandAllowStructures",
+    "got.common.command.GOTCommandBanStructures",
+    "got.common.command.GOTCommandConquest",
+    "got.common.command.GOTCommandDate",
+    "got.common.command.GOTCommandDragon",
+    "got.common.command.GOTCommandEnableAlignmentZones",
+    "got.common.command.GOTCommandEnchant",
+    "got.common.command.GOTCommandFactionRelations",
+    "got.common.command.GOTCommandFastTravelClock",
+    "got.common.command.GOTCommandFellowship",
+    "got.common.command.GOTCommandFellowshipMessage",
+    "got.common.command.GOTCommandInvasion",
+    "got.common.command.GOTCommandMessageFixed",
+    "got.common.command.GOTCommandPledgeCooldown",
+    "got.common.command.GOTCommandSpawnDamping",
+    "got.common.command.GOTCommandStrScan",
+    "got.common.command.GOTCommandSummon",
+    "got.common.command.GOTCommandTime",
+    "got.common.command.GOTCommandTimeVanilla",
+    "got.common.command.GOTCommandWaypointCooldown",
+    "got.common.command.GOTCommandWaypoints",
+    "got.common.command.GOTCommandWikiGen",
+    "got.common.network.GOTPacketHiredUnitCommand"
+  ],
+  "modern_command_files_before_pass": [
+    "src/main/java/got/GOTCommands.java",
+    "src/main/java/got/calendar/GOTCalendarCommands.java",
+    "src/main/java/got/pact/GOTPactCommands.java"
+  ],
+  "restored_in_pass3": [
+    "/got alignment <faction>",
+    "/got alignment <faction> <value> [player] (operator)",
+    "/got title clear",
+    "/got title color <color>",
+    "/got waypoint <waypoint>",
+    "/got calendar"
+  ],
+  "utility_hooks_added": [
+    "bounty trophy award helper",
+    "pickpocket eligibility helper"
+  ],
+  "deferred_orphans": [
+    "legacy debug/admin commands whose dependent systems are not yet ported",
+    "individual pickpocket loot tables/chances",
+    "old bounty contracts/target generation",
+    "commands tied to removed/deferred worldgen or entity systems",
+    "any command whose exact modern target API is still absent"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/wood_slab_olive"
+    },
+    "type=double": {
+      "model": "got:block/olive_planks"
+    },
+    "type=top": {
+      "model": "got:block/wood_slab_olive_top"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:yi_ti_pillar"
+  },
+  "result": "got:yi_ti_pillar_slab",
+  "count": 2
+}

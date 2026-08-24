@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:gray_terracotta_roof_tiles"
+    }
+  },
+  "result": {
+    "item": "got:stairs_clay_tile_dyed_gray",
+    "count": 4
+  }
+}

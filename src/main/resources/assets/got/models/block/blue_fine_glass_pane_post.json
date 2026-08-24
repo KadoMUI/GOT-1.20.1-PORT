@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "render_type": "translucent",
+  "textures": {
+    "pane": "got:block/stained_glass_blue",
+    "edge": "got:block/stained_glass_blue"
+  }
+}

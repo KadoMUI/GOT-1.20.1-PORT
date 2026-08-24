@@ -1,0 +1,604 @@
+{
+  "walker.death": {
+    "category": "neutral",
+    "sounds": [
+      "got:walker/death"
+    ]
+  },
+  "walker.fire": {
+    "category": "neutral",
+    "sounds": [
+      "got:walker/fire"
+    ]
+  },
+  "walker.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:walker/hurt1",
+      "got:walker/hurt2"
+    ]
+  },
+  "walker.say": {
+    "category": "neutral",
+    "sounds": [
+      "got:walker/say"
+    ]
+  },
+  "ambient.terrain.sea": {
+    "category": "ambient",
+    "sounds": [
+      "got:ambient/terrain/sea1",
+      "got:ambient/terrain/sea2",
+      "got:ambient/terrain/sea3"
+    ]
+  },
+  "mammoth.calf": {
+    "category": "neutral",
+    "sounds": [
+      "got:mammoth/calf1",
+      "got:mammoth/calf2"
+    ]
+  },
+  "mammoth.grunt": {
+    "category": "neutral",
+    "sounds": [
+      "got:mammoth/grunt1",
+      "got:mammoth/grunt2",
+      "got:mammoth/grunt3",
+      "got:mammoth/grunt4",
+      "got:mammoth/grunt5",
+      "got:mammoth/grunt6",
+      "got:mammoth/grunt7",
+      "got:mammoth/grunt8"
+    ]
+  },
+  "mammoth.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:mammoth/hurt1",
+      "got:mammoth/hurt2"
+    ]
+  },
+  "ambient.weather.rain": {
+    "category": "weather",
+    "sounds": [
+      "got:ambient/weather/rain1",
+      "got:ambient/weather/rain2",
+      "got:ambient/weather/rain3"
+    ]
+  },
+  "ambient.weather.thunder": {
+    "category": "weather",
+    "sounds": [
+      "got:ambient/weather/thunder1",
+      "got:ambient/weather/thunder2",
+      "got:ambient/weather/thunder3"
+    ]
+  },
+  "ambient.weather.wind": {
+    "category": "weather",
+    "sounds": [
+      "got:ambient/weather/wind1",
+      "got:ambient/weather/wind2",
+      "got:ambient/weather/wind3"
+    ]
+  },
+  "bison.death": {
+    "category": "neutral",
+    "sounds": [
+      "got:bison/death"
+    ]
+  },
+  "bison.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:bison/hurt1"
+    ]
+  },
+  "bison.say": {
+    "category": "neutral",
+    "sounds": [
+      "got:bison/say1",
+      "got:bison/say2",
+      "got:bison/say3"
+    ]
+  },
+  "bear.death": {
+    "category": "neutral",
+    "sounds": [
+      "got:bear/death"
+    ]
+  },
+  "bear.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:bear/hurt1",
+      "got:bear/hurt2"
+    ]
+  },
+  "bear.say": {
+    "category": "neutral",
+    "sounds": [
+      "got:bear/say1",
+      "got:bear/say2"
+    ]
+  },
+  "bird.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:bird/hurt1"
+    ]
+  },
+  "bird.say": {
+    "category": "neutral",
+    "sounds": [
+      "got:bird/say1",
+      "got:bird/say2",
+      "got:bird/say3",
+      "got:bird/say4",
+      "got:bird/say5",
+      "got:bird/say6",
+      "got:bird/say7",
+      "got:bird/say8",
+      "got:bird/say9",
+      "got:bird/say10",
+      "got:bird/say11",
+      "got:bird/say12",
+      "got:bird/say13",
+      "got:bird/say14",
+      "got:bird/say15"
+    ]
+  },
+  "bird.crow.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:bird/crow/hurt1",
+      "got:bird/crow/hurt2"
+    ]
+  },
+  "bird.crow.say": {
+    "category": "neutral",
+    "sounds": [
+      "got:bird/crow/say1",
+      "got:bird/crow/say2",
+      "got:bird/crow/say3"
+    ]
+  },
+  "bird.seagull.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:bird/seagull/hurt1"
+    ]
+  },
+  "bird.seagull.say": {
+    "category": "neutral",
+    "sounds": [
+      "got:bird/seagull/say1",
+      "got:bird/seagull/say2",
+      "got:bird/seagull/say3"
+    ]
+  },
+  "block.gate.close": {
+    "category": "block",
+    "sounds": [
+      "got:block/gate/close"
+    ]
+  },
+  "block.gate.open": {
+    "category": "block",
+    "sounds": [
+      "got:block/gate/open"
+    ]
+  },
+  "block.gate.stone_close": {
+    "category": "block",
+    "sounds": [
+      "got:block/gate/stone_close"
+    ]
+  },
+  "block.gate.stone_open": {
+    "category": "block",
+    "sounds": [
+      "got:block/gate/stone_open"
+    ]
+  },
+  "block.plate.break": {
+    "category": "block",
+    "sounds": [
+      "got:block/plate/break"
+    ]
+  },
+  "block.treasure.break": {
+    "category": "block",
+    "sounds": [
+      "got:block/treasure/break1",
+      "got:block/treasure/break2",
+      "got:block/treasure/break3"
+    ]
+  },
+  "block.treasure.step": {
+    "category": "block",
+    "sounds": [
+      "got:block/treasure/step1",
+      "got:block/treasure/step2",
+      "got:block/treasure/step3"
+    ]
+  },
+  "block.treasure.place": {
+    "category": "block",
+    "sounds": [
+      "got:block/treasure/place1"
+    ]
+  },
+  "crocodile.death": {
+    "category": "hostile",
+    "sounds": [
+      "got:crocodile/death"
+    ]
+  },
+  "crocodile.say": {
+    "category": "hostile",
+    "sounds": [
+      "got:crocodile/say"
+    ]
+  },
+  "crocodile.snap": {
+    "category": "hostile",
+    "sounds": [
+      "got:crocodile/snap"
+    ]
+  },
+  "deer.death": {
+    "category": "neutral",
+    "sounds": [
+      "got:deer/death"
+    ]
+  },
+  "deer.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:deer/hurt"
+    ]
+  },
+  "deer.say": {
+    "category": "neutral",
+    "sounds": [
+      "got:deer/say1",
+      "got:deer/say2"
+    ]
+  },
+  "elk.death": {
+    "category": "neutral",
+    "sounds": [
+      "got:elk/death"
+    ]
+  },
+  "elk.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:elk/hurt"
+    ]
+  },
+  "elk.say": {
+    "category": "neutral",
+    "sounds": [
+      "got:elk/say1",
+      "got:elk/say2"
+    ]
+  },
+  "event.fasttravel": {
+    "category": "player",
+    "sounds": [
+      "got:event/fasttravel"
+    ]
+  },
+  "event.pledge": {
+    "category": "player",
+    "sounds": [
+      "got:event/pledge"
+    ]
+  },
+  "event.trade": {
+    "category": "player",
+    "sounds": [
+      "got:event/trade1",
+      "got:event/trade2",
+      "got:event/trade3",
+      "got:event/trade4"
+    ]
+  },
+  "event.unpledge": {
+    "category": "player",
+    "sounds": [
+      "got:event/unpledge"
+    ]
+  },
+  "flamingo.death": {
+    "category": "neutral",
+    "sounds": [
+      "got:flamingo/death"
+    ]
+  },
+  "flamingo.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:flamingo/hurt1",
+      "got:flamingo/hurt2"
+    ]
+  },
+  "flamingo.say": {
+    "category": "neutral",
+    "sounds": [
+      "got:flamingo/say1",
+      "got:flamingo/say2"
+    ]
+  },
+  "item.whip": {
+    "category": "neutral",
+    "sounds": [
+      "got:item/whip"
+    ]
+  },
+  "item.crossbow": {
+    "category": "neutral",
+    "sounds": [
+      "got:item/crossbow"
+    ]
+  },
+  "item.crossbowload": {
+    "category": "neutral",
+    "sounds": [
+      "got:item/crossbowload"
+    ]
+  },
+  "item.dart": {
+    "category": "neutral",
+    "sounds": [
+      "got:item/dart1",
+      "got:item/dart2",
+      "got:item/dart3"
+    ]
+  },
+  "item.horn": {
+    "category": "neutral",
+    "sounds": [
+      "got:item/horn"
+    ]
+  },
+  "item.mug_fill": {
+    "category": "block",
+    "sounds": [
+      "got:item/mug_fill"
+    ]
+  },
+  "item.puff": {
+    "category": "neutral",
+    "sounds": [
+      "got:item/puff"
+    ]
+  },
+  "item.structurespawner": {
+    "category": "neutral",
+    "sounds": [
+      "got:item/structurespawner"
+    ]
+  },
+  "midges.swarm": {
+    "category": "ambient",
+    "sounds": [
+      "got:midges/swarm1",
+      "got:midges/swarm2",
+      "got:midges/swarm3"
+    ]
+  },
+  "lion.death": {
+    "category": "neutral",
+    "sounds": [
+      "got:lion/death"
+    ]
+  },
+  "lion.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:lion/hurt"
+    ]
+  },
+  "lion.say": {
+    "category": "neutral",
+    "sounds": [
+      "got:lion/say"
+    ]
+  },
+  "rabbit.death": {
+    "category": "neutral",
+    "sounds": [
+      "got:rabbit/death1"
+    ]
+  },
+  "rabbit.flee": {
+    "category": "neutral",
+    "sounds": [
+      "got:rabbit/flee1",
+      "got:rabbit/flee2"
+    ]
+  },
+  "rabbit.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:rabbit/hurt1",
+      "got:rabbit/hurt2"
+    ]
+  },
+  "rhino.death": {
+    "category": "neutral",
+    "sounds": [
+      "got:rhino/death"
+    ]
+  },
+  "rhino.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:rhino/hurt"
+    ]
+  },
+  "rhino.say": {
+    "category": "neutral",
+    "sounds": [
+      "got:rhino/say"
+    ]
+  },
+  "swan.hiss": {
+    "category": "neutral",
+    "sounds": [
+      "got:swan/hiss"
+    ]
+  },
+  "giant.ologhai_hammer": {
+    "category": "neutral",
+    "sounds": [
+      "got:giant/ologhai_hammer"
+    ]
+  },
+  "giant.rocksmash": {
+    "category": "neutral",
+    "sounds": [
+      "got:giant/rocksmash"
+    ]
+  },
+  "giant.say": {
+    "category": "neutral",
+    "sounds": [
+      "got:giant/say"
+    ]
+  },
+  "giant.sneeze": {
+    "category": "neutral",
+    "sounds": [
+      "got:giant/sneeze"
+    ]
+  },
+  "giant.sniff": {
+    "category": "neutral",
+    "sounds": [
+      "got:giant/sniff"
+    ]
+  },
+  "giant.step": {
+    "category": "neutral",
+    "sounds": [
+      "got:giant/step"
+    ]
+  },
+  "giant.transform": {
+    "category": "neutral",
+    "sounds": [
+      "got:giant/transform"
+    ]
+  },
+  "direwolf.attack": {
+    "category": "neutral",
+    "sounds": [
+      "got:direwolf/attack1",
+      "got:direwolf/attack2",
+      "got:direwolf/attack3"
+    ]
+  },
+  "direwolf.death": {
+    "category": "neutral",
+    "sounds": [
+      "got:direwolf/death1",
+      "got:direwolf/death2",
+      "got:direwolf/death3",
+      "got:direwolf/death4"
+    ]
+  },
+  "direwolf.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:direwolf/hurt1",
+      "got:direwolf/hurt2",
+      "got:direwolf/hurt3",
+      "got:direwolf/hurt4"
+    ]
+  },
+  "direwolf.say": {
+    "category": "neutral",
+    "sounds": [
+      "got:direwolf/say1",
+      "got:direwolf/say2",
+      "got:direwolf/say3",
+      "got:direwolf/say4",
+      "got:direwolf/say5",
+      "got:direwolf/say6",
+      "got:direwolf/say7"
+    ]
+  },
+  "wight.ambience": {
+    "category": "neutral",
+    "sounds": [
+      "got:wight/noise1",
+      "got:wight/noise2",
+      "got:wight/noise3",
+      "got:wight/noise4",
+      "got:wight/noise5",
+      "got:wight/voice1",
+      "got:wight/voice2",
+      "got:wight/voice3",
+      "got:wight/voice4",
+      "got:wight/voice5",
+      "got:wight/voice6",
+      "got:wight/voice7",
+      "got:wight/voice8",
+      "got:wight/scream1",
+      "got:wight/scream2",
+      "got:wight/whisper1"
+    ]
+  },
+  "wight.death": {
+    "category": "neutral",
+    "sounds": [
+      "got:wight/death1",
+      "got:wight/death2",
+      "got:wight/death3"
+    ]
+  },
+  "wight.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:wight/hurt1",
+      "got:wight/hurt2",
+      "got:wight/hurt3",
+      "got:wight/hurt4"
+    ]
+  },
+  "wraith.marshwraith_shoot": {
+    "category": "hostile",
+    "sounds": [
+      "got:wraith/marshwraith_shoot"
+    ]
+  },
+  "wraith.spawn": {
+    "category": "hostile",
+    "sounds": [
+      "got:wraith/spawn"
+    ]
+  },
+  "zebra.death": {
+    "category": "neutral",
+    "sounds": [
+      "got:zebra/death"
+    ]
+  },
+  "zebra.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "got:zebra/hurt"
+    ]
+  },
+  "zebra.say": {
+    "category": "neutral",
+    "sounds": [
+      "got:zebra/say"
+    ]
+  }
+}

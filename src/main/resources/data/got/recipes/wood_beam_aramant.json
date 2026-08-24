@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "got:aramant_planks"
+    }
+  },
+  "result": {
+    "item": "got:wood_beam_aramant",
+    "count": 3
+  }
+}

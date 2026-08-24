@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "got:block/stone_chest"
+    },
+    "facing=east": {
+      "model": "got:block/stone_chest",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "got:block/stone_chest",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "got:block/stone_chest",
+      "y": 270
+    }
+  }
+}

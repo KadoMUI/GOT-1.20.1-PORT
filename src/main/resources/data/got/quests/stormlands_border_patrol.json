@@ -1,0 +1,8 @@
+{
+  "title": "quest.got.stormlands_border_patrol.title", "description": "quest.got.stormlands_border_patrol.description",
+  "offer": "quest.got.stormlands_border_patrol.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.stormlands_border_patrol.complete",
+  "icon": "minecraft:iron_sword", "color": "#4D673E", "weight": 2, "repeatable": true, "cooldown_ticks": 24000,
+  "giver": { "factions": ["stormlands"], "roles": ["stormlands_levyman", "stormlands_levyman_archer", "stormlands_soldier", "stormlands_soldier_archer", "stormlands_banner_bearer"], "maximum_active_for_faction": 5 },
+  "objectives": [{ "type": "kill_faction", "target": "crownlands", "count": 5, "label": "quest.got.stormlands_border_patrol.objective.0" }],
+  "rewards": { "alignment": { "stormlands": 10.0 }, "coins": 20, "experience": 15 }
+}

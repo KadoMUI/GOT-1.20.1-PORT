@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    "PPP"
+  ],
+  "key": {
+    "F": {
+      "item": "got:lion_fur"
+    },
+    "P": {
+      "item": "minecraft:oak_planks"
+    }
+  },
+  "result": {
+    "item": "got:lion_fur_bed",
+    "count": 1
+  }
+}

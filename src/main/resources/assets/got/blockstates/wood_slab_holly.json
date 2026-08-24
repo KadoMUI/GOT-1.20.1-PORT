@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/wood_slab_holly"
+    },
+    "type=double": {
+      "model": "got:block/holly_planks"
+    },
+    "type=top": {
+      "model": "got:block/wood_slab_holly_top"
+    }
+  }
+}

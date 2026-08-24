@@ -1,0 +1,104 @@
+{
+  "total_lore_entries": 552,
+  "extension_counts": {
+    ".class": 2,
+    "<none>": 13,
+    ".txt": 502,
+    ".png": 35
+  },
+  "top_path_prefixes": [
+    [
+      "assets/got/texts/ru",
+      147
+    ],
+    [
+      "assets/got/texts/uk",
+      146
+    ],
+    [
+      "assets/got/texts/fr",
+      98
+    ],
+    [
+      "assets/got/textures/entity",
+      38
+    ],
+    [
+      "assets/got/texts/zh",
+      31
+    ],
+    [
+      "assets/got/texts/de",
+      22
+    ],
+    [
+      "assets/got/texts/en",
+      22
+    ],
+    [
+      "assets/got/texts/pl",
+      22
+    ],
+    [
+      "assets/got/texts/tr",
+      22
+    ],
+    [
+      "assets/got/textures/banner",
+      2
+    ],
+    [
+      "got/common/GOTLore$LoreCategory.class",
+      1
+    ],
+    [
+      "got/common/GOTLore.class",
+      1
+    ]
+  ],
+  "GOTLore_string_literals": [
+    "#",
+    ",",
+    ".txt",
+    "/",
+    "/assets/got/texts/",
+    "/lore/",
+    "Failed to onInit GOT lore",
+    "Failed to onInit GOT lore {} from MCP folder",
+    "Failed to onInit GOT lore {} from MCP folder; name bank files must be in .txt format",
+    "Failed to onInit GOT lore {}from zip file",
+    "Failed to onInit GOT lore: {}",
+    "Hummel009: Category {} has loaded {} lore texts, of which {} rewardable",
+    "Hummel009: Error formatting choice {} in text: {}",
+    "Hummel009: Error formatting name {} in text: {}",
+    "Hummel009: Error formatting number {} in text: {}",
+    "Hummel009: Loading lore {}, no category exists for name {}",
+    "Hummel009: No namebank exists for {}!",
+    "\\n",
+    "all",
+    "assets/got/texts/",
+    "author",
+    "author:",
+    "choose:",
+    "name:",
+    "num:",
+    "pages",
+    "reward",
+    "title",
+    "title:",
+    "types:"
+  ],
+  "GOTLore_static_fields": [
+    "private static final java.lang.String NEW_LINE;",
+    "private static final java.lang.String CODE_METADATA;",
+    "private static final java.lang.String CODE_TITLE;",
+    "private static final java.lang.String CODE_AUTHOR;",
+    "private static final java.lang.String CODE_CATEGORY;",
+    "private static final java.lang.String CODE_CATEGORY_SEPARATOR;",
+    "private static final java.lang.String CODE_REWARD;",
+    "public static got.common.GOTLore getMultiRandomLore(java.lang.Iterable<got.common.GOTLore$LoreCategory>, java.util.Random, boolean);",
+    "public static void onInit();",
+    "private static java.util.List<java.lang.String> organisePages(java.lang.String);"
+  ],
+  "readable_text_assets": 502
+}

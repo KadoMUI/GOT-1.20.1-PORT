@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "got:block/catalpa_planks",
+    "side": "got:block/catalpa_planks",
+    "top": "got:block/catalpa_planks"
+  }
+}

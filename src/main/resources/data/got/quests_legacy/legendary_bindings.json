@@ -1,0 +1,135 @@
+{
+  "format": 1,
+  "bindings": [
+    {
+      "legacy_factory": "HOWLAND",
+      "modern_binding": "howland",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "BALON",
+      "modern_binding": "balon",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "DAENERYS",
+      "modern_binding": "daenerys",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "VARYS",
+      "modern_binding": "varys",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "OBERYN",
+      "modern_binding": "oberyn",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "STANNIS",
+      "modern_binding": "stannis",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "JON_SNOW",
+      "modern_binding": "jon_snow",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "RENLY",
+      "modern_binding": "renly",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "KITRA",
+      "modern_binding": "kitra",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "BUGAI",
+      "modern_binding": "bugai",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "TYRION",
+      "modern_binding": "tyrion",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "CERSEI",
+      "modern_binding": "cersei",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "RAMSAY",
+      "modern_binding": "ramsay",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "SANDOR",
+      "modern_binding": "sandor",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "MELISANDRA",
+      "modern_binding": "melisandra",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "DORAN",
+      "modern_binding": "doran",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "MARGAERY",
+      "modern_binding": "margaery",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "ELLARYA",
+      "modern_binding": "ellarya",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "ARYA",
+      "modern_binding": "arya",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "OLENNA",
+      "modern_binding": "olenna",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "SAMWELL",
+      "modern_binding": "samwell",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "LYSA",
+      "modern_binding": "lysa",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "CATELYN",
+      "modern_binding": "catelyn",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "DAVEN",
+      "modern_binding": "daven",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "ARIANNE",
+      "modern_binding": "arianne",
+      "status": "identity_bound_content_audit_pending"
+    },
+    {
+      "legacy_factory": "MELLARIO",
+      "modern_binding": "mellario",
+      "status": "identity_bound_content_audit_pending"
+    }
+  ]
+}

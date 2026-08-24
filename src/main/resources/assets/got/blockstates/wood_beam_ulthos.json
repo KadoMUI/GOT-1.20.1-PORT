@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "got:block/wood_beam_ulthos_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "got:block/wood_beam_ulthos"
+    },
+    "axis=z": {
+      "model": "got:block/wood_beam_ulthos_horizontal",
+      "x": 90
+    }
+  }
+}

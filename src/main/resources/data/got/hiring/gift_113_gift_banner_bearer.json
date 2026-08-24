@@ -1,0 +1,11 @@
+{
+  "roles": [
+    "gift_banner_bearer"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 60.0,
+  "pledge_exclusive": true,
+  "initial_cost": 10,
+  "legacy_entity": "GOTEntityGiftBannerBearer",
+  "legacy_group": "GIFT"
+}

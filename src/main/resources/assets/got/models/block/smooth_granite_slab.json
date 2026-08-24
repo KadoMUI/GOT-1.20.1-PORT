@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "got:block/smooth_stone_granite_top",
+    "side": "got:block/smooth_stone_granite_side",
+    "top": "got:block/smooth_stone_granite_top"
+  }
+}

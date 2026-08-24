@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/flowery_yi_ti_brick_slab"
+    },
+    "type=double": {
+      "model": "got:block/yi_ti_flowers_bricks"
+    },
+    "type=top": {
+      "model": "got:block/flowery_yi_ti_brick_slab_top"
+    }
+  }
+}

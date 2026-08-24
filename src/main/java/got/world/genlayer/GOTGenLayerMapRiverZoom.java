@@ -1,0 +1,1 @@
+package got.world.genlayer; public class GOTGenLayerMapRiverZoom extends GOTGenLayerZoom {public GOTGenLayerMapRiverZoom(long s,GOTGenLayer p){super(s,p);}}

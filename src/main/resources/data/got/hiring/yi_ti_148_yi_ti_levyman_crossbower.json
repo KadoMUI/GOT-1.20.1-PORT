@@ -1,0 +1,11 @@
+{
+  "roles": [
+    "yi_ti_levyman_crossbower"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 55.0,
+  "pledge_exclusive": false,
+  "initial_cost": 10,
+  "legacy_entity": "GOTEntityYiTiLevymanCrossbower",
+  "legacy_group": "YI_TI"
+}

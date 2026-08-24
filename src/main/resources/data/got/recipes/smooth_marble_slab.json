@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:smooth_marble"
+    }
+  },
+  "result": {
+    "item": "got:smooth_marble_slab",
+    "count": 6
+  }
+}

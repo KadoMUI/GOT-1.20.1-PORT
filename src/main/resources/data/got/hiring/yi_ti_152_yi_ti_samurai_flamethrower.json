@@ -1,0 +1,11 @@
+{
+  "roles": [
+    "yi_ti_samurai_flamethrower"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 70.0,
+  "pledge_exclusive": true,
+  "initial_cost": 30,
+  "legacy_entity": "GOTEntityYiTiSamuraiFlamethrower",
+  "legacy_group": "YI_TI"
+}

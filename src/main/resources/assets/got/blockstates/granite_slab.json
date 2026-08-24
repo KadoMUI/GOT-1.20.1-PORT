@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/granite_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/granite"
+    },
+    "type=top": {
+      "model": "got:block/granite_slab_top"
+    }
+  }
+}

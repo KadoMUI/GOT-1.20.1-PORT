@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:mud_bricks"
+  },
+  "result": "got:mud_brick_wall",
+  "count": 1
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:basalt"
+  },
+  "result": "got:stairs_basalt",
+  "count": 1
+}

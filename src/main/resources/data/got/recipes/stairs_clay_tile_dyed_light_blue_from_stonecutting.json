@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:light_blue_terracotta_roof_tiles"
+  },
+  "result": "got:stairs_clay_tile_dyed_light_blue",
+  "count": 1
+}

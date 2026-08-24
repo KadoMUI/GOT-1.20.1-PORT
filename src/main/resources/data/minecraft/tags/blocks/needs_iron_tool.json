@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "got:cobalt_ore",
+    "got:valyrian_ore",
+    "got:topaz_ore",
+    "got:amethyst_ore",
+    "got:sapphire_ore",
+    "got:ruby_ore",
+    "got:amber_ore",
+    "got:diamond_vein",
+    "got:opal_ore",
+    "got:emerald_vein",
+    "got:silver_ore",
+    "got:deepslate_silver_ore",
+    "got:silver_block",
+    "got:alloy_steel_block"
+  ]
+}

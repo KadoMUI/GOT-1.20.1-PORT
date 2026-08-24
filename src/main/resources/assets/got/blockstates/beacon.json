@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "got:block/beacon"
+    },
+    "lit=true": {
+      "model": "got:block/beacon_lit"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "roles": [
+    "giant"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 100.0,
+  "pledge_exclusive": true,
+  "initial_cost": 50,
+  "legacy_entity": "GOTEntityGiant",
+  "legacy_group": "WILDLING"
+}

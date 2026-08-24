@@ -1,0 +1,74 @@
+{
+  "system": "Achievements / Ranks",
+  "original_static_achievement_fields": 390,
+  "ported_catalog_entries": 390,
+  "categories": [
+    "TITLES",
+    "GENERAL",
+    "KILL",
+    "WEAR",
+    "ENTER",
+    "LEGENDARY"
+  ],
+  "exact_rank_thresholds": [
+    {
+      "key": "guest",
+      "threshold": 10.0,
+      "title": "Guest"
+    },
+    {
+      "key": "friend",
+      "threshold": 50.0,
+      "title": "Friend"
+    },
+    {
+      "key": "defender",
+      "threshold": 100.0,
+      "title": "Benefactor",
+      "pledge_rank": true
+    },
+    {
+      "key": "hero",
+      "threshold": 500.0,
+      "title": "Hero"
+    },
+    {
+      "key": "leader",
+      "threshold": 1000.0,
+      "title": "Patron"
+    },
+    {
+      "key": "king",
+      "threshold": 1000.0,
+      "title": "Night King",
+      "faction": "WHITE_WALKER",
+      "pledge_rank": true
+    }
+  ],
+  "implemented": [
+    "original achievement catalog identity recovery",
+    "original localization recovery",
+    "original-style achievement GUI using original page/icons assets",
+    "client/server awarded-state synchronization",
+    "persistent legacy achievement state",
+    "TRADE achievement bridge",
+    "automatic rank-achievement award bridge",
+    "exact standard faction rank thresholds and names",
+    "faction rank display already present in GOTGuiFactions"
+  ],
+  "deferred_trigger_content": [
+    "individual legacy triggers tied to still-unported/miscellaneous systems",
+    "optional mirroring to vanilla Minecraft advancements",
+    "some entity/item/biome-specific trigger hookups to be verified in final original-vs-port audit"
+  ],
+  "note": "Pass 2's 2-field count was a parser-path error: the 390 static achievements live on got.common.database.GOTAchievement.",
+  "category_counts": {
+    "GENERAL": 79,
+    "LEGENDARY": 106,
+    "ENTER": 110,
+    "KILL": 38,
+    "WEAR": 57
+  },
+  "localized_title_count": 389,
+  "localized_description_count": 390
+}

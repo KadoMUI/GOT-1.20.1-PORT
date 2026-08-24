@@ -1,0 +1,11 @@
+{
+  "roles": [
+    "lhazar_farmhand"
+  ],
+  "task": "FARMER",
+  "required_alignment": 0.0,
+  "pledge_exclusive": false,
+  "initial_cost": 10,
+  "legacy_entity": "GOTEntityLhazarFarmhand",
+  "legacy_group": "LHAZAR_FARMER"
+}

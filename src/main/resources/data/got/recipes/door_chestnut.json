@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "got:chestnut_planks"
+    }
+  },
+  "result": {
+    "item": "got:door_chestnut",
+    "count": 3
+  }
+}

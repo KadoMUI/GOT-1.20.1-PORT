@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "got:block/ulthos_log",
+    "end": "got:block/ulthos_log_top"
+  }
+}

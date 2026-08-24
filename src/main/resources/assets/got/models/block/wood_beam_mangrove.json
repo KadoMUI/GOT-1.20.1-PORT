@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "got:block/wood_beam3_mangrove_top",
+    "side": "got:block/wood_beam3_mangrove_side"
+  }
+}

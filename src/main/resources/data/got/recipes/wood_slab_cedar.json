@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:cedar_planks"
+    }
+  },
+  "result": {
+    "item": "got:wood_slab_cedar",
+    "count": 6
+  }
+}

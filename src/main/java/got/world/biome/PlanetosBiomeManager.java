@@ -1,0 +1,3 @@
+package got.world.biome;
+import net.minecraft.resources.ResourceKey;import net.minecraft.world.level.biome.Biome;
+public final class PlanetosBiomeManager{private PlanetosBiomeManager(){}public static void initialize(long seed){PendingGenLayerProvider.set(new DefaultPlanetosGenLayerProvider(seed));}public static ResourceKey<Biome> getBiome(int x,int z){return PendingGenLayerProvider.get().getBiome(x,z);}public static GOTBiomeVariant getVariant(int x,int z){return PendingGenLayerProvider.get().getVariant(x,z);}public static GOTBiomeMetadata getMetadata(int x,int z){return GOTBiomes.metadata(getBiome(x,z).location().getPath()).orElse(null);}}

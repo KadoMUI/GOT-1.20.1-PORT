@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:yi_ti_flowers_bricks"
+    }
+  },
+  "result": {
+    "item": "got:flowery_yi_ti_brick_wall",
+    "count": 6
+  }
+}

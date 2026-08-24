@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/yi_ti_pillar_slab"
+    },
+    "type=double": {
+      "model": "got:block/yi_ti_pillar"
+    },
+    "type=top": {
+      "model": "got:block/yi_ti_pillar_slab_top"
+    }
+  }
+}

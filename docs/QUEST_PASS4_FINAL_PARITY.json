@@ -1,0 +1,48 @@
+{
+  "system": "Quest Fidelity / Content",
+  "pass": 4,
+  "status": "framework_complete_with_explicit_deferred_dependencies",
+  "complete": [
+    "server-authoritative offer/accept/decline lifecycle",
+    "persistent active/archive quest journal",
+    "quest giver and instance UUID ownership",
+    "collect objectives",
+    "kill entity objectives",
+    "kill faction objectives",
+    "NPC interaction objectives",
+    "location objectives",
+    "event objectives",
+    "sequential/parallel objective progression",
+    "prerequisites and cooldowns",
+    "alignment/membership gates",
+    "coin/item/xp/alignment rewards",
+    "quest tracking and client synchronization",
+    "Quest Book item and GUI",
+    "miniquest offer parchment GUI",
+    "quest giver death/failure handling",
+    "original factory identity manifest",
+    "26 legendary factory identity bindings",
+    "stateful special-quest persistence",
+    "Jaqen welcome/tutorial state bridge",
+    "original speech-bank integration"
+  ],
+  "deferred": [
+    {
+      "feature": "Bounty miniquests",
+      "reason": "requires missing player bounty/crime subsystem"
+    },
+    {
+      "feature": "Pickpocket miniquests",
+      "reason": "requires missing pickpocket/crime subsystem"
+    },
+    {
+      "feature": "unproven legacy target/reward mappings",
+      "reason": "old registry/metadata references remain unresolved; not guessed"
+    },
+    {
+      "feature": "exact legendary quest objectives/rewards not proven by audit",
+      "reason": "content fidelity rule"
+    }
+  ],
+  "result": "Quest system can be marked DONE for the 1.0 framework; deferred entries belong to prerequisite legacy-system/content audits."
+}

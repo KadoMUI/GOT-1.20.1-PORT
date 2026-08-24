@@ -1,0 +1,1 @@
+{"type":"forge:add_spawns","biomes":"#got:spawns_wildling_npcs","spawners":[{"type":"got:wildling_npc","weight":7,"minCount":1,"maxCount":3}]}

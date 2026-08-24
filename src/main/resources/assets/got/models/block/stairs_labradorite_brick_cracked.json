@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "got:block/cracked_labradorite_bricks",
+    "side": "got:block/cracked_labradorite_bricks",
+    "top": "got:block/cracked_labradorite_bricks"
+  }
+}

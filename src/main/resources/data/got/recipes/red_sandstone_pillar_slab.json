@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:red_sandstone_pillar"
+    }
+  },
+  "result": {
+    "item": "got:red_sandstone_pillar_slab",
+    "count": 6
+  }
+}

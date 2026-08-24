@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="See upstream project license"
+issueTrackerURL="https://github.com/Hummel009"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+displayURL="https://github.com/Hummel009"
+authors="Hummel009; port contributors"
+description='''
+A Forge 1.20.1 reconstruction of the open-source Game of Thrones mod.
+This bootstrap release establishes the modern mod container, registries,
+resource namespace, and converted translations.
+'''
+
+[[dependencies.${mod_id}]]
+modId="forge"
+mandatory=true
+versionRange="[47.4.13,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"

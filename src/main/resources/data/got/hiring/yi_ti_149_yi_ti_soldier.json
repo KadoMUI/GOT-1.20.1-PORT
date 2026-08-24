@@ -1,0 +1,11 @@
+{
+  "roles": [
+    "yi_ti_soldier"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 60.0,
+  "pledge_exclusive": false,
+  "initial_cost": 10,
+  "legacy_entity": "GOTEntityYiTiSoldier",
+  "legacy_group": "YI_TI"
+}

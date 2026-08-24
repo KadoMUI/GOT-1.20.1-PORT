@@ -1,0 +1,11 @@
+{
+  "roles": [
+    "norvos_farmhand"
+  ],
+  "task": "FARMER",
+  "required_alignment": 0.0,
+  "pledge_exclusive": false,
+  "initial_cost": 10,
+  "legacy_entity": "GOTEntityNorvosFarmhand",
+  "legacy_group": "NORVOS_FARMER"
+}

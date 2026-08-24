@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/asshai_gravel_slab"
+    },
+    "type=double": {
+      "model": "got:block/basalt_gravel"
+    },
+    "type=top": {
+      "model": "got:block/asshai_gravel_slab_top"
+    }
+  }
+}

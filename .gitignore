@@ -1,0 +1,36 @@
+# Gradle outputs and caches
+.gradle/
+build/
+.gradle-user-home/
+
+# Minecraft/Forge runtime directories
+run/
+run-data/
+logs/
+crash-reports/
+
+# IDE files
+.idea/
+out/
+*.iml
+*.ipr
+*.iws
+.settings/
+.metadata/
+.classpath
+.project
+bin/
+eclipse/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*~
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Forge MDK generated files
+forge*changelog.txt

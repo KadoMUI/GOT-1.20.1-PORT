@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:chalk_bricks"
+  },
+  "result": "got:stairs_chalk_brick",
+  "count": 1
+}

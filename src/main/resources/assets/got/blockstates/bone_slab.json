@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/bone_slab"
+    },
+    "type=double": {
+      "model": "got:block/bone_block"
+    },
+    "type=top": {
+      "model": "got:block/bone_slab_top"
+    }
+  }
+}

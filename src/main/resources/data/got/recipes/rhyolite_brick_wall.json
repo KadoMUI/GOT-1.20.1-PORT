@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:rhyolite_bricks"
+    }
+  },
+  "result": {
+    "item": "got:rhyolite_brick_wall",
+    "count": 6
+  }
+}

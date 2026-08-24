@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:willow_planks"
+    }
+  },
+  "result": {
+    "item": "got:stairs_willow",
+    "count": 4
+  }
+}

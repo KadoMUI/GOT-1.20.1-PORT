@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "got:dragon_planks"
+    }
+  },
+  "result": {
+    "item": "got:wood_beam_dragon",
+    "count": 3
+  }
+}

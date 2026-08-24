@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "got:block/yi_ti_granite_bricks"
+  }
+}

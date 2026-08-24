@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/sothoryos_pillar_slab"
+    },
+    "type=double": {
+      "model": "got:block/sothoryos_pillar"
+    },
+    "type=top": {
+      "model": "got:block/sothoryos_pillar_slab_top"
+    }
+  }
+}

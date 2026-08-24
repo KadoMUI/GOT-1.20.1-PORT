@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "got:banana_planks"
+    }
+  },
+  "result": {
+    "item": "got:door_banana",
+    "count": 3
+  }
+}

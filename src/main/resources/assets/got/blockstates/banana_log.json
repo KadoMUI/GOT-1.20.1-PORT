@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "got:block/banana_log"
+    },
+    "axis=x": {
+      "model": "got:block/banana_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=z": {
+      "model": "got:block/banana_log_horizontal",
+      "x": 90
+    }
+  }
+}

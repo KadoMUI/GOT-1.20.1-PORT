@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "got:block/pillar1_sothoryos_face",
+    "side": "got:block/pillar1_sothoryos_side",
+    "top": "got:block/pillar1_sothoryos_face"
+  }
+}

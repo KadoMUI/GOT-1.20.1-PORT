@@ -1,0 +1,168 @@
+{
+  "source": "Game of Thrones 24.08.29",
+  "legacy_item": "smithScroll",
+  "legacy_class": "got.common.item.other.GOTItemModifierTemplate",
+  "nbt_key": "ScrollModifier",
+  "texture": "assets/got/textures/items/smith_scroll.png",
+  "template_rule": "hasTemplateItem = enchantWeight > 0 AND beneficial",
+  "scroll_variant_count": 35,
+  "variants": [
+    {
+      "legacy_modifier": "strong1",
+      "translation_key": "got.enchant.strong1"
+    },
+    {
+      "legacy_modifier": "strong2",
+      "translation_key": "got.enchant.strong2"
+    },
+    {
+      "legacy_modifier": "strong3",
+      "translation_key": "got.enchant.strong3"
+    },
+    {
+      "legacy_modifier": "strong4",
+      "translation_key": "got.enchant.strong4"
+    },
+    {
+      "legacy_modifier": "durable1",
+      "translation_key": "got.enchant.durable1"
+    },
+    {
+      "legacy_modifier": "durable2",
+      "translation_key": "got.enchant.durable2"
+    },
+    {
+      "legacy_modifier": "durable3",
+      "translation_key": "got.enchant.durable3"
+    },
+    {
+      "legacy_modifier": "meleeSpeed1",
+      "translation_key": "got.enchant.meleeSpeed1"
+    },
+    {
+      "legacy_modifier": "meleeReach1",
+      "translation_key": "got.enchant.meleeReach1"
+    },
+    {
+      "legacy_modifier": "knockback1",
+      "translation_key": "got.enchant.knockback1"
+    },
+    {
+      "legacy_modifier": "knockback2",
+      "translation_key": "got.enchant.knockback2"
+    },
+    {
+      "legacy_modifier": "toolSpeed1",
+      "translation_key": "got.enchant.toolSpeed1"
+    },
+    {
+      "legacy_modifier": "toolSpeed2",
+      "translation_key": "got.enchant.toolSpeed2"
+    },
+    {
+      "legacy_modifier": "toolSpeed3",
+      "translation_key": "got.enchant.toolSpeed3"
+    },
+    {
+      "legacy_modifier": "toolSpeed4",
+      "translation_key": "got.enchant.toolSpeed4"
+    },
+    {
+      "legacy_modifier": "toolSilk",
+      "translation_key": "got.enchant.toolSilk"
+    },
+    {
+      "legacy_modifier": "looting1",
+      "translation_key": "got.enchant.looting1"
+    },
+    {
+      "legacy_modifier": "looting2",
+      "translation_key": "got.enchant.looting2"
+    },
+    {
+      "legacy_modifier": "looting3",
+      "translation_key": "got.enchant.looting3"
+    },
+    {
+      "legacy_modifier": "protect1",
+      "translation_key": "got.enchant.protect1"
+    },
+    {
+      "legacy_modifier": "protect2",
+      "translation_key": "got.enchant.protect2"
+    },
+    {
+      "legacy_modifier": "protectFire1",
+      "translation_key": "got.enchant.protectFire1"
+    },
+    {
+      "legacy_modifier": "protectFire2",
+      "translation_key": "got.enchant.protectFire2"
+    },
+    {
+      "legacy_modifier": "protectFire3",
+      "translation_key": "got.enchant.protectFire3"
+    },
+    {
+      "legacy_modifier": "protectFall1",
+      "translation_key": "got.enchant.protectFall1"
+    },
+    {
+      "legacy_modifier": "protectFall2",
+      "translation_key": "got.enchant.protectFall2"
+    },
+    {
+      "legacy_modifier": "protectFall3",
+      "translation_key": "got.enchant.protectFall3"
+    },
+    {
+      "legacy_modifier": "protectRanged1",
+      "translation_key": "got.enchant.protectRanged1"
+    },
+    {
+      "legacy_modifier": "protectRanged2",
+      "translation_key": "got.enchant.protectRanged2"
+    },
+    {
+      "legacy_modifier": "protectRanged3",
+      "translation_key": "got.enchant.protectRanged3"
+    },
+    {
+      "legacy_modifier": "rangedStrong1",
+      "translation_key": "got.enchant.rangedStrong1"
+    },
+    {
+      "legacy_modifier": "rangedStrong2",
+      "translation_key": "got.enchant.rangedStrong2"
+    },
+    {
+      "legacy_modifier": "rangedStrong3",
+      "translation_key": "got.enchant.rangedStrong3"
+    },
+    {
+      "legacy_modifier": "rangedKnockback1",
+      "translation_key": "got.enchant.rangedKnockback1"
+    },
+    {
+      "legacy_modifier": "rangedKnockback2",
+      "translation_key": "got.enchant.rangedKnockback2"
+    }
+  ],
+  "excluded_weight_zero": [
+    "fire",
+    "chill",
+    "headhunting"
+  ],
+  "excluded_harmful": [
+    "weak1",
+    "weak2",
+    "weak3",
+    "meleeSlow1",
+    "meleeUnreach1",
+    "toolSlow1",
+    "protectWeak1",
+    "protectWeak2",
+    "rangedWeak1",
+    "rangedWeak2"
+  ]
+}

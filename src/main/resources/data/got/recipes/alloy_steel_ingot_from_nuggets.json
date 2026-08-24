@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "got:alloy_steel_nugget"
+    }
+  },
+  "result": {
+    "item": "got:alloy_steel_ingot",
+    "count": 1
+  }
+}

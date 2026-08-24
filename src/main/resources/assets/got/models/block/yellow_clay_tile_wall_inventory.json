@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "got:block/yellow_terracotta_roof_tiles"
+  }
+}

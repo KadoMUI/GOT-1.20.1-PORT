@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "got:block/flax_crop_0"
+    },
+    "age=1": {
+      "model": "got:block/flax_crop_1"
+    },
+    "age=2": {
+      "model": "got:block/flax_crop_2"
+    },
+    "age=3": {
+      "model": "got:block/flax_crop_3"
+    },
+    "age=4": {
+      "model": "got:block/flax_crop_4"
+    },
+    "age=5": {
+      "model": "got:block/flax_crop_5"
+    },
+    "age=6": {
+      "model": "got:block/flax_crop_6"
+    },
+    "age=7": {
+      "model": "got:block/flax_crop_7"
+    }
+  }
+}

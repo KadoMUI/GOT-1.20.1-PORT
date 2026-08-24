@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "got:item/stone_throwing_axe"
+  }
+}

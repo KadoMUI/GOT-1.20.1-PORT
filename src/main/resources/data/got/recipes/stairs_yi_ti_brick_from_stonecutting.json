@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:yi_ti_bricks"
+  },
+  "result": "got:stairs_yi_ti_brick",
+  "count": 1
+}

@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "vertical_direction=down": {
+      "model": "got:block/stalactite"
+    },
+    "vertical_direction=up": {
+      "model": "got:block/stalactite",
+      "x": 180
+    }
+  }
+}

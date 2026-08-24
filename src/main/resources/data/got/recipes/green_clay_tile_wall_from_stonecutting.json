@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:green_terracotta_roof_tiles"
+  },
+  "result": "got:green_clay_tile_wall",
+  "count": 1
+}

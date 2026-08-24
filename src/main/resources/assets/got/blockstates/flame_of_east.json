@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "got:block/flame_of_east_lower"
+    },
+    "half=upper": {
+      "model": "got:block/flame_of_east_upper"
+    }
+  }
+}

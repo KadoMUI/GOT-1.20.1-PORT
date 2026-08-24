@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:cypress_planks"
+    }
+  },
+  "result": {
+    "item": "got:trapdoor_cypress",
+    "count": 2
+  }
+}

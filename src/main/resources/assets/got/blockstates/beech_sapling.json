@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "got:block/beech_sapling"
+    },
+    "stage=1": {
+      "model": "got:block/beech_sapling"
+    }
+  }
+}

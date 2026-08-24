@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "got:north",
+    "got:north_barrows",
+    "got:north_forest",
+    "got:north_forest_irontree",
+    "got:north_hills",
+    "got:north_mountains",
+    "got:north_town",
+    "got:north_wild",
+    "got:skagos"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "quest.got.crownlands_supplies.title", "description": "quest.got.crownlands_supplies.description",
+  "offer": "quest.got.crownlands_supplies.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.crownlands_supplies.complete",
+  "icon": "minecraft:paper", "color": "#DBB9A5", "weight": 5, "repeatable": true, "cooldown_ticks": 24000,
+  "giver": { "factions": ["crownlands"], "roles": ["crownlands_man", "crownlands_farmhand"], "maximum_active_for_faction": 5 },
+  "objectives": [{ "type": "collect", "target": "minecraft:paper", "count": 16, "consume": true, "label": "quest.got.crownlands_supplies.objective.0" }],
+  "rewards": { "alignment": { "crownlands": 8.0 }, "coins": 16, "experience": 10 }
+}

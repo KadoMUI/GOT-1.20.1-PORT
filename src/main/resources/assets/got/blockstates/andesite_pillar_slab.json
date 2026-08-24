@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/andesite_pillar_slab"
+    },
+    "type=double": {
+      "model": "got:block/andesite_pillar"
+    },
+    "type=top": {
+      "model": "got:block/andesite_pillar_slab_top"
+    }
+  }
+}

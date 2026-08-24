@@ -1,0 +1,34 @@
+{
+  "title": "quest.got.riverlands_border_patrol.title",
+  "description": "quest.got.riverlands_border_patrol.description",
+  "offer": "quest.got.riverlands_border_patrol.offer",
+  "progress": "quest.got.standard.progress",
+  "complete": "quest.got.riverlands_border_patrol.complete",
+  "icon": "minecraft:iron_sword",
+  "color": "#315A7D",
+  "weight": 2,
+  "repeatable": true,
+  "cooldown_ticks": 24000,
+  "giver": {
+    "factions": ["riverlands"],
+    "roles": [
+      "riverlands_levyman", "riverlands_levyman_archer",
+      "riverlands_soldier", "riverlands_soldier_archer",
+      "riverlands_banner_bearer"
+    ],
+    "maximum_active_for_faction": 5
+  },
+  "objectives": [
+    {
+      "type": "kill_faction",
+      "target": "westerlands",
+      "count": 5,
+      "label": "quest.got.riverlands_border_patrol.objective.0"
+    }
+  ],
+  "rewards": {
+    "alignment": { "riverlands": 10.0 },
+    "coins": 20,
+    "experience": 15
+  }
+}

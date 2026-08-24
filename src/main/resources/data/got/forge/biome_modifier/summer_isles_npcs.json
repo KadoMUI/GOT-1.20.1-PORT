@@ -1,0 +1,5 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#got:spawns_summer_isles_npcs",
+  "spawners": [{ "type": "got:summer_isles_npc", "weight": 10, "minCount": 1, "maxCount": 2 }]
+}

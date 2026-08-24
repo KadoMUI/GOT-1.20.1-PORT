@@ -1,0 +1,8 @@
+{
+  "title": "quest.got.mossovy_border_patrol.title", "description": "quest.got.mossovy_border_patrol.description",
+  "offer": "quest.got.mossovy_border_patrol.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.mossovy_border_patrol.complete",
+  "icon": "got:iron_crossbow", "color": "#4B5C42", "weight": 2, "repeatable": true, "cooldown_ticks": 24000,
+  "giver": { "factions": ["mossovy"], "roles": ["mossovy_man"], "maximum_active_for_faction": 5 },
+  "objectives": [{ "type": "kill_faction", "target": "jogos_nhai", "count": 5, "label": "quest.got.mossovy_border_patrol.objective.0" }],
+  "rewards": { "alignment": { "mossovy": 10.0 }, "coins": 20, "experience": 15 }
+}

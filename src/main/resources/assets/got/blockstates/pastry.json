@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "got:block/pastry_0"
+    },
+    "bites=1": {
+      "model": "got:block/pastry_1"
+    },
+    "bites=2": {
+      "model": "got:block/pastry_2"
+    },
+    "bites=3": {
+      "model": "got:block/pastry_3"
+    },
+    "bites=4": {
+      "model": "got:block/pastry_4"
+    },
+    "bites=5": {
+      "model": "got:block/pastry_5"
+    },
+    "bites=6": {
+      "model": "got:block/pastry_6"
+    }
+  }
+}

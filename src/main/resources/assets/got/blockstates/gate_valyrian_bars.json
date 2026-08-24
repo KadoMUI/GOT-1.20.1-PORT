@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,open=false,powered=false": {
+      "model": "got:block/gate_valyrian_bars"
+    },
+    "facing=east,open=false,powered=false": {
+      "model": "got:block/gate_valyrian_bars",
+      "y": 90
+    },
+    "facing=south,open=false,powered=false": {
+      "model": "got:block/gate_valyrian_bars",
+      "y": 180
+    },
+    "facing=west,open=false,powered=false": {
+      "model": "got:block/gate_valyrian_bars",
+      "y": 270
+    },
+    "facing=north,open=false,powered=true": {
+      "model": "got:block/gate_valyrian_bars"
+    },
+    "facing=east,open=false,powered=true": {
+      "model": "got:block/gate_valyrian_bars",
+      "y": 90
+    },
+    "facing=south,open=false,powered=true": {
+      "model": "got:block/gate_valyrian_bars",
+      "y": 180
+    },
+    "facing=west,open=false,powered=true": {
+      "model": "got:block/gate_valyrian_bars",
+      "y": 270
+    },
+    "facing=north,open=true,powered=false": {
+      "model": "got:block/gate_valyrian_bars_open"
+    },
+    "facing=east,open=true,powered=false": {
+      "model": "got:block/gate_valyrian_bars_open",
+      "y": 90
+    },
+    "facing=south,open=true,powered=false": {
+      "model": "got:block/gate_valyrian_bars_open",
+      "y": 180
+    },
+    "facing=west,open=true,powered=false": {
+      "model": "got:block/gate_valyrian_bars_open",
+      "y": 270
+    },
+    "facing=north,open=true,powered=true": {
+      "model": "got:block/gate_valyrian_bars_open"
+    },
+    "facing=east,open=true,powered=true": {
+      "model": "got:block/gate_valyrian_bars_open",
+      "y": 90
+    },
+    "facing=south,open=true,powered=true": {
+      "model": "got:block/gate_valyrian_bars_open",
+      "y": 180
+    },
+    "facing=west,open=true,powered=true": {
+      "model": "got:block/gate_valyrian_bars_open",
+      "y": 270
+    }
+  }
+}

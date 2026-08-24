@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "got:block/cracked_sothoryos_bricks",
+    "side": "got:block/cracked_sothoryos_bricks",
+    "top": "got:block/cracked_sothoryos_bricks"
+  }
+}

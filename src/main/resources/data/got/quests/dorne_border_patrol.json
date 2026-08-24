@@ -1,0 +1,8 @@
+{
+  "title": "quest.got.dorne_border_patrol.title", "description": "quest.got.dorne_border_patrol.description",
+  "offer": "quest.got.dorne_border_patrol.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.dorne_border_patrol.complete",
+  "icon": "minecraft:iron_sword", "color": "#C76832", "weight": 2, "repeatable": true, "cooldown_ticks": 24000,
+  "giver": { "factions": ["dorne"], "roles": ["dorne_levyman", "dorne_levyman_archer", "dorne_soldier", "dorne_soldier_archer", "dorne_banner_bearer"], "maximum_active_for_faction": 5 },
+  "objectives": [{ "type": "kill_faction", "target": "crownlands", "count": 5, "label": "quest.got.dorne_border_patrol.objective.0" }],
+  "rewards": { "alignment": { "dorne": 10.0 }, "coins": 20, "experience": 15 }
+}

@@ -1,0 +1,7548 @@
+{
+  "format": 1,
+  "source": "Game of Thrones 24.08.29",
+  "entry_count": 502,
+  "rewardable_count": 0,
+  "categories": {
+    "de": 21,
+    "en": 21,
+    "fr": 97,
+    "pl": 21,
+    "ru": 146,
+    "tr": 21,
+    "uk": 145,
+    "zh": 30
+  },
+  "entries": [
+    {
+      "id": "de/lore/arryn",
+      "source_path": "assets/got/texts/de/lore/arryn.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/asshai",
+      "source_path": "assets/got/texts/de/lore/asshai.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/braavos",
+      "source_path": "assets/got/texts/de/lore/braavos.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/crownlands",
+      "source_path": "assets/got/texts/de/lore/crownlands.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/dorne",
+      "source_path": "assets/got/texts/de/lore/dorne.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/dragonstone",
+      "source_path": "assets/got/texts/de/lore/dragonstone.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/ibben",
+      "source_path": "assets/got/texts/de/lore/ibben.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/lorath",
+      "source_path": "assets/got/texts/de/lore/lorath.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/lys",
+      "source_path": "assets/got/texts/de/lore/lys.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/myr",
+      "source_path": "assets/got/texts/de/lore/myr.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/north",
+      "source_path": "assets/got/texts/de/lore/north.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/pentos",
+      "source_path": "assets/got/texts/de/lore/pentos.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/qohor",
+      "source_path": "assets/got/texts/de/lore/qohor.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/reach",
+      "source_path": "assets/got/texts/de/lore/reach.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/riverlands",
+      "source_path": "assets/got/texts/de/lore/riverlands.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/sothoryos",
+      "source_path": "assets/got/texts/de/lore/sothoryos.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/stormlands",
+      "source_path": "assets/got/texts/de/lore/stormlands.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/tyrosh",
+      "source_path": "assets/got/texts/de/lore/tyrosh.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/volantis",
+      "source_path": "assets/got/texts/de/lore/volantis.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/westerlands",
+      "source_path": "assets/got/texts/de/lore/westerlands.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "de/lore/yi_ti",
+      "source_path": "assets/got/texts/de/lore/yi_ti.txt",
+      "category": "de",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/arryn",
+      "source_path": "assets/got/texts/en/lore/arryn.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/asshai",
+      "source_path": "assets/got/texts/en/lore/asshai.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/braavos",
+      "source_path": "assets/got/texts/en/lore/braavos.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/crownlands",
+      "source_path": "assets/got/texts/en/lore/crownlands.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/dorne",
+      "source_path": "assets/got/texts/en/lore/dorne.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/dragonstone",
+      "source_path": "assets/got/texts/en/lore/dragonstone.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/ibben",
+      "source_path": "assets/got/texts/en/lore/ibben.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/lorath",
+      "source_path": "assets/got/texts/en/lore/lorath.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/lys",
+      "source_path": "assets/got/texts/en/lore/lys.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/myr",
+      "source_path": "assets/got/texts/en/lore/myr.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/north",
+      "source_path": "assets/got/texts/en/lore/north.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/pentos",
+      "source_path": "assets/got/texts/en/lore/pentos.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/qohor",
+      "source_path": "assets/got/texts/en/lore/qohor.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/reach",
+      "source_path": "assets/got/texts/en/lore/reach.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/riverlands",
+      "source_path": "assets/got/texts/en/lore/riverlands.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/sothoryos",
+      "source_path": "assets/got/texts/en/lore/sothoryos.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/stormlands",
+      "source_path": "assets/got/texts/en/lore/stormlands.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/tyrosh",
+      "source_path": "assets/got/texts/en/lore/tyrosh.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/volantis",
+      "source_path": "assets/got/texts/en/lore/volantis.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/westerlands",
+      "source_path": "assets/got/texts/en/lore/westerlands.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "en/lore/yi_ti",
+      "source_path": "assets/got/texts/en/lore/yi_ti.txt",
+      "category": "en",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/alchemy_0",
+      "source_path": "assets/got/texts/fr/lore/alchemy_0.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/alchemy_1",
+      "source_path": "assets/got/texts/fr/lore/alchemy_1.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/alchemy_2",
+      "source_path": "assets/got/texts/fr/lore/alchemy_2.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/alchemy_3",
+      "source_path": "assets/got/texts/fr/lore/alchemy_3.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_0",
+      "source_path": "assets/got/texts/fr/lore/creatures_0.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_1",
+      "source_path": "assets/got/texts/fr/lore/creatures_1.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_10",
+      "source_path": "assets/got/texts/fr/lore/creatures_10.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_11",
+      "source_path": "assets/got/texts/fr/lore/creatures_11.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_12",
+      "source_path": "assets/got/texts/fr/lore/creatures_12.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_13",
+      "source_path": "assets/got/texts/fr/lore/creatures_13.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_14",
+      "source_path": "assets/got/texts/fr/lore/creatures_14.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_15",
+      "source_path": "assets/got/texts/fr/lore/creatures_15.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_2",
+      "source_path": "assets/got/texts/fr/lore/creatures_2.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_3",
+      "source_path": "assets/got/texts/fr/lore/creatures_3.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_4",
+      "source_path": "assets/got/texts/fr/lore/creatures_4.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_5",
+      "source_path": "assets/got/texts/fr/lore/creatures_5.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_6",
+      "source_path": "assets/got/texts/fr/lore/creatures_6.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_7",
+      "source_path": "assets/got/texts/fr/lore/creatures_7.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_8",
+      "source_path": "assets/got/texts/fr/lore/creatures_8.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/creatures_9",
+      "source_path": "assets/got/texts/fr/lore/creatures_9.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/legends_0",
+      "source_path": "assets/got/texts/fr/lore/legends_0.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/legends_1",
+      "source_path": "assets/got/texts/fr/lore/legends_1.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/legends_2",
+      "source_path": "assets/got/texts/fr/lore/legends_2.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/legends_3",
+      "source_path": "assets/got/texts/fr/lore/legends_3.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/legends_4",
+      "source_path": "assets/got/texts/fr/lore/legends_4.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_0",
+      "source_path": "assets/got/texts/fr/lore/letters_0.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_1",
+      "source_path": "assets/got/texts/fr/lore/letters_1.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_10",
+      "source_path": "assets/got/texts/fr/lore/letters_10.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_11",
+      "source_path": "assets/got/texts/fr/lore/letters_11.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_12",
+      "source_path": "assets/got/texts/fr/lore/letters_12.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_13",
+      "source_path": "assets/got/texts/fr/lore/letters_13.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_14",
+      "source_path": "assets/got/texts/fr/lore/letters_14.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_15",
+      "source_path": "assets/got/texts/fr/lore/letters_15.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_16",
+      "source_path": "assets/got/texts/fr/lore/letters_16.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_17",
+      "source_path": "assets/got/texts/fr/lore/letters_17.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_18",
+      "source_path": "assets/got/texts/fr/lore/letters_18.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_19",
+      "source_path": "assets/got/texts/fr/lore/letters_19.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_2",
+      "source_path": "assets/got/texts/fr/lore/letters_2.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_20",
+      "source_path": "assets/got/texts/fr/lore/letters_20.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_21",
+      "source_path": "assets/got/texts/fr/lore/letters_21.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_22",
+      "source_path": "assets/got/texts/fr/lore/letters_22.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_23",
+      "source_path": "assets/got/texts/fr/lore/letters_23.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_24",
+      "source_path": "assets/got/texts/fr/lore/letters_24.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_25",
+      "source_path": "assets/got/texts/fr/lore/letters_25.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_26",
+      "source_path": "assets/got/texts/fr/lore/letters_26.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_27",
+      "source_path": "assets/got/texts/fr/lore/letters_27.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_28",
+      "source_path": "assets/got/texts/fr/lore/letters_28.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_29",
+      "source_path": "assets/got/texts/fr/lore/letters_29.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_3",
+      "source_path": "assets/got/texts/fr/lore/letters_3.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_4",
+      "source_path": "assets/got/texts/fr/lore/letters_4.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_5",
+      "source_path": "assets/got/texts/fr/lore/letters_5.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_6",
+      "source_path": "assets/got/texts/fr/lore/letters_6.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_7",
+      "source_path": "assets/got/texts/fr/lore/letters_7.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_8",
+      "source_path": "assets/got/texts/fr/lore/letters_8.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/letters_9",
+      "source_path": "assets/got/texts/fr/lore/letters_9.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/magic_0",
+      "source_path": "assets/got/texts/fr/lore/magic_0.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/magic_1",
+      "source_path": "assets/got/texts/fr/lore/magic_1.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/magic_2",
+      "source_path": "assets/got/texts/fr/lore/magic_2.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/magic_3",
+      "source_path": "assets/got/texts/fr/lore/magic_3.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/magic_4",
+      "source_path": "assets/got/texts/fr/lore/magic_4.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/magic_5",
+      "source_path": "assets/got/texts/fr/lore/magic_5.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/magic_6",
+      "source_path": "assets/got/texts/fr/lore/magic_6.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/magic_7",
+      "source_path": "assets/got/texts/fr/lore/magic_7.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/medic_1",
+      "source_path": "assets/got/texts/fr/lore/medic_1.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/medic_2",
+      "source_path": "assets/got/texts/fr/lore/medic_2.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/medic_3",
+      "source_path": "assets/got/texts/fr/lore/medic_3.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/medic_4",
+      "source_path": "assets/got/texts/fr/lore/medic_4.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/medic_5",
+      "source_path": "assets/got/texts/fr/lore/medic_5.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/medic_6",
+      "source_path": "assets/got/texts/fr/lore/medic_6.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/medic_7",
+      "source_path": "assets/got/texts/fr/lore/medic_7.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/organization_0",
+      "source_path": "assets/got/texts/fr/lore/organization_0.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/organization_1",
+      "source_path": "assets/got/texts/fr/lore/organization_1.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/organization_2",
+      "source_path": "assets/got/texts/fr/lore/organization_2.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/organization_3",
+      "source_path": "assets/got/texts/fr/lore/organization_3.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/organization_4",
+      "source_path": "assets/got/texts/fr/lore/organization_4.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/organization_5",
+      "source_path": "assets/got/texts/fr/lore/organization_5.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/organization_6",
+      "source_path": "assets/got/texts/fr/lore/organization_6.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/organization_7",
+      "source_path": "assets/got/texts/fr/lore/organization_7.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/religion_0",
+      "source_path": "assets/got/texts/fr/lore/religion_0.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/religion_1",
+      "source_path": "assets/got/texts/fr/lore/religion_1.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/religion_10",
+      "source_path": "assets/got/texts/fr/lore/religion_10.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/religion_11",
+      "source_path": "assets/got/texts/fr/lore/religion_11.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/religion_12",
+      "source_path": "assets/got/texts/fr/lore/religion_12.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/religion_13",
+      "source_path": "assets/got/texts/fr/lore/religion_13.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/religion_2",
+      "source_path": "assets/got/texts/fr/lore/religion_2.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/religion_3",
+      "source_path": "assets/got/texts/fr/lore/religion_3.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/religion_4",
+      "source_path": "assets/got/texts/fr/lore/religion_4.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/religion_5",
+      "source_path": "assets/got/texts/fr/lore/religion_5.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/religion_6",
+      "source_path": "assets/got/texts/fr/lore/religion_6.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/religion_7",
+      "source_path": "assets/got/texts/fr/lore/religion_7.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/religion_8",
+      "source_path": "assets/got/texts/fr/lore/religion_8.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/religion_9",
+      "source_path": "assets/got/texts/fr/lore/religion_9.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/songs_0",
+      "source_path": "assets/got/texts/fr/lore/songs_0.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/songs_1",
+      "source_path": "assets/got/texts/fr/lore/songs_1.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/sothoryos_0",
+      "source_path": "assets/got/texts/fr/lore/sothoryos_0.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/sothoryos_1",
+      "source_path": "assets/got/texts/fr/lore/sothoryos_1.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "fr/lore/stannis_0",
+      "source_path": "assets/got/texts/fr/lore/stannis_0.txt",
+      "category": "fr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/arryn",
+      "source_path": "assets/got/texts/pl/lore/arryn.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/asshai",
+      "source_path": "assets/got/texts/pl/lore/asshai.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/braavos",
+      "source_path": "assets/got/texts/pl/lore/braavos.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/crownlands",
+      "source_path": "assets/got/texts/pl/lore/crownlands.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/dorne",
+      "source_path": "assets/got/texts/pl/lore/dorne.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/dragonstone",
+      "source_path": "assets/got/texts/pl/lore/dragonstone.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/ibben",
+      "source_path": "assets/got/texts/pl/lore/ibben.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/lorath",
+      "source_path": "assets/got/texts/pl/lore/lorath.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/lys",
+      "source_path": "assets/got/texts/pl/lore/lys.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/myr",
+      "source_path": "assets/got/texts/pl/lore/myr.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/north",
+      "source_path": "assets/got/texts/pl/lore/north.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/pentos",
+      "source_path": "assets/got/texts/pl/lore/pentos.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/qohor",
+      "source_path": "assets/got/texts/pl/lore/qohor.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/reach",
+      "source_path": "assets/got/texts/pl/lore/reach.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/riverlands",
+      "source_path": "assets/got/texts/pl/lore/riverlands.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/sothoryos",
+      "source_path": "assets/got/texts/pl/lore/sothoryos.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/stormlands",
+      "source_path": "assets/got/texts/pl/lore/stormlands.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/tyrosh",
+      "source_path": "assets/got/texts/pl/lore/tyrosh.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/volantis",
+      "source_path": "assets/got/texts/pl/lore/volantis.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/westerlands",
+      "source_path": "assets/got/texts/pl/lore/westerlands.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "pl/lore/yi_ti",
+      "source_path": "assets/got/texts/pl/lore/yi_ti.txt",
+      "category": "pl",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/alchemy_0",
+      "source_path": "assets/got/texts/ru/lore/alchemy_0.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/alchemy_1",
+      "source_path": "assets/got/texts/ru/lore/alchemy_1.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/alchemy_2",
+      "source_path": "assets/got/texts/ru/lore/alchemy_2.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/alchemy_3",
+      "source_path": "assets/got/texts/ru/lore/alchemy_3.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_0",
+      "source_path": "assets/got/texts/ru/lore/creatures_0.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_1",
+      "source_path": "assets/got/texts/ru/lore/creatures_1.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_10",
+      "source_path": "assets/got/texts/ru/lore/creatures_10.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_11",
+      "source_path": "assets/got/texts/ru/lore/creatures_11.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_12",
+      "source_path": "assets/got/texts/ru/lore/creatures_12.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_13",
+      "source_path": "assets/got/texts/ru/lore/creatures_13.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_14",
+      "source_path": "assets/got/texts/ru/lore/creatures_14.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_15",
+      "source_path": "assets/got/texts/ru/lore/creatures_15.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_2",
+      "source_path": "assets/got/texts/ru/lore/creatures_2.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_3",
+      "source_path": "assets/got/texts/ru/lore/creatures_3.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_4",
+      "source_path": "assets/got/texts/ru/lore/creatures_4.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_5",
+      "source_path": "assets/got/texts/ru/lore/creatures_5.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_6",
+      "source_path": "assets/got/texts/ru/lore/creatures_6.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_7",
+      "source_path": "assets/got/texts/ru/lore/creatures_7.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_8",
+      "source_path": "assets/got/texts/ru/lore/creatures_8.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/creatures_9",
+      "source_path": "assets/got/texts/ru/lore/creatures_9.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/legends_0",
+      "source_path": "assets/got/texts/ru/lore/legends_0.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/legends_1",
+      "source_path": "assets/got/texts/ru/lore/legends_1.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/legends_2",
+      "source_path": "assets/got/texts/ru/lore/legends_2.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/legends_3",
+      "source_path": "assets/got/texts/ru/lore/legends_3.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/legends_4",
+      "source_path": "assets/got/texts/ru/lore/legends_4.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_0",
+      "source_path": "assets/got/texts/ru/lore/letters_0.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_1",
+      "source_path": "assets/got/texts/ru/lore/letters_1.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_10",
+      "source_path": "assets/got/texts/ru/lore/letters_10.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_11",
+      "source_path": "assets/got/texts/ru/lore/letters_11.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_12",
+      "source_path": "assets/got/texts/ru/lore/letters_12.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_13",
+      "source_path": "assets/got/texts/ru/lore/letters_13.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_14",
+      "source_path": "assets/got/texts/ru/lore/letters_14.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_15",
+      "source_path": "assets/got/texts/ru/lore/letters_15.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_16",
+      "source_path": "assets/got/texts/ru/lore/letters_16.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_17",
+      "source_path": "assets/got/texts/ru/lore/letters_17.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_18",
+      "source_path": "assets/got/texts/ru/lore/letters_18.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_19",
+      "source_path": "assets/got/texts/ru/lore/letters_19.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_2",
+      "source_path": "assets/got/texts/ru/lore/letters_2.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_20",
+      "source_path": "assets/got/texts/ru/lore/letters_20.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_21",
+      "source_path": "assets/got/texts/ru/lore/letters_21.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_22",
+      "source_path": "assets/got/texts/ru/lore/letters_22.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_23",
+      "source_path": "assets/got/texts/ru/lore/letters_23.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_24",
+      "source_path": "assets/got/texts/ru/lore/letters_24.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_25",
+      "source_path": "assets/got/texts/ru/lore/letters_25.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_26",
+      "source_path": "assets/got/texts/ru/lore/letters_26.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_27",
+      "source_path": "assets/got/texts/ru/lore/letters_27.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_28",
+      "source_path": "assets/got/texts/ru/lore/letters_28.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_29",
+      "source_path": "assets/got/texts/ru/lore/letters_29.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_3",
+      "source_path": "assets/got/texts/ru/lore/letters_3.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_30",
+      "source_path": "assets/got/texts/ru/lore/letters_30.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_31",
+      "source_path": "assets/got/texts/ru/lore/letters_31.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_32",
+      "source_path": "assets/got/texts/ru/lore/letters_32.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_33",
+      "source_path": "assets/got/texts/ru/lore/letters_33.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_34",
+      "source_path": "assets/got/texts/ru/lore/letters_34.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_35",
+      "source_path": "assets/got/texts/ru/lore/letters_35.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_36",
+      "source_path": "assets/got/texts/ru/lore/letters_36.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_38",
+      "source_path": "assets/got/texts/ru/lore/letters_38.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_4",
+      "source_path": "assets/got/texts/ru/lore/letters_4.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_40",
+      "source_path": "assets/got/texts/ru/lore/letters_40.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_41",
+      "source_path": "assets/got/texts/ru/lore/letters_41.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_42",
+      "source_path": "assets/got/texts/ru/lore/letters_42.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_43",
+      "source_path": "assets/got/texts/ru/lore/letters_43.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_44",
+      "source_path": "assets/got/texts/ru/lore/letters_44.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_45",
+      "source_path": "assets/got/texts/ru/lore/letters_45.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_46",
+      "source_path": "assets/got/texts/ru/lore/letters_46.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_47",
+      "source_path": "assets/got/texts/ru/lore/letters_47.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_48",
+      "source_path": "assets/got/texts/ru/lore/letters_48.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_49",
+      "source_path": "assets/got/texts/ru/lore/letters_49.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_5",
+      "source_path": "assets/got/texts/ru/lore/letters_5.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_50",
+      "source_path": "assets/got/texts/ru/lore/letters_50.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_51",
+      "source_path": "assets/got/texts/ru/lore/letters_51.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_52",
+      "source_path": "assets/got/texts/ru/lore/letters_52.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_53",
+      "source_path": "assets/got/texts/ru/lore/letters_53.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_54",
+      "source_path": "assets/got/texts/ru/lore/letters_54.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_55",
+      "source_path": "assets/got/texts/ru/lore/letters_55.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_56",
+      "source_path": "assets/got/texts/ru/lore/letters_56.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_57",
+      "source_path": "assets/got/texts/ru/lore/letters_57.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_58",
+      "source_path": "assets/got/texts/ru/lore/letters_58.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_59",
+      "source_path": "assets/got/texts/ru/lore/letters_59.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_6",
+      "source_path": "assets/got/texts/ru/lore/letters_6.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_60",
+      "source_path": "assets/got/texts/ru/lore/letters_60.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_61",
+      "source_path": "assets/got/texts/ru/lore/letters_61.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_62",
+      "source_path": "assets/got/texts/ru/lore/letters_62.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_63",
+      "source_path": "assets/got/texts/ru/lore/letters_63.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_64",
+      "source_path": "assets/got/texts/ru/lore/letters_64.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_65",
+      "source_path": "assets/got/texts/ru/lore/letters_65.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_66",
+      "source_path": "assets/got/texts/ru/lore/letters_66.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_67",
+      "source_path": "assets/got/texts/ru/lore/letters_67.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_68",
+      "source_path": "assets/got/texts/ru/lore/letters_68.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_69",
+      "source_path": "assets/got/texts/ru/lore/letters_69.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_7",
+      "source_path": "assets/got/texts/ru/lore/letters_7.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_70",
+      "source_path": "assets/got/texts/ru/lore/letters_70.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_71",
+      "source_path": "assets/got/texts/ru/lore/letters_71.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_72",
+      "source_path": "assets/got/texts/ru/lore/letters_72.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_73",
+      "source_path": "assets/got/texts/ru/lore/letters_73.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_74",
+      "source_path": "assets/got/texts/ru/lore/letters_74.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_75",
+      "source_path": "assets/got/texts/ru/lore/letters_75.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_76",
+      "source_path": "assets/got/texts/ru/lore/letters_76.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_77",
+      "source_path": "assets/got/texts/ru/lore/letters_77.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_78",
+      "source_path": "assets/got/texts/ru/lore/letters_78.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_79",
+      "source_path": "assets/got/texts/ru/lore/letters_79.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_8",
+      "source_path": "assets/got/texts/ru/lore/letters_8.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_80",
+      "source_path": "assets/got/texts/ru/lore/letters_80.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/letters_9",
+      "source_path": "assets/got/texts/ru/lore/letters_9.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/magic_0",
+      "source_path": "assets/got/texts/ru/lore/magic_0.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/magic_1",
+      "source_path": "assets/got/texts/ru/lore/magic_1.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/magic_2",
+      "source_path": "assets/got/texts/ru/lore/magic_2.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/magic_3",
+      "source_path": "assets/got/texts/ru/lore/magic_3.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/magic_4",
+      "source_path": "assets/got/texts/ru/lore/magic_4.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/magic_5",
+      "source_path": "assets/got/texts/ru/lore/magic_5.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/magic_6",
+      "source_path": "assets/got/texts/ru/lore/magic_6.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/magic_7",
+      "source_path": "assets/got/texts/ru/lore/magic_7.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/medic_1",
+      "source_path": "assets/got/texts/ru/lore/medic_1.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/medic_2",
+      "source_path": "assets/got/texts/ru/lore/medic_2.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/medic_3",
+      "source_path": "assets/got/texts/ru/lore/medic_3.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/medic_4",
+      "source_path": "assets/got/texts/ru/lore/medic_4.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/medic_5",
+      "source_path": "assets/got/texts/ru/lore/medic_5.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/medic_6",
+      "source_path": "assets/got/texts/ru/lore/medic_6.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/medic_7",
+      "source_path": "assets/got/texts/ru/lore/medic_7.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/organization_0",
+      "source_path": "assets/got/texts/ru/lore/organization_0.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/organization_1",
+      "source_path": "assets/got/texts/ru/lore/organization_1.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/organization_2",
+      "source_path": "assets/got/texts/ru/lore/organization_2.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/organization_3",
+      "source_path": "assets/got/texts/ru/lore/organization_3.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/organization_4",
+      "source_path": "assets/got/texts/ru/lore/organization_4.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/organization_5",
+      "source_path": "assets/got/texts/ru/lore/organization_5.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/organization_6",
+      "source_path": "assets/got/texts/ru/lore/organization_6.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/organization_7",
+      "source_path": "assets/got/texts/ru/lore/organization_7.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/religion_0",
+      "source_path": "assets/got/texts/ru/lore/religion_0.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/religion_1",
+      "source_path": "assets/got/texts/ru/lore/religion_1.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/religion_10",
+      "source_path": "assets/got/texts/ru/lore/religion_10.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/religion_11",
+      "source_path": "assets/got/texts/ru/lore/religion_11.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/religion_12",
+      "source_path": "assets/got/texts/ru/lore/religion_12.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/religion_13",
+      "source_path": "assets/got/texts/ru/lore/religion_13.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/religion_2",
+      "source_path": "assets/got/texts/ru/lore/religion_2.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/religion_3",
+      "source_path": "assets/got/texts/ru/lore/religion_3.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/religion_4",
+      "source_path": "assets/got/texts/ru/lore/religion_4.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/religion_5",
+      "source_path": "assets/got/texts/ru/lore/religion_5.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/religion_6",
+      "source_path": "assets/got/texts/ru/lore/religion_6.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/religion_7",
+      "source_path": "assets/got/texts/ru/lore/religion_7.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/religion_8",
+      "source_path": "assets/got/texts/ru/lore/religion_8.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/religion_9",
+      "source_path": "assets/got/texts/ru/lore/religion_9.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/songs_0",
+      "source_path": "assets/got/texts/ru/lore/songs_0.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/songs_1",
+      "source_path": "assets/got/texts/ru/lore/songs_1.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/sothoryos_0",
+      "source_path": "assets/got/texts/ru/lore/sothoryos_0.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/sothoryos_1",
+      "source_path": "assets/got/texts/ru/lore/sothoryos_1.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "ru/lore/stannis_0",
+      "source_path": "assets/got/texts/ru/lore/stannis_0.txt",
+      "category": "ru",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/arryn",
+      "source_path": "assets/got/texts/tr/lore/arryn.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/asshai",
+      "source_path": "assets/got/texts/tr/lore/asshai.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/braavos",
+      "source_path": "assets/got/texts/tr/lore/braavos.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/crownlands",
+      "source_path": "assets/got/texts/tr/lore/crownlands.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/dorne",
+      "source_path": "assets/got/texts/tr/lore/dorne.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/dragonstone",
+      "source_path": "assets/got/texts/tr/lore/dragonstone.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/ibben",
+      "source_path": "assets/got/texts/tr/lore/ibben.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/lorath",
+      "source_path": "assets/got/texts/tr/lore/lorath.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/lys",
+      "source_path": "assets/got/texts/tr/lore/lys.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/myr",
+      "source_path": "assets/got/texts/tr/lore/myr.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/north",
+      "source_path": "assets/got/texts/tr/lore/north.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/pentos",
+      "source_path": "assets/got/texts/tr/lore/pentos.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/qohor",
+      "source_path": "assets/got/texts/tr/lore/qohor.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/reach",
+      "source_path": "assets/got/texts/tr/lore/reach.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/riverlands",
+      "source_path": "assets/got/texts/tr/lore/riverlands.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/sothoryos",
+      "source_path": "assets/got/texts/tr/lore/sothoryos.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/stormlands",
+      "source_path": "assets/got/texts/tr/lore/stormlands.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/tyrosh",
+      "source_path": "assets/got/texts/tr/lore/tyrosh.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/volantis",
+      "source_path": "assets/got/texts/tr/lore/volantis.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/westerlands",
+      "source_path": "assets/got/texts/tr/lore/westerlands.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "tr/lore/yi_ti",
+      "source_path": "assets/got/texts/tr/lore/yi_ti.txt",
+      "category": "tr",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/alchemy_0",
+      "source_path": "assets/got/texts/uk/lore/alchemy_0.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/alchemy_1",
+      "source_path": "assets/got/texts/uk/lore/alchemy_1.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/alchemy_2",
+      "source_path": "assets/got/texts/uk/lore/alchemy_2.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/alchemy_3",
+      "source_path": "assets/got/texts/uk/lore/alchemy_3.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_0",
+      "source_path": "assets/got/texts/uk/lore/creatures_0.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_1",
+      "source_path": "assets/got/texts/uk/lore/creatures_1.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_10",
+      "source_path": "assets/got/texts/uk/lore/creatures_10.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_11",
+      "source_path": "assets/got/texts/uk/lore/creatures_11.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_12",
+      "source_path": "assets/got/texts/uk/lore/creatures_12.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_13",
+      "source_path": "assets/got/texts/uk/lore/creatures_13.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_14",
+      "source_path": "assets/got/texts/uk/lore/creatures_14.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_15",
+      "source_path": "assets/got/texts/uk/lore/creatures_15.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_2",
+      "source_path": "assets/got/texts/uk/lore/creatures_2.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_3",
+      "source_path": "assets/got/texts/uk/lore/creatures_3.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_4",
+      "source_path": "assets/got/texts/uk/lore/creatures_4.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_5",
+      "source_path": "assets/got/texts/uk/lore/creatures_5.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_6",
+      "source_path": "assets/got/texts/uk/lore/creatures_6.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_7",
+      "source_path": "assets/got/texts/uk/lore/creatures_7.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_8",
+      "source_path": "assets/got/texts/uk/lore/creatures_8.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/creatures_9",
+      "source_path": "assets/got/texts/uk/lore/creatures_9.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/legends_0",
+      "source_path": "assets/got/texts/uk/lore/legends_0.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/legends_1",
+      "source_path": "assets/got/texts/uk/lore/legends_1.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/legends_2",
+      "source_path": "assets/got/texts/uk/lore/legends_2.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/legends_3",
+      "source_path": "assets/got/texts/uk/lore/legends_3.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/legends_4",
+      "source_path": "assets/got/texts/uk/lore/legends_4.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_0",
+      "source_path": "assets/got/texts/uk/lore/letters_0.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_1",
+      "source_path": "assets/got/texts/uk/lore/letters_1.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_10",
+      "source_path": "assets/got/texts/uk/lore/letters_10.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_11",
+      "source_path": "assets/got/texts/uk/lore/letters_11.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_12",
+      "source_path": "assets/got/texts/uk/lore/letters_12.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_13",
+      "source_path": "assets/got/texts/uk/lore/letters_13.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_14",
+      "source_path": "assets/got/texts/uk/lore/letters_14.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_15",
+      "source_path": "assets/got/texts/uk/lore/letters_15.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_16",
+      "source_path": "assets/got/texts/uk/lore/letters_16.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_17",
+      "source_path": "assets/got/texts/uk/lore/letters_17.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_18",
+      "source_path": "assets/got/texts/uk/lore/letters_18.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_19",
+      "source_path": "assets/got/texts/uk/lore/letters_19.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_2",
+      "source_path": "assets/got/texts/uk/lore/letters_2.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_20",
+      "source_path": "assets/got/texts/uk/lore/letters_20.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_21",
+      "source_path": "assets/got/texts/uk/lore/letters_21.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_22",
+      "source_path": "assets/got/texts/uk/lore/letters_22.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_23",
+      "source_path": "assets/got/texts/uk/lore/letters_23.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_24",
+      "source_path": "assets/got/texts/uk/lore/letters_24.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_25",
+      "source_path": "assets/got/texts/uk/lore/letters_25.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_26",
+      "source_path": "assets/got/texts/uk/lore/letters_26.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_27",
+      "source_path": "assets/got/texts/uk/lore/letters_27.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_28",
+      "source_path": "assets/got/texts/uk/lore/letters_28.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_29",
+      "source_path": "assets/got/texts/uk/lore/letters_29.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_3",
+      "source_path": "assets/got/texts/uk/lore/letters_3.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_30",
+      "source_path": "assets/got/texts/uk/lore/letters_30.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_31",
+      "source_path": "assets/got/texts/uk/lore/letters_31.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_32",
+      "source_path": "assets/got/texts/uk/lore/letters_32.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_33",
+      "source_path": "assets/got/texts/uk/lore/letters_33.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_34",
+      "source_path": "assets/got/texts/uk/lore/letters_34.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_35",
+      "source_path": "assets/got/texts/uk/lore/letters_35.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_36",
+      "source_path": "assets/got/texts/uk/lore/letters_36.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_38",
+      "source_path": "assets/got/texts/uk/lore/letters_38.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_4",
+      "source_path": "assets/got/texts/uk/lore/letters_4.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_40",
+      "source_path": "assets/got/texts/uk/lore/letters_40.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_41",
+      "source_path": "assets/got/texts/uk/lore/letters_41.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_42",
+      "source_path": "assets/got/texts/uk/lore/letters_42.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_43",
+      "source_path": "assets/got/texts/uk/lore/letters_43.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_44",
+      "source_path": "assets/got/texts/uk/lore/letters_44.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_45",
+      "source_path": "assets/got/texts/uk/lore/letters_45.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_46",
+      "source_path": "assets/got/texts/uk/lore/letters_46.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_47",
+      "source_path": "assets/got/texts/uk/lore/letters_47.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_48",
+      "source_path": "assets/got/texts/uk/lore/letters_48.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_49",
+      "source_path": "assets/got/texts/uk/lore/letters_49.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_5",
+      "source_path": "assets/got/texts/uk/lore/letters_5.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_50",
+      "source_path": "assets/got/texts/uk/lore/letters_50.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_51",
+      "source_path": "assets/got/texts/uk/lore/letters_51.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_52",
+      "source_path": "assets/got/texts/uk/lore/letters_52.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_53",
+      "source_path": "assets/got/texts/uk/lore/letters_53.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_54",
+      "source_path": "assets/got/texts/uk/lore/letters_54.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_55",
+      "source_path": "assets/got/texts/uk/lore/letters_55.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_56",
+      "source_path": "assets/got/texts/uk/lore/letters_56.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_57",
+      "source_path": "assets/got/texts/uk/lore/letters_57.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_58",
+      "source_path": "assets/got/texts/uk/lore/letters_58.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_59",
+      "source_path": "assets/got/texts/uk/lore/letters_59.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_6",
+      "source_path": "assets/got/texts/uk/lore/letters_6.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_60",
+      "source_path": "assets/got/texts/uk/lore/letters_60.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_61",
+      "source_path": "assets/got/texts/uk/lore/letters_61.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_62",
+      "source_path": "assets/got/texts/uk/lore/letters_62.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_64",
+      "source_path": "assets/got/texts/uk/lore/letters_64.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_65",
+      "source_path": "assets/got/texts/uk/lore/letters_65.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_66",
+      "source_path": "assets/got/texts/uk/lore/letters_66.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_67",
+      "source_path": "assets/got/texts/uk/lore/letters_67.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_68",
+      "source_path": "assets/got/texts/uk/lore/letters_68.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_69",
+      "source_path": "assets/got/texts/uk/lore/letters_69.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_7",
+      "source_path": "assets/got/texts/uk/lore/letters_7.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_70",
+      "source_path": "assets/got/texts/uk/lore/letters_70.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_71",
+      "source_path": "assets/got/texts/uk/lore/letters_71.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_72",
+      "source_path": "assets/got/texts/uk/lore/letters_72.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_73",
+      "source_path": "assets/got/texts/uk/lore/letters_73.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_74",
+      "source_path": "assets/got/texts/uk/lore/letters_74.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_75",
+      "source_path": "assets/got/texts/uk/lore/letters_75.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_76",
+      "source_path": "assets/got/texts/uk/lore/letters_76.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_77",
+      "source_path": "assets/got/texts/uk/lore/letters_77.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_78",
+      "source_path": "assets/got/texts/uk/lore/letters_78.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_79",
+      "source_path": "assets/got/texts/uk/lore/letters_79.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_8",
+      "source_path": "assets/got/texts/uk/lore/letters_8.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_80",
+      "source_path": "assets/got/texts/uk/lore/letters_80.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/letters_9",
+      "source_path": "assets/got/texts/uk/lore/letters_9.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/magic_0",
+      "source_path": "assets/got/texts/uk/lore/magic_0.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/magic_1",
+      "source_path": "assets/got/texts/uk/lore/magic_1.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/magic_2",
+      "source_path": "assets/got/texts/uk/lore/magic_2.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/magic_3",
+      "source_path": "assets/got/texts/uk/lore/magic_3.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/magic_4",
+      "source_path": "assets/got/texts/uk/lore/magic_4.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/magic_5",
+      "source_path": "assets/got/texts/uk/lore/magic_5.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/magic_6",
+      "source_path": "assets/got/texts/uk/lore/magic_6.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/magic_7",
+      "source_path": "assets/got/texts/uk/lore/magic_7.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/medic_1",
+      "source_path": "assets/got/texts/uk/lore/medic_1.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/medic_2",
+      "source_path": "assets/got/texts/uk/lore/medic_2.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/medic_3",
+      "source_path": "assets/got/texts/uk/lore/medic_3.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/medic_4",
+      "source_path": "assets/got/texts/uk/lore/medic_4.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/medic_5",
+      "source_path": "assets/got/texts/uk/lore/medic_5.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/medic_6",
+      "source_path": "assets/got/texts/uk/lore/medic_6.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/medic_7",
+      "source_path": "assets/got/texts/uk/lore/medic_7.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/organization_0",
+      "source_path": "assets/got/texts/uk/lore/organization_0.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/organization_1",
+      "source_path": "assets/got/texts/uk/lore/organization_1.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/organization_2",
+      "source_path": "assets/got/texts/uk/lore/organization_2.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/organization_3",
+      "source_path": "assets/got/texts/uk/lore/organization_3.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/organization_4",
+      "source_path": "assets/got/texts/uk/lore/organization_4.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/organization_5",
+      "source_path": "assets/got/texts/uk/lore/organization_5.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/organization_6",
+      "source_path": "assets/got/texts/uk/lore/organization_6.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/organization_7",
+      "source_path": "assets/got/texts/uk/lore/organization_7.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/religion_0",
+      "source_path": "assets/got/texts/uk/lore/religion_0.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/religion_1",
+      "source_path": "assets/got/texts/uk/lore/religion_1.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/religion_10",
+      "source_path": "assets/got/texts/uk/lore/religion_10.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/religion_11",
+      "source_path": "assets/got/texts/uk/lore/religion_11.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/religion_12",
+      "source_path": "assets/got/texts/uk/lore/religion_12.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/religion_13",
+      "source_path": "assets/got/texts/uk/lore/religion_13.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/religion_2",
+      "source_path": "assets/got/texts/uk/lore/religion_2.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/religion_3",
+      "source_path": "assets/got/texts/uk/lore/religion_3.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/religion_4",
+      "source_path": "assets/got/texts/uk/lore/religion_4.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/religion_5",
+      "source_path": "assets/got/texts/uk/lore/religion_5.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/religion_6",
+      "source_path": "assets/got/texts/uk/lore/religion_6.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/religion_7",
+      "source_path": "assets/got/texts/uk/lore/religion_7.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/religion_8",
+      "source_path": "assets/got/texts/uk/lore/religion_8.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/religion_9",
+      "source_path": "assets/got/texts/uk/lore/religion_9.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/songs_0",
+      "source_path": "assets/got/texts/uk/lore/songs_0.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/songs_1",
+      "source_path": "assets/got/texts/uk/lore/songs_1.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/sothoryos_0",
+      "source_path": "assets/got/texts/uk/lore/sothoryos_0.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/sothoryos_1",
+      "source_path": "assets/got/texts/uk/lore/sothoryos_1.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "uk/lore/stannis_0",
+      "source_path": "assets/got/texts/uk/lore/stannis_0.txt",
+      "category": "uk",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/alchemy_0",
+      "source_path": "assets/got/texts/zh/lore/alchemy_0.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/alchemy_1",
+      "source_path": "assets/got/texts/zh/lore/alchemy_1.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/alchemy_2",
+      "source_path": "assets/got/texts/zh/lore/alchemy_2.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/alchemy_3",
+      "source_path": "assets/got/texts/zh/lore/alchemy_3.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/arryn",
+      "source_path": "assets/got/texts/zh/lore/arryn.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/asshai_clothes",
+      "source_path": "assets/got/texts/zh/lore/asshai_clothes.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/asshai_plant",
+      "source_path": "assets/got/texts/zh/lore/asshai_plant.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/blood_rider",
+      "source_path": "assets/got/texts/zh/lore/blood_rider.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/dothraki_language",
+      "source_path": "assets/got/texts/zh/lore/dothraki_language.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/ghiscar",
+      "source_path": "assets/got/texts/zh/lore/ghiscar.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/ironborn",
+      "source_path": "assets/got/texts/zh/lore/ironborn.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/medic",
+      "source_path": "assets/got/texts/zh/lore/medic.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/plant",
+      "source_path": "assets/got/texts/zh/lore/plant.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/poem_dorne",
+      "source_path": "assets/got/texts/zh/lore/poem_dorne.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/poem_dothraki",
+      "source_path": "assets/got/texts/zh/lore/poem_dothraki.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/poem_fiveforts",
+      "source_path": "assets/got/texts/zh/lore/poem_fiveforts.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/poem_ironborn",
+      "source_path": "assets/got/texts/zh/lore/poem_ironborn.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/poem_winterfell",
+      "source_path": "assets/got/texts/zh/lore/poem_winterfell.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/poem_yin",
+      "source_path": "assets/got/texts/zh/lore/poem_yin.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/prophesy",
+      "source_path": "assets/got/texts/zh/lore/prophesy.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/raised_dragon",
+      "source_path": "assets/got/texts/zh/lore/raised_dragon.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/sothoryos_0",
+      "source_path": "assets/got/texts/zh/lore/sothoryos_0.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/sothoryos_1",
+      "source_path": "assets/got/texts/zh/lore/sothoryos_1.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/sothoryos_2",
+      "source_path": "assets/got/texts/zh/lore/sothoryos_2.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/story_yi_ti",
+      "source_path": "assets/got/texts/zh/lore/story_yi_ti.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/valiryan_0",
+      "source_path": "assets/got/texts/zh/lore/valiryan_0.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/walker",
+      "source_path": "assets/got/texts/zh/lore/walker.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/waterdancer",
+      "source_path": "assets/got/texts/zh/lore/waterdancer.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/wineofcourage",
+      "source_path": "assets/got/texts/zh/lore/wineofcourage.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    },
+    {
+      "id": "zh/lore/yi_ti_fire",
+      "source_path": "assets/got/texts/zh/lore/yi_ti_fire.txt",
+      "category": "zh",
+      "title": null,
+      "author": null,
+      "types": [],
+      "rewardable": false,
+      "pages": null,
+      "directives": {
+        "choose": [],
+        "name": [],
+        "num": []
+      }
+    }
+  ]
+}

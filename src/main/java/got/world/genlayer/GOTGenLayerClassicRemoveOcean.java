@@ -1,0 +1,1 @@
+package got.world.genlayer; public class GOTGenLayerClassicRemoveOcean extends GOTGenLayer {public GOTGenLayerClassicRemoveOcean(long s,GOTGenLayer p){super(s);gotParent=p;}public int[] getInts(int x,int z,int w,int h){int[] o=gotParent.getInts(x,z,w,h);for(int i=0;i<o.length;i++)if(o[i]==0)o[i]=1;return o;}}

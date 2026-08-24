@@ -1,0 +1,29 @@
+{
+  "title": "quest.got.ramsay_branding_iron.title",
+  "description": "quest.got.ramsay_branding_iron.description",
+  "offer": "quest.got.ramsay_branding_iron.offer",
+  "progress": "quest.got.standard.progress",
+  "complete": "quest.got.ramsay_branding_iron.complete",
+  "icon": "got:branding_iron",
+  "color": "#6A7481",
+  "weight": 100,
+  "repeatable": false,
+  "giver": {
+    "factions": ["north"],
+    "roles": ["ramsay_bolton"]
+  },
+  "objectives": [
+    {
+      "type": "collect",
+      "target": "got:branding_iron",
+      "count": 1,
+      "consume": true,
+      "label": "quest.got.ramsay_branding_iron.objective.0"
+    }
+  ],
+  "rewards": {
+    "alignment": { "north": 5.0 },
+    "coins": 10,
+    "experience": 20
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "got:block/legacy_vessel_renderer"
+    },
+    "facing=south": {
+      "model": "got:block/legacy_vessel_renderer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "got:block/legacy_vessel_renderer",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "got:block/legacy_vessel_renderer",
+      "y": 90
+    }
+  }
+}

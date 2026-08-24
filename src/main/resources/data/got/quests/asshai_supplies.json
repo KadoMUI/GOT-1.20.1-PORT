@@ -1,0 +1,8 @@
+{
+  "title": "quest.got.asshai_supplies.title", "description": "quest.got.asshai_supplies.description",
+  "offer": "quest.got.asshai_supplies.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.asshai_supplies.complete",
+  "icon": "minecraft:glowstone_dust", "color": "#3C353F", "weight": 5, "repeatable": true, "cooldown_ticks": 24000,
+  "giver": { "factions": ["asshai"], "roles": ["asshai_man"], "maximum_active_for_faction": 5 },
+  "objectives": [{ "type": "collect", "target": "minecraft:glowstone_dust", "count": 12, "consume": true, "label": "quest.got.asshai_supplies.objective.0" }],
+  "rewards": { "alignment": { "asshai": 8.0 }, "coins": 16, "experience": 10 }
+}

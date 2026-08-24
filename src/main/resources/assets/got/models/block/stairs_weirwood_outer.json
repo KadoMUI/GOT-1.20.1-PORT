@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "got:block/weirwood_planks",
+    "side": "got:block/weirwood_planks",
+    "top": "got:block/weirwood_planks"
+  }
+}

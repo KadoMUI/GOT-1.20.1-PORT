@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "got:block/bomb_triple"
+    },
+    "lit=true": {
+      "model": "got:block/bomb_triple_lit"
+    }
+  }
+}

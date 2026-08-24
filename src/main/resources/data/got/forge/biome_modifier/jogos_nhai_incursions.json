@@ -1,0 +1,5 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#got:spawns_jogos_nhai_incursions",
+  "spawners": [{ "type": "got:jogos_nhai_npc", "weight": 2, "minCount": 1, "maxCount": 2 }]
+}

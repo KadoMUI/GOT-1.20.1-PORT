@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/clay_tile_slab"
+    },
+    "type=double": {
+      "model": "got:block/terracotta_roof_tiles"
+    },
+    "type=top": {
+      "model": "got:block/clay_tile_slab_top"
+    }
+  }
+}

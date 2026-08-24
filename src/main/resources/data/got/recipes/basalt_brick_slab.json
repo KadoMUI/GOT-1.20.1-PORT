@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:basalt_westeros_bricks"
+    }
+  },
+  "result": {
+    "item": "got:basalt_brick_slab",
+    "count": 6
+  }
+}

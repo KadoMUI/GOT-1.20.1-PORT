@@ -1,0 +1,33 @@
+{
+  "title": "quest.got.westerlands_border_patrol.title",
+  "description": "quest.got.westerlands_border_patrol.description",
+  "offer": "quest.got.westerlands_border_patrol.offer",
+  "progress": "quest.got.standard.progress",
+  "complete": "quest.got.westerlands_border_patrol.complete",
+  "icon": "minecraft:iron_sword",
+  "color": "#9D1A1A",
+  "weight": 2,
+  "repeatable": true,
+  "cooldown_ticks": 24000,
+  "giver": {
+    "factions": ["westerlands"],
+    "roles": [
+      "westerlands_levyman", "westerlands_levyman_archer", "westerlands_soldier",
+      "westerlands_soldier_archer", "westerlands_guard", "westerlands_banner_bearer"
+    ],
+    "maximum_active_for_faction": 5
+  },
+  "objectives": [
+    {
+      "type": "kill_faction",
+      "target": "north",
+      "count": 5,
+      "label": "quest.got.westerlands_border_patrol.objective.0"
+    }
+  ],
+  "rewards": {
+    "alignment": { "westerlands": 10.0 },
+    "coins": 20,
+    "experience": 15
+  }
+}

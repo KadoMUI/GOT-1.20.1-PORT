@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:sothoryos_gold_pillar"
+  },
+  "result": "got:sothoryos_gold_pillar_slab",
+  "count": 2
+}

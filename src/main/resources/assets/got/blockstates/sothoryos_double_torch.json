@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "got:block/sothoryos_double_torch_lower"
+    },
+    "half=upper": {
+      "model": "got:block/sothoryos_double_torch_upper"
+    }
+  }
+}

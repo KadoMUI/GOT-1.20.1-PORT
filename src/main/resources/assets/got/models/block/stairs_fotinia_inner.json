@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "got:block/fotinia_planks",
+    "side": "got:block/fotinia_planks",
+    "top": "got:block/fotinia_planks"
+  }
+}

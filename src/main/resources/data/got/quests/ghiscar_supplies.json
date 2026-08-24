@@ -1,0 +1,8 @@
+{
+  "title": "quest.got.ghiscar_supplies.title", "description": "quest.got.ghiscar_supplies.description",
+  "offer": "quest.got.ghiscar_supplies.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.ghiscar_supplies.complete",
+  "icon": "minecraft:brick", "color": "#AB7731", "weight": 5, "repeatable": true, "cooldown_ticks": 24000,
+  "giver": { "factions": ["ghiscar"], "roles": ["ghiscar_man", "ghiscar_slave"], "maximum_active_for_faction": 5 },
+  "objectives": [{ "type": "collect", "target": "minecraft:brick", "count": 24, "consume": true, "label": "quest.got.ghiscar_supplies.objective.0" }],
+  "rewards": { "alignment": { "ghiscar": 8.0 }, "coins": 16, "experience": 10 }
+}

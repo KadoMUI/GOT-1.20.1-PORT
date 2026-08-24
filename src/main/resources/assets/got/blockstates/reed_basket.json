@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "got:block/reed_basket"
+    },
+    "facing=east": {
+      "model": "got:block/reed_basket",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "got:block/reed_basket",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "got:block/reed_basket",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"type":"forge:add_spawns","biomes":"#got:spawns_white_walker_npcs","spawners":[{"type":"got:white_walker_npc","weight":4,"minCount":1,"maxCount":3}]}

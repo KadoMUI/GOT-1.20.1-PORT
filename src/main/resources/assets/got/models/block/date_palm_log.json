@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "got:block/date_palm_log",
+    "end": "got:block/date_palm_log_top"
+  }
+}

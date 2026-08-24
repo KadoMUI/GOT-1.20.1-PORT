@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:smooth_rhyolite"
+  },
+  "result": "got:smooth_rhyolite_slab",
+  "count": 2
+}

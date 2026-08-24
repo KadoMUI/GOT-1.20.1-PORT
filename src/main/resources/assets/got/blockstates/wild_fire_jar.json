@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "got:block/wild_fire_jar"
+    },
+    "lit=true": {
+      "model": "got:block/wild_fire_jar_lit"
+    }
+  }
+}

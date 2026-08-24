@@ -1,0 +1,43 @@
+{
+  "textures": {
+    "particle": "got:block/apple_crumble_side",
+    "bottom": "got:block/apple_crumble_bottom",
+    "top": "got:block/apple_crumble_top",
+    "side": "got:block/apple_crumble_side",
+    "inside": "got:block/apple_crumble_inner"
+  },
+  "elements": [
+    {
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        8,
+        15
+      ],
+      "faces": {
+        "down": {
+          "texture": "#bottom"
+        },
+        "up": {
+          "texture": "#top"
+        },
+        "north": {
+          "texture": "#side"
+        },
+        "south": {
+          "texture": "#side"
+        },
+        "west": {
+          "texture": "#side"
+        },
+        "east": {
+          "texture": "#side"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "got:item/drinks/mug_plantain_brew_gold_drinking_horn"
+  }
+}

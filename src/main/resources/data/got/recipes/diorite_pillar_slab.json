@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:diorite_pillar"
+    }
+  },
+  "result": {
+    "item": "got:diorite_pillar_slab",
+    "count": 6
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:charred_planks"
+    }
+  },
+  "result": {
+    "item": "got:trapdoor_charred",
+    "count": 2
+  }
+}

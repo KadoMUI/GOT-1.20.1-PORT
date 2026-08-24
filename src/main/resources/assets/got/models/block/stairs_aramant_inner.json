@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "got:block/aramant_planks",
+    "side": "got:block/aramant_planks",
+    "top": "got:block/aramant_planks"
+  }
+}

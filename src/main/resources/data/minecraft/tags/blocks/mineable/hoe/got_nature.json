@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "got:corn_crop",
+    "got:flax_crop",
+    "got:lettuce_crop",
+    "got:cucumber_crop",
+    "got:pipeweed_crop",
+    "got:blackberry_bush",
+    "got:blueberry_bush",
+    "got:cranberry_bush",
+    "got:elderberry_bush",
+    "got:raspberry_bush",
+    "got:wildberry_bush",
+    "got:red_grapevine",
+    "got:white_grapevine",
+    "got:asshai_flower",
+    "got:chrysanthemum_orange",
+    "got:dead_marsh_plant",
+    "got:plantain",
+    "got:arid_grass",
+    "got:asshai_grass",
+    "got:quendite_grass",
+    "got:reeds",
+    "got:dried_reeds"
+  ]
+}

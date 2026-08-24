@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "got:stairs_thatch",
+    "got:thatch_slab",
+    "got:stairs_reed",
+    "got:reed_slab"
+  ]
+}

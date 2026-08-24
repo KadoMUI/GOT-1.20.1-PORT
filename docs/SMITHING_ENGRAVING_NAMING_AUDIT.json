@@ -1,0 +1,29 @@
+{
+  "ownership_nbt": {
+    "current": "GOTCurrentOwner",
+    "previous": "GOTPrevOwnerList",
+    "max_previous": 3
+  },
+  "engraving": {
+    "base_physical_anvil_cost": 2,
+    "cost_material": "matching repair material",
+    "cannot_reengrave_to_same_current_owner": true,
+    "achievement": "ENGRAVE_OWNERSHIP"
+  },
+  "name_color_gems": {
+    "amber": "YELLOW",
+    "amethyst": "LIGHT_PURPLE",
+    "diamond": "GRAY",
+    "emerald": "GREEN",
+    "opal": "AQUA",
+    "ruby": "RED",
+    "sapphire": "BLUE",
+    "topaz": "GOLD"
+  },
+  "rename_behavior": {
+    "plain_custom_name": true,
+    "color_consumes_one_gem": true,
+    "old_color_replaced_by_new_color": true,
+    "rename_material_cost": "none in this port; original incremented anvil work cost rather than physical material"
+  }
+}

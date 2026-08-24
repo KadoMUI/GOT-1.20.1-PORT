@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:clay_ball"
+    }
+  },
+  "result": {
+    "item": "got:clay_plate",
+    "count": 2
+  }
+}

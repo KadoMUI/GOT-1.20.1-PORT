@@ -1,0 +1,56 @@
+{
+  "uploaded_schematics": 24,
+  "major_replacements": [
+    "Braavos.schem",
+    "CasterlyRock.schem",
+    "CastleBlack.schem",
+    "CrastersKeep.schem",
+    "Dragonstone.schem",
+    "Dreadfort.schem",
+    "Eyrie.schem",
+    "Harrenhall.schem",
+    "Highgarden.schem",
+    "KingsLanding.schem",
+    "Lys.schem",
+    "Myr.schem",
+    "Pentos.schem",
+    "Qarth.schem",
+    "Riverrun.schem",
+    "StormsEnd.schem",
+    "Sunspear.schem",
+    "Tyrosh.schem",
+    "Volantis.schem",
+    "Winterfell.schem"
+  ],
+  "reusable_templates": [
+    "WesterosCastleSmall.schem",
+    "Wildling_House.schem"
+  ],
+  "ignore_air": true,
+  "hardhome": {
+    "house_count": 15,
+    "template": "Wildling_House.schem",
+    "old_procedural_geometry_removed": true
+  },
+  "bindings": {
+    "WildlingStructureType.HOUSE": "Wildling_House.schem",
+    "NorthStructureType.FORTRESS": "WesterosCastleSmall.schem",
+    "WesterosCastleSmall.schem": "generic fallback for Westerosi castles without dedicated builds"
+  },
+  "pentos": {
+    "registered": true,
+    "file": "Pentos.schem",
+    "size": [
+      178,
+      90,
+      209
+    ],
+    "offset": [
+      -86,
+      -13,
+      -137
+    ],
+    "non_air_blocks": 530435,
+    "air_policy": "ignore"
+  }
+}

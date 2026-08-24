@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:mossy_labradorite_bricks"
+  },
+  "result": "got:stairs_labradorite_brick_mossy",
+  "count": 1
+}

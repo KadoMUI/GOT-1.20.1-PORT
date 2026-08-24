@@ -1,0 +1,5 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#got:spawns_stormlands_npcs",
+  "spawners": [{ "type": "got:stormlands_npc", "weight": 5, "minCount": 1, "maxCount": 2 }]
+}

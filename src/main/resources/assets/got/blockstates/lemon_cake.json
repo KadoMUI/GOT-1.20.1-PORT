@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "got:block/lemon_cake_0"
+    },
+    "bites=1": {
+      "model": "got:block/lemon_cake_1"
+    },
+    "bites=2": {
+      "model": "got:block/lemon_cake_2"
+    },
+    "bites=3": {
+      "model": "got:block/lemon_cake_3"
+    },
+    "bites=4": {
+      "model": "got:block/lemon_cake_4"
+    },
+    "bites=5": {
+      "model": "got:block/lemon_cake_5"
+    },
+    "bites=6": {
+      "model": "got:block/lemon_cake_6"
+    }
+  }
+}

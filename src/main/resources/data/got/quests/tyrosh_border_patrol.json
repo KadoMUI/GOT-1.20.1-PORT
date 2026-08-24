@@ -1,0 +1,8 @@
+{
+  "title": "quest.got.tyrosh_border_patrol.title", "description": "quest.got.tyrosh_border_patrol.description",
+  "offer": "quest.got.tyrosh_border_patrol.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.tyrosh_border_patrol.complete",
+  "icon": "minecraft:iron_sword", "color": "#2E2E2E", "weight": 2, "repeatable": true, "cooldown_ticks": 24000,
+  "giver": { "factions": ["tyrosh"], "roles": ["tyrosh_levyman", "tyrosh_levyman_archer", "tyrosh_soldier", "tyrosh_soldier_archer", "tyrosh_banner_bearer"], "maximum_active_for_faction": 5 },
+  "objectives": [{ "type": "kill_faction", "target": "lys", "count": 5, "label": "quest.got.tyrosh_border_patrol.objective.0" }],
+  "rewards": { "alignment": { "tyrosh": 10.0 }, "coins": 20, "experience": 15 }
+}

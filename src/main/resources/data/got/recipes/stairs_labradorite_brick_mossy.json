@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:mossy_labradorite_bricks"
+    }
+  },
+  "result": {
+    "item": "got:stairs_labradorite_brick_mossy",
+    "count": 4
+  }
+}

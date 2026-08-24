@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "got:block/smooth_stone_andesite_side",
+    "top": "got:block/smooth_stone_andesite_top",
+    "bottom": "got:block/smooth_stone_andesite_top"
+  }
+}

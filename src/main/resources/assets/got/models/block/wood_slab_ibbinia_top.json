@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "got:block/ibbinia_planks",
+    "side": "got:block/ibbinia_planks",
+    "top": "got:block/ibbinia_planks"
+  }
+}

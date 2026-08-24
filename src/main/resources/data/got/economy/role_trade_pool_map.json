@@ -1,0 +1,78 @@
+{
+  "roles": {
+    "baker": {
+      "sells": "BAKER_SELLS",
+      "buys": "BAKER_BUYS"
+    },
+    "brewer": {
+      "sells": "BREWER_SELLS",
+      "buys": "BREWER_BUYS"
+    },
+    "butcher": {
+      "sells": "BUTCHER_SELLS",
+      "buys": "BUTCHER_BUYS"
+    },
+    "goldsmith": {
+      "sells": "GOLDSMITH_SELLS",
+      "buys": "GOLDSMITH_BUYS"
+    },
+    "miner": {
+      "sells": "MINER_SELLS",
+      "buys": "MINER_BUYS"
+    },
+    "fishmonger": {
+      "sells": "FISHMONGER_SELLS",
+      "buys": "FISHMONGER_BUYS"
+    },
+    "maester": {
+      "sells": "MAESTER_SELLS",
+      "buys": "MAESTER_BUYS"
+    },
+    "tramp": {
+      "sells": "TRAMP_SELLS",
+      "buys": "TRAMP_BUYS"
+    },
+    "lumberman": {
+      "sells": "LUMBERMAN_SELLS",
+      "buys": "LUMBERMAN_BUYS"
+    },
+    "florist": {
+      "sells": "FLORIST_SELLS",
+      "buys": "FLORIST_BUYS"
+    },
+    "farmer": {
+      "sells": "FARMER_SELLS",
+      "buys": "FARMER_BUYS"
+    },
+    "mason": {
+      "sells": "MASON_SELLS",
+      "buys": "MASON_BUYS"
+    },
+    "alchemist": {
+      "sells": "ALCHEMIST_SELLS",
+      "buys": "ALCHEMIST_BUYS"
+    },
+    "bartender": {
+      "sells": "BARTENDER_SELLS",
+      "buys": "BARTENDER_BUYS"
+    },
+    "blacksmith": {
+      "sells": "BLACKSMITH_SELLS",
+      "buys": "BLACKSMITH_BUYS"
+    }
+  },
+  "special": {
+    "petyr_baelish": {
+      "sells": "BAELISH_SELLS",
+      "buys": "EMPTY_BUYS"
+    },
+    "davos_seaworth": {
+      "sells": "DAVOS_SELLS",
+      "buys": "EMPTY_BUYS"
+    },
+    "tobho_mott": {
+      "sells": "TOBHO_SELLS",
+      "buys": "EMPTY_BUYS"
+    }
+  }
+}

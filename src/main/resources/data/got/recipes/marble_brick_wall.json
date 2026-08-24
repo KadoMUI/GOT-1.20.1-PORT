@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:chalk_bricks"
+    }
+  },
+  "result": {
+    "item": "got:marble_brick_wall",
+    "count": 6
+  }
+}

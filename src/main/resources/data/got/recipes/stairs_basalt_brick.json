@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:basalt_westeros_bricks"
+    }
+  },
+  "result": {
+    "item": "got:stairs_basalt_brick",
+    "count": 4
+  }
+}

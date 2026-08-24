@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "got:crossbow_bolt"
+    },
+    {
+      "item": "got:crossbow_bolt"
+    },
+    {
+      "item": "got:crossbow_bolt"
+    },
+    {
+      "item": "got:crossbow_bolt"
+    },
+    {
+      "item": "got:bottle_poison"
+    }
+  ],
+  "result": {
+    "item": "got:crossbow_bolt_poisoned",
+    "count": 4
+  }
+}

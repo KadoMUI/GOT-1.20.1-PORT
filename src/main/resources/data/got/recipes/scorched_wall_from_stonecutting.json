@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:scorched_stone"
+  },
+  "result": "got:scorched_wall",
+  "count": 1
+}

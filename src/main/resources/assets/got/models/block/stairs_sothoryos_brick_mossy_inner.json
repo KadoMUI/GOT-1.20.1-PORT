@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "got:block/mossy_sothoryos_bricks",
+    "side": "got:block/mossy_sothoryos_bricks",
+    "top": "got:block/mossy_sothoryos_bricks"
+  }
+}

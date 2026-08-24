@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "got:cedar_planks"
+    }
+  },
+  "result": {
+    "item": "got:stairs_cedar",
+    "count": 4
+  }
+}

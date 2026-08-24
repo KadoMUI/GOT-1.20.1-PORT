@@ -1,0 +1,41 @@
+{
+  "textures": {
+    "particle": "got:block/brick4_basalt_westeros_carved",
+    "all": "got:block/brick4_basalt_westeros_carved"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        1,
+        6
+      ],
+      "to": [
+        16,
+        15,
+        10
+      ],
+      "faces": {
+        "down": {
+          "texture": "#all"
+        },
+        "up": {
+          "texture": "#all"
+        },
+        "north": {
+          "texture": "#all"
+        },
+        "south": {
+          "texture": "#all"
+        },
+        "west": {
+          "texture": "#all"
+        },
+        "east": {
+          "texture": "#all"
+        }
+      }
+    }
+  ],
+  "render_type": "cutout"
+}

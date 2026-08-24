@@ -1,0 +1,29 @@
+{
+  "title": "quest.got.daven_vengeance.title",
+  "description": "quest.got.daven_vengeance.description",
+  "offer": "quest.got.daven_vengeance.offer",
+  "progress": "quest.got.daven_vengeance.progress",
+  "complete": "quest.got.daven_vengeance.complete",
+  "icon": "minecraft:iron_sword",
+  "color": "#9D1A1A",
+  "weight": 100,
+  "repeatable": false,
+  "giver": {
+    "factions": ["westerlands"],
+    "roles": ["daven_lannister"]
+  },
+  "objectives": [
+    {
+      "type": "kill_entity",
+      "target": "got:north_npc",
+      "role": "rickard_karstark",
+      "count": 1,
+      "label": "quest.got.daven_vengeance.objective.0"
+    }
+  ],
+  "rewards": {
+    "alignment": { "westerlands": 100.0 },
+    "coins": 200,
+    "experience": 100
+  }
+}

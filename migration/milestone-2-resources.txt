@@ -1,0 +1,16 @@
+Milestone 2: Resource foundation
+
+Added modern registrations and assets for raw tin, silver, dragonglass (legacy obsidian shard), and Valyrian steel.
+Added Bronze, Silver, Alloy Steel, and Valyrian Steel storage blocks.
+Added silver ore generation and raw-ore drops.
+Added Forge material tags and reversible nugget/ingot/block recipes.
+
+Intentional deferrals:
+- Alloy Steel has no ordinary crafting recipe. Its original alloy-forge production system must be ported first.
+- Valyrian Steel has no ordinary crafting recipe. Its lore-specific/original acquisition system must be ported first.
+- Dragonglass shard acquisition is deferred until the original obsidian/dragonglass mechanics are reviewed.
+- raw_tin, raw_silver, and deepslate_silver_ore currently use temporary textures derived from existing assets.
+
+0.5I update:
+- Planetos underground generation now restores the legacy common, gem, mountain, ocean, Sothoryos, Ulthos, Tarth, and Valyria deposits.
+- The animated Valyrian ore block now generates rarely below Valyria's volcano, but the ore-to-Valyrian-Steel acquisition chain remains intentionally deferred to its original lore system.
