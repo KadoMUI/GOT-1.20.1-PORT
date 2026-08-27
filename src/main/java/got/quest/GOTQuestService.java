@@ -8,6 +8,8 @@ import got.network.GOTNetwork;
 import got.network.S2CQuestDataPacket;
 import got.network.S2CQuestOfferPacket;
 import got.npc.GOTFactionNpc;
+import got.npc.hiring.GOTHiredTask;
+import got.npc.hiring.GOTHiringService;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -41,6 +43,15 @@ public final class GOTQuestService {
     private static final int OFFER_LIFETIME = 20 * 60;
 
     private GOTQuestService() {}
+
+
+    /** Server-authoritative query used by the legacy-style overhead quest marker. */
+    public static boolean hasAvailableQuest(ServerPlayer player, Mob npc, GOTQuestGiver giver) {
+        if (!npc.isAlive() || !giver.canOfferQuests()) return false;
+        GOTQuestPlayerData data = GOTQuestPlayerData.get(player);
+        if (data.findActiveByGiver(npc.getUUID()).isPresent()) return false;
+        return !availableFor(player, npc, giver, data).isEmpty();
+    }
 
     public static boolean interact(ServerPlayer player, Mob npc, GOTQuestGiver giver) {
         if (!npc.isAlive()) return false;
@@ -169,11 +180,11 @@ public final class GOTQuestService {
                 if (!canProgress(definition, instance, index)) continue;
                 if (objective.type() == GOTQuestObjectiveType.KILL_ENTITY
                         && matchesEntity(objective, victim)) {
-                    instanceChanged |= instance.addProgress(index, 1, objective.count());
+                    instanceChanged |= instance.addProgress(index, 1, instance.target(index, objective));
                 } else if (objective.type() == GOTQuestObjectiveType.KILL_FACTION
                         && victim instanceof GOTFactionNpc factionNpc
                         && factionNpc.getFactionId().equals(objective.target())) {
-                    instanceChanged |= instance.addProgress(index, 1, objective.count());
+                    instanceChanged |= instance.addProgress(index, 1, instance.target(index, objective));
                 }
             }
             if (instanceChanged) {
@@ -209,7 +220,7 @@ public final class GOTQuestService {
                 if (!player.level().dimension().location().equals(objective.dimension())) continue;
                 double radiusSquared = objective.radius() * objective.radius();
                 if (player.blockPosition().distSqr(objective.position()) <= radiusSquared) {
-                    instanceChanged |= instance.addProgress(index, objective.count(), objective.count());
+                    instanceChanged |= instance.addProgress(index, instance.target(index, objective), instance.target(index, objective));
                 }
             }
             if (instanceChanged) {
@@ -240,7 +251,7 @@ public final class GOTQuestService {
                 if (objective.type() == GOTQuestObjectiveType.EVENT
                         && objective.target().equals(eventId.toString())
                         && canProgress(definition, instance, index)) {
-                    instanceChanged |= instance.addProgress(index, amount, objective.count());
+                    instanceChanged |= instance.addProgress(index, amount, instance.target(index, objective));
                 }
             }
             if (instanceChanged) {
@@ -272,7 +283,7 @@ public final class GOTQuestService {
         List<GOTQuestView> active = new ArrayList<>();
         for (GOTQuestInstance instance : data.active()) {
             GOTQuestDefinitionManager.get(instance.definitionId()).ifPresent(definition -> {
-                instance.ensureObjectiveCount(definition.objectives().size());
+                instance.ensureObjectiveCount(definition);
                 active.add(view(definition, instance, instance.instanceId().equals(tracked)));
             });
         }
@@ -291,6 +302,14 @@ public final class GOTQuestService {
         List<GOTQuestDefinition> result = new ArrayList<>();
         for (GOTQuestDefinition definition : GOTQuestDefinitionManager.all()) {
             if (isAvailable(player, npc, giver, data, definition)) result.add(definition);
+        }
+        boolean hasLegendaryRoleQuest = result.stream().anyMatch(definition -> definition.legendary()
+                && !definition.giver().roles().isEmpty()
+                && definition.giver().roles().contains(giver.getQuestRoleId()));
+        if (hasLegendaryRoleQuest) {
+            result.removeIf(definition -> !definition.legendary()
+                    || definition.giver().roles().isEmpty()
+                    || !definition.giver().roles().contains(giver.getQuestRoleId()));
         }
         result.sort(Comparator.comparing(definition -> definition.id().toString()));
         return result;
@@ -354,7 +373,7 @@ public final class GOTQuestService {
                         || objective.target().equals(giver.getQuestFaction().id())
                         || (type != null && objective.target().equals(type.toString()));
                 if (roleMatches && targetMatches) {
-                    instanceChanged |= instance.addProgress(index, 1, objective.count());
+                    instanceChanged |= instance.addProgress(index, 1, instance.target(index, objective));
                 }
             }
             if (instanceChanged) {
@@ -387,18 +406,18 @@ public final class GOTQuestService {
                     ItemStack stack = inventory.getItem(slot);
                     if (stack.is(wanted)) available += stack.getCount();
                 }
-                int credited = Math.min(objective.count(), available);
+                int credited = Math.min(instance.target(index, objective), available);
                 int contribution = credited - instance.progress(index);
-                if (contribution > 0) instance.addProgress(index, contribution, objective.count());
+                if (contribution > 0) instance.addProgress(index, contribution, instance.target(index, objective));
                 continue;
             }
-            int remaining = objective.count() - instance.progress(index);
+            int remaining = instance.target(index, objective) - instance.progress(index);
             for (int slot = 0; slot < inventory.getContainerSize() && remaining > 0; slot++) {
                 ItemStack stack = inventory.getItem(slot);
                 if (!stack.is(wanted)) continue;
                 int contribution = Math.min(remaining, stack.getCount());
                 stack.shrink(contribution);
-                instance.addProgress(index, contribution, objective.count());
+                instance.addProgress(index, contribution, instance.target(index, objective));
                 remaining -= contribution;
             }
         }
@@ -419,7 +438,8 @@ public final class GOTQuestService {
         if (!instance.state().isActive()) return false;
         if (!definition.sequential()) return true;
         for (int previous = 0; previous < objectiveIndex; previous++) {
-            if (instance.progress(previous) < definition.objectives().get(previous).count()) return false;
+            GOTQuestDefinition.Objective previousObjective = definition.objectives().get(previous);
+            if (instance.progress(previous) < instance.target(previous, previousObjective)) return false;
         }
         return true;
     }
@@ -427,7 +447,8 @@ public final class GOTQuestService {
     private static void refreshReady(GOTQuestDefinition definition, GOTQuestInstance instance,
                                      long gameTime) {
         for (int index = 0; index < definition.objectives().size(); index++) {
-            if (instance.progress(index) < definition.objectives().get(index).count()) {
+            GOTQuestDefinition.Objective objective = definition.objectives().get(index);
+            if (instance.progress(index) < instance.target(index, objective)) {
                 if (instance.state() == GOTQuestState.READY) instance.setState(GOTQuestState.ACTIVE, gameTime);
                 return;
             }
@@ -439,15 +460,39 @@ public final class GOTQuestService {
                                  GOTQuestDefinition definition, GOTQuestInstance instance) {
         instance.setState(GOTQuestState.COMPLETED, serverGameTime(player));
         data.archive(instance);
+        got.achievement.GOTAchievementHooks.award(player, definition.legendary() ? "DO_MINIQUEST_LEGENDARY" : "DO_MINIQUEST");
         for (Map.Entry<GOTFaction, Float> alignment : definition.reward().alignment().entrySet()) {
             GOTFactionService.addAlignment(player, alignment.getKey(), alignment.getValue());
+        }
+        int legacyCoins = 0;
+        if (definition.legacyRewardFactor() >= 0.0F && !definition.objectives().isEmpty()) {
+            GOTQuestDefinition.Objective objective = definition.objectives().get(0);
+            int target = instance.target(0, objective);
+            float alignmentBonus = objective.type() == GOTQuestObjectiveType.COLLECT
+                    ? Math.max(target * definition.legacyRewardFactor(), 1.0F)
+                    : target * definition.legacyRewardFactor();
+            if (instance.giverFaction().isPlayable()) {
+                GOTFactionService.addAlignment(player, instance.giverFaction(), alignmentBonus);
+            }
+            legacyCoins = Math.round(alignmentBonus * 2.0F);
         }
         for (GOTQuestDefinition.ItemReward reward : definition.reward().items()) {
             Item item = ForgeRegistries.ITEMS.getValue(reward.item());
             if (item != null) give(player, new ItemStack(item, reward.count()));
         }
-        giveCoins(player, definition.reward().coins());
+        giveCoins(player, definition.reward().coins() + legacyCoins);
+        // Legacy miniquests had a 1-in-10 chance to include a faction-appropriate lore book.
+        if (player.getRandom().nextInt(10) == 0) {
+            ItemStack lore = got.lore.GOTLoreBookService.randomForFaction(player, instance.giverFaction(), player.getRandom());
+            if (!lore.isEmpty()) give(player, lore);
+        }
         if (definition.reward().experience() > 0) player.giveExperiencePoints(definition.reward().experience());
+        if (definition.reward().hireGiver()
+                && (!instance.giverFaction().isPlayable()
+                || GOTFactionPlayerData.get(player).alignment(instance.giverFaction()) >= definition.reward().hireAlignment())) {
+            Entity giver = findEntity(player, instance.giverId());
+            if (giver != null) GOTHiringService.hire(player, giver, GOTHiredTask.WARRIOR);
+        }
         player.level().playSound(null, player.blockPosition(), SoundEvents.PLAYER_LEVELUP,
                 SoundSource.PLAYERS, 0.9F, 1.1F);
         player.displayClientMessage(Component.translatable(definition.completeKey(),
@@ -488,7 +533,8 @@ public final class GOTQuestService {
         for (int index = 0; index < definition.objectives().size(); index++) {
             GOTQuestDefinition.Objective objective = definition.objectives().get(index);
             objectives.add(new GOTQuestView.ObjectiveView(objective.labelKey(),
-                    instance == null ? 0 : instance.progress(index), objective.count()));
+                    instance == null ? 0 : instance.progress(index),
+                    instance == null ? objective.maximumCount() : instance.target(index, objective)));
         }
         return new GOTQuestView(instance == null ? null : instance.instanceId(), definition.id(),
                 definition.titleKey(), definition.descriptionKey(), definition.offerKey(),

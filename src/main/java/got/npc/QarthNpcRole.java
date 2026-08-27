@@ -27,7 +27,8 @@ public enum QarthNpcRole {
     QARTH_BUTCHER("qarth_butcher", "Qarth Butcher", Gender.RANDOM, Combat.PASSIVE, Trade.BUTCHER, 2),
     QARTH_FISHMONGER("qarth_fishmonger", "Qarth Fishmonger", Gender.RANDOM, Combat.PASSIVE, Trade.FISHMONGER, 2),
     QARTH_BAKER("qarth_baker", "Qarth Baker", Gender.RANDOM, Combat.PASSIVE, Trade.BAKER, 2),
-    QARTH_WARLOCK("qarth_warlock", "Qarth Warlock", Gender.MALE, Combat.PASSIVE, Trade.ALCHEMIST, 2);
+    QARTH_WARLOCK("qarth_warlock", "Qarth Warlock", Gender.MALE, Combat.PASSIVE, Trade.ALCHEMIST, 2),
+    XARO_XHOAN_DAXOS("xaro_xhoan_daxos", "Xaro Xhoan Daxos", Gender.MALE, Combat.PASSIVE, Trade.GOLDSMITH, 500, true, "xaro_xhoan_daxos", "_1", "_2", 1.0F, 1.0F);
 
     public enum Gender { RANDOM, MALE, FEMALE }
     public enum Combat { PASSIVE, MELEE, ARCHER, HYBRID }
@@ -41,14 +42,32 @@ public enum QarthNpcRole {
     private final Combat combat;
     private final Trade trade;
     private final int alignmentBonus;
+    private final boolean legendary;
+    private final String legendaryTexture;
+    private final String legendaryBaseSuffix;
+    private final String legendaryOverlaySuffix;
+    private final float scale;
+    private final float collisionScale;
 
     QarthNpcRole(String id, String displayName, Gender gender, Combat combat, Trade trade, int alignmentBonus) {
+        this(id, displayName, gender, combat, trade, alignmentBonus, false, null, "", "", 1.0F, 1.0F);
+    }
+
+    QarthNpcRole(String id, String displayName, Gender gender, Combat combat, Trade trade, int alignmentBonus,
+                 boolean legendary, String legendaryTexture, String legendaryBaseSuffix,
+                 String legendaryOverlaySuffix, float scale, float collisionScale) {
         this.id = id;
         this.displayName = displayName;
         this.gender = gender;
         this.combat = combat;
         this.trade = trade;
         this.alignmentBonus = alignmentBonus;
+        this.legendary = legendary;
+        this.legendaryTexture = legendaryTexture;
+        this.legendaryBaseSuffix = legendaryBaseSuffix;
+        this.legendaryOverlaySuffix = legendaryOverlaySuffix;
+        this.scale = scale;
+        this.collisionScale = collisionScale;
     }
 
     public String id() { return id; }
@@ -57,13 +76,13 @@ public enum QarthNpcRole {
     public Combat combat() { return combat; }
     public Trade trade() { return trade; }
     public int alignmentBonus() { return alignmentBonus; }
-    public boolean legendary() { return false; }
-    public String legendaryTexture() { return null; }
-    public String legendaryBaseSuffix() { return ""; }
-    public String legendaryOverlaySuffix() { return ""; }
-    public boolean hasLegendaryOverlay() { return false; }
-    public float scale() { return 1.0F; }
-    public float collisionScale() { return 1.0F; }
+    public boolean legendary() { return legendary; }
+    public String legendaryTexture() { return legendaryTexture; }
+    public String legendaryBaseSuffix() { return legendaryBaseSuffix; }
+    public String legendaryOverlaySuffix() { return legendaryOverlaySuffix; }
+    public boolean hasLegendaryOverlay() { return !legendaryOverlaySuffix.isEmpty(); }
+    public float scale() { return scale; }
+    public float collisionScale() { return collisionScale; }
     public boolean ordinaryCivilian() { return this == QARTH_MAN || this == QARTH_FARMHAND; }
     public boolean activeCombatant() { return combat != Combat.PASSIVE; }
     public boolean usesOutfitOverlay() { return this != QARTH_SOLDIER && this != QARTH_SOLDIER_ARCHER && this != QARTH_BANNER_BEARER; }

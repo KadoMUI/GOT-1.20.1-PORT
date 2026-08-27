@@ -1,9 +1,6 @@
 {
   "replace": false,
   "values": [
-    "got:westerlands",
-    "got:westerlands_forest",
-    "got:westerlands_hills",
-    "got:westerlands_town"
+    "got:westerlands"
   ]
 }

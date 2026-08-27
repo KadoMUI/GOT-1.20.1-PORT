@@ -8,7 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public final class GOTGuiHiredFarmer extends GOTGuiHiredNPC {
     private static final ResourceLocation TEX =
-        new ResourceLocation("got","textures/gui/npc/hiredFarmer.png");
+        new ResourceLocation("got","textures/gui/npc/hiredfarmer.png");
 
     public GOTGuiHiredFarmer(GOTHireSnapshot snapshot) {
         super(Component.literal("Hired Farmer"),snapshot);

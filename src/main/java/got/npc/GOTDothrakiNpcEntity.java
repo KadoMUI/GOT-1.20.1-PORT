@@ -52,6 +52,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 
 import javax.annotation.Nullable;
+import java.util.UUID;
 
 /** Shared modern entity implementation for the complete Dothraki roster. */
 public class GOTDothrakiNpcEntity extends PathfinderMob implements net.minecraft.world.entity.monster.RangedAttackMob, Merchant, GOTFactionNpc, GOTQuestGiver {
@@ -72,6 +73,11 @@ public class GOTDothrakiNpcEntity extends PathfinderMob implements net.minecraft
     private MerchantOffers offers;
     private Player tradingPlayer;
     private int villagerXp;
+    private boolean pendingDothrakiHorse;
+    private int mountRetryTicks;
+    private UUID khalasarId;
+    private UUID khalasarLeaderUuid;
+    private int dothrakiSkirmishTicks;
 
     public GOTDothrakiNpcEntity(EntityType<? extends GOTDothrakiNpcEntity> type, Level level) {
         super(type, level);
@@ -124,6 +130,7 @@ public class GOTDothrakiNpcEntity extends PathfinderMob implements net.minecraft
                         && getTarget() == null && super.canUse();
             }
         });
+        goalSelector.addGoal(4, new GOTDothrakiKhalasarGoal(this));
         goalSelector.addGoal(5, new RandomStrollGoal(this, 0.9D));
         goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 8.0F));
         goalSelector.addGoal(8, new LookAtPlayerGoal(this, GOTDothrakiNpcEntity.class, 5.0F));
@@ -131,7 +138,8 @@ public class GOTDothrakiNpcEntity extends PathfinderMob implements net.minecraft
 
         targetSelector.addGoal(1, new GOTFactionHurtByTargetGoal(this));
         targetSelector.addGoal(2, new GOTFactionTargetGoal(this));
-        targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Monster.class, true) {
+        targetSelector.addGoal(3, new GOTDothrakiSkirmishGoal(this));
+        targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Monster.class, true) {
             @Override public boolean canUse() {
                 return getRole().activeCombatant() && super.canUse();
             }
@@ -173,6 +181,62 @@ public class GOTDothrakiNpcEntity extends PathfinderMob implements net.minecraft
         refreshDimensions();
         applyRoleAttributes();
         if (!level().isClientSide) GOTDothrakiNpcLoadouts.configure(this);
+    }
+
+    /** Marks this NPC to receive a Dothraki horse after it has entered the level. */
+    public void requestDothrakiHorse() {
+        if (getRole() == DothrakiNpcRole.DOTHRAKI || getRole() == DothrakiNpcRole.DOTHRAKI_ARCHER
+                || getRole() == DothrakiNpcRole.DOTHRAKI_CHIEFTAIN) {
+            pendingDothrakiHorse = true;
+            mountRetryTicks = 0;
+            setPersistenceRequired();
+        }
+    }
+
+    public boolean isDothrakiHorseRequested() { return pendingDothrakiHorse; }
+
+    public void assignKhalasar(UUID groupId, @Nullable UUID leaderUuid) {
+        this.khalasarId = groupId;
+        this.khalasarLeaderUuid = leaderUuid;
+        setPersistenceRequired();
+    }
+
+    public @Nullable UUID getKhalasarId() { return khalasarId; }
+    public @Nullable UUID getKhalasarLeaderUuid() { return khalasarLeaderUuid; }
+
+    public @Nullable GOTDothrakiNpcEntity getKhalasarLeader() {
+        if (khalasarLeaderUuid == null || !(level() instanceof net.minecraft.server.level.ServerLevel server)) return null;
+        net.minecraft.world.entity.Entity entity = server.getEntity(khalasarLeaderUuid);
+        return entity instanceof GOTDothrakiNpcEntity dothraki ? dothraki : null;
+    }
+
+    public boolean sameKhalasar(GOTDothrakiNpcEntity other) {
+        return khalasarId != null && khalasarId.equals(other.khalasarId);
+    }
+
+    public boolean canDothrakiSkirmish() {
+        return isAlive() && !isBaby() && !isFemale() && !isPassenger()
+                && getRole() == DothrakiNpcRole.DOTHRAKI && getTarget() == null;
+    }
+
+    public boolean isDothrakiSkirmishing() { return dothrakiSkirmishTicks > 0; }
+
+    public void beginDothrakiSkirmish(GOTDothrakiNpcEntity opponent) {
+        dothrakiSkirmishTicks = 160;
+        setTarget(opponent);
+    }
+
+    /**
+     * Dothraki combatants are overwhelmingly mounted in world-generated groups.
+     * Chieftains always ride; ordinary warriors/archers use an 85% mounted mix so
+     * camps still retain some dismounted fighters.
+     */
+    public boolean rollWorldMount() {
+        return switch (getRole()) {
+            case DOTHRAKI_CHIEFTAIN -> true;
+            case DOTHRAKI, DOTHRAKI_ARCHER -> random.nextFloat() < 0.85F;
+            default -> false;
+        };
     }
 
     public DothrakiNpcRole getRole() { return DothrakiNpcRole.byId(entityData.get(DATA_ROLE)); }
@@ -244,9 +308,25 @@ public class GOTDothrakiNpcEntity extends PathfinderMob implements net.minecraft
     @Override
     public void aiStep() {
         super.aiStep();
-        if (!level().isClientSide && offers != null
-                && got.economy.GOTNpcTraderRuntime.tick(this, offers)) {
-            offers = null;
+        if (!level().isClientSide) {
+            if (dothrakiSkirmishTicks > 0) {
+                if (!(getTarget() instanceof GOTDothrakiNpcEntity)) --dothrakiSkirmishTicks;
+                else if (--dothrakiSkirmishTicks <= 0) setTarget(null);
+            }
+            if (pendingDothrakiHorse && !isPassenger()) {
+                if (mountRetryTicks > 0) {
+                    --mountRetryTicks;
+                } else if (GOTDothrakiMountService.spawnHorseFor(this)) {
+                    pendingDothrakiHorse = false;
+                } else {
+                    // Retry after nearby entities/structure pieces have settled rather
+                    // than dropping the mount permanently because one tick was crowded.
+                    mountRetryTicks = 20;
+                }
+            }
+            if (offers != null && got.economy.GOTNpcTraderRuntime.tick(this, offers)) {
+                offers = null;
+            }
         }
         got.economy.GOTTraderAdvertisement.tick(this);
     }
@@ -319,6 +399,10 @@ public class GOTDothrakiNpcEntity extends PathfinderMob implements net.minecraft
         tag.put("IdleItem", idleItem.save(new CompoundTag()));
         if (offers != null) tag.put("Offers", offers.createTag());
         tag.putInt("TradeXp", villagerXp);
+        tag.putBoolean("DothrakiHorsePending", pendingDothrakiHorse);
+        if (khalasarId != null) tag.putUUID("DothrakiKhalasar", khalasarId);
+        if (khalasarLeaderUuid != null) tag.putUUID("DothrakiKhalasarLeader", khalasarLeaderUuid);
+        tag.putInt("DothrakiSkirmish", dothrakiSkirmishTicks);
     }
 
     @Override
@@ -334,6 +418,11 @@ public class GOTDothrakiNpcEntity extends PathfinderMob implements net.minecraft
         if (tag.contains("IdleItem")) idleItem = ItemStack.of(tag.getCompound("IdleItem"));
         if (tag.contains("Offers")) offers = new MerchantOffers(tag.getCompound("Offers"));
         villagerXp = tag.getInt("TradeXp");
+        pendingDothrakiHorse = tag.getBoolean("DothrakiHorsePending");
+        khalasarId = tag.hasUUID("DothrakiKhalasar") ? tag.getUUID("DothrakiKhalasar") : null;
+        khalasarLeaderUuid = tag.hasUUID("DothrakiKhalasarLeader") ? tag.getUUID("DothrakiKhalasarLeader") : null;
+        dothrakiSkirmishTicks = tag.getInt("DothrakiSkirmish");
+        mountRetryTicks = 0;
         refreshDimensions();
         applyRoleAttributes();
         updateHeldItem();

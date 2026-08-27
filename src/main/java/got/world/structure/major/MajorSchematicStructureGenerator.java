@@ -1,6 +1,9 @@
 package got.world.structure.major;
 
 import got.GOTMod;
+import got.GOTAbstractBannerEntity;
+import got.GOTStandingBannerEntity;
+import got.GOTWallBannerEntity;
 import got.common.world.map.GOTWaypoint;
 import got.npc.GOTNorthNpcPopulation;
 import got.world.structure.north.NorthStructureMarker;
@@ -11,7 +14,9 @@ import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.NbtIo;
 import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Rotation;
@@ -26,6 +31,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.ref.SoftReference;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -101,15 +107,17 @@ public final class MajorSchematicStructureGenerator {
             SpongeSchematic schematic = load(site);
             if (schematic == null) continue;
 
-            if (!intersects(site.structureMinX(schematic), site.structureMinZ(schematic),
-                    site.structureMaxX(schematic), site.structureMaxZ(schematic),
+            int terrainApron = schematic.terrainApron();
+            if (!intersects(site.structureMinX(schematic) - terrainApron, site.structureMinZ(schematic) - terrainApron,
+                    site.structureMaxX(schematic) + terrainApron, site.structureMaxZ(schematic) + terrainApron,
                     chunkMinX, chunkMinZ, chunkMaxX, chunkMaxZ)) continue;
 
-            int terrainAnchorY = terrain.structureAnchorHeight(site.anchorX(), site.anchorZ())
-                    + 1 + site.anchorYOffset();
+            int terrainAnchorY = schematic.recommendedAnchorY(terrain, site) + site.anchorYOffset();
             int minimumAnchorY = level.getMinBuildHeight() - schematic.offsetY;
             int maximumAnchorY = level.getMaxBuildHeight() - schematic.offsetY - schematic.height;
             int anchorY = Math.max(minimumAnchorY, Math.min(maximumAnchorY, terrainAnchorY));
+            schematic.prepareTerrain(level, terrain, site, anchorY,
+                    chunkMinX, chunkMinZ, chunkMaxX, chunkMaxZ);
             schematic.placeChunk(level, site, anchorY,
                     chunkMinX, chunkMinZ, chunkMaxX, chunkMaxZ);
             spawnNorthernLegendaryCharacters(level, site, schematic, anchorY,
@@ -217,6 +225,7 @@ public final class MajorSchematicStructureGenerator {
         }
     }
     private record BlockEntityData(int x, int y, int z, CompoundTag tag) {}
+    private record SchematicEntityData(double x, double y, double z, CompoundTag tag) {}
 
     private static final class SpongeSchematic {
         private final int width;
@@ -229,11 +238,15 @@ public final class MajorSchematicStructureGenerator {
         private final byte[] blockData;
         private final int[] rowOffsets;
         private final List<BlockEntityData> blockEntities;
+        private final List<SchematicEntityData> entities;
+        private final int groundLayer;
+        private final boolean[] groundMask;
 
         private SpongeSchematic(int width, int height, int length,
                                 int offsetX, int offsetY, int offsetZ,
                                 BlockState[] palette, byte[] blockData,
-                                int[] rowOffsets, List<BlockEntityData> blockEntities) {
+                                int[] rowOffsets, List<BlockEntityData> blockEntities,
+                                List<SchematicEntityData> entities, int groundLayer, boolean[] groundMask) {
             this.width = width;
             this.height = height;
             this.length = length;
@@ -244,6 +257,9 @@ public final class MajorSchematicStructureGenerator {
             this.blockData = blockData;
             this.rowOffsets = rowOffsets;
             this.blockEntities = blockEntities;
+            this.entities = entities;
+            this.groundLayer = groundLayer;
+            this.groundMask = groundMask;
         }
 
         static SpongeSchematic read(InputStream input) throws IOException {
@@ -271,8 +287,135 @@ public final class MajorSchematicStructureGenerator {
             byte[] blockData = root.getByteArray("BlockData");
             int[] rowOffsets = indexRows(blockData, width, height, length);
             List<BlockEntityData> blockEntities = readBlockEntities(root);
+            List<SchematicEntityData> entities = readEntities(root);
+            GroundProfile ground = analyzeGround(palette, blockData, rowOffsets, width, height, length);
             return new SpongeSchematic(width, height, length, offsetX, offsetY, offsetZ,
-                    palette, blockData, rowOffsets, blockEntities);
+                    palette, blockData, rowOffsets, blockEntities, entities, ground.layer(), ground.mask());
+        }
+
+        int terrainApron() { return 6; }
+
+        int recommendedAnchorY(PlanetosTerrainSampler terrain, Site site) {
+            List<Integer> heights = new ArrayList<>();
+            int count = 0;
+            for (boolean value : groundMask) if (value) count++;
+            int stride = Math.max(1, (int)Math.sqrt(Math.max(1, count) / 256.0D));
+            for (int z = 0; z < length; z += stride) {
+                for (int x = 0; x < width; x += stride) {
+                    if (!groundMask[z * width + x]) continue;
+                    heights.add(terrain.surfaceHeight(worldX(site, x, z), worldZ(site, x, z)));
+                }
+            }
+            int ground = terrain.structureAnchorHeight(site.anchorX(), site.anchorZ());
+            if (!heights.isEmpty()) {
+                Collections.sort(heights);
+                ground = heights.get(heights.size() / 2);
+            }
+            // The common schematic ground layer is a floor/road block. Place
+            // it one block above the median natural terrain surface.
+            return ground + 1 - offsetY - groundLayer;
+        }
+
+        void prepareTerrain(WorldGenLevel level, PlanetosTerrainSampler terrain, Site site, int anchorY,
+                            int chunkMinX, int chunkMinZ, int chunkMaxX, int chunkMaxZ) {
+            if (groundMask.length == 0) return;
+            int apron = terrainApron();
+            int targetGroundY = anchorY + offsetY + groundLayer - 1;
+            BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos();
+            for (int wz = chunkMinZ; wz <= chunkMaxZ; wz++) {
+                for (int wx = chunkMinX; wx <= chunkMaxX; wx++) {
+                    int[] local = localXZ(site, wx, wz);
+                    int lx = local[0], lz = local[1];
+                    int nearest = nearestGroundDistance(lx, lz, apron);
+                    if (nearest > apron) continue;
+
+                    float weight = nearest == 0 ? 1.0F : Math.max(0.0F, 1.0F - nearest / (float)(apron + 1));
+                    weight = weight * weight * (3.0F - 2.0F * weight);
+                    int naturalY = terrain.surfaceHeight(wx, wz);
+                    pos.set(wx, naturalY, wz);
+                    BlockState naturalTop = level.getBlockState(pos);
+                    // Leave open water alone. Docks, bridges, harbours and
+                    // river crossings should keep their water instead of
+                    // gaining an accidental dirt causeway.
+                    if (!naturalTop.getFluidState().isEmpty()) continue;
+
+                    int desiredY = Math.round(naturalY + (targetGroundY - naturalY) * weight);
+                    reshapeTerrainColumn(level, wx, wz, naturalY, desiredY, nearest == 0, naturalTop, pos);
+                }
+            }
+        }
+
+        private int nearestGroundDistance(int lx, int lz, int apron) {
+            int best = apron + 1;
+            for (int dz = -apron; dz <= apron; dz++) {
+                int z = lz + dz;
+                if (z < 0 || z >= length) continue;
+                for (int dx = -apron; dx <= apron; dx++) {
+                    int x = lx + dx;
+                    if (x < 0 || x >= width || !groundMask[z * width + x]) continue;
+                    int distance = Math.max(Math.abs(dx), Math.abs(dz));
+                    if (distance < best) best = distance;
+                }
+            }
+            return best;
+        }
+
+        private int[] localXZ(Site site, int worldX, int worldZ) {
+            if (site.rotation() == Rotation.CLOCKWISE_90) {
+                return new int[]{worldZ - site.anchorZ() - offsetX,
+                        site.anchorX() - offsetZ - worldX};
+            }
+            return new int[]{worldX - site.anchorX() - offsetX,
+                    worldZ - site.anchorZ() - offsetZ};
+        }
+
+        private static void reshapeTerrainColumn(WorldGenLevel level, int x, int z,
+                                                 int fromY, int toY, boolean core,
+                                                 BlockState originalTop, BlockPos.MutableBlockPos pos) {
+            int minY = level.getMinBuildHeight();
+            int maxY = level.getMaxBuildHeight() - 1;
+            fromY = Math.max(minY, Math.min(maxY, fromY));
+            toY = Math.max(minY, Math.min(maxY, toY));
+            if (fromY > toY) {
+                for (int y = Math.min(maxY, fromY + 6); y > toY; y--) {
+                    pos.set(x, y, z);
+                    BlockState state = level.getBlockState(pos);
+                    if (state.isAir()) continue;
+                    if (!isNaturalTerrain(state)) continue;
+                    level.setBlock(pos, Blocks.AIR.defaultBlockState(), UPDATE_FLAGS);
+                }
+            } else if (fromY < toY) {
+                BlockState fill = naturalFill(originalTop);
+                for (int y = fromY + 1; y <= toY; y++) {
+                    pos.set(x, y, z);
+                    BlockState existing = level.getBlockState(pos);
+                    if (!existing.isAir() && existing.getFluidState().isEmpty() && !isNaturalTerrain(existing)) continue;
+                    BlockState state = (!core && y == toY) ? naturalTop(originalTop) : fill;
+                    level.setBlock(pos, state, UPDATE_FLAGS);
+                }
+            }
+        }
+
+        private static boolean isNaturalTerrain(BlockState state) {
+            Block block = state.getBlock();
+            return state.is(BlockTags.LEAVES) || state.is(BlockTags.LOGS)
+                    || block == Blocks.GRASS_BLOCK || block == Blocks.DIRT || block == Blocks.COARSE_DIRT
+                    || block == Blocks.PODZOL || block == Blocks.ROOTED_DIRT || block == Blocks.MUD
+                    || block == Blocks.STONE || block == Blocks.DEEPSLATE || block == Blocks.GRAVEL
+                    || block == Blocks.SAND || block == Blocks.RED_SAND || block == Blocks.CLAY
+                    || block == Blocks.SNOW || block == Blocks.SNOW_BLOCK || state.canBeReplaced();
+        }
+
+        private static BlockState naturalFill(BlockState top) {
+            Block block = top.getBlock();
+            if (block == Blocks.SAND || block == Blocks.RED_SAND || block == Blocks.GRAVEL
+                    || block == Blocks.CLAY || block == Blocks.MUD) return top;
+            return Blocks.DIRT.defaultBlockState();
+        }
+
+        private static BlockState naturalTop(BlockState top) {
+            return !top.isAir() && top.getFluidState().isEmpty() && isNaturalTerrain(top)
+                    ? top : Blocks.GRASS_BLOCK.defaultBlockState();
         }
 
         void placeChunk(WorldGenLevel level, Site site, int anchorY,
@@ -342,6 +485,71 @@ public final class MajorSchematicStructureGenerator {
                 blockEntity.load(tag);
                 blockEntity.setChanged();
             }
+
+            placeBannerEntities(level, site, anchorY, chunkMinX, chunkMinZ, chunkMaxX, chunkMaxZ);
+        }
+
+        private void placeBannerEntities(WorldGenLevel level, Site site, int anchorY,
+                                         int chunkMinX, int chunkMinZ, int chunkMaxX, int chunkMaxZ) {
+            if (entities.isEmpty()) return;
+            for (SchematicEntityData data : entities) {
+                CompoundTag saved = data.tag().copy();
+                CompoundTag entityTag = saved.contains("Data", Tag.TAG_COMPOUND)
+                        ? saved.getCompound("Data").copy() : saved.copy();
+                String id = entityTag.getString("id");
+                if (id.isEmpty()) id = entityTag.getString("Id");
+                if (id.isEmpty()) id = saved.getString("Id");
+                if (!id.equals("got:standing_banner") && !id.equals("got:wall_banner")) continue;
+
+                double localX = data.x() + offsetX;
+                double localY = data.y() + offsetY;
+                double localZ = data.z() + offsetZ;
+                double worldX = site.rotation() == Rotation.CLOCKWISE_90
+                        ? site.anchorX() - localZ : site.anchorX() + localX;
+                double worldZ = site.rotation() == Rotation.CLOCKWISE_90
+                        ? site.anchorZ() + localX : site.anchorZ() + localZ;
+                double worldY = anchorY + localY;
+                if (worldX < chunkMinX || worldX >= chunkMaxX + 1.0D
+                        || worldZ < chunkMinZ || worldZ >= chunkMaxZ + 1.0D) continue;
+
+                Entity created = id.equals("got:wall_banner")
+                        ? got.GOTEntities.WALL_BANNER.get().create(level.getLevel())
+                        : got.GOTEntities.STANDING_BANNER.get().create(level.getLevel());
+                if (!(created instanceof GOTAbstractBannerEntity banner)) continue;
+
+                entityTag.remove("UUID");
+                entityTag.remove("UUIDMost");
+                entityTag.remove("UUIDLeast");
+                entityTag.putString("id", id);
+                entityTag.remove("Id");
+                try { banner.load(entityTag); }
+                catch (Exception ex) {
+                    GOTMod.LOGGER.warn("Unable to restore banner NBT from schematic {}", site.file(), ex);
+                }
+
+                if (banner instanceof GOTStandingBannerEntity standing) {
+                    standing.setPos(worldX, worldY, worldZ);
+                    standing.setYRot(standing.getYRot() + rotationDegrees(site.rotation()));
+                    standing.yRotO = standing.getYRot();
+                } else if (banner instanceof GOTWallBannerEntity wall) {
+                    net.minecraft.core.Direction outward = wall.getDirection();
+                    if (site.rotation() == Rotation.CLOCKWISE_90) outward = outward.getClockWise();
+                    int anchorYWorld = net.minecraft.util.Mth.floor(worldY) + 1;
+                    int anchorXWorld = net.minecraft.util.Mth.floor(worldX - outward.getStepX() * 0.54D);
+                    int anchorZWorld = net.minecraft.util.Mth.floor(worldZ - outward.getStepZ() * 0.54D);
+                    wall.setAnchor(new BlockPos(anchorXWorld, anchorYWorld, anchorZWorld), outward);
+                }
+                level.addFreshEntity(banner);
+            }
+        }
+
+        private static float rotationDegrees(Rotation rotation) {
+            return switch (rotation) {
+                case CLOCKWISE_90 -> 90.0F;
+                case CLOCKWISE_180 -> 180.0F;
+                case COUNTERCLOCKWISE_90 -> -90.0F;
+                default -> 0.0F;
+            };
         }
 
         private int worldX(Site site, int x, int z) {
@@ -358,6 +566,52 @@ public final class MajorSchematicStructureGenerator {
 
         String dimensionsAndOffset() {
             return width + "x" + height + "x" + length + " @ " + offsetX + "," + offsetY + "," + offsetZ;
+        }
+
+        private record GroundProfile(int layer, boolean[] mask) {}
+
+        private static GroundProfile analyzeGround(BlockState[] palette, byte[] data, int[] rowOffsets,
+                                                   int width, int height, int length) {
+            int columns = width * length;
+            int[] lowest = new int[columns];
+            Arrays.fill(lowest, Integer.MAX_VALUE);
+            Map<Integer, Integer> frequency = new HashMap<>();
+
+            for (int y = 0; y < height; y++) {
+                for (int z = 0; z < length; z++) {
+                    int[] cursor = {rowOffsets[y * length + z]};
+                    for (int x = 0; x < width; x++) {
+                        int id = readVarInt(data, cursor);
+                        BlockState state = id >= 0 && id < palette.length ? palette[id] : Blocks.AIR.defaultBlockState();
+                        if (state.isAir() || !state.getFluidState().isEmpty()) continue;
+                        int column = z * width + x;
+                        if (lowest[column] == Integer.MAX_VALUE) lowest[column] = y;
+                    }
+                }
+            }
+            for (int y : lowest) if (y != Integer.MAX_VALUE) frequency.merge(y, 1, Integer::sum);
+            int ground = 0, best = -1;
+            for (Map.Entry<Integer, Integer> e : frequency.entrySet()) {
+                if (e.getValue() > best) { best = e.getValue(); ground = e.getKey(); }
+            }
+
+            boolean[] atGround = new boolean[columns];
+            if (ground >= 0 && ground < height) {
+                for (int z = 0; z < length; z++) {
+                    int[] cursor = {rowOffsets[ground * length + z]};
+                    for (int x = 0; x < width; x++) {
+                        int id = readVarInt(data, cursor);
+                        BlockState state = id >= 0 && id < palette.length ? palette[id] : Blocks.AIR.defaultBlockState();
+                        if (!state.isAir() && state.getFluidState().isEmpty()) atGround[z * width + x] = true;
+                    }
+                }
+            }
+            boolean[] mask = new boolean[columns];
+            for (int i = 0; i < columns; i++) {
+                int y = lowest[i];
+                mask[i] = atGround[i] || (y != Integer.MAX_VALUE && Math.abs(y - ground) <= 1);
+            }
+            return new GroundProfile(ground, mask);
         }
 
         private static int[] indexRows(byte[] data, int width, int height, int length) throws IOException {
@@ -386,6 +640,35 @@ public final class MajorSchematicStructureGenerator {
                 }
             }
             return List.copyOf(result);
+        }
+
+        private static List<SchematicEntityData> readEntities(CompoundTag root) {
+            List<SchematicEntityData> result = new ArrayList<>();
+            ListTag list = root.getList("Entities", Tag.TAG_COMPOUND);
+            for (int i = 0; i < list.size(); i++) {
+                CompoundTag tag = list.getCompound(i);
+                double[] pos = readEntityPos(tag);
+                if (pos != null) result.add(new SchematicEntityData(pos[0], pos[1], pos[2], tag.copy()));
+            }
+            return List.copyOf(result);
+        }
+
+        @Nullable
+        private static double[] readEntityPos(CompoundTag tag) {
+            if (tag.contains("Pos", Tag.TAG_LIST)) {
+                ListTag pos = tag.getList("Pos", Tag.TAG_DOUBLE);
+                if (pos.size() >= 3) return new double[]{pos.getDouble(0), pos.getDouble(1), pos.getDouble(2)};
+            }
+            int[] ints = tag.getIntArray("Pos");
+            if (ints.length == 3) return new double[]{ints[0], ints[1], ints[2]};
+            if (tag.contains("Data", Tag.TAG_COMPOUND)) {
+                CompoundTag data = tag.getCompound("Data");
+                if (data.contains("Pos", Tag.TAG_LIST)) {
+                    ListTag pos = data.getList("Pos", Tag.TAG_DOUBLE);
+                    if (pos.size() >= 3) return new double[]{pos.getDouble(0), pos.getDouble(1), pos.getDouble(2)};
+                }
+            }
+            return null;
         }
 
         private static BlockState parseBlockState(String serialized) {

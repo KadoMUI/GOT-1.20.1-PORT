@@ -266,6 +266,16 @@ public class GOTMossovyNpcEntity extends PathfinderMob implements
         return (attacker == null || !isHiredAlly(attacker)) && super.hurt(source, amount);
     }
 
+    @Override
+    public void aiStep() {
+        super.aiStep();
+        if (!level().isClientSide && offers != null
+                && got.economy.GOTNpcTraderRuntime.tick(this, offers)) {
+            offers = null;
+        }
+        got.economy.GOTTraderAdvertisement.tick(this);
+    }
+
     @Override protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHit) {
         super.dropCustomDeathLoot(source, looting, recentlyHit);
         if (random.nextInt(6) == 0) spawnAtLocation(Items.BONE);

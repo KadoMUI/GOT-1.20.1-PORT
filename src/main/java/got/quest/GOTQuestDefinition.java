@@ -23,6 +23,8 @@ public record GOTQuestDefinition(
         int cooldownTicks,
         boolean sequential,
         boolean autoComplete,
+        boolean legendary,
+        float legacyRewardFactor,
         List<ResourceLocation> prerequisites,
         Giver giver,
         List<Objective> objectives,
@@ -53,6 +55,8 @@ public record GOTQuestDefinition(
             String target,
             String role,
             int count,
+            int minimumCount,
+            int maximumCount,
             ResourceLocation dimension,
             BlockPos position,
             double radius,
@@ -64,7 +68,9 @@ public record GOTQuestDefinition(
             Map<GOTFaction, Float> alignment,
             List<ItemReward> items,
             int coins,
-            int experience
+            int experience,
+            boolean hireGiver,
+            int hireAlignment
     ) {
         public Reward {
             alignment = Map.copyOf(alignment);

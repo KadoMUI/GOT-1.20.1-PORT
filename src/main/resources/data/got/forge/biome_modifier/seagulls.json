@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#got:spawns_seagulls",
+  "spawners": [
+    {
+      "type": "got:seagull",
+      "weight": 20,
+      "minCount": 2,
+      "maxCount": 5
+    }
+  ]
+}

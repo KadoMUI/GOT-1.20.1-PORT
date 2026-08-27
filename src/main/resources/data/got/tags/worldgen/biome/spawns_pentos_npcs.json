@@ -1,4 +1,6 @@
 {
   "replace": false,
-  "values": ["got:pentos", "got:pentos_forest", "got:pentos_hills"]
+  "values": [
+    "got:pentos"
+  ]
 }

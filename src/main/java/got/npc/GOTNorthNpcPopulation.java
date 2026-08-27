@@ -3,6 +3,9 @@ package got.npc;
 import got.GOTMod;
 import got.GOTEntities;
 import got.world.structure.north.NorthStructureMarker;
+import got.common.world.map.GOTWaypoint;
+import got.world.terrain.PlanetosTerrainSampler;
+import net.minecraft.world.level.chunk.ChunkAccess;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.MinecraftServer;
@@ -32,6 +35,31 @@ public final class GOTNorthNpcPopulation {
     private static final ConcurrentLinkedQueue<PendingKey> PENDING_ORDER = new ConcurrentLinkedQueue<>();
 
     private GOTNorthNpcPopulation() {}
+    private static final List<FixedNamedSpawn> FIXED_NAMED = List.of(
+            new FixedNamedSpawn(GOTWaypoint.BARROWTOWN, NorthNpcRole.BARBREY_DUSTIN, 0, 3),
+            new FixedNamedSpawn(GOTWaypoint.GREYWATER_WATCH, NorthNpcRole.HOWLAND_REED, 0, 5),
+            new FixedNamedSpawn(GOTWaypoint.WHITE_HARBOUR, NorthNpcRole.WYMAN_MANDERLY, 0, 5)
+    );
+
+    /** Restores the three legacy North fixer characters not attached to authored structure markers. */
+    public static void queueFixedSites(WorldGenLevel level, ChunkAccess chunk, long seed) {
+        ArrayList<PreparedSpawn> prepared = new ArrayList<>();
+        PlanetosTerrainSampler terrain = null;
+        for (FixedNamedSpawn fixed : FIXED_NAMED) {
+            int x = fixed.waypoint().getCoordX() + fixed.offsetX();
+            int z = fixed.waypoint().getCoordZ() + fixed.offsetZ();
+            if (Math.floorDiv(x, 16) != chunk.getPos().x || Math.floorDiv(z, 16) != chunk.getPos().z) continue;
+            if (terrain == null) terrain = new PlanetosTerrainSampler(seed);
+            int y = terrain.surfaceHeight(x, z) + 1;
+            NorthStructureMarker marker = new NorthStructureMarker(
+                    "legendary_npc:" + fixed.role().id(), new BlockPos(x, y, z), 0);
+            ParsedMarker parsed = parse(marker.role());
+            prepared.add(new PreparedSpawn(marker, parsed, fixed.role(),
+                    "north:fixed:" + fixed.waypoint().name().toLowerCase(Locale.ROOT) + ':' + fixed.role().id()));
+        }
+        enqueue(level.getLevel(), prepared);
+    }
+
 
     public static int spawnMarkers(LevelAccessor accessor, List<NorthStructureMarker> markers) {
         if (markers.isEmpty()) return 0;
@@ -132,7 +160,11 @@ public final class GOTNorthNpcPopulation {
                 marker.rotation() * 90.0F + 180.0F, 0.0F);
         npc.prepareForSpawn(spawn.role(), spawn.parsed().female(), spawn.parsed().child(), position,
                 spawn.parsed().homeRadius(), spawn.populationKey());
-        return level.noCollision(npc) && level.addFreshEntity(npc);
+        boolean added = level.noCollision(npc) && level.addFreshEntity(npc);
+        if (added && spawn.role().legendary()) {
+            GOTNamedNpcRespawnData.get(level).register(npc, spawn.populationKey(), position);
+        }
+        return added;
     }
 
     @Nullable
@@ -239,4 +271,5 @@ public final class GOTNorthNpcPopulation {
                               String populationKey) {}
 
     private record PendingSpawn(PreparedSpawn spawn) {}
+    private record FixedNamedSpawn(GOTWaypoint waypoint, NorthNpcRole role, int offsetX, int offsetZ) {}
 }

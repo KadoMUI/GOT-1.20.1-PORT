@@ -1,0 +1,55 @@
+Compiled from "GOTEntityMellario.java"
+public class got.common.entity.essos.legendary.quest.GOTEntityMellario extends got.common.entity.other.GOTEntityHumanBase {
+  public got.common.entity.essos.legendary.quest.GOTEntityMellario(net.minecraft.world.World);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #9                  // Method got/common/entity/other/GOTEntityHumanBase."<init>":(Lnet/minecraft/world/World;)V
+       5: aload_0
+       6: iconst_1
+       7: invokevirtual #13                 // Method setupLegendaryNPC:(Z)V
+      10: return
+
+  public got.common.faction.GOTFaction getFaction();
+    Code:
+       0: getstatic     #25                 // Field got/common/faction/GOTFaction.NORVOS:Lgot/common/faction/GOTFaction;
+       3: areturn
+
+  public got.common.quest.GOTMiniQuestFactory getMiniQuestFactory();
+    Code:
+       0: getstatic     #33                 // Field got/common/quest/GOTMiniQuestFactory.MELLARIO:Lgot/common/quest/GOTMiniQuestFactory;
+       3: areturn
+
+  public float getAlignmentBonus();
+    Code:
+       0: ldc           #36                 // float 300.0f
+       2: freturn
+
+  public net.minecraft.entity.IEntityLivingData func_110161_a(net.minecraft.entity.IEntityLivingData);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #40                 // Method got/common/entity/other/GOTEntityHumanBase.func_110161_a:(Lnet/minecraft/entity/IEntityLivingData;)Lnet/minecraft/entity/IEntityLivingData;
+       5: astore_2
+       6: aload_0
+       7: getfield      #44                 // Field npcItemsInv:Lgot/common/entity/other/utils/GOTInventoryNPCItems;
+      10: new           #46                 // class net/minecraft/item/ItemStack
+      13: dup
+      14: getstatic     #52                 // Field got/common/database/GOTItems.alloySteelDagger:Lnet/minecraft/item/Item;
+      17: invokespecial #55                 // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/item/Item;)V
+      20: invokevirtual #61                 // Method got/common/entity/other/utils/GOTInventoryNPCItems.setMeleeWeapon:(Lnet/minecraft/item/ItemStack;)V
+      23: aload_0
+      24: getfield      #44                 // Field npcItemsInv:Lgot/common/entity/other/utils/GOTInventoryNPCItems;
+      27: aconst_null
+      28: invokevirtual #64                 // Method got/common/entity/other/utils/GOTInventoryNPCItems.setIdleItem:(Lnet/minecraft/item/ItemStack;)V
+      31: aload_2
+      32: areturn
+
+  public void setupNPCGender();
+    Code:
+       0: aload_0
+       1: getfield      #73                 // Field familyInfo:Lgot/common/entity/other/info/GOTFamilyInfo;
+       4: iconst_0
+       5: invokevirtual #78                 // Method got/common/entity/other/info/GOTFamilyInfo.setMale:(Z)V
+       8: return
+}

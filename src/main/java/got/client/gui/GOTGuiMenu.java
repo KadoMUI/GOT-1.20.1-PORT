@@ -68,7 +68,8 @@ public final class GOTGuiMenu extends Screen {
                 () -> new GOTGuiMap(this), true);
         addMenuButton(4, Component.translatable("got.gui.factions"), GLFW.GLFW_KEY_F,
                 GOTGuiFactions::new, true);
-        addMenuButton(8, Component.translatable("got.gui.languages"), GLFW.GLFW_KEY_T, null, false);
+        addMenuButton(8, Component.translatable("got.gui.lore"), GLFW.GLFW_KEY_B, GOTGuiLore::new, true);
+        addMenuButton(0, Component.translatable("got.gui.capes"), GLFW.GLFW_KEY_C, GOTGuiCapes::new, true);
         addMenuButton(6, Component.translatable("got.gui.pacts"), GLFW.GLFW_KEY_P, GOTGuiPacts::new, true);
         addMenuButton(7, Component.translatable("got.gui.titles"), GLFW.GLFW_KEY_T, GOTGuiTitles::new, true);
         addMenuButton(5, Component.translatable("got.gui.alignment"), GLFW.GLFW_KEY_S, GOTGuiAlignment::new, true);

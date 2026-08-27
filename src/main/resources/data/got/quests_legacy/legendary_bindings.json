@@ -4,132 +4,158 @@
     {
       "legacy_factory": "HOWLAND",
       "modern_binding": "howland",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:howland_crocodiles"
     },
     {
       "legacy_factory": "BALON",
       "modern_binding": "balon",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:balon_euron"
     },
     {
       "legacy_factory": "DAENERYS",
       "modern_binding": "daenerys",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:daenerys_dragon_eggs"
     },
     {
       "legacy_factory": "VARYS",
       "modern_binding": "varys",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:varys_daenerys"
     },
     {
       "legacy_factory": "OBERYN",
       "modern_binding": "oberyn",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:oberyn_gerold"
     },
     {
       "legacy_factory": "STANNIS",
       "modern_binding": "stannis",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:stannis_renly"
     },
     {
       "legacy_factory": "JON_SNOW",
       "modern_binding": "jon_snow",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:jon_snow_valyrian_sword"
     },
     {
       "legacy_factory": "RENLY",
       "modern_binding": "renly",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:renly_stannis"
     },
     {
       "legacy_factory": "KITRA",
       "modern_binding": "kitra",
-      "status": "identity_bound_content_audit_pending"
+      "status": "removed_in_final_legacy_build",
+      "note": "Removed from final 24.08.29 build; factory enum identity remains stale."
     },
     {
       "legacy_factory": "BUGAI",
       "modern_binding": "bugai",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:bugai_tugar_khan"
     },
     {
       "legacy_factory": "TYRION",
       "modern_binding": "tyrion",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:tyrion_red_wine"
     },
     {
       "legacy_factory": "CERSEI",
       "modern_binding": "cersei",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:cersei_wildfire"
     },
     {
       "legacy_factory": "RAMSAY",
       "modern_binding": "ramsay",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:ramsay_branding_iron"
     },
     {
       "legacy_factory": "SANDOR",
       "modern_binding": "sandor",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:sandor_chicken"
     },
     {
       "legacy_factory": "MELISANDRA",
       "modern_binding": "melisandra",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:melisandra_blood"
     },
     {
       "legacy_factory": "DORAN",
       "modern_binding": "doran",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:doran_poppy_milk"
     },
     {
       "legacy_factory": "MARGAERY",
       "modern_binding": "margaery",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:margaery_cersei"
     },
     {
       "legacy_factory": "ELLARYA",
       "modern_binding": "ellarya",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:ellarya_tywin"
     },
     {
       "legacy_factory": "ARYA",
       "modern_binding": "arya",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:arya_wooden_sword"
     },
     {
       "legacy_factory": "OLENNA",
       "modern_binding": "olenna",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:olenna_joffrey"
     },
     {
       "legacy_factory": "SAMWELL",
       "modern_binding": "samwell",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:samwell_obsidian_dagger"
     },
     {
       "legacy_factory": "LYSA",
       "modern_binding": "lysa",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:lysa_tyrion"
     },
     {
       "legacy_factory": "CATELYN",
       "modern_binding": "catelyn",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:catelyn_theon"
     },
     {
       "legacy_factory": "DAVEN",
       "modern_binding": "daven",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:daven_vengeance"
     },
     {
       "legacy_factory": "ARIANNE",
       "modern_binding": "arianne",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:arianne_tommen"
     },
     {
       "legacy_factory": "MELLARIO",
       "modern_binding": "mellario",
-      "status": "identity_bound_content_audit_pending"
+      "status": "content_reconstructed_final_legacy",
+      "quest": "got:mellario_doran"
     }
   ]
 }

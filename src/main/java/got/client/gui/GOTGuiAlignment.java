@@ -5,6 +5,8 @@ import got.faction.GOTFaction;
 import got.faction.GOTFactionService;
 import got.network.C2SRequestFactionDataPacket;
 import got.network.GOTNetwork;
+import got.network.C2SJaqenTutorialPacket;
+import got.quest.GOTJaqenQuestSequence;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 
@@ -21,6 +23,7 @@ public final class GOTGuiAlignment extends GOTGuiMenuBaseReturn {
 
     @Override
     protected void init() {
+        GOTNetwork.CHANNEL.sendToServer(C2SJaqenTutorialPacket.action(GOTJaqenQuestSequence.Action.VIEW_ALIGNMENT));
         super.init();
         GOTNetwork.CHANNEL.sendToServer(new C2SRequestFactionDataPacket());
     }

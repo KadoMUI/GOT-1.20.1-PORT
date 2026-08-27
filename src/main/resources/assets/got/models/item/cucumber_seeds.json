@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "item/generated",
   "textures": {
-    "layer0": "minecraft:item/wheat_seeds"
+    "layer0": "got:item/cucumber_seeds"
   }
 }

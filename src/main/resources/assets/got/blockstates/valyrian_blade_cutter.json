@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "got:block/valyrian_blade_cutter"
+    },
+    "facing=east": {
+      "model": "got:block/valyrian_blade_cutter",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "got:block/valyrian_blade_cutter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "got:block/valyrian_blade_cutter",
+      "y": 270
+    }
+  }
+}

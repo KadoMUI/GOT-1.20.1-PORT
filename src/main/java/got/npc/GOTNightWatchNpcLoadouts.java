@@ -30,9 +30,9 @@ final class GOTNightWatchNpcLoadouts {
         }
         npc.updateHeldItem();
     }
-    static MerchantOffers createOffers(NightWatchNpcRole role){MerchantOffers o=new MerchantOffers();switch(role.trade()){
+    static MerchantOffers createOffers(NightWatchNpcRole role){MerchantOffers legendary=got.economy.GOTLegendaryTraderOffers.forRole(role.id());if(legendary!=null)return legendary;MerchantOffers o=new MerchantOffers();switch(role.trade()){
         case BLACKSMITH->{buy(o,"minecraft:coal",16,2);buy(o,"minecraft:iron_ingot",8,4);sell(o,8,"minecraft:iron_sword",1);sell(o,10,"got:iron_spear",1);}
-        case UNITS->{sell(o,14,"got:gift_chestplate",1);sell(o,10,"got:gift_helmet",1);sell(o,12,"got:command_horn",1);}
+        case UNITS->{sell(o,16,"got:warhorn",1);sell(o,14,"got:gift_chestplate",1);sell(o,10,"got:gift_helmet",1);sell(o,12,"got:command_horn",1);}
         case MAESTER->{buy(o,"minecraft:paper",20,3);sell(o,4,"minecraft:book",3);sell(o,8,"got:mug_poppy_milk",1);}
         default->{}}
         return o;}

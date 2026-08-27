@@ -56,6 +56,7 @@ final class GOTJogosNhaiNpcLoadouts {
                 sell(offers, 3, "minecraft:cooked_porkchop", 5);
             }
             case UNITS -> {
+                sell(offers, 16, "got:warhorn", 1);
                 sell(offers, 12, "got:command_horn", 1);
                 sell(offers, 16, "got:jogos_nhai_chestplate", 1);
                 sell(offers, 10, "got:iron_scimitar", 1);

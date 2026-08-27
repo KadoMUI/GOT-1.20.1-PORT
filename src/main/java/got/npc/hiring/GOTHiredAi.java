@@ -24,34 +24,37 @@ public final class GOTHiredAi {
         if (ownerId == null) return;
 
         ServerPlayer owner = level.getServer().getPlayerList().getPlayer(ownerId);
-        if (owner == null || !owner.isAlive()) return;
 
-        LivingEntity ownerTarget = owner.getLastHurtMob();
-        if (ownerTarget == null || !ownerTarget.isAlive()) {
-            ownerTarget = owner.getLastHurtByMob();
-        }
+        // Owner-driven target sharing only requires the owner to be online.
+        // HOLD/PATROL/WANDER must continue functioning if the owner logs out.
+        if (owner != null && owner.isAlive()) {
+            LivingEntity ownerTarget = owner.getLastHurtMob();
+            if (ownerTarget == null || !ownerTarget.isAlive()) {
+                ownerTarget = owner.getLastHurtByMob();
+            }
 
-        if (ownerTarget != null && ownerTarget.isAlive() && ownerTarget != mob) {
-            if (mob.getTarget() == null || !mob.getTarget().isAlive()) {
-                mob.setTarget(ownerTarget);
+            if (ownerTarget != null && ownerTarget.isAlive() && ownerTarget != mob) {
+                if (mob.getTarget() == null || !mob.getTarget().isAlive()) {
+                    mob.setTarget(ownerTarget);
+                }
             }
         }
 
         if (mob.getTarget() != null && mob.getTarget().isAlive()) return;
 
         switch (GOTHiredData.order(mob)) {
-            case FOLLOW -> follow(mob, owner);
+            case FOLLOW -> { if (owner != null && owner.isAlive()) follow(mob, owner); else mob.getNavigation().stop(); }
             case HOLD -> hold(mob);
             case PATROL, WANDER -> { }
         }
     }
 
     private static void follow(PathfinderMob mob, ServerPlayer owner) {
+        if (mob.getVehicle() instanceof got.mount.GOTMountEntity) return;
         double dist = mob.distanceToSqr(owner);
 
         if (dist > 1024.0D && GOTHiredData.teleportAutomatically(mob)) {
-            mob.teleportTo(owner.getX(), owner.getY(), owner.getZ());
-            mob.getNavigation().stop();
+            GOTHiredMountController.teleportUnit(mob, owner.getX(), owner.getY(), owner.getZ());
             return;
         }
 
@@ -63,6 +66,7 @@ public final class GOTHiredAi {
     }
 
     private static void hold(PathfinderMob mob) {
+        if (mob.getVehicle() instanceof got.mount.GOTMountEntity) return;
         BlockPos guard = GOTHiredData.guardPoint(mob);
         int range = GOTHiredData.guardRange(mob);
         double max = (double) range * (double) range;

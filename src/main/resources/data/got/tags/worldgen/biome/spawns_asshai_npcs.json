@@ -1,4 +1,6 @@
 {
   "replace": false,
-  "values": ["got:shadow_town"]
+  "values": [
+    "got:shadow_town"
+  ]
 }

@@ -1,4 +1,6 @@
 {
   "replace": false,
-  "values": ["got:volantis", "got:volantis_forest", "got:volantis_marshes", "got:volantis_orange_forest"]
+  "values": [
+    "got:volantis"
+  ]
 }

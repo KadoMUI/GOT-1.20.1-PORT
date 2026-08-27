@@ -1,0 +1,1 @@
+{"type":"forge:add_spawns","biomes":"#got:red_scorpions","spawners":[{"type":"got:red_scorpion","weight":8,"minCount":1,"maxCount":1}]}

@@ -97,6 +97,16 @@ public final class GOTSothoryosNpcEntity extends GOTNorvosNpcEntity {
     }
 
     @Override
+    public void aiStep() {
+        super.aiStep();
+        if (!level().isClientSide && sothoryosOffers != null
+                && got.economy.GOTNpcTraderRuntime.tick(this, sothoryosOffers)) {
+            sothoryosOffers = null;
+        }
+        got.economy.GOTTraderAdvertisement.tick(this);
+    }
+
+    @Override
     public void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
         tag.putString("SothoryosRole", getSothoryosRole().id());

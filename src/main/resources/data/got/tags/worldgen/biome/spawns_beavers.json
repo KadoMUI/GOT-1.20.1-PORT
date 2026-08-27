@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "got:north_forest",
+    "got:wolfswood",
+    "got:riverlands_forest",
+    "got:neck_forest",
+    "got:arryn_forest",
+    "got:stormlands_forest",
+    "got:braavos_forest",
+    "got:essos_forest",
+    "got:ibben_colony_forest"
+  ]
+}

@@ -5,8 +5,10 @@ import got.network.C2SRequestOptionsPacket;
 import got.network.C2SToggleOptionPacket;
 import got.network.GOTNetwork;
 import got.player.GOTPlayerOptions;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.screens.LanguageSelectScreen;
 import net.minecraft.network.chat.Component;
 
 import java.util.EnumMap;
@@ -18,7 +20,7 @@ public final class GOTGuiSettings extends GOTGuiMenuBaseReturn {
 
     public GOTGuiSettings() {
         super(Component.translatable("got.gui.settings"));
-        sizeX=256; sizeY=230;
+        sizeX=256; sizeY=258;
     }
 
     @Override
@@ -45,6 +47,12 @@ public final class GOTGuiSettings extends GOTGuiMenuBaseReturn {
             buttons.put(option,b);
             y+=23;
         }
+        addRenderableWidget(Button.builder(Component.translatable("got.gui.settings.localization"),
+                button -> {
+                    Minecraft mc = Minecraft.getInstance();
+                    mc.setScreen(new LanguageSelectScreen(this, mc.options, mc.getLanguageManager()));
+                }).bounds(guiLeft + 28, y + 2, 200, 20).build());
+
         GOTNetwork.CHANNEL.sendToServer(new C2SRequestOptionsPacket());
         updateLabels();
     }

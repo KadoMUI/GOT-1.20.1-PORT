@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a reproducible problem in Conquest of Westeros
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Conquest of Westeros version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: forge
+    attributes:
+      label: Minecraft / Forge version
+      placeholder: "Minecraft 1.20.1 / Forge 47.4.22"
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Singleplayer
+        - Multiplayer client
+        - Dedicated server
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / crash report
+      description: Attach the relevant latest.log or crash report.

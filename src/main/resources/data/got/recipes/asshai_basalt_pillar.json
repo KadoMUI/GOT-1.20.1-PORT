@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B",
+    "B"
+  ],
+  "key": {
+    "B": {
+      "item": "got:basalt_bricks"
+    }
+  },
+  "result": {
+    "item": "got:asshai_basalt_pillar",
+    "count": 2
+  }
+}

@@ -1,1 +1,0 @@
-{"type":"forge:add_spawns","biomes":"#got:spawns_night_watch_npcs","spawners":[{"type":"got:night_watch_npc","weight":5,"minCount":1,"maxCount":2}]}

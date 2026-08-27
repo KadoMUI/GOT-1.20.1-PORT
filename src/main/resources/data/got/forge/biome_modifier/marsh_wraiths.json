@@ -1,0 +1,1 @@
+{"type":"forge:add_spawns","biomes":"#got:spawns_marsh_wraiths","spawners":{"type":"got:marsh_wraith","weight":8,"minCount":1,"maxCount":1}}

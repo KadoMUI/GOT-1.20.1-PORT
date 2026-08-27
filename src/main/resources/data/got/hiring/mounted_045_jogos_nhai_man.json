@@ -1,0 +1,14 @@
+{
+  "roles": [
+    "jogos_nhai_man"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 65.0,
+  "pledge_exclusive": false,
+  "initial_cost": 15,
+  "legacy_entity": "GOTEntityJogosNhaiMan",
+  "legacy_group": "JOGOS_NHAI",
+  "mount_type": "GOTEntityZebra",
+  "mount_name": "Rider",
+  "mount_armor": ""
+}

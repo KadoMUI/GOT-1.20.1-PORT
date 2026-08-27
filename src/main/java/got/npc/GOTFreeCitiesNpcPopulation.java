@@ -54,8 +54,11 @@ public final class GOTFreeCitiesNpcPopulation {
             ,fixed(GOTWaypoint.VAES_EFE, City.DOTHRAKI, "jorah_mormont", 1, 3)
             ,fixed(GOTWaypoint.YIN, City.YI_TI, "bu_gai", 12, 0)
             ,fixed(GOTWaypoint.ASSHAI, City.ASSHAI, "asshai_archmag", 0, 0)
+            ,fixed(GOTWaypoint.VOLANTIS, City.ASSHAI, "moqorro", -1, 0)
+            ,fixed(GOTWaypoint.QARTH, City.QARTH, "xaro_xhoan_daxos", 3, 0)
             ,fixed(GOTWaypoint.HOJDBAATAR, City.JOGOS_NHAI, "tugar_khan", 0, 3)
             ,fixed(GOTWaypoint.MYR, City.GOLDEN_COMPANY, "harry_strickland", -1, -1)
+            ,fixed(GOTWaypoint.NORVOS, City.NORVOS, "mellario", 0, 1)
     );
 
     private GOTFreeCitiesNpcPopulation() {}
@@ -131,8 +134,10 @@ public final class GOTFreeCitiesNpcPopulation {
             case DOTHRAKI -> spawnDothraki(level, position, spawn);
             case YI_TI -> spawnYiTi(level, position, spawn);
             case ASSHAI -> spawnAsshai(level, position, spawn);
+            case QARTH -> spawnQarth(level, position, spawn);
             case JOGOS_NHAI -> spawnJogosNhai(level, position, spawn);
             case GOLDEN_COMPANY -> spawnGoldenCompany(level, position, spawn);
+            case NORVOS -> spawnNorvos(level, position, spawn);
         };
     }
 
@@ -229,7 +234,9 @@ public final class GOTFreeCitiesNpcPopulation {
         if (npc == null) return false;
         npc.moveTo(position.getX() + 0.5D, position.getY(), position.getZ() + 0.5D, 180.0F, 0.0F);
         npc.prepareForSpawn(role, null, false, position, 16, spawn.populationKey());
-        return level.noCollision(npc) && level.addFreshEntity(npc);
+        if (!level.noCollision(npc) || !level.addFreshEntity(npc)) return false;
+        if (npc.rollWorldMount()) npc.requestDothrakiHorse();
+        return true;
     }
 
     private static boolean spawnYiTi(ServerLevel level, BlockPos position, PreparedSpawn spawn) {
@@ -256,6 +263,18 @@ public final class GOTFreeCitiesNpcPopulation {
         return level.noCollision(npc) && level.addFreshEntity(npc);
     }
 
+    private static boolean spawnQarth(ServerLevel level, BlockPos position, PreparedSpawn spawn) {
+        QarthNpcRole role = QarthNpcRole.findById(spawn.roleId());
+        if (role == null || !level.getEntitiesOfClass(GOTQarthNpcEntity.class,
+                new AABB(position).inflate(32.0D), npc -> spawn.populationKey().equals(npc.getPopulationKey())
+                        || (role.legendary() && npc.getRole() == role)).isEmpty()) return false;
+        GOTQarthNpcEntity npc = GOTEntities.QARTH_NPC.get().create(level);
+        if (npc == null) return false;
+        npc.moveTo(position.getX() + 0.5D, position.getY(), position.getZ() + 0.5D, 180.0F, 0.0F);
+        npc.prepareForSpawn(role, null, false, position, 16, spawn.populationKey());
+        return level.noCollision(npc) && level.addFreshEntity(npc);
+    }
+
     private static boolean spawnJogosNhai(ServerLevel level, BlockPos position, PreparedSpawn spawn) {
         JogosNhaiNpcRole role = JogosNhaiNpcRole.findById(spawn.roleId());
         if (role == null || !level.getEntitiesOfClass(GOTJogosNhaiNpcEntity.class,
@@ -265,6 +284,18 @@ public final class GOTFreeCitiesNpcPopulation {
         if (npc == null) return false;
         npc.moveTo(position.getX() + 0.5D, position.getY(), position.getZ() + 0.5D, 180.0F, 0.0F);
         npc.prepareForSpawn(role, null, false, position, 16, spawn.populationKey());
+        return level.noCollision(npc) && level.addFreshEntity(npc);
+    }
+
+    private static boolean spawnNorvos(ServerLevel level, BlockPos position, PreparedSpawn spawn) {
+        NorvosNpcRole role = NorvosNpcRole.findById(spawn.roleId());
+        if (role == null || !level.getEntitiesOfClass(GOTNorvosNpcEntity.class,
+                new AABB(position).inflate(32.0D), npc -> spawn.populationKey().equals(npc.getPopulationKey())
+                        || (role.legendary() && npc.getRole() == role)).isEmpty()) return false;
+        GOTNorvosNpcEntity npc = GOTEntities.NORVOS_NPC.get().create(level);
+        if (npc == null) return false;
+        npc.moveTo(position.getX() + 0.5D, position.getY(), position.getZ() + 0.5D, 180.0F, 0.0F);
+        npc.prepareForSpawn(role, true, false, position, 16, spawn.populationKey());
         return level.noCollision(npc) && level.addFreshEntity(npc);
     }
 
@@ -308,8 +339,8 @@ public final class GOTFreeCitiesNpcPopulation {
     }
 
     private enum City {
-        BRAAVOS, PENTOS, LYS, TYROSH, GHISCAR, DOTHRAKI, YI_TI, ASSHAI,
-        JOGOS_NHAI, GOLDEN_COMPANY
+        BRAAVOS, PENTOS, LYS, TYROSH, GHISCAR, DOTHRAKI, YI_TI, ASSHAI, QARTH,
+        JOGOS_NHAI, GOLDEN_COMPANY, NORVOS
     }
 
     private record FixedSpawn(GOTWaypoint waypoint, City city, String roleId,

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    "SMS",
+    "SSS"
+  ],
+  "key": {
+    "S": { "tag": "got:stone_materials" },
+    "M": { "item": "minecraft:smoker" }
+  },
+  "result": { "item": "got:oven", "count": 1 }
+}

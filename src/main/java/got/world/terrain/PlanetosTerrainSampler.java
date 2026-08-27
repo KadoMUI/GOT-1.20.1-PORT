@@ -101,7 +101,6 @@ public final class PlanetosTerrainSampler {
         double weightTotal = 0.0D;
         PlanetosTerrainProfile centerProfile = PlanetosTerrainProfile.of(center, null);
         double centerBase = centerProfile.baseHeight();
-        boolean centerAquatic = GOTLegacyTerrainCatalog.isAquatic(center.id());
 
         // Restore a full 13x13 transition kernel. At eight-block intervals it
         // gives every coastline a 48-block shoulder instead of a cliff.
@@ -121,11 +120,12 @@ public final class PlanetosTerrainSampler {
                 variationTotal += nearbyProfile.variation() * weight;
                 detailTotal += nearbyProfile.detailScale() * weight;
                 ridgeTotal += nearbyProfile.ridgeStrength() * weight;
-                // Use an even coastal kernel rather than the height kernel's
-                // center-heavy weight. The first land and water columns then
-                // meet at matching beach/shelf elevations instead of a ledge.
-                oceanTotal += nearbyProfile.ocean() ? 1.0D : 0.0D;
-                oceanSampleCount += 1.0D;
+                // A radial coastal kernel smooths the atlas water mask itself.
+                // The old even 13x13 count preserved square atlas corners in
+                // the final shoreline even though terrain height was blended.
+                double coastWeight = Math.exp(-(dx * dx + dz * dz) / 11.0D);
+                oceanTotal += (nearbyProfile.ocean() ? 1.0D : 0.0D) * coastWeight;
+                oceanSampleCount += coastWeight;
                 weightTotal += weight;
             }
         }
@@ -133,14 +133,37 @@ public final class PlanetosTerrainSampler {
         if (weightTotal == 0.0D) {
             return new BlendedTerrain(centerProfile.baseHeight(), centerProfile.variation(),
                     centerProfile.detailScale(), centerProfile.ridgeStrength(),
-                    centerProfile.ocean() ? 1.0D : 0.0D, centerAquatic);
+                    centerProfile.ocean() ? 1.0D : 0.0D, centerProfile.ocean());
         }
+        double oceanWeight = oceanSampleCount == 0.0D ? 0.0D : oceanTotal / oceanSampleCount;
+        boolean shorelineWater = shorelineWater(blockX, blockZ, oceanWeight);
         return new BlendedTerrain(baseTotal / weightTotal,
                 variationTotal / weightTotal,
                 detailTotal / weightTotal,
                 ridgeTotal / weightTotal,
-                oceanSampleCount == 0.0D ? 0.0D : oceanTotal / oceanSampleCount,
-                centerAquatic);
+                oceanWeight,
+                shorelineWater);
+    }
+
+    /**
+     * Smoothed authored water mask used by both terrain shaping and sea fill.
+     * Only coastal columns are perturbed; deep land/ocean remain exactly as
+     * authored. This removes atlas-cell right angles without relocating the
+     * coastline by more than a small local shoulder.
+     */
+    public boolean isWaterColumn(int blockX, int blockZ) {
+        return blendBiomes(blockX, blockZ).aquatic();
+    }
+
+    private boolean shorelineWater(int blockX, int blockZ, double oceanWeight) {
+        if (oceanWeight <= 0.08D) return false;
+        if (oceanWeight >= 0.92D) return true;
+
+        // Low-frequency distortion breaks long straight/orthogonal atlas edges
+        // while retaining river channels and the authored continental outline.
+        double warp = fractal(blockX + 9137, blockZ - 5279, 1.0D / 92.0D, 2, 0.55D);
+        double threshold = 0.50D + warp * 0.085D;
+        return oceanWeight >= threshold;
     }
 
     private double fractal(double x, double z, double frequency, int octaves, double persistence) {

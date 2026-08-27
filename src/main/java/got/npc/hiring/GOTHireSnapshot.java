@@ -25,6 +25,8 @@ public record GOTHireSnapshot(
     int xp,
     int kills,
     boolean hireAllowed,
+    boolean mountedVariant,
+    boolean mountedHireAllowed,
     String rejectionReason,
     int requiredAlignment,
     String requirementText,
@@ -48,6 +50,8 @@ public record GOTHireSnapshot(
         b.writeVarInt(s.xp());
         b.writeVarInt(s.kills());
         b.writeBoolean(s.hireAllowed());
+        b.writeBoolean(s.mountedVariant());
+        b.writeBoolean(s.mountedHireAllowed());
         b.writeUtf(s.rejectionReason());
         b.writeInt(s.requiredAlignment());
         b.writeUtf(s.requirementText());
@@ -74,6 +78,8 @@ public record GOTHireSnapshot(
         int xp=b.readVarInt();
         int kills=b.readVarInt();
         boolean hireAllowed=b.readBoolean();
+        boolean mountedVariant=b.readBoolean();
+        boolean mountedHireAllowed=b.readBoolean();
         String rejectionReason=b.readUtf();
         int requiredAlignment=b.readInt();
         String requirementText=b.readUtf();
@@ -81,6 +87,6 @@ public record GOTHireSnapshot(
         List<CostLine> cost=new ArrayList<>(n);
         for(int i=0;i<n;i++) cost.add(new CostLine(b.readUtf(), b.readVarInt()));
         return new GOTHireSnapshot(entityId,npcName,npcType,factionId,hired,owner,task,order,squadron,
-            guardRange,autoTeleport,level,xp,kills,hireAllowed,rejectionReason,requiredAlignment,requirementText,cost);
+            guardRange,autoTeleport,level,xp,kills,hireAllowed,mountedVariant,mountedHireAllowed,rejectionReason,requiredAlignment,requirementText,cost);
     }
 }

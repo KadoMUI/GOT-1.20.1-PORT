@@ -6,11 +6,14 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 
 /** Visible projectile used by the legacy Northern hillman axe thrower. */
 public final class GOTThrownAxeEntity extends ThrowableItemProjectile {
+    private float damage = 6.0F;
     public GOTThrownAxeEntity(EntityType<? extends GOTThrownAxeEntity> type, Level level) {
         super(type, level);
     }
@@ -18,6 +21,12 @@ public final class GOTThrownAxeEntity extends ThrowableItemProjectile {
     public GOTThrownAxeEntity(Level level, LivingEntity owner) {
         super(GOTEntities.THROWN_AXE.get(), owner, level);
         setItem(GOTNorthNpcLoadouts.stack("got:iron_throwing_axe"));
+    }
+
+    public GOTThrownAxeEntity(Level level, LivingEntity owner, ItemStack stack, float damage) {
+        super(GOTEntities.THROWN_AXE.get(), owner, level);
+        setItem(stack.copyWithCount(1));
+        this.damage = damage;
     }
 
     @Override
@@ -28,13 +37,25 @@ public final class GOTThrownAxeEntity extends ThrowableItemProjectile {
     @Override
     protected void onHitEntity(EntityHitResult hit) {
         super.onHitEntity(hit);
-        hit.getEntity().hurt(damageSources().thrown(this, getOwner()), 6.0F);
-        discard();
+        if (!level().isClientSide) {
+            hit.getEntity().hurt(damageSources().thrown(this, getOwner()), damage);
+            dropAndDiscard();
+        }
     }
 
     @Override
     protected void onHitBlock(BlockHitResult hit) {
         super.onHitBlock(hit);
-        if (!level().isClientSide) discard();
+        if (!level().isClientSide) dropAndDiscard();
     }
+
+    private void dropAndDiscard() {
+        ItemStack stack = getItem().copyWithCount(1);
+        if (!stack.isEmpty()) spawnAtLocation(stack);
+        discard();
+    }
+
+    @Override public void addAdditionalSaveData(CompoundTag tag) { super.addAdditionalSaveData(tag); tag.putFloat("LegacyDamage", damage); }
+    @Override public void readAdditionalSaveData(CompoundTag tag) { super.readAdditionalSaveData(tag); if (tag.contains("LegacyDamage")) damage = tag.getFloat("LegacyDamage"); }
 }
+

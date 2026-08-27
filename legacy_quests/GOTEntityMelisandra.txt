@@ -1,0 +1,63 @@
+Compiled from "GOTEntityMelisandra.java"
+public class got.common.entity.westeros.legendary.quest.GOTEntityMelisandra extends got.common.entity.other.GOTEntityHumanBase {
+  public got.common.entity.westeros.legendary.quest.GOTEntityMelisandra(net.minecraft.world.World);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #9                  // Method got/common/entity/other/GOTEntityHumanBase."<init>":(Lnet/minecraft/world/World;)V
+       5: aload_0
+       6: iconst_1
+       7: invokevirtual #13                 // Method setupLegendaryNPC:(Z)V
+      10: aload_0
+      11: iconst_1
+      12: putfield      #17                 // Field field_70178_ae:Z
+      15: return
+
+  public got.common.faction.GOTFaction getFaction();
+    Code:
+       0: getstatic     #29                 // Field got/common/faction/GOTFaction.DRAGONSTONE:Lgot/common/faction/GOTFaction;
+       3: areturn
+
+  public got.common.quest.GOTMiniQuestFactory getMiniQuestFactory();
+    Code:
+       0: getstatic     #37                 // Field got/common/quest/GOTMiniQuestFactory.MELISANDRA:Lgot/common/quest/GOTMiniQuestFactory;
+       3: areturn
+
+  public float getAlignmentBonus();
+    Code:
+       0: ldc           #40                 // float 300.0f
+       2: freturn
+
+  public got.common.database.GOTAchievement getKillAchievement();
+    Code:
+       0: getstatic     #48                 // Field got/common/database/GOTAchievement.killMelisandra:Lgot/common/database/GOTAchievement;
+       3: areturn
+
+  public void func_70628_a(boolean, int);
+    Code:
+       0: aload_0
+       1: getstatic     #56                 // Field got/common/database/GOTItems.ruby:Lnet/minecraft/item/Item;
+       4: iconst_1
+       5: invokevirtual #60                 // Method func_145779_a:(Lnet/minecraft/item/Item;I)Lnet/minecraft/entity/item/EntityItem;
+       8: pop
+       9: return
+
+  public java.lang.String getSpeechBank(got.common.entity.other.GOTEntityNPC, net.minecraft.entity.player.EntityPlayer);
+    Code:
+       0: aload_1
+       1: aload_2
+       2: invokevirtual #71                 // Method got/common/entity/other/GOTEntityNPC.isFriendly:(Lnet/minecraft/entity/player/EntityPlayer;)Z
+       5: ifeq          11
+       8: ldc           #73                 // String legendary/melisandra_friendly
+      10: areturn
+      11: ldc           #75                 // String special/father_hostile
+      13: areturn
+
+  public void setupNPCGender();
+    Code:
+       0: aload_0
+       1: getfield      #85                 // Field familyInfo:Lgot/common/entity/other/info/GOTFamilyInfo;
+       4: iconst_0
+       5: invokevirtual #90                 // Method got/common/entity/other/info/GOTFamilyInfo.setMale:(Z)V
+       8: return
+}

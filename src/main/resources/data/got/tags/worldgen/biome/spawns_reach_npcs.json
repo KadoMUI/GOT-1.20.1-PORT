@@ -1,4 +1,6 @@
 {
   "replace": false,
-  "values": ["got:reach", "got:reach_arbor", "got:reach_fire_field", "got:reach_forest", "got:reach_hills", "got:reach_town"]
+  "values": [
+    "got:reach"
+  ]
 }

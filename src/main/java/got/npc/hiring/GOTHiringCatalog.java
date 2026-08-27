@@ -60,7 +60,10 @@ public final class GOTHiringCatalog {
                         GsonHelper.getAsBoolean(json, "pledge_exclusive", false),
                         GsonHelper.getAsInt(json, "initial_cost"),
                         GsonHelper.getAsString(json, "legacy_entity", ""),
-                        GsonHelper.getAsString(json, "legacy_group", "")
+                        GsonHelper.getAsString(json, "legacy_group", ""),
+                        GsonHelper.getAsString(json, "mount_type", ""),
+                        GsonHelper.getAsString(json, "mount_name", ""),
+                        GsonHelper.getAsString(json, "mount_armor", "")
                     ));
                 } catch (Exception e) {
                     throw new RuntimeException("Failed loading GOT hiring definition " + resourceId, e);

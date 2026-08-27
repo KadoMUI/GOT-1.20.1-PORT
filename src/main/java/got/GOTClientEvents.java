@@ -1,5 +1,24 @@
 package got;
+import got.client.ambient.*;
+import got.client.special.*;
+import got.wildlife.*;
 
+import got.client.wildlife.GOTWildlifeLayers;
+import got.client.wildlife.GOTWildlifeModel;
+import got.client.wildlife.GOTWildlifeRenderer;
+import got.client.wildlife.GOTScorpionLayers;
+import got.client.wildlife.GOTScorpionModel;
+import got.client.wildlife.GOTScorpionRenderer;
+
+import got.client.cape.GOTCapeLayer;
+
+import got.client.mount.GOTLegacyMountModel;
+import got.client.mount.GOTLegacyMountRenderer;
+import got.client.mount.GOTMountModelLayers;
+import got.client.mount.GOTZebraRenderer;
+import got.client.npc.GOTCrocodileLayers;
+import got.client.npc.GOTCrocodileModel;
+import got.client.npc.GOTCrocodileRenderer;
 import got.client.npc.GOTNorthNpcLayers;
 import got.client.npc.GOTNorthNpcModel;
 import got.client.npc.GOTNorthNpcRenderer;
@@ -42,6 +61,7 @@ import got.client.npc.GOTWhiteWalkerNpcRenderer;
 import got.client.npc.GOTBraavosNpcLayers;
 import got.client.npc.GOTBraavosNpcModel;
 import got.client.npc.GOTBraavosNpcRenderer;
+import got.client.npc.GOTJaqenHgharRenderer;
 import got.client.npc.GOTPentosNpcLayers;
 import got.client.npc.GOTPentosNpcModel;
 import got.client.npc.GOTPentosNpcRenderer;
@@ -119,6 +139,14 @@ public final class GOTClientEvents {
 
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(GOTCrocodileLayers.BASE, GOTCrocodileModel::layer);
+        event.registerLayerDefinition(GOTMountModelLayers.RHINO, () -> GOTLegacyMountModel.layer(GOTLegacyMountModel.Kind.RHINO));
+        event.registerLayerDefinition(GOTMountModelLayers.RHINO_SADDLE, () -> GOTLegacyMountModel.layer(GOTLegacyMountModel.Kind.RHINO, 0.5F));
+        event.registerLayerDefinition(GOTMountModelLayers.CAMEL_SADDLE, () -> GOTLegacyMountModel.layer(GOTLegacyMountModel.Kind.CAMEL, 0.5F));
+        event.registerLayerDefinition(GOTMountModelLayers.CAMEL_CARPET, () -> GOTLegacyMountModel.layer(GOTLegacyMountModel.Kind.CAMEL, 0.6F));
+        event.registerLayerDefinition(GOTMountModelLayers.BOAR_SADDLE, () -> GOTLegacyMountModel.layer(GOTLegacyMountModel.Kind.BOAR, 0.5F));
+        event.registerLayerDefinition(GOTMountModelLayers.CAMEL, () -> GOTLegacyMountModel.layer(GOTLegacyMountModel.Kind.CAMEL));
+        event.registerLayerDefinition(GOTMountModelLayers.BOAR, () -> GOTLegacyMountModel.layer(GOTLegacyMountModel.Kind.BOAR));
         event.registerLayerDefinition(LegacyVesselLayers.MUG, LegacyVesselGeometry::mug);
         event.registerLayerDefinition(LegacyVesselLayers.GOBLET, LegacyVesselGeometry::goblet);
         event.registerLayerDefinition(LegacyVesselLayers.ALE_HORN, LegacyVesselGeometry::aleHorn);
@@ -127,6 +155,29 @@ public final class GOTClientEvents {
         event.registerLayerDefinition(LegacyDecorLayers.BEACON, LegacyDecorGeometry::beacon);
         event.registerLayerDefinition(LegacyDecorLayers.UNSMELTERY, LegacyDecorGeometry::unsmeltery);
         event.registerLayerDefinition(LegacyDecorLayers.BEAR_RUG, LegacyDecorGeometry::bearRug);
+        event.registerLayerDefinition(GOTWraithLayers.HUMANOID, () -> net.minecraft.client.model.geom.builders.LayerDefinition.create(net.minecraft.client.model.HumanoidModel.createMesh(net.minecraft.client.model.geom.builders.CubeDeformation.NONE, 0.0F), 64, 64));
+        event.registerLayerDefinition(GOTWildlifeLayers.DEER, GOTWildlifeModel::deer);
+        event.registerLayerDefinition(GOTWildlifeLayers.BEAR, GOTWildlifeModel::bear);
+        event.registerLayerDefinition(GOTWildlifeLayers.BISON, GOTWildlifeModel::bison);
+        event.registerLayerDefinition(GOTWildlifeLayers.DIREWOLF, GOTWildlifeModel::direwolf);
+        event.registerLayerDefinition(GOTWildlifeLayers.ELEPHANT, GOTWildlifeModel::elephant);
+        event.registerLayerDefinition(GOTWildlifeLayers.MAMMOTH, GOTWildlifeModel::mammoth);
+        event.registerLayerDefinition(GOTWildlifeLayers.GIRAFFE, GOTWildlifeModel::giraffe);
+        event.registerLayerDefinition(GOTWildlifeLayers.LION, GOTWildlifeModel::lion);
+        event.registerLayerDefinition(GOTWildlifeLayers.ORYX, GOTWildlifeModel::oryx);
+        event.registerLayerDefinition(GOTWildlifeLayers.DIKDIK, GOTWildlifeModel::dikdik);
+        event.registerLayerDefinition(GOTWildlifeLayers.WALRUS, GOTWildlifeModel::walrus);
+        event.registerLayerDefinition(GOTWildlifeLayers.BEAVER, GOTWildlifeModel::beaver);
+        event.registerLayerDefinition(GOTWildlifeLayers.SHADOWCAT, GOTWildlifeModel::shadowcat);
+        event.registerLayerDefinition(GOTScorpionLayers.SCORPION, GOTScorpionModel::layer);
+        event.registerLayerDefinition(GOTSpecialHumanoidLayers.STONE_MAN, GOTSpecialHumanoidModel::stoneLayer);
+        event.registerLayerDefinition(GOTSpecialHumanoidLayers.WEREWOLF, GOTSpecialHumanoidModel::werewolfLayer);
+        event.registerLayerDefinition(GOTGiantLayers.GIANT, GOTGiantModel::layer);
+        event.registerLayerDefinition(GOTAmbientLayers.BIRD, GOTAmbientModel::bird);
+        event.registerLayerDefinition(GOTAmbientLayers.BUTTERFLY, GOTAmbientModel::butterfly);
+        event.registerLayerDefinition(GOTAmbientLayers.FLAMINGO, GOTAmbientModel::flamingo);
+        event.registerLayerDefinition(GOTAmbientLayers.SWAN, GOTAmbientModel::swan);
+        event.registerLayerDefinition(GOTAmbientLayers.MIDGES, GOTAmbientModel::midges);
         event.registerLayerDefinition(LegacyDecorLayers.GIRAFFE_RUG, LegacyDecorGeometry::giraffeRug);
         event.registerLayerDefinition(LegacyDecorLayers.LION_RUG, LegacyDecorGeometry::lionRug);
         event.registerLayerDefinition(GOTBannerLayers.STANDING, GOTBannerGeometry::standing);
@@ -299,6 +350,8 @@ public final class GOTClientEvents {
 
     @SubscribeEvent
     public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
+        event.register(got.invasion.GOTWarhornItem::tint, GOTEquipment.WARHORN.get());
+        event.register((stack, tintIndex) -> tintIndex == 0 ? ((net.minecraft.world.item.DyeableLeatherItem)stack.getItem()).getColor(stack) : 0xFFFFFF, GOTItems.POUCH_SMALL.get(), GOTItems.POUCH_MEDIUM.get(), GOTItems.POUCH_LARGE.get());
         event.register((stack, tintIndex) -> tintIndex == 0
                         ? ((net.minecraft.world.item.DyeableLeatherItem) stack.getItem()).getColor(stack)
                         : 0xFFFFFF,
@@ -354,17 +407,86 @@ public final class GOTClientEvents {
     }
 
     @SubscribeEvent
+    public static void addPlayerCapeLayers(net.minecraftforge.client.event.EntityRenderersEvent.AddLayers event) {
+        net.minecraft.client.renderer.entity.player.PlayerRenderer normal = event.getSkin("default");
+        net.minecraft.client.renderer.entity.player.PlayerRenderer slim = event.getSkin("slim");
+        if (normal != null) normal.addLayer(new GOTCapeLayer(normal));
+        if (slim != null) slim.addLayer(new GOTCapeLayer(slim));
+    }
+
+    @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             MenuScreens.register(GOTMenus.OVEN.get(), OvenScreen::new);
             MenuScreens.register(GOTMenus.FERMENTATION_BARREL.get(), FermentationBarrelScreen::new);
+            MenuScreens.register(GOTMenus.ALLOY_FORGE.get(), AlloyForgeScreen::new);
+            MenuScreens.register(GOTMenus.MILLSTONE.get(), MillstoneScreen::new);
             MenuScreens.register(GOTMenus.GOT_SMITHING.get(), GOTSmithingScreen::new);
             MenuScreens.register(GOTMenus.HIRED_WARRIOR_INVENTORY.get(), got.client.gui.hiring.GOTGuiHiredWarriorInventory::new);
             MenuScreens.register(GOTMenus.HIRED_FARMER_INVENTORY.get(), got.client.gui.hiring.GOTGuiHiredFarmerInventory::new);
+            MenuScreens.register(GOTMenus.POUCH.get(), got.client.GOTPouchScreen::new);
+            MenuScreens.register(GOTMenus.COIN_EXCHANGE.get(), got.client.GOTCoinExchangeScreen::new);
+            net.minecraft.client.renderer.item.ItemProperties.register(GOTEquipment.BRANDING_IRON.get(), net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(GOTMod.MOD_ID, "hot"), (stack, level, living, seed) -> GOTBrandingIronItem.hot(stack) ? 1.0F : 0.0F);
+            // Custom shields follow the same model-property architecture used by
+            // working 1.20.1 shield mods: idle item model -> *_blocking model.
+            net.minecraft.core.registries.BuiltInRegistries.ITEM.forEach(item -> {
+                if (item instanceof GOTFactionShieldItem) {
+                    net.minecraft.client.renderer.item.ItemProperties.register(
+                            item,
+                            net.minecraft.resources.ResourceLocation.withDefaultNamespace("blocking"),
+                            (stack, level, living, seed) ->
+                                    living != null
+                                            && living.isUsingItem()
+                                            && living.getUseItem() == stack ? 1.0F : 0.0F
+                    );
+                }
+            });
             BlockEntityRenderers.register(GOTBlockEntities.PLACED_DRINK_VESSEL.get(), PlacedDrinkVesselRenderer::new);
             BlockEntityRenderers.register(GOTBlockEntities.WEAPON_RACK.get(), GOTWeaponRackRenderer::new);
             BlockEntityRenderers.register(GOTBlockEntities.CARVED_SIGN.get(), GOTCarvedSignRenderer::new);
             BlockEntityRenderers.register(GOTBlockEntities.LEGACY_DECOR.get(), GOTLegacyDecorRenderer::new);
+            EntityRenderers.register(GOTEntities.GOT_HORSE.get(), net.minecraft.client.renderer.entity.HorseRenderer::new);
+            EntityRenderers.register(GOTEntities.ZEBRA.get(), GOTZebraRenderer::new);
+            EntityRenderers.register(GOTEntities.RHINO.get(), c -> new GOTLegacyMountRenderer<>(c, GOTMountModelLayers.RHINO, GOTLegacyMountModel.Kind.RHINO, "textures/entity/animal/rhino/rhino.png", 0.9F));
+            EntityRenderers.register(GOTEntities.WOOLY_RHINO.get(), c -> new GOTLegacyMountRenderer<>(c, GOTMountModelLayers.RHINO, GOTLegacyMountModel.Kind.RHINO, "textures/entity/animal/rhino/wooly.png", 0.9F));
+            EntityRenderers.register(GOTEntities.CAMEL.get(), c -> new GOTLegacyMountRenderer<>(c, GOTMountModelLayers.CAMEL, GOTLegacyMountModel.Kind.CAMEL, "textures/entity/animal/camel/camel.png", 0.8F));
+            EntityRenderers.register(GOTEntities.BOAR.get(), c -> new GOTLegacyMountRenderer<>(c, GOTMountModelLayers.BOAR, GOTLegacyMountModel.Kind.BOAR, "textures/entity/animal/boar/boar.png", 0.6F));
+            EntityRenderers.register(GOTEntities.DEER.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.DEER, GOTWildlifeModel.Kind.DEER, 0.6F, e -> "textures/entity/animal/deer/" + GOTWildlifeRenderer.skin(e, 2) + ".png"));
+            EntityRenderers.register(GOTEntities.BEAR.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.BEAR, GOTWildlifeModel.Kind.BEAR, 0.8F, e -> "textures/entity/animal/bear/" + (switch (GOTWildlifeRenderer.skin(e, 3)) { case 0 -> "black.png"; case 1 -> "dark.png"; default -> "light.png"; })));
+            EntityRenderers.register(GOTEntities.SNOW_BEAR.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.BEAR, GOTWildlifeModel.Kind.BEAR, 0.8F, e -> "textures/entity/animal/polarbear.png"));
+            EntityRenderers.register(GOTEntities.BISON.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.BISON, GOTWildlifeModel.Kind.BISON, 0.8F, e -> "textures/entity/animal/bison/" + GOTWildlifeRenderer.skin(e, 4) + ".png"));
+            EntityRenderers.register(GOTEntities.WHITE_BISON.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.BISON, GOTWildlifeModel.Kind.BISON, 0.8F, e -> "textures/entity/animal/wbison/" + GOTWildlifeRenderer.skin(e, 2) + ".png"));
+            EntityRenderers.register(GOTEntities.DIREWOLF.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.DIREWOLF, GOTWildlifeModel.Kind.DIREWOLF, 0.6F, e -> "textures/entity/animal/direwolf.png"));
+            EntityRenderers.register(GOTEntities.ELEPHANT.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.ELEPHANT, GOTWildlifeModel.Kind.ELEPHANT, 1.2F, 1.25F, e -> "textures/entity/animal/elephant.png"));
+            EntityRenderers.register(GOTEntities.MAMMOTH.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.MAMMOTH, GOTWildlifeModel.Kind.MAMMOTH, 1.4F, 1.35F, e -> "textures/entity/animal/mammoth.png"));
+            EntityRenderers.register(GOTEntities.GIRAFFE.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.GIRAFFE, GOTWildlifeModel.Kind.GIRAFFE, 0.9F, 1.15F, e -> "textures/entity/animal/giraffe/giraffe.png"));
+            EntityRenderers.register(GOTEntities.LION.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.LION, GOTWildlifeModel.Kind.LION, 0.7F, e -> "textures/entity/animal/lion/lion.png"));
+            EntityRenderers.register(GOTEntities.LIONESS.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.LION, GOTWildlifeModel.Kind.LION, 0.65F, 0.95F, e -> "textures/entity/animal/lion/lioness.png"));
+            EntityRenderers.register(GOTEntities.ORYX.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.ORYX, GOTWildlifeModel.Kind.ORYX, 0.55F, e -> "textures/entity/animal/oryx.png"));
+            EntityRenderers.register(GOTEntities.WHITE_ORYX.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.ORYX, GOTWildlifeModel.Kind.ORYX, 0.55F, e -> "textures/entity/animal/whiteoryx/" + GOTWildlifeRenderer.skin(e, 3) + ".png"));
+            EntityRenderers.register(GOTEntities.DIKDIK.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.DIKDIK, GOTWildlifeModel.Kind.DIKDIK, 0.35F, e -> "textures/entity/animal/dikdik/" + GOTWildlifeRenderer.skin(e, 3) + ".png"));
+            EntityRenderers.register(GOTEntities.WALRUS.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.WALRUS, GOTWildlifeModel.Kind.WALRUS, 0.8F, e -> "textures/entity/animal/walrus.png"));
+            EntityRenderers.register(GOTEntities.BEAVER.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.BEAVER, GOTWildlifeModel.Kind.BEAVER, 0.45F, e -> "textures/entity/animal/beaver.png"));
+            EntityRenderers.register(GOTEntities.SHADOWCAT.get(), c -> new GOTWildlifeRenderer<>(c, GOTWildlifeLayers.SHADOWCAT, GOTWildlifeModel.Kind.SHADOWCAT, 0.7F, e -> "textures/entity/animal/shadowcat.png"));
+            EntityRenderers.register(GOTEntities.BIRD.get(), c -> new GOTAmbientRenderer<GOTBirdEntity>(c,GOTAmbientLayers.BIRD,GOTAmbientModel.Kind.BIRD,.25F,e -> {String d=switch(e.getBirdType()){case CROW->"crow";case MAGPIE->"magpie";case SOTHORYOS->"sothoryos";default->"common";}; int max=d.equals("common")||d.equals("sothoryos")?9:1; return "textures/entity/animal/bird/"+d+"/"+Math.floorMod(e.getSkin(),max)+".png";}));
+            EntityRenderers.register(GOTEntities.SEAGULL.get(), c -> new GOTAmbientRenderer<GOTSeagullEntity>(c,GOTAmbientLayers.BIRD,GOTAmbientModel.Kind.BIRD,.3F,e -> "textures/entity/animal/bird/seagull/0.png"));
+            EntityRenderers.register(GOTEntities.GORCROW.get(), c -> new GOTAmbientRenderer<GOTGorcrowEntity>(c,GOTAmbientLayers.BIRD,GOTAmbientModel.Kind.BIRD,.4F,1.4F,e -> "textures/entity/animal/bird/gorcrow/0.png"));
+            EntityRenderers.register(GOTEntities.BUTTERFLY.get(), c -> new GOTAmbientRenderer<GOTButterflyEntity>(c,GOTAmbientLayers.BUTTERFLY,GOTAmbientModel.Kind.BUTTERFLY,.05F,.55F,e -> {String d=e.getButterflyType().name().toLowerCase(java.util.Locale.ROOT); int max=d.equals("ulthos")||d.equals("qohor")?1:5; return "textures/entity/animal/butterfly/"+d+"/"+Math.floorMod(e.getSkin(),max)+".png";}));
+            EntityRenderers.register(GOTEntities.FLAMINGO.get(), c -> new GOTAmbientRenderer<GOTFlamingoEntity>(c,GOTAmbientLayers.FLAMINGO,GOTAmbientModel.Kind.FLAMINGO,.3F,e -> e.isBaby()?"textures/entity/animal/flamingo/chick.png":"textures/entity/animal/flamingo/flamingo.png"));
+            EntityRenderers.register(GOTEntities.SWAN.get(), c -> new GOTAmbientRenderer<GOTSwanEntity>(c,GOTAmbientLayers.SWAN,GOTAmbientModel.Kind.SWAN,.3F,e -> "textures/entity/animal/swan.png"));
+            EntityRenderers.register(GOTEntities.MIDGES.get(), c -> new GOTAmbientRenderer<GOTMidgesEntity>(c,GOTAmbientLayers.MIDGES,GOTAmbientModel.Kind.MIDGES,0F,.35F,e -> "textures/entity/animal/midge.png"));
+            EntityRenderers.register(GOTEntities.DESERT_SCORPION.get(), c -> new GOTScorpionRenderer<>(c,.35F,1F,e -> "textures/entity/animal/scorpion/desert.png"));
+            EntityRenderers.register(GOTEntities.JUNGLE_SCORPION.get(), c -> new GOTScorpionRenderer<>(c,.35F,1F,e -> "textures/entity/animal/scorpion/jungle.png"));
+            EntityRenderers.register(GOTEntities.RED_SCORPION.get(), c -> new GOTScorpionRenderer<>(c,.45F,1.25F,e -> "textures/entity/animal/redscorp.png"));
+            EntityRenderers.register(GOTEntities.MANTICORE.get(), c -> new GOTScorpionRenderer<>(c,.15F,.45F,e -> "textures/entity/animal/manticore.png"));
+            EntityRenderers.register(GOTEntities.STONE_MAN.get(), GOTStoneManRenderer::new);
+            EntityRenderers.register(GOTEntities.WEREWOLF.get(), GOTWerewolfRenderer::new);
+            EntityRenderers.register(GOTEntities.GIANT.get(), c -> new GOTGiantRenderer<>(c,false));
+            EntityRenderers.register(GOTEntities.WIGHT_GIANT.get(), c -> new GOTGiantRenderer<>(c,true));
+            EntityRenderers.register(GOTEntities.THROWN_ROCK.get(), net.minecraft.client.renderer.entity.ThrownItemRenderer::new);
+            EntityRenderers.register(GOTEntities.BARROW_WRAITH.get(), c -> new GOTWraithRenderer<>(c,"textures/entity/westeros/shadow.png",.5F));
+            EntityRenderers.register(GOTEntities.MARSH_WRAITH.get(), c -> new GOTWraithRenderer<>(c,"textures/entity/essos/mossovy/wraith/marshwraith.png",.4F));
+            EntityRenderers.register(GOTEntities.MARSH_WRAITH_BALL.get(), GOTMarshWraithBallRenderer::new);
             EntityRenderers.register(GOTEntities.STANDING_BANNER.get(), GOTStandingBannerRenderer::new);
             EntityRenderers.register(GOTEntities.WALL_BANNER.get(), GOTWallBannerRenderer::new);
             EntityRenderers.register(GOTEntities.NORTH_NPC.get(), GOTNorthNpcRenderer::new);
@@ -381,6 +503,7 @@ public final class GOTClientEvents {
             EntityRenderers.register(GOTEntities.NIGHT_WATCH_NPC.get(), GOTNightWatchNpcRenderer::new);
             EntityRenderers.register(GOTEntities.WHITE_WALKER_NPC.get(), GOTWhiteWalkerNpcRenderer::new);
             EntityRenderers.register(GOTEntities.BRAAVOS_NPC.get(), GOTBraavosNpcRenderer::new);
+            EntityRenderers.register(GOTEntities.JAQEN_HGHAR.get(), GOTJaqenHgharRenderer::new);
             EntityRenderers.register(GOTEntities.PENTOS_NPC.get(), GOTPentosNpcRenderer::new);
             EntityRenderers.register(GOTEntities.VOLANTIS_NPC.get(), GOTVolantisNpcRenderer::new);
             EntityRenderers.register(GOTEntities.LYS_NPC.get(), GOTLysNpcRenderer::new);
@@ -401,9 +524,18 @@ public final class GOTClientEvents {
             EntityRenderers.register(GOTEntities.GOLDEN_COMPANY_NPC.get(), GOTGoldenCompanyNpcRenderer::new);
             EntityRenderers.register(GOTEntities.SUMMER_ISLES_NPC.get(), GOTSummerIslesNpcRenderer::new);
             EntityRenderers.register(GOTEntities.SOTHORYOS_NPC.get(), GOTSothoryosNpcRenderer::new);
+            EntityRenderers.register(GOTEntities.CROCODILE.get(), GOTCrocodileRenderer::new);
             EntityRenderers.register(GOTEntities.ULTHOS_SPIDER.get(), GOTUlthosSpiderRenderer::new);
             EntityRenderers.register(GOTEntities.BLIZZARD.get(), GOTBlizzardRenderer::new);
             EntityRenderers.register(GOTEntities.THROWN_AXE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(GOTEntities.SPEAR_PROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(GOTEntities.FIRE_POT_PROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(GOTEntities.LEGACY_ARROW_PROJECTILE.get(), c -> new net.minecraft.client.renderer.entity.ArrowRenderer<GOTLegacyArrowEntity>(c) {
+                private final net.minecraft.resources.ResourceLocation texture = new net.minecraft.resources.ResourceLocation("minecraft", "textures/entity/projectiles/arrow.png");
+                @Override public net.minecraft.resources.ResourceLocation getTextureLocation(GOTLegacyArrowEntity entity) { return texture; }
+            });
+            EntityRenderers.register(GOTEntities.PEBBLE_PROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(GOTEntities.DART_PROJECTILE.get(), ThrownItemRenderer::new);
             GOTDecorativeFunctionalBlocks.CUTOUT.forEach(block ->
                     ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
             GOTDecorativeFunctionalBlocks.TRANSLUCENT.forEach(block ->

@@ -12,6 +12,9 @@ public final class GOTRecipes {
     public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS =
             DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, GOTMod.MOD_ID);
 
+    public static final RegistryObject<RecipeSerializer<GOTPouchCombineRecipe>> POUCH_COMBINE =
+            SERIALIZERS.register("pouch_combine", () -> new SimpleCraftingRecipeSerializer<>(GOTPouchCombineRecipe::new));
+
     public static final RegistryObject<RecipeSerializer<GOTBannerCopyRecipe>> BANNER_COPY =
             SERIALIZERS.register("banner_copy",
                     () -> new SimpleCraftingRecipeSerializer<>(GOTBannerCopyRecipe::new));

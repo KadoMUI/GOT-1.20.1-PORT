@@ -83,7 +83,7 @@ public class GOTWildFireJarBlock extends Block {
         }
     }
 
-    private void explode(Level level, BlockPos pos) {
+    public void explode(Level level, BlockPos pos) {
         level.removeBlock(pos, false);
         level.explode(null, pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D,
                 3.5F, true, Level.ExplosionInteraction.BLOCK);

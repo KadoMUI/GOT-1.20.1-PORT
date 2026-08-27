@@ -1,0 +1,41 @@
+{
+  "title": "quest.got.sandor_chicken.title",
+  "description": "quest.got.sandor_chicken.description",
+  "offer": "quest.got.sandor_chicken.offer",
+  "progress": "quest.got.sandor_chicken.progress",
+  "complete": "quest.got.sandor_chicken.complete",
+  "icon": "minecraft:cooked_chicken",
+  "color": "#7A5C3E",
+  "weight": 1,
+  "repeatable": false,
+  "legendary": true,
+  "legacy_reward_factor": 1,
+  "giver": {
+    "roles": [
+      "sandor_clegane"
+    ],
+    "factions": [
+      "crownlands"
+    ],
+    "entity_types": [
+      "got:crownlands_npc"
+    ],
+    "maximum_active_for_faction": 5
+  },
+  "objectives": [
+    {
+      "type": "collect",
+      "target": "minecraft:cooked_chicken",
+      "count": 10,
+      "label": "quest.got.sandor_chicken.objective.0",
+      "count_min": 1,
+      "count_max": 10
+    }
+  ],
+  "rewards": {
+    "coins": 0,
+    "experience": 0,
+    "hire_giver": true,
+    "hire_alignment": 100
+  }
+}

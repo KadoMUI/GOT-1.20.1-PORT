@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:valyrian_sword"
+  },
+  "result": "got:night_king_sword",
+  "count": 1
+}

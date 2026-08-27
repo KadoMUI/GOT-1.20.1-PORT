@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "N N",
+    "I I"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:copper_ingot"
+    },
+    "N": {
+      "item": "got:copper_nugget"
+    }
+  },
+  "result": {
+    "item": "got:copper_chainmail_boots"
+  }
+}

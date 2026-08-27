@@ -146,9 +146,10 @@ public class GOTRiverlandsNpcEntity extends PathfinderMob implements net.minecra
         if (spawnType == MobSpawnType.NATURAL || spawnType == MobSpawnType.CHUNK_GENERATION) {
             GOTBiomeMetadata metadata = PlanetosBiomeManager.getMetadata(blockPosition().getX(), blockPosition().getZ());
             if (metadata != null && metadata.id().startsWith("riverlands")) {
-                boolean child = random.nextInt(7) == 0;
-                prepareForSpawn(RiverlandsNpcRole.RIVERLANDS_MAN, null, child,
-                        blockPosition(), 24, "");
+                RiverlandsNpcRole role = random.nextInt(15) < 10
+                        ? RiverlandsNpcRole.RIVERLANDS_LEVYMAN
+                        : RiverlandsNpcRole.RIVERLANDS_LEVYMAN_ARCHER;
+                prepareForSpawn(role, false, false, blockPosition(), 24, "");
             }
         } else if (getCustomName() == null) {
             prepareForSpawn(getRole(), null, false, blockPosition(), 24, "");

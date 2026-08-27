@@ -34,3 +34,21 @@ Thumbs.db
 
 # Forge MDK generated files
 forge*changelog.txt
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# JVM / generated artifacts
+*.class
+*.jar
+hs_err_pid*
+
+# Test worlds / saves
+saves/
+world/
+worlds/
+
+# VS Code
+.vscode/

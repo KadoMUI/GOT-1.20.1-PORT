@@ -1,0 +1,14 @@
+{
+  "roles": [
+    "lys_banner_bearer"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 65.0,
+  "pledge_exclusive": false,
+  "initial_cost": 15,
+  "legacy_entity": "GOTEntityLysBannerBearer",
+  "legacy_group": "LYS",
+  "mount_type": "GOTEntityHorse",
+  "mount_name": "Rider",
+  "mount_armor": "got/common/database/GOTItems.ironHorseArmor"
+}

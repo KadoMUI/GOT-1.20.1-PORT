@@ -12,6 +12,13 @@ public final class GOTBlockEntities {
     public static final RegistryObject<BlockEntityType<OvenBlockEntity>> OVEN = BLOCK_ENTITIES.register("oven",
             () -> BlockEntityType.Builder.of(OvenBlockEntity::new, GOTBlocks.OVEN.get()).build(null));
 
+
+    public static final RegistryObject<BlockEntityType<AlloyForgeBlockEntity>> ALLOY_FORGE = BLOCK_ENTITIES.register("alloy_forge",
+            () -> BlockEntityType.Builder.of(AlloyForgeBlockEntity::new, GOTBlocks.ALLOY_FORGE.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<MillstoneBlockEntity>> MILLSTONE = BLOCK_ENTITIES.register("millstone",
+            () -> BlockEntityType.Builder.of(MillstoneBlockEntity::new, GOTBlocks.MILLSTONE.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<FermentationBarrelBlockEntity>> FERMENTATION_BARREL = BLOCK_ENTITIES.register("fermentation_barrel",
             () -> BlockEntityType.Builder.of(FermentationBarrelBlockEntity::new, GOTBlocks.FERMENTATION_BARREL.get()).build(null));
 

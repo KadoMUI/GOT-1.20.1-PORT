@@ -24,6 +24,7 @@ final class GOTSummerIslesNpcLoadouts {
             case SUMMER_CAPTAIN -> summerArmor(npc, false);
             default -> { }
         }
+        GOTNpcShieldLoadouts.equip(npc, npc.getRole(), "got:summer_shield");
         npc.updateHeldItem();
     }
 

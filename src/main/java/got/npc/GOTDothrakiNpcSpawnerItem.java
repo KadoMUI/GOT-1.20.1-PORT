@@ -75,6 +75,7 @@ public final class GOTDothrakiNpcSpawnerItem extends Item {
             npc.moveTo(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D,
                     context.getRotation() + 180.0F, 0.0F);
             npc.prepareForSpawn(role, null, false, pos, role.legendary() ? 16 : 24, "");
+            if (npc.rollWorldMount()) npc.requestDothrakiHorse();
             npc.setPersistenceRequired();
             if (!serverLevel.noCollision(npc)) return InteractionResult.FAIL;
             serverLevel.addFreshEntity(npc);

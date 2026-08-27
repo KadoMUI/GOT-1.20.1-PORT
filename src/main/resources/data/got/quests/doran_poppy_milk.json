@@ -1,0 +1,39 @@
+{
+  "title": "quest.got.doran_poppy_milk.title",
+  "description": "quest.got.doran_poppy_milk.description",
+  "offer": "quest.got.doran_poppy_milk.offer",
+  "progress": "quest.got.doran_poppy_milk.progress",
+  "complete": "quest.got.doran_poppy_milk.complete",
+  "icon": "got:mug_poppy_milk",
+  "color": "#7A5C3E",
+  "weight": 1,
+  "repeatable": false,
+  "legendary": true,
+  "legacy_reward_factor": 5,
+  "giver": {
+    "roles": [
+      "doran_martell"
+    ],
+    "factions": [
+      "dorne"
+    ],
+    "entity_types": [
+      "got:dorne_npc"
+    ],
+    "maximum_active_for_faction": 5
+  },
+  "objectives": [
+    {
+      "type": "collect",
+      "target": "got:mug_poppy_milk",
+      "count": 10,
+      "label": "quest.got.doran_poppy_milk.objective.0",
+      "count_min": 1,
+      "count_max": 10
+    }
+  ],
+  "rewards": {
+    "coins": 0,
+    "experience": 0
+  }
+}

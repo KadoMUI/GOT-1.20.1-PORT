@@ -104,12 +104,16 @@ public class GOTArrynNpcEntity extends PathfinderMob implements net.minecraft.wo
         goalSelector.addGoal(1, new OpenDoorGoal(this, true));
         goalSelector.addGoal(2, new RangedAttackGoal(this, 1.25D, 35, 20.0F) {
             @Override public boolean canUse() {
-                return getRole().combat() == ArrynNpcRole.Combat.ARCHER && super.canUse();
+                ArrynNpcRole.Combat combat = getRole().combat();
+                return (combat == ArrynNpcRole.Combat.ARCHER
+                        || combat == ArrynNpcRole.Combat.AXE_THROWER) && super.canUse();
             }
         });
         goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.35D, false) {
             @Override public boolean canUse() {
-                return getRole().combat() != ArrynNpcRole.Combat.ARCHER && super.canUse();
+                return getRole().combat() != ArrynNpcRole.Combat.ARCHER
+                        && getRole().combat() != ArrynNpcRole.Combat.AXE_THROWER
+                        && super.canUse();
             }
         });
         goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Monster.class, 8.0F, 1.2D, 1.5D) {
@@ -139,15 +143,33 @@ public class GOTArrynNpcEntity extends PathfinderMob implements net.minecraft.wo
         SpawnGroupData result = super.finalizeSpawn(level, difficulty, spawnType, spawnData, dataTag);
         if (spawnType == MobSpawnType.NATURAL || spawnType == MobSpawnType.CHUNK_GENERATION) {
             GOTBiomeMetadata metadata = PlanetosBiomeManager.getMetadata(blockPosition().getX(), blockPosition().getZ());
-            if (metadata != null && metadata.id().startsWith("arryn")) {
-                boolean child = random.nextInt(7) == 0;
-                prepareForSpawn(ArrynNpcRole.ARRYN_MAN, null, child,
-                        blockPosition(), 24, "");
+            if (metadata != null) {
+                String biome = metadata.id();
+                ArrynNpcRole role = null;
+                if (biome.equals("arryn_town") || biome.equals("arryn_mountains_foothills")) {
+                    role = randomHillmanFighter();
+                } else if (biome.equals("arryn")) {
+                    // Legacy Arryn proper carried both ARRYN_MILITARY and HILL_TRIBES_MILITARY.
+                    // Keep the native levy list dominant while allowing the overlapping hill-tribe population.
+                    role = random.nextInt(5) == 0
+                            ? randomHillmanFighter()
+                            : (random.nextInt(15) < 10 ? ArrynNpcRole.ARRYN_LEVYMAN : ArrynNpcRole.ARRYN_LEVYMAN_ARCHER);
+                }
+                if (role != null) prepareForSpawn(role, false, false, blockPosition(), 24, "");
             }
         } else if (getCustomName() == null) {
             prepareForSpawn(getRole(), null, false, blockPosition(), 24, "");
         }
         return result;
+    }
+
+    private ArrynNpcRole randomHillmanFighter() {
+        int value = random.nextInt(100);
+        if (value < 38) return ArrynNpcRole.HILLMAN_WARRIOR;
+        if (value < 63) return ArrynNpcRole.HILLMAN_ARCHER;
+        if (value < 82) return ArrynNpcRole.HILLMAN_AXE_THROWER;
+        if (value < 94) return ArrynNpcRole.HILLMAN_BANNER_BEARER;
+        return ArrynNpcRole.HILLMAN_BERSERKER;
     }
 
     public void prepareForSpawn(ArrynNpcRole role, @Nullable Boolean female, boolean child,
@@ -165,7 +187,7 @@ public class GOTArrynNpcEntity extends PathfinderMob implements net.minecraft.wo
         entityData.set(DATA_POPULATION_KEY, resolvedPopulationKey);
         setCustomName(Component.literal(role.legendary()
                 ? role.displayName()
-                : GOTNpcNames.random(random, resolvedFemale, false)));
+                : GOTNpcNames.random(random, resolvedFemale, role.hillman())));
         setCustomNameVisible(role.legendary());
         if (role.legendary() || !resolvedPopulationKey.isEmpty()) setPersistenceRequired();
         restrictTo(home, Math.max(4, homeRadius));
@@ -175,11 +197,16 @@ public class GOTArrynNpcEntity extends PathfinderMob implements net.minecraft.wo
     }
 
     public ArrynNpcRole getRole() { return ArrynNpcRole.byId(entityData.get(DATA_ROLE)); }
-    @Override public String getFactionId() { return "arryn"; }
+    @Override public String getFactionId() {
+        if (getRole().hillman()) return "hill_tribes";
+        if (getRole().prostitute()) return "unaligned";
+        return "arryn";
+    }
     @Override public String getQuestRoleId() { return getRole().id(); }
     @Override public got.faction.GOTFaction getQuestFaction() { return getFaction(); }
     @Override public boolean canOfferQuests() {
-        return isAlive() && !isBaby() && getRole().trade() == ArrynNpcRole.Trade.NONE;
+        return isAlive() && !isBaby() && !getRole().prostitute()
+                && getRole().trade() == ArrynNpcRole.Trade.NONE;
     }
     @Override public int getAlignmentBonus() { return getRole().alignmentBonus(); }
     @Override public boolean isCivilian() { return !getRole().legendary() && !getRole().activeCombatant(); }
@@ -207,6 +234,19 @@ public class GOTArrynNpcEntity extends PathfinderMob implements net.minecraft.wo
 
     @Override
     public void performRangedAttack(LivingEntity target, float distanceFactor) {
+        if (getRole().combat() == ArrynNpcRole.Combat.AXE_THROWER) {
+            GOTThrownAxeEntity axe = new GOTThrownAxeEntity(level(), this);
+            double dx = target.getX() - getX();
+            double dy = target.getY(0.5D) - axe.getY();
+            double dz = target.getZ() - getZ();
+            double horizontal = Math.sqrt(dx * dx + dz * dz);
+            axe.shoot(dx, dy + horizontal * 0.2D, dz, 1.25F, 6.0F);
+            playSound(SoundEvents.SNOWBALL_THROW, 1.0F, 0.9F + random.nextFloat() * 0.2F);
+            level().addFreshEntity(axe);
+            swing(InteractionHand.MAIN_HAND);
+            return;
+        }
+
         ItemStack bow = rangedWeapon.isEmpty() ? new ItemStack(Items.BOW) : rangedWeapon;
         Arrow arrow = new Arrow(level(), this);
         double dx = target.getX() - getX();
@@ -274,7 +314,8 @@ public class GOTArrynNpcEntity extends PathfinderMob implements net.minecraft.wo
 
     void updateHeldItem() {
         ItemStack held;
-        if (getTarget() != null && getRole().combat() == ArrynNpcRole.Combat.ARCHER) {
+        if (getTarget() != null && (getRole().combat() == ArrynNpcRole.Combat.ARCHER
+                || getRole().combat() == ArrynNpcRole.Combat.AXE_THROWER)) {
             held = rangedWeapon;
         } else if (getTarget() != null) {
             held = combatWeapon;
@@ -286,7 +327,9 @@ public class GOTArrynNpcEntity extends PathfinderMob implements net.minecraft.wo
     }
 
     private void applyRoleAttributes() {
-        double health = getRole().legendary() ? 30.0D : 20.0D;
+        double health = getRole() == ArrynNpcRole.HILLMAN_BERSERKER
+                ? 40.0D
+                : (getRole().legendary() ? 30.0D : 20.0D);
         if (getAttribute(Attributes.MAX_HEALTH) != null) {
             getAttribute(Attributes.MAX_HEALTH).setBaseValue(health);
             setHealth((float)health);

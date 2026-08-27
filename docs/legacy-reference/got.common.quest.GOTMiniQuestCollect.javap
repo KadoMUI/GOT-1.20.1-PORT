@@ -1,0 +1,201 @@
+Compiled from "GOTMiniQuestCollect.java"
+public class got.common.quest.GOTMiniQuestCollect extends got.common.quest.GOTMiniQuestCollectBase {
+  private net.minecraft.item.ItemStack collectItem;
+
+  public got.common.quest.GOTMiniQuestCollect(got.common.GOTPlayerData);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #14                 // Method got/common/quest/GOTMiniQuestCollectBase."<init>":(Lgot/common/GOTPlayerData;)V
+       5: return
+
+  public java.lang.String getObjectiveInSpeech();
+    Code:
+       0: new           #22                 // class java/lang/StringBuilder
+       3: dup
+       4: invokespecial #25                 // Method java/lang/StringBuilder."<init>":()V
+       7: aload_0
+       8: invokevirtual #29                 // Method getCollectTarget:()I
+      11: invokevirtual #33                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+      14: ldc           #35                 // String
+      16: invokevirtual #38                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      19: aload_0
+      20: getfield      #40                 // Field collectItem:Lnet/minecraft/item/ItemStack;
+      23: invokevirtual #45                 // Method net/minecraft/item/ItemStack.func_82833_r:()Ljava/lang/String;
+      26: invokevirtual #38                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      29: invokevirtual #48                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      32: areturn
+
+  public java.lang.String getProgressedObjectiveInSpeech();
+    Code:
+       0: new           #22                 // class java/lang/StringBuilder
+       3: dup
+       4: invokespecial #25                 // Method java/lang/StringBuilder."<init>":()V
+       7: aload_0
+       8: invokevirtual #29                 // Method getCollectTarget:()I
+      11: aload_0
+      12: getfield      #53                 // Field amountGiven:I
+      15: isub
+      16: invokevirtual #33                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+      19: ldc           #35                 // String
+      21: invokevirtual #38                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      24: aload_0
+      25: getfield      #40                 // Field collectItem:Lnet/minecraft/item/ItemStack;
+      28: invokevirtual #45                 // Method net/minecraft/item/ItemStack.func_82833_r:()Ljava/lang/String;
+      31: invokevirtual #38                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      34: invokevirtual #48                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      37: areturn
+
+  public net.minecraft.item.ItemStack getQuestIcon();
+    Code:
+       0: aload_0
+       1: getfield      #40                 // Field collectItem:Lnet/minecraft/item/ItemStack;
+       4: areturn
+
+  public java.lang.String getQuestObjective();
+    Code:
+       0: ldc           #58                 // String got.miniquest.collect
+       2: iconst_2
+       3: anewarray     #60                 // class java/lang/Object
+       6: dup
+       7: iconst_0
+       8: aload_0
+       9: invokevirtual #29                 // Method getCollectTarget:()I
+      12: invokestatic  #66                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      15: aastore
+      16: dup
+      17: iconst_1
+      18: aload_0
+      19: getfield      #40                 // Field collectItem:Lnet/minecraft/item/ItemStack;
+      22: invokevirtual #45                 // Method net/minecraft/item/ItemStack.func_82833_r:()Ljava/lang/String;
+      25: aastore
+      26: invokestatic  #72                 // Method net/minecraft/util/StatCollector.func_74837_a:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+      29: areturn
+
+  public void handleEvent(got.common.quest.GOTMiniQuestEvent);
+    Code:
+       0: return
+
+  public boolean isQuestItem(net.minecraft.item.ItemStack);
+    Code:
+       0: aload_1
+       1: invokestatic  #83                 // Method got/common/quest/GOTPickpoketableHelper.isPickpocketed:(Lnet/minecraft/item/ItemStack;)Z
+       4: ifeq          9
+       7: iconst_0
+       8: ireturn
+       9: aload_0
+      10: getfield      #40                 // Field collectItem:Lnet/minecraft/item/ItemStack;
+      13: invokestatic  #88                 // Method got/common/item/other/GOTItemMug.isItemFullDrink:(Lnet/minecraft/item/ItemStack;)Z
+      16: ifeq          49
+      19: aload_0
+      20: getfield      #40                 // Field collectItem:Lnet/minecraft/item/ItemStack;
+      23: invokestatic  #92                 // Method got/common/item/other/GOTItemMug.getEquivalentDrink:(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;
+      26: astore_2
+      27: aload_1
+      28: invokestatic  #92                 // Method got/common/item/other/GOTItemMug.getEquivalentDrink:(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;
+      31: astore_3
+      32: aload_2
+      33: invokevirtual #96                 // Method net/minecraft/item/ItemStack.func_77973_b:()Lnet/minecraft/item/Item;
+      36: aload_3
+      37: invokevirtual #96                 // Method net/minecraft/item/ItemStack.func_77973_b:()Lnet/minecraft/item/Item;
+      40: if_acmpne     47
+      43: iconst_1
+      44: goto          48
+      47: iconst_0
+      48: ireturn
+      49: aload_1
+      50: invokevirtual #96                 // Method net/minecraft/item/ItemStack.func_77973_b:()Lnet/minecraft/item/Item;
+      53: aload_0
+      54: getfield      #40                 // Field collectItem:Lnet/minecraft/item/ItemStack;
+      57: invokevirtual #96                 // Method net/minecraft/item/ItemStack.func_77973_b:()Lnet/minecraft/item/Item;
+      60: if_acmpne     94
+      63: aload_0
+      64: getfield      #40                 // Field collectItem:Lnet/minecraft/item/ItemStack;
+      67: invokevirtual #99                 // Method net/minecraft/item/ItemStack.func_77960_j:()I
+      70: sipush        32767
+      73: if_icmpeq     90
+      76: aload_1
+      77: invokevirtual #99                 // Method net/minecraft/item/ItemStack.func_77960_j:()I
+      80: aload_0
+      81: getfield      #40                 // Field collectItem:Lnet/minecraft/item/ItemStack;
+      84: invokevirtual #99                 // Method net/minecraft/item/ItemStack.func_77960_j:()I
+      87: if_icmpne     94
+      90: iconst_1
+      91: goto          95
+      94: iconst_0
+      95: ireturn
+
+  public boolean isValidQuest();
+    Code:
+       0: aload_0
+       1: invokespecial #106                // Method got/common/quest/GOTMiniQuestCollectBase.isValidQuest:()Z
+       4: ifeq          18
+       7: aload_0
+       8: getfield      #40                 // Field collectItem:Lnet/minecraft/item/ItemStack;
+      11: ifnull        18
+      14: iconst_1
+      15: goto          19
+      18: iconst_0
+      19: ireturn
+
+  public void onKill(net.minecraft.entity.player.EntityPlayer, net.minecraft.entity.EntityLivingBase);
+    Code:
+       0: return
+
+  public void onKilledByPlayer(net.minecraft.entity.player.EntityPlayer, net.minecraft.entity.player.EntityPlayer);
+    Code:
+       0: return
+
+  public void onPlayerTick();
+    Code:
+       0: return
+
+  public void readFromNBT(net.minecraft.nbt.NBTTagCompound);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #120                // Method got/common/quest/GOTMiniQuestCollectBase.readFromNBT:(Lnet/minecraft/nbt/NBTTagCompound;)V
+       5: aload_1
+       6: ldc           #122                // String Item
+       8: invokevirtual #128                // Method net/minecraft/nbt/NBTTagCompound.func_74764_b:(Ljava/lang/String;)Z
+      11: ifeq          29
+      14: aload_1
+      15: ldc           #122                // String Item
+      17: invokevirtual #132                // Method net/minecraft/nbt/NBTTagCompound.func_74775_l:(Ljava/lang/String;)Lnet/minecraft/nbt/NBTTagCompound;
+      20: astore_2
+      21: aload_0
+      22: aload_2
+      23: invokestatic  #136                // Method net/minecraft/item/ItemStack.func_77949_a:(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/item/ItemStack;
+      26: putfield      #40                 // Field collectItem:Lnet/minecraft/item/ItemStack;
+      29: return
+
+  public void writeToNBT(net.minecraft.nbt.NBTTagCompound);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #142                // Method got/common/quest/GOTMiniQuestCollectBase.writeToNBT:(Lnet/minecraft/nbt/NBTTagCompound;)V
+       5: aload_0
+       6: getfield      #40                 // Field collectItem:Lnet/minecraft/item/ItemStack;
+       9: ifnull        36
+      12: new           #124                // class net/minecraft/nbt/NBTTagCompound
+      15: dup
+      16: invokespecial #143                // Method net/minecraft/nbt/NBTTagCompound."<init>":()V
+      19: astore_2
+      20: aload_0
+      21: getfield      #40                 // Field collectItem:Lnet/minecraft/item/ItemStack;
+      24: aload_2
+      25: invokevirtual #147                // Method net/minecraft/item/ItemStack.func_77955_b:(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;
+      28: pop
+      29: aload_1
+      30: ldc           #122                // String Item
+      32: aload_2
+      33: invokevirtual #151                // Method net/minecraft/nbt/NBTTagCompound.func_74782_a:(Ljava/lang/String;Lnet/minecraft/nbt/NBTBase;)V
+      36: return
+
+  protected void setCollectItem(net.minecraft.item.ItemStack);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: putfield      #40                 // Field collectItem:Lnet/minecraft/item/ItemStack;
+       5: return
+}

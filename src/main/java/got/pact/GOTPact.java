@@ -5,6 +5,7 @@ import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.StringTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
+import got.common.world.map.GOTWaypoint;
 
 import java.util.*;
 
@@ -24,6 +25,8 @@ public final class GOTPact {
     private final HashSet<UUID> admins = new HashSet<>();
     private final HashSet<UUID> mapSharers = new HashSet<>();
     private final HashMap<UUID, String> titles = new HashMap<>();
+    private final EnumSet<GOTWaypoint.Region> sharedFastTravelRegions = EnumSet.noneOf(GOTWaypoint.Region.class);
+    private final ArrayList<GOTPactWaypoint> sharedWaypoints = new ArrayList<>();
 
     // Faithful legacy defaults.
     private boolean preventPvp = true;
@@ -49,6 +52,8 @@ public final class GOTPact {
     public Set<UUID> admins() { return Collections.unmodifiableSet(admins); }
     public Set<UUID> mapSharers() { return Collections.unmodifiableSet(mapSharers); }
     public Map<UUID, String> titles() { return Collections.unmodifiableMap(titles); }
+    public EnumSet<GOTWaypoint.Region> sharedFastTravelRegions() { return sharedFastTravelRegions.clone(); }
+    public List<GOTPactWaypoint> sharedWaypoints() { return List.copyOf(sharedWaypoints); }
     public int size() { return members.size(); }
 
     public boolean contains(UUID player) { return members.contains(player); }
@@ -73,6 +78,7 @@ public final class GOTPact {
         admins.remove(player);
         mapSharers.remove(player);
         titles.remove(player);
+        sharedWaypoints.removeIf(w -> w.owner().equals(player));
         return members.remove(player);
     }
 
@@ -93,6 +99,35 @@ public final class GOTPact {
     boolean setMapSharing(UUID player, boolean sharing) {
         if (!members.contains(player)) return false;
         return sharing ? mapSharers.add(player) : mapSharers.remove(player);
+    }
+
+
+    boolean shareFastTravelRegion(GOTWaypoint.Region region) {
+        return region != null && region != GOTWaypoint.Region.HIDDEN && sharedFastTravelRegions.add(region);
+    }
+
+    void publishWaypoint(GOTPactWaypoint waypoint) {
+        sharedWaypoints.removeIf(w -> w.owner().equals(waypoint.owner()) && w.id() == waypoint.id());
+        sharedWaypoints.add(waypoint);
+    }
+
+    boolean renameWaypoint(UUID owner, int id, String name) {
+        for (int i = 0; i < sharedWaypoints.size(); i++) {
+            GOTPactWaypoint w = sharedWaypoints.get(i);
+            if (w.owner().equals(owner) && w.id() == id) {
+                sharedWaypoints.set(i, new GOTPactWaypoint(owner, id, name, w.x(), w.y(), w.z())); return true;
+            }
+        }
+        return false;
+    }
+
+    boolean removeWaypoint(UUID owner, int id) {
+        return sharedWaypoints.removeIf(w -> w.owner().equals(owner) && w.id() == id);
+    }
+
+    GOTPactWaypoint waypoint(UUID owner, int id) {
+        for (GOTPactWaypoint w : sharedWaypoints) if (w.owner().equals(owner) && w.id() == id) return w;
+        return null;
     }
 
     void setTitle(UUID player, String title) {
@@ -122,6 +157,12 @@ public final class GOTPact {
         tag.put("Members", uuidList(members));
         tag.put("Admins", uuidList(admins));
         tag.put("MapSharers", uuidList(mapSharers));
+        ListTag regionList = new ListTag();
+        for (GOTWaypoint.Region r : sharedFastTravelRegions) regionList.add(StringTag.valueOf(r.name()));
+        tag.put("SharedFastTravelRegions", regionList);
+        ListTag waypointList = new ListTag();
+        for (GOTPactWaypoint w : sharedWaypoints) waypointList.add(w.save());
+        tag.put("SharedWaypoints", waypointList);
 
         ListTag titleList = new ListTag();
         titles.forEach((uuid, title) -> {
@@ -152,6 +193,10 @@ public final class GOTPact {
         if (tag.contains("PreventPvp")) pact.preventPvp = tag.getBoolean("PreventPvp");
         if (tag.contains("PreventHiredFF")) pact.preventHiredFriendlyFire = tag.getBoolean("PreventHiredFF");
         if (tag.contains("ShowMapLocations")) pact.showMapLocations = tag.getBoolean("ShowMapLocations");
+        ListTag regionList = tag.getList("SharedFastTravelRegions", Tag.TAG_STRING);
+        for (int i=0;i<regionList.size();i++) try { pact.sharedFastTravelRegions.add(GOTWaypoint.Region.valueOf(regionList.getString(i))); } catch (IllegalArgumentException ignored) {}
+        ListTag waypointList = tag.getList("SharedWaypoints", Tag.TAG_COMPOUND);
+        for (int i=0;i<waypointList.size();i++) { try { GOTPactWaypoint w=GOTPactWaypoint.load(waypointList.getCompound(i)); if (pact.members.contains(w.owner())) pact.sharedWaypoints.add(w); } catch (RuntimeException ignored) {} }
 
         ListTag titleList = tag.getList("Titles", Tag.TAG_COMPOUND);
         for (int i = 0; i < titleList.size(); i++) {

@@ -4,33 +4,17 @@ import java.util.List;
 
 public final class GOTAchievementParityLedger {
     private GOTAchievementParityLedger() {}
-
-    public enum Status {
-        AUDITED,
-        PRESENT_IN_PORT,
-        NEEDS_PORT,
-        CONTENT_PASS,
-        INTEGRATION_PASS
-    }
-
+    public enum Status { AUDITED, COMPLETE, INTEGRATED, DEPENDENCY_BLOCKED }
     public record Entry(String feature, Status status, String note) {}
-
-    public static List<Entry> entries() {
-        return List.of(
-            new Entry("Original achievement class/resource inventory", Status.AUDITED,
-                    "See docs/ACHIEVEMENTS_PASS1_ORIGINAL_ENTRY_INVENTORY.txt"),
-            new Entry("Original achievement/rank API", Status.AUDITED,
-                    "See docs/ACHIEVEMENTS_PASS1_ORIGINAL_API_AUDIT.txt"),
-            new Entry("Modern advancement/rank references", Status.AUDITED,
-                    "See docs/ACHIEVEMENTS_PASS1_MODERN_SOURCE_HITS.json"),
-            new Entry("Exact original achievement catalog", Status.CONTENT_PASS,
-                    "Pass 2: recover IDs, icons, triggers, relationships and descriptions"),
-            new Entry("Faction rank thresholds / benefits", Status.CONTENT_PASS,
-                    "Pass 2: recover exact original rank data"),
-            new Entry("Achievement persistence / sync", Status.NEEDS_PORT,
-                    "Use modern advancements where equivalent; custom state where required"),
-            new Entry("Ranks GUI / Titles integration", Status.INTEGRATION_PASS,
-                    "Pass 3: presentation and final fidelity audit")
-        );
-    }
+    public static List<Entry> entries() { return List.of(
+            new Entry("Original 390-entry achievement catalog", Status.COMPLETE, "Exact recovered IDs/categories/localization retained"),
+            new Entry("Persistence / client synchronization", Status.COMPLETE, "Death-copy plus immediate award sync and GUI request sync"),
+            new Entry("Biome / Traveller triggers", Status.INTEGRATED, "Biome-entry achievements plus 20/40/60/80/100 unique Planetos biomes"),
+            new Entry("Kill / legendary NPC triggers", Status.INTEGRATED, "Entity registry IDs and consolidated NPC role IDs"),
+            new Entry("Full armor triggers", Status.INTEGRATED, "Catalog-driven four-slot armor-family matching"),
+            new Entry("Craft / use / drink / pickup / mount triggers", Status.INTEGRATED, "Registry-driven trigger bridge for currently implemented content"),
+            new Entry("Quest / trade / invasion / smithing / crime / pledge / hiring hooks", Status.INTEGRATED, "Direct subsystem hooks"),
+            new Entry("Alloy Forge / Millstone achievements", Status.INTEGRATED, "Awarded from the legacy-style result slots when machine output is taken"),
+            new Entry("Achievements for still-unported mechanics", Status.DEPENDENCY_BLOCKED, "Carts/pouches and other absent legacy systems award when those systems are restored")
+    ); }
 }

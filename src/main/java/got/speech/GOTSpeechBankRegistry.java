@@ -57,13 +57,18 @@ public final class GOTSpeechBankRegistry extends SimplePreparableReloadListener<
         if (lines == null || lines.isEmpty()) {
             return "Speech bank " + bank + " could not be found!";
         }
-        return lines.get(RANDOM.nextInt(lines.size()));
+        int first = !lines.isEmpty() && lines.get(0).startsWith("!") ? 1 : 0;
+        if (first >= lines.size()) return "Speech bank " + bank + " has no speech lines!";
+        return lines.get(first + RANDOM.nextInt(lines.size() - first));
     }
 
     public static String at(String bank, int line) {
         List<String> lines = BANKS.get(bank);
         if (lines == null || lines.isEmpty()) return "Speech bank " + bank + " could not be found!";
-        return lines.get(Math.floorMod(line, lines.size()));
+        int first = !lines.isEmpty() && lines.get(0).startsWith("!") ? 1 : 0;
+        int index = first + line - 1; // legacy GOTSpeech.getSpeechAtLine is one-based
+        if (line < 1 || index < first || index >= lines.size()) return "Speech line " + line + " is out of range!";
+        return lines.get(index);
     }
 
     public static Set<String> banks() {

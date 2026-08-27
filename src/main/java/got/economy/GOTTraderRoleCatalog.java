@@ -31,7 +31,7 @@ public final class GOTTraderRoleCatalog {
 
     private static final Map<String, Pools> SPECIAL = Map.of(
         "petyr_baelish", new Pools("BAELISH_SELLS", "EMPTY_BUYS"),
-        "davos_seaworth", new Pools("DAVOS_SELLS", "EMPTY_BUYS"),
+        "davos_seaworth", new Pools("DAVOS_SELLS", "MAESTER_BUYS"),
         "tobho_mott", new Pools("TOBHO_SELLS", "EMPTY_BUYS")
     );
 

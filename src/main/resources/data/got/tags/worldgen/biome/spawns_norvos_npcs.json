@@ -1,1 +1,7 @@
-{ "replace": false, "values": ["got:norvos"] }
+{
+  "replace": false,
+  "values": [
+    "got:norvos",
+    "got:volantis"
+  ]
+}

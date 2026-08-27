@@ -1,0 +1,38 @@
+{
+  "title": "quest.got.margaery_cersei.title",
+  "description": "quest.got.margaery_cersei.description",
+  "offer": "quest.got.margaery_cersei.offer",
+  "progress": "quest.got.margaery_cersei.progress",
+  "complete": "quest.got.margaery_cersei.complete",
+  "icon": "minecraft:iron_sword",
+  "color": "#7A5C3E",
+  "weight": 1,
+  "repeatable": false,
+  "legendary": true,
+  "legacy_reward_factor": 100,
+  "giver": {
+    "roles": [
+      "margaery_tyrell"
+    ],
+    "factions": [
+      "reach"
+    ],
+    "entity_types": [
+      "got:reach_npc"
+    ],
+    "maximum_active_for_faction": 5
+  },
+  "objectives": [
+    {
+      "type": "kill_entity",
+      "target": "got:crownlands_npc",
+      "count": 1,
+      "label": "quest.got.margaery_cersei.objective.0",
+      "role": "cersei_lannister"
+    }
+  ],
+  "rewards": {
+    "coins": 0,
+    "experience": 0
+  }
+}

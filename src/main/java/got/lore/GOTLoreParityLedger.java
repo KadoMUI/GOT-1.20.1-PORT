@@ -2,39 +2,17 @@ package got.lore;
 
 import java.util.List;
 
-/**
- * Lore Pass 1 forensic parity ledger.
- *
- * This class intentionally does not fabricate lore content.  It records the
- * implementation categories that subsequent passes must bind to evidence
- * recovered from the original 24.08.29 JAR.
- */
 public final class GOTLoreParityLedger {
     private GOTLoreParityLedger() {}
-
-    public enum Status {
-        AUDITED,
-        PRESENT_IN_PORT,
-        NEEDS_PORT,
-        CONTENT_PASS
-    }
-
+    public enum Status { AUDITED, COMPLETE, INTEGRATED }
     public record Entry(String feature, Status status, String note) {}
-
-    public static List<Entry> entries() {
-        return List.of(
-            new Entry("Original lore class/resource inventory", Status.AUDITED,
-                    "See docs/LORE_PASS1_ORIGINAL_ENTRY_INVENTORY.txt"),
-            new Entry("Original lore API/disassembly", Status.AUDITED,
-                    "See docs/LORE_PASS1_ORIGINAL_API_AUDIT.txt"),
-            new Entry("Current-port lore references", Status.AUDITED,
-                    "See docs/LORE_PASS1_MODERN_SOURCE_HITS.json"),
-            new Entry("Exact lore catalog/text", Status.CONTENT_PASS,
-                    "Recover in Pass 2; do not invent missing entries"),
-            new Entry("Unlock/persistence integration", Status.NEEDS_PORT,
-                    "Implement only from recovered original behavior"),
-            new Entry("Lore GUI/menu fidelity", Status.NEEDS_PORT,
-                    "Presentation/final integration belongs to Pass 3")
-        );
-    }
+    public static List<Entry> entries() { return List.of(
+            new Entry("Original lore corpus", Status.COMPLETE, "502 preserved localized text resources"),
+            new Entry("Metadata parser", Status.COMPLETE, "title/author/types/reward and recovered formatting directives; # directives and BOM handled"),
+            new Entry("Server resource reload", Status.INTEGRATED, "Lore registry now loads on datapack/resource reload"),
+            new Entry("Written lore books", Status.INTEGRATED, "Legacy written-book presentation restored with GOTLoreId"),
+            new Entry("Discovery persistence", Status.COMPLETE, "Reading a lore book permanently records its ID and survives death"),
+            new Entry("Miniquest lore rewards", Status.INTEGRATED, "Legacy 1-in-10 extra lore-book roll using player language and faction/type categories"),
+            new Entry("Discovered-lore browser", Status.INTEGRATED, "Menu screen requests discovered entry text from the server")
+    ); }
 }

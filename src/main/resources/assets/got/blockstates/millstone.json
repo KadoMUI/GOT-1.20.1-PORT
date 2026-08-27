@@ -1,19 +1,12 @@
 {
   "variants": {
-    "facing=north": {
-      "model": "got:block/millstone"
-    },
-    "facing=east": {
-      "model": "got:block/millstone",
-      "y": 90
-    },
-    "facing=south": {
-      "model": "got:block/millstone",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "got:block/millstone",
-      "y": 270
-    }
+    "facing=north,powered=false":{"model":"got:block/millstone"},
+    "facing=east,powered=false":{"model":"got:block/millstone","y":90},
+    "facing=south,powered=false":{"model":"got:block/millstone","y":180},
+    "facing=west,powered=false":{"model":"got:block/millstone","y":270},
+    "facing=north,powered=true":{"model":"got:block/millstone_active"},
+    "facing=east,powered=true":{"model":"got:block/millstone_active","y":90},
+    "facing=south,powered=true":{"model":"got:block/millstone_active","y":180},
+    "facing=west,powered=true":{"model":"got:block/millstone_active","y":270}
   }
 }

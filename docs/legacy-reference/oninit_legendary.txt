@@ -1,0 +1,381 @@
+      10: invokestatic  #324                // Method registerQuestClass:(Ljava/lang/Class;I)V
+      13: ldc           #45                 // class got/common/quest/GOTMiniQuestBounty
+      15: iconst_2
+      16: invokestatic  #324                // Method registerQuestClass:(Ljava/lang/Class;I)V
+      19: ldc           #40                 // class got/common/quest/GOTMiniQuestPickpocket
+      21: iconst_1
+      22: invokestatic  #324                // Method registerQuestClass:(Ljava/lang/Class;I)V
+      25: getstatic     #328                // Field BALON:Lgot/common/quest/GOTMiniQuestFactory;
+      28: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+      31: dup
+      32: ldc_w         #330                // String balon
+      35: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+      38: ldc_w         #333                // class got/common/entity/westeros/legendary/warrior/GOTEntityEuronGreyjoy
+      41: iconst_1
+      42: iconst_1
+      43: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+      46: ldc_w         #338                // float 100.0f
+      49: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+      52: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+      55: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+      58: getstatic     #345                // Field VARYS:Lgot/common/quest/GOTMiniQuestFactory;
+      61: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+      64: dup
+      65: ldc_w         #347                // String varys
+      68: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+      71: ldc_w         #349                // class got/common/entity/essos/legendary/quest/GOTEntityDaenerysTargaryen
+      74: iconst_1
+      75: iconst_1
+      76: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+      79: ldc_w         #338                // float 100.0f
+      82: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+      85: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+      88: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+      91: getstatic     #351                // Field OBERYN:Lgot/common/quest/GOTMiniQuestFactory;
+      94: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+      97: dup
+      98: ldc_w         #353                // String oberyn
+     101: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+     104: ldc_w         #355                // class got/common/entity/westeros/legendary/warrior/GOTEntityGeroldDayne
+     107: iconst_1
+     108: iconst_1
+     109: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+     112: ldc_w         #338                // float 100.0f
+     115: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     118: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     121: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     124: getstatic     #357                // Field STANNIS:Lgot/common/quest/GOTMiniQuestFactory;
+     127: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+     130: dup
+     131: ldc_w         #359                // String stannis
+     134: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+     137: ldc_w         #361                // class got/common/entity/westeros/legendary/quest/GOTEntityRenlyBaratheon
+     140: iconst_1
+     141: iconst_1
+     142: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+     145: ldc_w         #338                // float 100.0f
+     148: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     151: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     154: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     157: getstatic     #363                // Field RENLY:Lgot/common/quest/GOTMiniQuestFactory;
+     160: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+     163: dup
+     164: ldc_w         #365                // String renly
+     167: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+     170: ldc_w         #367                // class got/common/entity/westeros/legendary/quest/GOTEntityStannisBaratheon
+     173: iconst_1
+     174: iconst_1
+     175: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+     178: ldc_w         #338                // float 100.0f
+     181: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     184: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     187: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     190: getstatic     #369                // Field BUGAI:Lgot/common/quest/GOTMiniQuestFactory;
+     193: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+     196: dup
+     197: ldc_w         #371                // String bugai
+     200: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+     203: ldc_w         #373                // class got/common/entity/essos/legendary/warrior/GOTEntityTugarKhan
+     206: iconst_1
+     207: iconst_1
+     208: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+     211: ldc_w         #338                // float 100.0f
+     214: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     217: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     220: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     223: getstatic     #375                // Field MARGAERY:Lgot/common/quest/GOTMiniQuestFactory;
+     226: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+     229: dup
+     230: ldc_w         #377                // String margaery
+     233: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+     236: ldc_w         #379                // class got/common/entity/westeros/legendary/quest/GOTEntityCerseiLannister
+     239: iconst_1
+     240: iconst_1
+     241: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+     244: ldc_w         #338                // float 100.0f
+     247: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     250: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     253: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     256: getstatic     #381                // Field HOWLAND:Lgot/common/quest/GOTMiniQuestFactory;
+     259: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+     262: dup
+     263: ldc_w         #383                // String howland
+     266: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+     269: ldc_w         #385                // class got/common/entity/animal/GOTEntityCrocodile
+     272: bipush        50
+     274: bipush        50
+     276: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+     279: ldc_w         #386                // float 50.0f
+     282: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     285: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     288: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     291: getstatic     #388                // Field OLENNA:Lgot/common/quest/GOTMiniQuestFactory;
+     294: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+     297: dup
+     298: ldc_w         #390                // String olenna
+     301: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+     304: ldc_w         #392                // class got/common/entity/westeros/legendary/warrior/GOTEntityJoffreyBaratheon
+     307: iconst_1
+     308: iconst_1
+     309: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+     312: ldc_w         #338                // float 100.0f
+     315: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     318: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     321: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     324: getstatic     #394                // Field ELLARYA:Lgot/common/quest/GOTMiniQuestFactory;
+     327: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+     330: dup
+     331: ldc_w         #396                // String ellarya
+     334: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+     337: ldc_w         #398                // class got/common/entity/westeros/legendary/warrior/GOTEntityTywinLannister
+     340: iconst_1
+     341: iconst_1
+     342: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+     345: ldc_w         #338                // float 100.0f
+     348: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     351: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     354: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     357: getstatic     #400                // Field LYSA:Lgot/common/quest/GOTMiniQuestFactory;
+     360: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+     363: dup
+     364: ldc_w         #402                // String lysa
+     367: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+     370: ldc_w         #404                // class got/common/entity/westeros/legendary/quest/GOTEntityTyrionLannister
+     373: iconst_1
+     374: iconst_1
+     375: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+     378: ldc_w         #338                // float 100.0f
+     381: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     384: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     387: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     390: getstatic     #406                // Field CATELYN:Lgot/common/quest/GOTMiniQuestFactory;
+     393: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+     396: dup
+     397: ldc_w         #408                // String catelyn
+     400: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+     403: ldc           #33                 // class got/common/entity/westeros/legendary/reborn/GOTEntityTheonGreyjoy$TheonGreyjoyNormal
+     405: iconst_1
+     406: iconst_1
+     407: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+     410: ldc_w         #338                // float 100.0f
+     413: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     416: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     419: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     422: getstatic     #410                // Field DAVEN:Lgot/common/quest/GOTMiniQuestFactory;
+     425: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+     428: dup
+     429: ldc_w         #412                // String daven
+     432: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+     435: ldc_w         #414                // class got/common/entity/westeros/legendary/captain/GOTEntityRickardKarstark
+     438: iconst_1
+     439: iconst_1
+     440: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+     443: ldc_w         #338                // float 100.0f
+     446: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     449: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     452: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     455: getstatic     #416                // Field ARIANNE:Lgot/common/quest/GOTMiniQuestFactory;
+     458: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+     461: dup
+     462: ldc_w         #418                // String arianne
+     465: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+     468: ldc_w         #420                // class got/common/entity/westeros/legendary/deco/GOTEntityTommenBaratheon
+     471: iconst_1
+     472: iconst_1
+     473: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+     476: ldc_w         #338                // float 100.0f
+     479: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     482: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     485: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     488: getstatic     #422                // Field MELLARIO:Lgot/common/quest/GOTMiniQuestFactory;
+     491: new           #28                 // class got/common/quest/GOTMiniQuestKillEntity$QFKillEntity
+     494: dup
+     495: ldc_w         #424                // String mellario
+     498: invokespecial #331                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity."<init>":(Ljava/lang/String;)V
+     501: ldc_w         #426                // class got/common/entity/westeros/legendary/quest/GOTEntityDoranMartell
+     504: iconst_1
+     505: iconst_1
+     506: invokevirtual #337                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setKillEntity:(Ljava/lang/Class;II)Lgot/common/quest/GOTMiniQuestKillEntity$QFKillEntity;
+     509: ldc_w         #338                // float 100.0f
+     512: invokevirtual #339                // Method got/common/quest/GOTMiniQuestKillEntity$QFKillEntity.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     515: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     518: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     521: getstatic     #428                // Field MELISANDRA:Lgot/common/quest/GOTMiniQuestFactory;
+     524: new           #23                 // class got/common/quest/GOTMiniQuestCollect$QFCollect
+     527: dup
+     528: ldc_w         #430                // String melisandra
+     531: invokespecial #431                // Method got/common/quest/GOTMiniQuestCollect$QFCollect."<init>":(Ljava/lang/String;)V
+     534: new           #433                // class net/minecraft/item/ItemStack
+     537: dup
+     538: getstatic     #439                // Field got/common/database/GOTItems.bloodOfTrueKings:Lnet/minecraft/item/Item;
+     541: invokespecial #442                // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/item/Item;)V
+     544: iconst_1
+     545: iconst_1
+     546: invokevirtual #305                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setCollectItem:(Lnet/minecraft/item/ItemStack;II)Lgot/common/quest/GOTMiniQuestCollect$QFCollect;
+     549: ldc_w         #338                // float 100.0f
+     552: invokevirtual #309                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     555: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     558: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     561: getstatic     #444                // Field TYRION:Lgot/common/quest/GOTMiniQuestFactory;
+     564: new           #23                 // class got/common/quest/GOTMiniQuestCollect$QFCollect
+     567: dup
+     568: ldc_w         #446                // String tyrion
+     571: invokespecial #431                // Method got/common/quest/GOTMiniQuestCollect$QFCollect."<init>":(Ljava/lang/String;)V
+     574: new           #433                // class net/minecraft/item/ItemStack
+     577: dup
+     578: getstatic     #449                // Field got/common/database/GOTItems.mugRedWine:Lnet/minecraft/item/Item;
+     581: invokespecial #442                // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/item/Item;)V
+     584: iconst_1
+     585: bipush        10
+     587: invokevirtual #305                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setCollectItem:(Lnet/minecraft/item/ItemStack;II)Lgot/common/quest/GOTMiniQuestCollect$QFCollect;
+     590: ldc_w         #450                // float 5.0f
+     593: invokevirtual #309                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     596: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     599: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     602: getstatic     #452                // Field CERSEI:Lgot/common/quest/GOTMiniQuestFactory;
+     605: new           #23                 // class got/common/quest/GOTMiniQuestCollect$QFCollect
+     608: dup
+     609: ldc_w         #454                // String cersei
+     612: invokespecial #431                // Method got/common/quest/GOTMiniQuestCollect$QFCollect."<init>":(Ljava/lang/String;)V
+     615: new           #433                // class net/minecraft/item/ItemStack
+     618: dup
+     619: getstatic     #460                // Field got/common/database/GOTBlocks.wildFireJar:Lnet/minecraft/block/Block;
+     622: invokespecial #463                // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/block/Block;)V
+     625: iconst_1
+     626: bipush        10
+     628: invokevirtual #305                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setCollectItem:(Lnet/minecraft/item/ItemStack;II)Lgot/common/quest/GOTMiniQuestCollect$QFCollect;
+     631: fconst_0
+     632: invokevirtual #309                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     635: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     638: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     641: getstatic     #465                // Field RAMSAY:Lgot/common/quest/GOTMiniQuestFactory;
+     644: new           #23                 // class got/common/quest/GOTMiniQuestCollect$QFCollect
+     647: dup
+     648: ldc_w         #467                // String ramsay
+     651: invokespecial #431                // Method got/common/quest/GOTMiniQuestCollect$QFCollect."<init>":(Ljava/lang/String;)V
+     654: new           #433                // class net/minecraft/item/ItemStack
+     657: dup
+     658: getstatic     #470                // Field got/common/database/GOTItems.brandingIron:Lnet/minecraft/item/Item;
+     661: invokespecial #442                // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/item/Item;)V
+     664: iconst_1
+     665: iconst_1
+     666: invokevirtual #305                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setCollectItem:(Lnet/minecraft/item/ItemStack;II)Lgot/common/quest/GOTMiniQuestCollect$QFCollect;
+     669: ldc_w         #450                // float 5.0f
+     672: invokevirtual #309                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     675: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     678: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     681: getstatic     #472                // Field DAENERYS:Lgot/common/quest/GOTMiniQuestFactory;
+     684: new           #23                 // class got/common/quest/GOTMiniQuestCollect$QFCollect
+     687: dup
+     688: ldc_w         #474                // String daenerys
+     691: invokespecial #431                // Method got/common/quest/GOTMiniQuestCollect$QFCollect."<init>":(Ljava/lang/String;)V
+     694: new           #433                // class net/minecraft/item/ItemStack
+     697: dup
+     698: getstatic     #479                // Field net/minecraft/init/Blocks.field_150380_bt:Lnet/minecraft/block/Block;
+     701: invokespecial #463                // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/block/Block;)V
+     704: iconst_3
+     705: iconst_3
+     706: invokevirtual #305                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setCollectItem:(Lnet/minecraft/item/ItemStack;II)Lgot/common/quest/GOTMiniQuestCollect$QFCollect;
+     709: ldc_w         #338                // float 100.0f
+     712: invokevirtual #309                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     715: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     718: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     721: getstatic     #481                // Field JON_SNOW:Lgot/common/quest/GOTMiniQuestFactory;
+     724: new           #23                 // class got/common/quest/GOTMiniQuestCollect$QFCollect
+     727: dup
+     728: ldc_w         #483                // String jonsnow
+     731: invokespecial #431                // Method got/common/quest/GOTMiniQuestCollect$QFCollect."<init>":(Ljava/lang/String;)V
+     734: new           #433                // class net/minecraft/item/ItemStack
+     737: dup
+     738: getstatic     #486                // Field got/common/database/GOTItems.valyrianSword:Lnet/minecraft/item/Item;
+     741: invokespecial #442                // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/item/Item;)V
+     744: iconst_1
+     745: iconst_1
+     746: invokevirtual #305                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setCollectItem:(Lnet/minecraft/item/ItemStack;II)Lgot/common/quest/GOTMiniQuestCollect$QFCollect;
+     749: invokevirtual #489                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setHiring:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     752: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     755: getstatic     #491                // Field SANDOR:Lgot/common/quest/GOTMiniQuestFactory;
+     758: new           #23                 // class got/common/quest/GOTMiniQuestCollect$QFCollect
+     761: dup
+     762: ldc_w         #493                // String sandor
+     765: invokespecial #431                // Method got/common/quest/GOTMiniQuestCollect$QFCollect."<init>":(Ljava/lang/String;)V
+     768: new           #433                // class net/minecraft/item/ItemStack
+     771: dup
+     772: getstatic     #498                // Field net/minecraft/init/Items.field_151077_bg:Lnet/minecraft/item/Item;
+     775: invokespecial #442                // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/item/Item;)V
+     778: iconst_1
+     779: bipush        10
+     781: invokevirtual #305                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setCollectItem:(Lnet/minecraft/item/ItemStack;II)Lgot/common/quest/GOTMiniQuestCollect$QFCollect;
+     784: invokevirtual #489                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setHiring:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     787: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     790: getstatic     #500                // Field DORAN:Lgot/common/quest/GOTMiniQuestFactory;
+     793: new           #23                 // class got/common/quest/GOTMiniQuestCollect$QFCollect
+     796: dup
+     797: ldc_w         #502                // String doran
+     800: invokespecial #431                // Method got/common/quest/GOTMiniQuestCollect$QFCollect."<init>":(Ljava/lang/String;)V
+     803: new           #433                // class net/minecraft/item/ItemStack
+     806: dup
+     807: getstatic     #505                // Field got/common/database/GOTItems.mugPoppyMilk:Lnet/minecraft/item/Item;
+     810: invokespecial #442                // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/item/Item;)V
+     813: iconst_1
+     814: bipush        10
+     816: invokevirtual #305                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setCollectItem:(Lnet/minecraft/item/ItemStack;II)Lgot/common/quest/GOTMiniQuestCollect$QFCollect;
+     819: ldc_w         #450                // float 5.0f
+     822: invokevirtual #309                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     825: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     828: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     831: getstatic     #507                // Field ARYA:Lgot/common/quest/GOTMiniQuestFactory;
+     834: new           #23                 // class got/common/quest/GOTMiniQuestCollect$QFCollect
+     837: dup
+     838: ldc_w         #509                // String arya
+     841: invokespecial #431                // Method got/common/quest/GOTMiniQuestCollect$QFCollect."<init>":(Ljava/lang/String;)V
+     844: new           #433                // class net/minecraft/item/ItemStack
+     847: dup
+     848: getstatic     #512                // Field net/minecraft/init/Items.field_151041_m:Lnet/minecraft/item/Item;
+     851: invokespecial #442                // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/item/Item;)V
+     854: iconst_1
+     855: iconst_1
+     856: invokevirtual #305                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setCollectItem:(Lnet/minecraft/item/ItemStack;II)Lgot/common/quest/GOTMiniQuestCollect$QFCollect;
+     859: invokevirtual #489                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setHiring:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     862: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     865: getstatic     #514                // Field SAMWELL:Lgot/common/quest/GOTMiniQuestFactory;
+     868: new           #23                 // class got/common/quest/GOTMiniQuestCollect$QFCollect
+     871: dup
+     872: ldc_w         #516                // String samwell
+     875: invokespecial #431                // Method got/common/quest/GOTMiniQuestCollect$QFCollect."<init>":(Ljava/lang/String;)V
+     878: new           #433                // class net/minecraft/item/ItemStack
+     881: dup
+     882: getstatic     #519                // Field got/common/database/GOTItems.obsidianDagger:Lnet/minecraft/item/Item;
+     885: invokespecial #442                // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/item/Item;)V
+     888: iconst_1
+     889: iconst_1
+     890: invokevirtual #305                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setCollectItem:(Lnet/minecraft/item/ItemStack;II)Lgot/common/quest/GOTMiniQuestCollect$QFCollect;
+     893: ldc_w         #386                // float 50.0f
+     896: invokevirtual #309                // Method got/common/quest/GOTMiniQuestCollect$QFCollect.setRewardFactor:(F)Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     899: invokevirtual #343                // Method got/common/quest/GOTMiniQuest$QuestFactoryBase.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     902: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     905: getstatic     #521                // Field CRIMINAL:Lgot/common/quest/GOTMiniQuestFactory;
+     908: new           #38                 // class got/common/quest/GOTMiniQuestPickpocket$QFPickpocket
+     911: dup
+     912: ldc_w         #523                // String criminal
+     915: invokespecial #524                // Method got/common/quest/GOTMiniQuestPickpocket$QFPickpocket."<init>":(Ljava/lang/String;)V
+     918: iconst_1
+     919: bipush        9
+     921: invokevirtual #528                // Method got/common/quest/GOTMiniQuestPickpocket$QFPickpocket.setPickpocketNumber:(II)Lgot/common/quest/GOTMiniQuestPickpocket$QFPickpocket;
+     924: invokevirtual #529                // Method got/common/quest/GOTMiniQuestPickpocket$QFPickpocket.setIsLegendary:()Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;
+     927: invokespecial #313                // Method addQuest:(Lgot/common/quest/GOTMiniQuest$QuestFactoryBase;)V
+     930: invokestatic  #202                // Method values:()[Lgot/common/quest/GOTMiniQuestFactory;
+     933: astore_0
+     934: aload_0
+     935: arraylength
+     936: istore_1
+     937: iconst_0
+     938: istore_2
+     939: iload_2
+     940: iload_1
+     941: if_icmpge     3935
+     944: aload_0
+     945: iload_2
+     946: aaload
+     947: astore_3
+     948: aload_3

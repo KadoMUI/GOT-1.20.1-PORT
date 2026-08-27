@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#got:spawns_butterflies",
+  "spawners": [
+    {
+      "type": "got:butterfly",
+      "weight": 22,
+      "minCount": 2,
+      "maxCount": 5
+    }
+  ]
+}

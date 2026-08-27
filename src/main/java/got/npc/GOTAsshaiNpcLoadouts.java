@@ -54,6 +54,7 @@ final class GOTAsshaiNpcLoadouts {
                 ItemStack staff = stack("got:skull_staff");
                 npc.setWeapons(staff, staff);
             }
+            case MOQORRO -> { ItemStack staff=stack("got:skull_staff"); npc.setWeapons(staff, staff); }
             case ASSHAI_ARCHMAG -> {
                 ItemStack staff = stack("got:asshai_archmag_staff");
                 npc.setWeapons(staff, staff);
@@ -62,6 +63,7 @@ final class GOTAsshaiNpcLoadouts {
                 npc.setItemSlot(EquipmentSlot.HEAD, stack("got:asshai_mask"));
             }
         }
+        GOTNpcShieldLoadouts.equip(npc, npc.getRole(), "got:asshai_shield");
         npc.updateHeldItem();
     }
 
@@ -76,6 +78,7 @@ final class GOTAsshaiNpcLoadouts {
                 sell(offers, 16, "got:skull_staff", 1);
             }
             case UNITS -> {
+                sell(offers, 16, "got:warhorn", 1);
                 sell(offers, 12, "got:command_horn", 1);
                 sell(offers, 16, "got:asshai_chestplate", 1);
                 sell(offers, 12, "got:asshai_helmet", 1);

@@ -13,8 +13,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 /**
  * Opens the correct hired inventory menu for an owned NPC.
  *
- * Replace the null MenuType placeholders with the project's registered menu
- * types when merging.
+ * Uses the registered hired-warrior/farmer container menus.
  */
 public final class GOTHiredMenuProvider implements MenuProvider {
     private final Entity npc;

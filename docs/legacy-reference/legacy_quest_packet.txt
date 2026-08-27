@@ -1,0 +1,82 @@
+Compiled from "GOTPacketNPCIsOfferingQuest.java"
+public class got.common.network.GOTPacketNPCIsOfferingQuest implements cpw.mods.fml.common.network.simpleimpl.IMessage {
+  private boolean offering;
+
+  private int offerColor;
+
+  private int entityID;
+
+  public got.common.network.GOTPacketNPCIsOfferingQuest();
+    Code:
+       0: aload_0
+       1: invokespecial #19                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public got.common.network.GOTPacketNPCIsOfferingQuest(int, boolean, int);
+    Code:
+       0: aload_0
+       1: invokespecial #19                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: iload_1
+       6: putfield      #24                 // Field entityID:I
+       9: aload_0
+      10: iload_2
+      11: putfield      #26                 // Field offering:Z
+      14: aload_0
+      15: iload_3
+      16: putfield      #28                 // Field offerColor:I
+      19: return
+
+  public void fromBytes(io.netty.buffer.ByteBuf);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #39                 // Method io/netty/buffer/ByteBuf.readInt:()I
+       5: putfield      #24                 // Field entityID:I
+       8: aload_0
+       9: aload_1
+      10: invokevirtual #43                 // Method io/netty/buffer/ByteBuf.readBoolean:()Z
+      13: putfield      #26                 // Field offering:Z
+      16: aload_0
+      17: aload_1
+      18: invokevirtual #39                 // Method io/netty/buffer/ByteBuf.readInt:()I
+      21: putfield      #28                 // Field offerColor:I
+      24: return
+
+  public void toBytes(io.netty.buffer.ByteBuf);
+    Code:
+       0: aload_1
+       1: aload_0
+       2: getfield      #24                 // Field entityID:I
+       5: invokevirtual #50                 // Method io/netty/buffer/ByteBuf.writeInt:(I)Lio/netty/buffer/ByteBuf;
+       8: pop
+       9: aload_1
+      10: aload_0
+      11: getfield      #26                 // Field offering:Z
+      14: invokevirtual #54                 // Method io/netty/buffer/ByteBuf.writeBoolean:(Z)Lio/netty/buffer/ByteBuf;
+      17: pop
+      18: aload_1
+      19: aload_0
+      20: getfield      #28                 // Field offerColor:I
+      23: invokevirtual #50                 // Method io/netty/buffer/ByteBuf.writeInt:(I)Lio/netty/buffer/ByteBuf;
+      26: pop
+      27: return
+
+  public int getOfferColor();
+    Code:
+       0: aload_0
+       1: getfield      #28                 // Field offerColor:I
+       4: ireturn
+
+  public boolean isOffering();
+    Code:
+       0: aload_0
+       1: getfield      #26                 // Field offering:Z
+       4: ireturn
+
+  static int access$000(got.common.network.GOTPacketNPCIsOfferingQuest);
+    Code:
+       0: aload_0
+       1: getfield      #24                 // Field entityID:I
+       4: ireturn
+}

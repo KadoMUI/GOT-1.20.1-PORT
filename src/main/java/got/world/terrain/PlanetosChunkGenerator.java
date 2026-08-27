@@ -3,11 +3,11 @@ package got.world.terrain;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import got.world.biome.GOTBiomeMetadata;
-import got.world.biome.GOTLegacyTerrainCatalog;
 import got.world.biome.PlanetosBiomeManager;
 import got.world.flora.PlanetosBiomeDecorator;
 import got.world.resource.PlanetosResourceGenerator;
 import got.world.road.PlanetosRoadGenerator;
+import got.npc.GOTNorthNpcPopulation;
 import got.npc.GOTWesterlandsNpcPopulation;
 import got.npc.GOTRiverlandsNpcPopulation;
 import got.npc.GOTArrynNpcPopulation;
@@ -19,6 +19,7 @@ import got.npc.GOTDorneNpcPopulation;
 import got.npc.GOTIronbornNpcPopulation;
 import got.npc.GOTFreeCitiesNpcPopulation;
 import got.world.structure.major.MajorSchematicStructureGenerator;
+import got.world.structure.modular.PlanetosModularWaypointStructureGenerator;
 import got.world.structure.north.PlanetosNorthStructureGenerator;
 import got.world.structure.nightwatch.PlanetosNightWatchStructureGenerator;
 import got.world.structure.wildling.PlanetosWildlingStructureGenerator;
@@ -105,13 +106,17 @@ public final class PlanetosChunkGenerator extends ChunkGenerator {
                 int slope = maximumSlope(heights, localX + 1, localZ + 1);
                 GOTBiomeMetadata metadata = PlanetosBiomeManager.getMetadata(blockX, blockZ);
                 double detail = sampler.surfaceDetail(blockX, blockZ);
+                boolean waterColumn = sampler.isWaterColumn(blockX, blockZ);
                 BlockState top = PlanetosSurfaceResolver.top(metadata, blockX, blockZ, surfaceY,
                         PlanetosTerrainSampler.SEA_LEVEL, slope, detail);
+                if (waterColumn && surfaceY < PlanetosTerrainSampler.SEA_LEVEL - 1) {
+                    top = detail > 0.35D ? Blocks.SAND.defaultBlockState() : Blocks.GRAVEL.defaultBlockState();
+                }
                 BlockState filler = PlanetosSurfaceResolver.filler(metadata, blockX, blockZ, detail);
                 int fillerDepth = 3 + (int)Math.floorMod(hash(blockX, blockZ), 3L);
 
                 for (int y = MIN_Y; y < MIN_Y + GEN_DEPTH; y++) {
-                    BlockState state = stateAt(blockX, y, blockZ, surfaceY, fillerDepth, metadata, top, filler);
+                    BlockState state = stateAt(blockX, y, blockZ, surfaceY, fillerDepth, metadata, top, filler, waterColumn);
                     if (state.isAir()) continue;
                     pos.set(blockX, y, blockZ);
                     chunk.setBlockState(pos, state, false);
@@ -124,7 +129,8 @@ public final class PlanetosChunkGenerator extends ChunkGenerator {
     }
 
     private BlockState stateAt(int x, int y, int z, int surfaceY, int fillerDepth,
-                               GOTBiomeMetadata metadata, BlockState top, BlockState filler) {
+                               GOTBiomeMetadata metadata, BlockState top, BlockState filler,
+                               boolean waterColumn) {
         if (y <= MIN_Y + bedrockDepth(x, z)) return Blocks.BEDROCK.defaultBlockState();
         if (y <= surfaceY) {
             if (sampler.isCave(x, y, z, surfaceY)) {
@@ -138,17 +144,13 @@ public final class PlanetosChunkGenerator extends ChunkGenerator {
         // previous unconditional fill turned any low noise depression in a
         // land biome into a false lake with a grass floor.
         if (y <= PlanetosTerrainSampler.SEA_LEVEL
-                && (isAquatic(metadata) || PlanetosLandmarkTerrain.isSeaCityWater(x, z))) {
+                && (waterColumn || PlanetosLandmarkTerrain.isSeaCityWater(x, z))) {
             if (y == PlanetosTerrainSampler.SEA_LEVEL && metadata != null && metadata.temperature() < 0.15F) {
                 return Blocks.ICE.defaultBlockState();
             }
             return Blocks.WATER.defaultBlockState();
         }
         return Blocks.AIR.defaultBlockState();
-    }
-
-    private static boolean isAquatic(GOTBiomeMetadata metadata) {
-        return metadata != null && GOTLegacyTerrainCatalog.isAquatic(metadata.id());
     }
 
     private static int maximumSlope(int[][] heights, int x, int z) {
@@ -194,12 +196,14 @@ public final class PlanetosChunkGenerator extends ChunkGenerator {
         PlanetosNorthStructureGenerator.generate(level, chunk, seed);
         PlanetosNightWatchStructureGenerator.generate(level, chunk, seed);
         PlanetosWildlingStructureGenerator.generate(level, chunk, seed);
+        PlanetosModularWaypointStructureGenerator.generate(level, chunk, seed);
         // Authored major locations run last so their non-air blocks and
         // block-entity data replace any regional placeholder at the waypoint.
         MajorSchematicStructureGenerator.generate(level, chunk, seed);
         // Fixed Westerlands characters use the same post-worldgen deferred
         // population boundary as Winterfell, including sites whose replacement
         // schematics have not been supplied yet.
+        GOTNorthNpcPopulation.queueFixedSites(level, chunk, seed);
         GOTWesterlandsNpcPopulation.queueFixedSites(level, chunk, seed);
         GOTRiverlandsNpcPopulation.queueFixedSites(level, chunk, seed);
         GOTArrynNpcPopulation.queueFixedSites(level, chunk, seed);
@@ -250,9 +254,13 @@ public final class PlanetosChunkGenerator extends ChunkGenerator {
         BlockState top = PlanetosSurfaceResolver.top(metadata, x, z, surfaceY,
                 PlanetosTerrainSampler.SEA_LEVEL, 0, detail);
         BlockState filler = PlanetosSurfaceResolver.filler(metadata, x, z, detail);
+        boolean waterColumn = sampler.isWaterColumn(x, z);
+        if (waterColumn && surfaceY < PlanetosTerrainSampler.SEA_LEVEL - 1) {
+            top = detail > 0.35D ? Blocks.SAND.defaultBlockState() : Blocks.GRAVEL.defaultBlockState();
+        }
         BlockState[] states = new BlockState[GEN_DEPTH];
         for (int i = 0; i < states.length; i++) {
-            states[i] = stateAt(x, MIN_Y + i, z, surfaceY, 4, metadata, top, filler);
+            states[i] = stateAt(x, MIN_Y + i, z, surfaceY, 4, metadata, top, filler, waterColumn);
         }
         return new NoiseColumn(MIN_Y, states);
     }

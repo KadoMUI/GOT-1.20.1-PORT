@@ -1,6 +1,7 @@
 package got.npc.hiring;
 
 import got.network.GOTNetwork;
+import got.mount.GOTMountEntity;
 import got.network.hiring.S2CHiredNpcGuiPacket;
 import got.npc.hiring.ai.GOTHiredCombatPolicy;
 import net.minecraft.server.level.ServerPlayer;
@@ -8,6 +9,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -49,6 +51,18 @@ public final class GOTHiringEvents {
 
         event.setCanceled(true);
         event.setCancellationResult(InteractionResult.SUCCESS);
+    }
+
+    @SubscribeEvent
+    public static void onHiredDeath(LivingDeathEvent event) {
+        if (!(event.getEntity() instanceof PathfinderMob mob)) return;
+        if (mob.level().isClientSide) return;
+        if (mob.getVehicle() instanceof GOTMountEntity mount && mount.belongsToNpc()) {
+            // NPC-owned cavalry mounts are part of the unit. Do not leave a
+            // permanently persistent orphan mount behind when its rider dies.
+            mob.stopRiding();
+            mount.discard();
+        }
     }
 
     @SubscribeEvent

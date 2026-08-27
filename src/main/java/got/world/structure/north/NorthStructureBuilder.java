@@ -5,6 +5,10 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -100,10 +104,19 @@ public final class NorthStructureBuilder {
     }
 
     public void foundation(int minX, int minZ, int maxX, int maxZ, BlockState state) {
+        // Seat authored/procedural buildings into the existing terrain before
+        // placing the flat structural foundation.  The footprint is level, but
+        // the surrounding three-block apron eases back toward the natural
+        // surface instead of leaving a vertical cut or a floating slab.
+        fitFoundationTerrain(minX, minZ, maxX, maxZ, 3, originY - 1);
         fill(minX, -1, minZ, maxX, -1, maxZ, state);
+
+        // Deep support columns remain useful on small local hollows, but are no
+        // longer limited to eight blocks.  They terminate as soon as genuine
+        // terrain is reached.
         for (int z = minZ; z <= maxZ; z++) {
             for (int x = minX; x <= maxX; x++) {
-                for (int y = -2; y >= -8; y--) {
+                for (int y = -2; y >= Math.max(-24, level.getMinBuildHeight() - originY); y--) {
                     BlockPos pos = worldPos(x, y, z);
                     if (!insideClip(pos)) continue;
                     BlockState existing = level.getBlockState(pos);
@@ -113,6 +126,100 @@ public final class NorthStructureBuilder {
                 }
             }
         }
+    }
+
+    /**
+     * Terraces one structure footprint into terrain and feathers its edge.
+     * Only natural terrain/vegetation is cut, so a later child foundation does
+     * not chew through a building that has already been placed in the same
+     * settlement pass.
+     */
+    public void fitAuthoredTerrain(int minX, int minZ, int maxX, int maxZ, int groundLocalY) {
+        fitFoundationTerrain(minX, minZ, maxX, maxZ, 3, originY + groundLocalY - 1);
+    }
+
+    private void fitFoundationTerrain(int minX, int minZ, int maxX, int maxZ, int apron, int targetY) {
+        for (int z = minZ - apron; z <= maxZ + apron; z++) {
+            for (int x = minX - apron; x <= maxX + apron; x++) {
+                BlockPos column = worldPos(x, 0, z);
+                if (column.getX() < clipMinX || column.getX() > clipMaxX
+                        || column.getZ() < clipMinZ || column.getZ() > clipMaxZ) continue;
+
+                int dx = x < minX ? minX - x : Math.max(0, x - maxX);
+                int dz = z < minZ ? minZ - z : Math.max(0, z - maxZ);
+                int distance = Math.max(dx, dz);
+                float weight = distance == 0 ? 1.0F : Math.max(0.0F, 1.0F - distance / (float)(apron + 1));
+                weight = weight * weight * (3.0F - 2.0F * weight); // smoothstep
+
+                int naturalY = naturalSurfaceY(column.getX(), column.getZ());
+                int desiredY = Math.round(naturalY + (targetY - naturalY) * weight);
+                reshapeNaturalColumn(column.getX(), column.getZ(), naturalY, desiredY, distance == 0);
+            }
+        }
+    }
+
+    private int naturalSurfaceY(int x, int z) {
+        if (level instanceof WorldGenLevel worldGen) {
+            return worldGen.getHeight(Heightmap.Types.WORLD_SURFACE_WG, x, z) - 1;
+        }
+        if (level instanceof ServerLevel server) {
+            return server.getHeight(Heightmap.Types.WORLD_SURFACE, x, z) - 1;
+        }
+        return originY - 1;
+    }
+
+    private void reshapeNaturalColumn(int x, int z, int fromY, int toY, boolean foundationCore) {
+        if (fromY == toY) return;
+        int minY = level.getMinBuildHeight();
+        int maxY = level.getMaxBuildHeight() - 1;
+        fromY = Math.max(minY, Math.min(maxY, fromY));
+        toY = Math.max(minY, Math.min(maxY, toY));
+
+        BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos();
+        if (fromY > toY) {
+            // Remove only terrain and vegetation. Never erase block entities or
+            // structural blocks placed by an earlier settlement child.
+            for (int y = fromY + 4; y > toY; y--) {
+                if (y < minY || y > maxY) continue;
+                pos.set(x, y, z);
+                BlockState existing = level.getBlockState(pos);
+                if (existing.isAir()) continue;
+                if (!isNatural(existing)) continue;
+                level.setBlock(pos, Blocks.AIR.defaultBlockState(), FLAGS);
+            }
+        } else {
+            BlockState top = level.getBlockState(pos.set(x, fromY, z));
+            BlockState fillState = naturalFill(top);
+            for (int y = fromY + 1; y <= toY; y++) {
+                pos.set(x, y, z);
+                BlockState existing = level.getBlockState(pos);
+                if (!existing.isAir() && existing.getFluidState().isEmpty() && !isNatural(existing)) continue;
+                level.setBlock(pos, y == toY && !foundationCore ? naturalTop(top) : fillState, FLAGS);
+            }
+        }
+    }
+
+    private static boolean isNatural(BlockState state) {
+        Block block = state.getBlock();
+        return state.is(BlockTags.LEAVES) || state.is(BlockTags.LOGS)
+                || block == Blocks.GRASS_BLOCK || block == Blocks.DIRT || block == Blocks.COARSE_DIRT
+                || block == Blocks.PODZOL || block == Blocks.ROOTED_DIRT || block == Blocks.MUD
+                || block == Blocks.STONE || block == Blocks.DEEPSLATE || block == Blocks.GRAVEL
+                || block == Blocks.SAND || block == Blocks.RED_SAND || block == Blocks.CLAY
+                || block == Blocks.SNOW || block == Blocks.SNOW_BLOCK || block == Blocks.WATER
+                || state.canBeReplaced();
+    }
+
+    private static BlockState naturalFill(BlockState top) {
+        Block block = top.getBlock();
+        if (block == Blocks.SAND || block == Blocks.RED_SAND || block == Blocks.GRAVEL
+                || block == Blocks.CLAY || block == Blocks.MUD) return top;
+        return Blocks.DIRT.defaultBlockState();
+    }
+
+    private static BlockState naturalTop(BlockState top) {
+        if (!top.isAir() && top.getFluidState().isEmpty() && isNatural(top)) return top;
+        return Blocks.GRASS_BLOCK.defaultBlockState();
     }
 
     public void hollowBox(int minX, int minY, int minZ, int maxX, int maxY, int maxZ,

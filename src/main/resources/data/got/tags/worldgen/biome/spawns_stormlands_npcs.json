@@ -1,4 +1,6 @@
 {
   "replace": false,
-  "values": ["got:stormlands", "got:stormlands_forest", "got:stormlands_tarth", "got:stormlands_tarth_forest", "got:stormlands_town"]
+  "values": [
+    "got:stormlands"
+  ]
 }

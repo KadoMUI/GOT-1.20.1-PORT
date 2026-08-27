@@ -1,0 +1,1562 @@
+Compiled from "GOTNPCRendering.java"
+public class got.client.render.other.GOTNPCRendering {
+  private static final net.minecraft.client.renderer.entity.RenderItem ITEM_RENDERER;
+
+  private static final net.minecraft.client.Minecraft MINECRAFT;
+
+  private got.client.render.other.GOTNPCRendering();
+    Code:
+       0: aload_0
+       1: invokespecial #18                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void renderAllNPCSpeeches(net.minecraft.client.Minecraft, net.minecraft.world.World, float);
+    Code:
+       0: invokestatic  #27                 // Method org/lwjgl/opengl/GL11.glPushMatrix:()V
+       3: invokestatic  #32                 // Method net/minecraft/client/renderer/RenderHelper.func_74519_b:()V
+       6: sipush        516
+       9: ldc           #33                 // float 0.01f
+      11: invokestatic  #37                 // Method org/lwjgl/opengl/GL11.glAlphaFunc:(IF)V
+      14: getstatic     #43                 // Field net/minecraft/client/renderer/entity/RenderManager.field_78725_b:D
+      17: dstore_3
+      18: getstatic     #46                 // Field net/minecraft/client/renderer/entity/RenderManager.field_78726_c:D
+      21: dstore        5
+      23: getstatic     #49                 // Field net/minecraft/client/renderer/entity/RenderManager.field_78723_d:D
+      26: dstore        7
+      28: aload_1
+      29: getfield      #55                 // Field net/minecraft/world/World.field_72996_f:Ljava/util/List;
+      32: invokeinterface #61,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+      37: astore        9
+      39: aload         9
+      41: invokeinterface #69,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+      46: ifeq          223
+      49: aload         9
+      51: invokeinterface #73,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      56: astore        10
+      58: aload         10
+      60: checkcast     #75                 // class net/minecraft/entity/Entity
+      63: astore        11
+      65: aload         11
+      67: dload_3
+      68: dload         5
+      70: dload         7
+      72: invokevirtual #79                 // Method net/minecraft/entity/Entity.func_145770_h:(DDD)Z
+      75: istore        12
+      77: aload         11
+      79: instanceof    #81                 // class got/common/entity/other/GOTEntityNPC
+      82: ifeq          220
+      85: iload         12
+      87: ifeq          220
+      90: aload         11
+      92: checkcast     #81                 // class got/common/entity/other/GOTEntityNPC
+      95: astore        13
+      97: aload         13
+      99: invokevirtual #84                 // Method got/common/entity/other/GOTEntityNPC.func_70089_S:()Z
+     102: ifeq          215
+     105: aload         13
+     107: invokestatic  #88                 // Method got/client/GOTSpeechClient.getSpeechFor:(Lnet/minecraft/entity/Entity;)Lgot/client/GOTSpeechClient$TimedSpeech;
+     110: astore        14
+     112: aload         14
+     114: ifnull        212
+     117: aload         13
+     119: getfield      #91                 // Field got/common/entity/other/GOTEntityNPC.field_70142_S:D
+     122: aload         13
+     124: getfield      #94                 // Field got/common/entity/other/GOTEntityNPC.field_70165_t:D
+     127: aload         13
+     129: getfield      #91                 // Field got/common/entity/other/GOTEntityNPC.field_70142_S:D
+     132: dsub
+     133: fload_2
+     134: f2d
+     135: dmul
+     136: dadd
+     137: dstore        15
+     139: aload         13
+     141: getfield      #97                 // Field got/common/entity/other/GOTEntityNPC.field_70137_T:D
+     144: aload         13
+     146: getfield      #100                // Field got/common/entity/other/GOTEntityNPC.field_70163_u:D
+     149: aload         13
+     151: getfield      #97                 // Field got/common/entity/other/GOTEntityNPC.field_70137_T:D
+     154: dsub
+     155: fload_2
+     156: f2d
+     157: dmul
+     158: dadd
+     159: dstore        17
+     161: aload         13
+     163: getfield      #103                // Field got/common/entity/other/GOTEntityNPC.field_70136_U:D
+     166: aload         13
+     168: getfield      #106                // Field got/common/entity/other/GOTEntityNPC.field_70161_v:D
+     171: aload         13
+     173: getfield      #103                // Field got/common/entity/other/GOTEntityNPC.field_70136_U:D
+     176: dsub
+     177: fload_2
+     178: f2d
+     179: dmul
+     180: dadd
+     181: dstore        19
+     183: aload         13
+     185: aload         14
+     187: invokevirtual #110                // Method got/client/GOTSpeechClient$TimedSpeech.getSpeech:()Ljava/lang/String;
+     190: aload         14
+     192: invokevirtual #114                // Method got/client/GOTSpeechClient$TimedSpeech.getAge:()F
+     195: dload         15
+     197: dload_3
+     198: dsub
+     199: dload         17
+     201: dload         5
+     203: dsub
+     204: dload         19
+     206: dload         7
+     208: dsub
+     209: invokestatic  #118                // Method renderSpeech:(Lnet/minecraft/entity/EntityLivingBase;Ljava/lang/String;FDDD)V
+     212: goto          220
+     215: aload         13
+     217: invokestatic  #122                // Method got/client/GOTSpeechClient.removeSpeech:(Lnet/minecraft/entity/Entity;)V
+     220: goto          39
+     223: sipush        516
+     226: ldc           #123                // float 0.1f
+     228: invokestatic  #37                 // Method org/lwjgl/opengl/GL11.glAlphaFunc:(IF)V
+     231: invokestatic  #126                // Method net/minecraft/client/renderer/RenderHelper.func_74518_a:()V
+     234: aload_0
+     235: getfield      #130                // Field net/minecraft/client/Minecraft.field_71460_t:Lnet/minecraft/client/renderer/EntityRenderer;
+     238: fload_2
+     239: f2d
+     240: invokevirtual #136                // Method net/minecraft/client/renderer/EntityRenderer.func_78483_a:(D)V
+     243: invokestatic  #139                // Method org/lwjgl/opengl/GL11.glPopMatrix:()V
+     246: return
+
+  public static void renderHealthBar(net.minecraft.entity.EntityLivingBase, double, double, double, int[], int[]);
+    Code:
+       0: getstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+       3: getfield      #168                // Field net/minecraft/client/Minecraft.field_71441_e:Lnet/minecraft/client/multiplayer/WorldClient;
+       6: astore        9
+       8: aload         9
+      10: getfield      #174                // Field net/minecraft/client/multiplayer/WorldClient.field_72984_F:Lnet/minecraft/profiler/Profiler;
+      13: ldc           #175                // String renderHealthBar
+      15: invokevirtual #181                // Method net/minecraft/profiler/Profiler.func_76320_a:(Ljava/lang/String;)V
+      18: getstatic     #185                // Field net/minecraft/client/renderer/entity/RenderManager.field_78727_a:Lnet/minecraft/client/renderer/entity/RenderManager;
+      21: astore        10
+      23: getstatic     #190                // Field net/minecraft/client/renderer/entity/RendererLivingEntity.NAME_TAG_RANGE:F
+      26: f2d
+      27: dstore        11
+      29: aload_0
+      30: aload         10
+      32: getfield      #194                // Field net/minecraft/client/renderer/entity/RenderManager.field_78734_h:Lnet/minecraft/entity/EntityLivingBase;
+      35: invokevirtual #200                // Method net/minecraft/entity/EntityLivingBase.func_70068_e:(Lnet/minecraft/entity/Entity;)D
+      38: dstore        13
+      40: dload         13
+      42: dload         11
+      44: dload         11
+      46: dmul
+      47: dcmpg
+      48: ifgt          719
+      51: ldc           #201                // float 1.6f
+      53: fstore        15
+      55: ldc           #202                // float 0.016666666f
+      57: fload         15
+      59: fmul
+      60: fstore        16
+      62: invokestatic  #27                 // Method org/lwjgl/opengl/GL11.glPushMatrix:()V
+      65: dload_1
+      66: d2f
+      67: dload_3
+      68: d2f
+      69: aload_0
+      70: getfield      #205                // Field net/minecraft/entity/EntityLivingBase.field_70131_O:F
+      73: fadd
+      74: ldc           #206                // float 0.7f
+      76: fadd
+      77: dload         5
+      79: d2f
+      80: invokestatic  #210                // Method org/lwjgl/opengl/GL11.glTranslatef:(FFF)V
+      83: fconst_0
+      84: fconst_1
+      85: fconst_0
+      86: invokestatic  #213                // Method org/lwjgl/opengl/GL11.glNormal3f:(FFF)V
+      89: aload         10
+      91: getfield      #216                // Field net/minecraft/client/renderer/entity/RenderManager.field_78735_i:F
+      94: fneg
+      95: fconst_0
+      96: fconst_1
+      97: fconst_0
+      98: invokestatic  #220                // Method org/lwjgl/opengl/GL11.glRotatef:(FFFF)V
+     101: aload         10
+     103: getfield      #223                // Field net/minecraft/client/renderer/entity/RenderManager.field_78732_j:F
+     106: fconst_1
+     107: fconst_0
+     108: fconst_0
+     109: invokestatic  #220                // Method org/lwjgl/opengl/GL11.glRotatef:(FFFF)V
+     112: fload         16
+     114: fneg
+     115: fload         16
+     117: fneg
+     118: fload         16
+     120: invokestatic  #226                // Method org/lwjgl/opengl/GL11.glScalef:(FFF)V
+     123: sipush        2896
+     126: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     129: iconst_0
+     130: invokestatic  #234                // Method org/lwjgl/opengl/GL11.glDepthMask:(Z)V
+     133: sipush        2929
+     136: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     139: sipush        3042
+     142: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     145: sipush        770
+     148: sipush        771
+     151: invokestatic  #241                // Method org/lwjgl/opengl/GL11.glBlendFunc:(II)V
+     154: getstatic     #247                // Field net/minecraft/client/renderer/Tessellator.field_78398_a:Lnet/minecraft/client/renderer/Tessellator;
+     157: astore        17
+     159: sipush        3553
+     162: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     165: aload         7
+     167: iconst_0
+     168: iaload
+     169: istore        18
+     171: aload         7
+     173: iconst_1
+     174: iaload
+     175: istore        19
+     177: aload         17
+     179: invokevirtual #250                // Method net/minecraft/client/renderer/Tessellator.func_78382_b:()V
+     182: aload         17
+     184: iconst_0
+     185: invokevirtual #253                // Method net/minecraft/client/renderer/Tessellator.func_78378_d:(I)V
+     188: aload         17
+     190: ldc2_w        #254                // double -19.5d
+     193: ldc2_w        #256                // double 18.5d
+     196: dconst_0
+     197: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     200: aload         17
+     202: ldc2_w        #254                // double -19.5d
+     205: ldc2_w        #262                // double 21.0d
+     208: dconst_0
+     209: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     212: aload         17
+     214: ldc2_w        #264                // double 19.5d
+     217: ldc2_w        #262                // double 21.0d
+     220: dconst_0
+     221: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     224: aload         17
+     226: ldc2_w        #264                // double 19.5d
+     229: ldc2_w        #256                // double 18.5d
+     232: dconst_0
+     233: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     236: aload         17
+     238: invokevirtual #269                // Method net/minecraft/client/renderer/Tessellator.func_78381_a:()I
+     241: pop
+     242: aload         17
+     244: invokevirtual #250                // Method net/minecraft/client/renderer/Tessellator.func_78382_b:()V
+     247: aload         17
+     249: iload         19
+     251: invokevirtual #253                // Method net/minecraft/client/renderer/Tessellator.func_78378_d:(I)V
+     254: aload         17
+     256: ldc2_w        #270                // double -19.0d
+     259: ldc2_w        #272                // double 19.0d
+     262: dconst_0
+     263: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     266: aload         17
+     268: ldc2_w        #270                // double -19.0d
+     271: ldc2_w        #274                // double 20.5d
+     274: dconst_0
+     275: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     278: aload         17
+     280: ldc2_w        #272                // double 19.0d
+     283: ldc2_w        #274                // double 20.5d
+     286: dconst_0
+     287: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     290: aload         17
+     292: ldc2_w        #272                // double 19.0d
+     295: ldc2_w        #272                // double 19.0d
+     298: dconst_0
+     299: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     302: aload         17
+     304: invokevirtual #269                // Method net/minecraft/client/renderer/Tessellator.func_78381_a:()I
+     307: pop
+     308: aload_0
+     309: invokevirtual #278                // Method net/minecraft/entity/EntityLivingBase.func_110143_aJ:()F
+     312: aload_0
+     313: invokevirtual #281                // Method net/minecraft/entity/EntityLivingBase.func_110138_aP:()F
+     316: fdiv
+     317: f2d
+     318: dstore        20
+     320: dload         20
+     322: dconst_0
+     323: dcmpg
+     324: ifge          330
+     327: dconst_0
+     328: dstore        20
+     330: aload         17
+     332: invokevirtual #250                // Method net/minecraft/client/renderer/Tessellator.func_78382_b:()V
+     335: aload         17
+     337: iload         18
+     339: invokevirtual #253                // Method net/minecraft/client/renderer/Tessellator.func_78378_d:(I)V
+     342: aload         17
+     344: ldc2_w        #270                // double -19.0d
+     347: ldc2_w        #272                // double 19.0d
+     350: dconst_0
+     351: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     354: aload         17
+     356: ldc2_w        #270                // double -19.0d
+     359: ldc2_w        #274                // double 20.5d
+     362: dconst_0
+     363: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     366: aload         17
+     368: ldc2_w        #270                // double -19.0d
+     371: ldc2_w        #284                // double 38.0d
+     374: dload         20
+     376: dmul
+     377: dadd
+     378: ldc2_w        #274                // double 20.5d
+     381: dconst_0
+     382: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     385: aload         17
+     387: ldc2_w        #270                // double -19.0d
+     390: ldc2_w        #284                // double 38.0d
+     393: dload         20
+     395: dmul
+     396: dadd
+     397: ldc2_w        #272                // double 19.0d
+     400: dconst_0
+     401: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     404: aload         17
+     406: invokevirtual #269                // Method net/minecraft/client/renderer/Tessellator.func_78381_a:()I
+     409: pop
+     410: aload         8
+     412: ifnull        681
+     415: aload_0
+     416: getfield      #288                // Field net/minecraft/entity/EntityLivingBase.field_70154_o:Lnet/minecraft/entity/Entity;
+     419: instanceof    #196                // class net/minecraft/entity/EntityLivingBase
+     422: ifeq          681
+     425: aload_0
+     426: getfield      #288                // Field net/minecraft/entity/EntityLivingBase.field_70154_o:Lnet/minecraft/entity/Entity;
+     429: checkcast     #196                // class net/minecraft/entity/EntityLivingBase
+     432: astore        22
+     434: aload         8
+     436: iconst_0
+     437: iaload
+     438: istore        23
+     440: aload         8
+     442: iconst_1
+     443: iaload
+     444: istore        24
+     446: aload         17
+     448: invokevirtual #250                // Method net/minecraft/client/renderer/Tessellator.func_78382_b:()V
+     451: aload         17
+     453: iconst_0
+     454: invokevirtual #253                // Method net/minecraft/client/renderer/Tessellator.func_78378_d:(I)V
+     457: aload         17
+     459: ldc2_w        #254                // double -19.5d
+     462: ldc2_w        #289                // double 23.5d
+     465: dconst_0
+     466: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     469: aload         17
+     471: ldc2_w        #254                // double -19.5d
+     474: ldc2_w        #291                // double 26.0d
+     477: dconst_0
+     478: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     481: aload         17
+     483: ldc2_w        #264                // double 19.5d
+     486: ldc2_w        #291                // double 26.0d
+     489: dconst_0
+     490: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     493: aload         17
+     495: ldc2_w        #264                // double 19.5d
+     498: ldc2_w        #289                // double 23.5d
+     501: dconst_0
+     502: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     505: aload         17
+     507: invokevirtual #269                // Method net/minecraft/client/renderer/Tessellator.func_78381_a:()I
+     510: pop
+     511: aload         17
+     513: invokevirtual #250                // Method net/minecraft/client/renderer/Tessellator.func_78382_b:()V
+     516: aload         17
+     518: iload         24
+     520: invokevirtual #253                // Method net/minecraft/client/renderer/Tessellator.func_78378_d:(I)V
+     523: aload         17
+     525: ldc2_w        #270                // double -19.0d
+     528: ldc2_w        #293                // double 24.0d
+     531: dconst_0
+     532: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     535: aload         17
+     537: ldc2_w        #270                // double -19.0d
+     540: ldc2_w        #295                // double 25.5d
+     543: dconst_0
+     544: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     547: aload         17
+     549: ldc2_w        #272                // double 19.0d
+     552: ldc2_w        #295                // double 25.5d
+     555: dconst_0
+     556: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     559: aload         17
+     561: ldc2_w        #272                // double 19.0d
+     564: ldc2_w        #293                // double 24.0d
+     567: dconst_0
+     568: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     571: aload         17
+     573: invokevirtual #269                // Method net/minecraft/client/renderer/Tessellator.func_78381_a:()I
+     576: pop
+     577: aload         22
+     579: invokevirtual #278                // Method net/minecraft/entity/EntityLivingBase.func_110143_aJ:()F
+     582: aload         22
+     584: invokevirtual #281                // Method net/minecraft/entity/EntityLivingBase.func_110138_aP:()F
+     587: fdiv
+     588: f2d
+     589: dstore        25
+     591: dload         25
+     593: dconst_0
+     594: dcmpg
+     595: ifge          601
+     598: dconst_0
+     599: dstore        25
+     601: aload         17
+     603: invokevirtual #250                // Method net/minecraft/client/renderer/Tessellator.func_78382_b:()V
+     606: aload         17
+     608: iload         23
+     610: invokevirtual #253                // Method net/minecraft/client/renderer/Tessellator.func_78378_d:(I)V
+     613: aload         17
+     615: ldc2_w        #270                // double -19.0d
+     618: ldc2_w        #293                // double 24.0d
+     621: dconst_0
+     622: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     625: aload         17
+     627: ldc2_w        #270                // double -19.0d
+     630: ldc2_w        #295                // double 25.5d
+     633: dconst_0
+     634: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     637: aload         17
+     639: ldc2_w        #270                // double -19.0d
+     642: ldc2_w        #284                // double 38.0d
+     645: dload         25
+     647: dmul
+     648: dadd
+     649: ldc2_w        #295                // double 25.5d
+     652: dconst_0
+     653: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     656: aload         17
+     658: ldc2_w        #270                // double -19.0d
+     661: ldc2_w        #284                // double 38.0d
+     664: dload         25
+     666: dmul
+     667: dadd
+     668: ldc2_w        #293                // double 24.0d
+     671: dconst_0
+     672: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     675: aload         17
+     677: invokevirtual #269                // Method net/minecraft/client/renderer/Tessellator.func_78381_a:()I
+     680: pop
+     681: sipush        3553
+     684: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     687: sipush        2929
+     690: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     693: iconst_1
+     694: invokestatic  #234                // Method org/lwjgl/opengl/GL11.glDepthMask:(Z)V
+     697: sipush        2896
+     700: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     703: sipush        3042
+     706: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     709: fconst_1
+     710: fconst_1
+     711: fconst_1
+     712: fconst_1
+     713: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     716: invokestatic  #139                // Method org/lwjgl/opengl/GL11.glPopMatrix:()V
+     719: aload         9
+     721: getfield      #174                // Field net/minecraft/client/multiplayer/WorldClient.field_72984_F:Lnet/minecraft/profiler/Profiler;
+     724: invokevirtual #302                // Method net/minecraft/profiler/Profiler.func_76319_b:()V
+     727: return
+
+  public static void renderHiredIcon(net.minecraft.entity.EntityLivingBase, double, double, double);
+    Code:
+       0: getstatic     #326                // Field got/common/GOTConfig.hiredUnitIcons:Z
+       3: ifeq          33
+       6: aload_0
+       7: getfield      #329                // Field net/minecraft/entity/EntityLivingBase.field_70153_n:Lnet/minecraft/entity/Entity;
+      10: instanceof    #81                 // class got/common/entity/other/GOTEntityNPC
+      13: ifne          33
+      16: aload_0
+      17: instanceof    #81                 // class got/common/entity/other/GOTEntityNPC
+      20: ifeq          34
+      23: aload_0
+      24: checkcast     #81                 // class got/common/entity/other/GOTEntityNPC
+      27: invokestatic  #333                // Method got/client/GOTSpeechClient.hasSpeech:(Lgot/common/entity/other/GOTEntityNPC;)Z
+      30: ifeq          34
+      33: return
+      34: getstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+      37: getfield      #168                // Field net/minecraft/client/Minecraft.field_71441_e:Lnet/minecraft/client/multiplayer/WorldClient;
+      40: astore        7
+      42: aload         7
+      44: getfield      #174                // Field net/minecraft/client/multiplayer/WorldClient.field_72984_F:Lnet/minecraft/profiler/Profiler;
+      47: ldc_w         #334                // String renderHiredIcon
+      50: invokevirtual #181                // Method net/minecraft/profiler/Profiler.func_76320_a:(Ljava/lang/String;)V
+      53: getstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+      56: invokevirtual #338                // Method net/minecraft/client/Minecraft.func_110434_K:()Lnet/minecraft/client/renderer/texture/TextureManager;
+      59: astore        8
+      61: getstatic     #185                // Field net/minecraft/client/renderer/entity/RenderManager.field_78727_a:Lnet/minecraft/client/renderer/entity/RenderManager;
+      64: astore        9
+      66: getstatic     #190                // Field net/minecraft/client/renderer/entity/RendererLivingEntity.NAME_TAG_RANGE:F
+      69: f2d
+      70: dstore        10
+      72: aload_0
+      73: aload         9
+      75: getfield      #194                // Field net/minecraft/client/renderer/entity/RenderManager.field_78734_h:Lnet/minecraft/entity/EntityLivingBase;
+      78: invokevirtual #200                // Method net/minecraft/entity/EntityLivingBase.func_70068_e:(Lnet/minecraft/entity/Entity;)D
+      81: dstore        12
+      83: dload         12
+      85: dload         10
+      87: dload         10
+      89: dmul
+      90: dcmpg
+      91: ifgt          537
+      94: aload_0
+      95: invokevirtual #342                // Method net/minecraft/entity/EntityLivingBase.func_70694_bm:()Lnet/minecraft/item/ItemStack;
+      98: astore        14
+     100: aconst_null
+     101: astore        15
+     103: aload_0
+     104: instanceof    #81                 // class got/common/entity/other/GOTEntityNPC
+     107: ifeq          138
+     110: aload_0
+     111: checkcast     #81                 // class got/common/entity/other/GOTEntityNPC
+     114: astore        16
+     116: aload         16
+     118: invokevirtual #346                // Method got/common/entity/other/GOTEntityNPC.getHireableInfo:()Lgot/common/entity/other/info/GOTHireableInfo;
+     121: invokevirtual #351                // Method got/common/entity/other/info/GOTHireableInfo.getHiredSquadron:()Ljava/lang/String;
+     124: astore        17
+     126: aload         17
+     128: invokestatic  #357                // Method net/minecraft/util/StringUtils.func_151246_b:(Ljava/lang/String;)Z
+     131: ifne          138
+     134: aload         17
+     136: astore        15
+     138: invokestatic  #27                 // Method org/lwjgl/opengl/GL11.glPushMatrix:()V
+     141: dload_1
+     142: d2f
+     143: dload_3
+     144: d2f
+     145: aload_0
+     146: getfield      #205                // Field net/minecraft/entity/EntityLivingBase.field_70131_O:F
+     149: fadd
+     150: dload         5
+     152: d2f
+     153: invokestatic  #210                // Method org/lwjgl/opengl/GL11.glTranslatef:(FFF)V
+     156: fconst_0
+     157: fconst_1
+     158: fconst_0
+     159: invokestatic  #213                // Method org/lwjgl/opengl/GL11.glNormal3f:(FFF)V
+     162: aload         9
+     164: getfield      #216                // Field net/minecraft/client/renderer/entity/RenderManager.field_78735_i:F
+     167: fneg
+     168: fconst_0
+     169: fconst_1
+     170: fconst_0
+     171: invokestatic  #220                // Method org/lwjgl/opengl/GL11.glRotatef:(FFFF)V
+     174: aload         9
+     176: getfield      #223                // Field net/minecraft/client/renderer/entity/RenderManager.field_78732_j:F
+     179: fconst_1
+     180: fconst_0
+     181: fconst_0
+     182: invokestatic  #220                // Method org/lwjgl/opengl/GL11.glRotatef:(FFFF)V
+     185: sipush        2896
+     188: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     191: iconst_0
+     192: invokestatic  #234                // Method org/lwjgl/opengl/GL11.glDepthMask:(Z)V
+     195: sipush        2929
+     198: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     201: sipush        3042
+     204: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     207: sipush        770
+     210: sipush        771
+     213: iconst_1
+     214: iconst_0
+     215: invokestatic  #369                // Method net/minecraft/client/renderer/OpenGlHelper.func_148821_a:(IIII)V
+     218: getstatic     #372                // Field net/minecraft/client/renderer/OpenGlHelper.field_77476_b:I
+     221: ldc_w         #373                // float 240.0f
+     224: ldc_w         #373                // float 240.0f
+     227: invokestatic  #377                // Method net/minecraft/client/renderer/OpenGlHelper.func_77475_a:(IFF)V
+     230: fconst_1
+     231: fconst_1
+     232: fconst_1
+     233: fconst_1
+     234: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     237: fconst_1
+     238: fconst_1
+     239: fconst_1
+     240: fconst_1
+     241: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     244: aload         15
+     246: ifnull        441
+     249: fconst_0
+     250: ldc_w         #378                // float 0.3f
+     253: fconst_0
+     254: invokestatic  #210                // Method org/lwjgl/opengl/GL11.glTranslatef:(FFF)V
+     257: invokestatic  #27                 // Method org/lwjgl/opengl/GL11.glPushMatrix:()V
+     260: getstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+     263: getfield      #382                // Field net/minecraft/client/Minecraft.field_71466_p:Lnet/minecraft/client/gui/FontRenderer;
+     266: astore        16
+     268: getstatic     #247                // Field net/minecraft/client/renderer/Tessellator.field_78398_a:Lnet/minecraft/client/renderer/Tessellator;
+     271: astore        17
+     273: aload         16
+     275: aload         15
+     277: invokevirtual #388                // Method net/minecraft/client/gui/FontRenderer.func_78256_a:(Ljava/lang/String;)I
+     280: iconst_2
+     281: idiv
+     282: istore        18
+     284: ldc_w         #389                // float 0.015f
+     287: fstore        19
+     289: fload         19
+     291: fneg
+     292: fload         19
+     294: fneg
+     295: fload         19
+     297: invokestatic  #226                // Method org/lwjgl/opengl/GL11.glScalef:(FFF)V
+     300: sipush        3553
+     303: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     306: aload         17
+     308: invokevirtual #250                // Method net/minecraft/client/renderer/Tessellator.func_78382_b:()V
+     311: aload         17
+     313: fconst_0
+     314: fconst_0
+     315: fconst_0
+     316: ldc_w         #390                // float 0.25f
+     319: invokevirtual #393                // Method net/minecraft/client/renderer/Tessellator.func_78369_a:(FFFF)V
+     322: aload         17
+     324: iload         18
+     326: ineg
+     327: iconst_1
+     328: isub
+     329: i2d
+     330: ldc2_w        #394                // double -9.0d
+     333: dconst_0
+     334: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     337: aload         17
+     339: iload         18
+     341: ineg
+     342: iconst_1
+     343: isub
+     344: i2d
+     345: dconst_0
+     346: dconst_0
+     347: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     350: aload         17
+     352: iload         18
+     354: iconst_1
+     355: iadd
+     356: i2d
+     357: dconst_0
+     358: dconst_0
+     359: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     362: aload         17
+     364: iload         18
+     366: iconst_1
+     367: iadd
+     368: i2d
+     369: ldc2_w        #394                // double -9.0d
+     372: dconst_0
+     373: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     376: aload         17
+     378: invokevirtual #269                // Method net/minecraft/client/renderer/Tessellator.func_78381_a:()I
+     381: pop
+     382: sipush        3553
+     385: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     388: aload         16
+     390: aload         15
+     392: iload         18
+     394: ineg
+     395: bipush        -8
+     397: ldc_w         #396                // int 553648127
+     400: invokevirtual #400                // Method net/minecraft/client/gui/FontRenderer.func_78276_b:(Ljava/lang/String;III)I
+     403: pop
+     404: sipush        2929
+     407: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     410: iconst_1
+     411: invokestatic  #234                // Method org/lwjgl/opengl/GL11.glDepthMask:(Z)V
+     414: aload         16
+     416: aload         15
+     418: iload         18
+     420: ineg
+     421: bipush        -8
+     423: iconst_m1
+     424: invokevirtual #400                // Method net/minecraft/client/gui/FontRenderer.func_78276_b:(Ljava/lang/String;III)I
+     427: pop
+     428: sipush        2929
+     431: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     434: iconst_0
+     435: invokestatic  #234                // Method org/lwjgl/opengl/GL11.glDepthMask:(Z)V
+     438: invokestatic  #139                // Method org/lwjgl/opengl/GL11.glPopMatrix:()V
+     441: aload         14
+     443: ifnull        505
+     446: fconst_0
+     447: ldc_w         #401                // float 0.5f
+     450: fconst_0
+     451: invokestatic  #210                // Method org/lwjgl/opengl/GL11.glTranslatef:(FFF)V
+     454: ldc_w         #402                // float -1.0f
+     457: ldc_w         #402                // float -1.0f
+     460: fconst_1
+     461: invokestatic  #226                // Method org/lwjgl/opengl/GL11.glScalef:(FFF)V
+     464: ldc_w         #403                // float 0.03f
+     467: fstore        16
+     469: fload         16
+     471: fload         16
+     473: fload         16
+     475: invokestatic  #226                // Method org/lwjgl/opengl/GL11.glScalef:(FFF)V
+     478: aload         8
+     480: getstatic     #409                // Field net/minecraft/client/renderer/texture/TextureMap.field_110576_c:Lnet/minecraft/util/ResourceLocation;
+     483: invokevirtual #413                // Method net/minecraft/client/renderer/texture/TextureManager.func_110577_a:(Lnet/minecraft/util/ResourceLocation;)V
+     486: getstatic     #415                // Field ITEM_RENDERER:Lnet/minecraft/client/renderer/entity/RenderItem;
+     489: bipush        -8
+     491: bipush        -8
+     493: aload         14
+     495: invokevirtual #419                // Method net/minecraft/item/ItemStack.func_77954_c:()Lnet/minecraft/util/IIcon;
+     498: bipush        16
+     500: bipush        16
+     502: invokevirtual #425                // Method net/minecraft/client/renderer/entity/RenderItem.func_94149_a:(IILnet/minecraft/util/IIcon;II)V
+     505: sipush        3042
+     508: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     511: sipush        2929
+     514: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     517: iconst_1
+     518: invokestatic  #234                // Method org/lwjgl/opengl/GL11.glDepthMask:(Z)V
+     521: sipush        2896
+     524: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     527: fconst_1
+     528: fconst_1
+     529: fconst_1
+     530: fconst_1
+     531: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     534: invokestatic  #139                // Method org/lwjgl/opengl/GL11.glPopMatrix:()V
+     537: aload         7
+     539: getfield      #174                // Field net/minecraft/client/multiplayer/WorldClient.field_72984_F:Lnet/minecraft/profiler/Profiler;
+     542: invokevirtual #302                // Method net/minecraft/profiler/Profiler.func_76319_b:()V
+     545: return
+
+  public static void renderNPCHealthBar(net.minecraft.entity.EntityLivingBase, double, double, double);
+    Code:
+       0: getstatic     #440                // Field got/common/GOTConfig.hiredUnitHealthBars:Z
+       3: ifeq          33
+       6: aload_0
+       7: getfield      #329                // Field net/minecraft/entity/EntityLivingBase.field_70153_n:Lnet/minecraft/entity/Entity;
+      10: instanceof    #81                 // class got/common/entity/other/GOTEntityNPC
+      13: ifne          33
+      16: aload_0
+      17: instanceof    #81                 // class got/common/entity/other/GOTEntityNPC
+      20: ifeq          34
+      23: aload_0
+      24: checkcast     #81                 // class got/common/entity/other/GOTEntityNPC
+      27: invokestatic  #333                // Method got/client/GOTSpeechClient.hasSpeech:(Lgot/common/entity/other/GOTEntityNPC;)Z
+      30: ifeq          34
+      33: return
+      34: aload_0
+      35: dload_1
+      36: dload_3
+      37: dload         5
+      39: iconst_2
+      40: newarray       int
+      42: dup
+      43: iconst_0
+      44: ldc_w         #441                // int 5888860
+      47: iastore
+      48: dup
+      49: iconst_1
+      50: ldc_w         #442                // int 12006707
+      53: iastore
+      54: iconst_2
+      55: newarray       int
+      57: dup
+      58: iconst_0
+      59: ldc_w         #443                // int 6079225
+      62: iastore
+      63: dup
+      64: iconst_1
+      65: ldc_w         #442                // int 12006707
+      68: iastore
+      69: invokestatic  #445                // Method renderHealthBar:(Lnet/minecraft/entity/EntityLivingBase;DDD[I[I)V
+      72: return
+
+  public static void renderQuestBook(got.common.entity.other.GOTEntityNPC, double, double, double);
+    Code:
+       0: getstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+       3: getfield      #168                // Field net/minecraft/client/Minecraft.field_71441_e:Lnet/minecraft/client/multiplayer/WorldClient;
+       6: astore        7
+       8: aload         7
+      10: getfield      #174                // Field net/minecraft/client/multiplayer/WorldClient.field_72984_F:Lnet/minecraft/profiler/Profiler;
+      13: ldc_w         #449                // String renderMiniquestBook
+      16: invokevirtual #181                // Method net/minecraft/profiler/Profiler.func_76320_a:(Ljava/lang/String;)V
+      19: getstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+      22: getfield      #452                // Field net/minecraft/client/Minecraft.field_71451_h:Lnet/minecraft/entity/EntityLivingBase;
+      25: aload_0
+      26: invokevirtual #456                // Method net/minecraft/entity/EntityLivingBase.func_70032_d:(Lnet/minecraft/entity/Entity;)F
+      29: fstore        8
+      31: fload         8
+      33: f2d
+      34: ldc2_w        #457                // double 12.0d
+      37: dcmpg
+      38: ifgt          45
+      41: iconst_1
+      42: goto          46
+      45: iconst_0
+      46: istore        9
+      48: getstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+      51: invokevirtual #338                // Method net/minecraft/client/Minecraft.func_110434_K:()Lnet/minecraft/client/renderer/texture/TextureManager;
+      54: astore        10
+      56: getstatic     #185                // Field net/minecraft/client/renderer/entity/RenderManager.field_78727_a:Lnet/minecraft/client/renderer/entity/RenderManager;
+      59: astore        11
+      61: getstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+      64: getfield      #462                // Field net/minecraft/client/Minecraft.field_71439_g:Lnet/minecraft/client/entity/EntityClientPlayerMP;
+      67: astore        12
+      69: aload         12
+      71: invokestatic  #468                // Method got/common/GOTLevelData.getData:(Lnet/minecraft/entity/player/EntityPlayer;)Lgot/common/GOTPlayerData;
+      74: aload_0
+      75: iconst_1
+      76: invokevirtual #474                // Method got/common/GOTPlayerData.getMiniQuestsForEntity:(Lnet/minecraft/entity/Entity;Z)Ljava/util/List;
+      79: invokeinterface #477,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+      84: ifne          601
+      87: aload_0
+      88: invokestatic  #333                // Method got/client/GOTSpeechClient.hasSpeech:(Lgot/common/entity/other/GOTEntityNPC;)Z
+      91: ifne          601
+      94: new           #361                // class net/minecraft/item/ItemStack
+      97: dup
+      98: getstatic     #483                // Field got/common/database/GOTItems.questBook:Lnet/minecraft/item/Item;
+     101: invokespecial #486                // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/item/Item;)V
+     104: astore        13
+     106: aload         13
+     108: invokevirtual #419                // Method net/minecraft/item/ItemStack.func_77954_c:()Lnet/minecraft/util/IIcon;
+     111: astore        14
+     113: aload         14
+     115: ifnonnull     137
+     118: aload         10
+     120: getstatic     #409                // Field net/minecraft/client/renderer/texture/TextureMap.field_110576_c:Lnet/minecraft/util/ResourceLocation;
+     123: invokevirtual #490                // Method net/minecraft/client/renderer/texture/TextureManager.func_110581_b:(Lnet/minecraft/util/ResourceLocation;)Lnet/minecraft/client/renderer/texture/ITextureObject;
+     126: checkcast     #405                // class net/minecraft/client/renderer/texture/TextureMap
+     129: ldc_w         #492                // String missingno
+     132: invokevirtual #496                // Method net/minecraft/client/renderer/texture/TextureMap.func_110572_b:(Ljava/lang/String;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
+     135: astore        14
+     137: getstatic     #247                // Field net/minecraft/client/renderer/Tessellator.field_78398_a:Lnet/minecraft/client/renderer/Tessellator;
+     140: astore        15
+     142: aload         14
+     144: invokeinterface #503,  1          // InterfaceMethod net/minecraft/util/IIcon.func_94209_e:()F
+     149: fstore        16
+     151: aload         14
+     153: invokeinterface #506,  1          // InterfaceMethod net/minecraft/util/IIcon.func_94212_f:()F
+     158: fstore        17
+     160: aload         14
+     162: invokeinterface #509,  1          // InterfaceMethod net/minecraft/util/IIcon.func_94206_g:()F
+     167: fstore        18
+     169: aload         14
+     171: invokeinterface #512,  1          // InterfaceMethod net/minecraft/util/IIcon.func_94210_h:()F
+     176: fstore        19
+     178: iload         9
+     180: ifeq          360
+     183: aload_0
+     184: getfield      #515                // Field got/common/entity/other/GOTEntityNPC.field_70173_aa:I
+     187: i2f
+     188: invokestatic  #520                // Method got/client/GOTTickHandlerClient.getRenderTick:()F
+     191: fadd
+     192: fstore        20
+     194: fload         20
+     196: ldc_w         #521                // float 360.0f
+     199: frem
+     200: fstore        21
+     202: invokestatic  #27                 // Method org/lwjgl/opengl/GL11.glPushMatrix:()V
+     205: ldc_w         #522                // int 32826
+     208: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     211: sipush        2896
+     214: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     217: dload_1
+     218: d2f
+     219: dload_3
+     220: d2f
+     221: aload_0
+     222: getfield      #523                // Field got/common/entity/other/GOTEntityNPC.field_70131_O:F
+     225: fadd
+     226: ldc_w         #524                // float 1.3f
+     229: fadd
+     230: dload         5
+     232: d2f
+     233: invokestatic  #210                // Method org/lwjgl/opengl/GL11.glTranslatef:(FFF)V
+     236: fconst_1
+     237: fstore        22
+     239: fload         21
+     241: ldc_w         #525                // float 6.0f
+     244: fmul
+     245: fconst_0
+     246: fconst_1
+     247: fconst_0
+     248: invokestatic  #220                // Method org/lwjgl/opengl/GL11.glRotatef:(FFFF)V
+     251: ldc_w         #526                // float -0.5f
+     254: fload         22
+     256: fmul
+     257: ldc_w         #526                // float -0.5f
+     260: fload         22
+     262: fmul
+     263: ldc_w         #527                // float 0.03125f
+     266: fload         22
+     268: fmul
+     269: invokestatic  #210                // Method org/lwjgl/opengl/GL11.glTranslatef:(FFF)V
+     272: fload         22
+     274: fload         22
+     276: fload         22
+     278: invokestatic  #226                // Method org/lwjgl/opengl/GL11.glScalef:(FFF)V
+     281: aload         10
+     283: getstatic     #409                // Field net/minecraft/client/renderer/texture/TextureMap.field_110576_c:Lnet/minecraft/util/ResourceLocation;
+     286: invokevirtual #413                // Method net/minecraft/client/renderer/texture/TextureManager.func_110577_a:(Lnet/minecraft/util/ResourceLocation;)V
+     289: getstatic     #372                // Field net/minecraft/client/renderer/OpenGlHelper.field_77476_b:I
+     292: ldc_w         #373                // float 240.0f
+     295: ldc_w         #373                // float 240.0f
+     298: invokestatic  #377                // Method net/minecraft/client/renderer/OpenGlHelper.func_77475_a:(IFF)V
+     301: fconst_1
+     302: fconst_1
+     303: fconst_1
+     304: fconst_1
+     305: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     308: fconst_1
+     309: fconst_1
+     310: fconst_1
+     311: fconst_1
+     312: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     315: aload         15
+     317: fload         17
+     319: fload         18
+     321: fload         16
+     323: fload         19
+     325: aload         14
+     327: invokeinterface #530,  1          // InterfaceMethod net/minecraft/util/IIcon.func_94211_a:()I
+     332: aload         14
+     334: invokeinterface #533,  1          // InterfaceMethod net/minecraft/util/IIcon.func_94216_b:()I
+     339: ldc_w         #534                // float 0.0625f
+     342: invokestatic  #540                // Method net/minecraft/client/renderer/ItemRenderer.func_78439_a:(Lnet/minecraft/client/renderer/Tessellator;FFFFIIF)V
+     345: sipush        2896
+     348: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     351: ldc_w         #522                // int 32826
+     354: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     357: goto          598
+     360: fload         8
+     362: ldc_w         #541                // float 12.0f
+     365: fdiv
+     366: fstore        20
+     368: fload         20
+     370: f2d
+     371: ldc2_w        #542                // double 1.1d
+     374: invokestatic  #549                // Method java/lang/Math.pow:(DD)D
+     377: d2f
+     378: fstore        20
+     380: fload         20
+     382: f2d
+     383: ldc2_w        #550                // double -0.4d
+     386: invokestatic  #549                // Method java/lang/Math.pow:(DD)D
+     389: d2f
+     390: fstore        21
+     392: invokestatic  #27                 // Method org/lwjgl/opengl/GL11.glPushMatrix:()V
+     395: dload_1
+     396: d2f
+     397: dload_3
+     398: d2f
+     399: aload_0
+     400: getfield      #523                // Field got/common/entity/other/GOTEntityNPC.field_70131_O:F
+     403: fadd
+     404: ldc_w         #524                // float 1.3f
+     407: fadd
+     408: dload         5
+     410: d2f
+     411: invokestatic  #210                // Method org/lwjgl/opengl/GL11.glTranslatef:(FFF)V
+     414: fconst_0
+     415: fconst_1
+     416: fconst_0
+     417: invokestatic  #213                // Method org/lwjgl/opengl/GL11.glNormal3f:(FFF)V
+     420: aload         11
+     422: getfield      #216                // Field net/minecraft/client/renderer/entity/RenderManager.field_78735_i:F
+     425: fneg
+     426: fconst_0
+     427: fconst_1
+     428: fconst_0
+     429: invokestatic  #220                // Method org/lwjgl/opengl/GL11.glRotatef:(FFFF)V
+     432: aload         11
+     434: getfield      #223                // Field net/minecraft/client/renderer/entity/RenderManager.field_78732_j:F
+     437: fconst_1
+     438: fconst_0
+     439: fconst_0
+     440: invokestatic  #220                // Method org/lwjgl/opengl/GL11.glRotatef:(FFFF)V
+     443: fload         20
+     445: fload         20
+     447: fload         20
+     449: invokestatic  #226                // Method org/lwjgl/opengl/GL11.glScalef:(FFF)V
+     452: sipush        2896
+     455: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     458: iconst_0
+     459: invokestatic  #234                // Method org/lwjgl/opengl/GL11.glDepthMask:(Z)V
+     462: sipush        2929
+     465: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     468: sipush        3042
+     471: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     474: sipush        770
+     477: sipush        771
+     480: iconst_1
+     481: iconst_0
+     482: invokestatic  #369                // Method net/minecraft/client/renderer/OpenGlHelper.func_148821_a:(IIII)V
+     485: aload         10
+     487: getstatic     #409                // Field net/minecraft/client/renderer/texture/TextureMap.field_110576_c:Lnet/minecraft/util/ResourceLocation;
+     490: invokevirtual #413                // Method net/minecraft/client/renderer/texture/TextureManager.func_110577_a:(Lnet/minecraft/util/ResourceLocation;)V
+     493: getstatic     #372                // Field net/minecraft/client/renderer/OpenGlHelper.field_77476_b:I
+     496: ldc_w         #373                // float 240.0f
+     499: ldc_w         #373                // float 240.0f
+     502: invokestatic  #377                // Method net/minecraft/client/renderer/OpenGlHelper.func_77475_a:(IFF)V
+     505: fconst_1
+     506: fconst_1
+     507: fconst_1
+     508: fload         21
+     510: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     513: fconst_1
+     514: fconst_1
+     515: fconst_1
+     516: fload         21
+     518: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     521: ldc_w         #402                // float -1.0f
+     524: ldc_w         #402                // float -1.0f
+     527: fconst_1
+     528: invokestatic  #226                // Method org/lwjgl/opengl/GL11.glScalef:(FFF)V
+     531: ldc_w         #534                // float 0.0625f
+     534: fstore        22
+     536: fload         22
+     538: fload         22
+     540: fload         22
+     542: invokestatic  #226                // Method org/lwjgl/opengl/GL11.glScalef:(FFF)V
+     545: aload         10
+     547: getstatic     #409                // Field net/minecraft/client/renderer/texture/TextureMap.field_110576_c:Lnet/minecraft/util/ResourceLocation;
+     550: invokevirtual #413                // Method net/minecraft/client/renderer/texture/TextureManager.func_110577_a:(Lnet/minecraft/util/ResourceLocation;)V
+     553: getstatic     #415                // Field ITEM_RENDERER:Lnet/minecraft/client/renderer/entity/RenderItem;
+     556: bipush        -8
+     558: bipush        -8
+     560: aload         14
+     562: bipush        16
+     564: bipush        16
+     566: invokevirtual #425                // Method net/minecraft/client/renderer/entity/RenderItem.func_94149_a:(IILnet/minecraft/util/IIcon;II)V
+     569: sipush        3042
+     572: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     575: sipush        2929
+     578: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     581: iconst_1
+     582: invokestatic  #234                // Method org/lwjgl/opengl/GL11.glDepthMask:(Z)V
+     585: sipush        2896
+     588: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     591: fconst_1
+     592: fconst_1
+     593: fconst_1
+     594: fconst_1
+     595: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     598: invokestatic  #139                // Method org/lwjgl/opengl/GL11.glPopMatrix:()V
+     601: aload         7
+     603: getfield      #174                // Field net/minecraft/client/multiplayer/WorldClient.field_72984_F:Lnet/minecraft/profiler/Profiler;
+     606: invokevirtual #302                // Method net/minecraft/profiler/Profiler.func_76319_b:()V
+     609: return
+
+  public static void renderQuestOffer(got.common.entity.other.GOTEntityNPC, double, double, double);
+    Code:
+       0: getstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+       3: getfield      #168                // Field net/minecraft/client/Minecraft.field_71441_e:Lnet/minecraft/client/multiplayer/WorldClient;
+       6: astore        7
+       8: aload         7
+      10: getfield      #174                // Field net/minecraft/client/multiplayer/WorldClient.field_72984_F:Lnet/minecraft/profiler/Profiler;
+      13: ldc_w         #566                // String renderMiniquestoffer
+      16: invokevirtual #181                // Method net/minecraft/profiler/Profiler.func_76320_a:(Ljava/lang/String;)V
+      19: aload_0
+      20: invokevirtual #84                 // Method got/common/entity/other/GOTEntityNPC.func_70089_S:()Z
+      23: ifeq          377
+      26: aload_0
+      27: invokevirtual #570                // Method got/common/entity/other/GOTEntityNPC.getQuestInfo:()Lgot/common/entity/other/info/GOTQuestInfo;
+      30: invokevirtual #575                // Method got/common/entity/other/info/GOTQuestInfo.isClientIsOffering:()Z
+      33: ifeq          377
+      36: aload_0
+      37: invokestatic  #333                // Method got/client/GOTSpeechClient.hasSpeech:(Lgot/common/entity/other/GOTEntityNPC;)Z
+      40: ifne          377
+      43: getstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+      46: getfield      #462                // Field net/minecraft/client/Minecraft.field_71439_g:Lnet/minecraft/client/entity/EntityClientPlayerMP;
+      49: astore        8
+      51: getstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+      54: getfield      #452                // Field net/minecraft/client/Minecraft.field_71451_h:Lnet/minecraft/entity/EntityLivingBase;
+      57: aload_0
+      58: invokevirtual #456                // Method net/minecraft/entity/EntityLivingBase.func_70032_d:(Lnet/minecraft/entity/Entity;)F
+      61: fstore        9
+      63: fload         9
+      65: f2d
+      66: ldc2_w        #576                // double 16.0d
+      69: dcmpg
+      70: ifgt          377
+      73: aload         8
+      75: invokestatic  #468                // Method got/common/GOTLevelData.getData:(Lnet/minecraft/entity/player/EntityPlayer;)Lgot/common/GOTPlayerData;
+      78: aload_0
+      79: iconst_1
+      80: invokevirtual #474                // Method got/common/GOTPlayerData.getMiniQuestsForEntity:(Lnet/minecraft/entity/Entity;Z)Ljava/util/List;
+      83: invokeinterface #477,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+      88: ifeq          377
+      91: getstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+      94: invokevirtual #338                // Method net/minecraft/client/Minecraft.func_110434_K:()Lnet/minecraft/client/renderer/texture/TextureManager;
+      97: astore        10
+      99: getstatic     #185                // Field net/minecraft/client/renderer/entity/RenderManager.field_78727_a:Lnet/minecraft/client/renderer/entity/RenderManager;
+     102: astore        11
+     104: invokestatic  #582                // Method got/common/item/other/GOTItemQuestBook.getQuestOfferIcon:()Lnet/minecraft/util/IIcon;
+     107: astore        12
+     109: aload         12
+     111: invokeinterface #503,  1          // InterfaceMethod net/minecraft/util/IIcon.func_94209_e:()F
+     116: pop
+     117: aload         12
+     119: invokeinterface #506,  1          // InterfaceMethod net/minecraft/util/IIcon.func_94212_f:()F
+     124: pop
+     125: aload         12
+     127: invokeinterface #509,  1          // InterfaceMethod net/minecraft/util/IIcon.func_94206_g:()F
+     132: pop
+     133: aload         12
+     135: invokeinterface #512,  1          // InterfaceMethod net/minecraft/util/IIcon.func_94210_h:()F
+     140: pop
+     141: ldc_w         #583                // float 0.75f
+     144: fstore        13
+     146: fconst_1
+     147: fstore        14
+     149: aload_0
+     150: invokevirtual #570                // Method got/common/entity/other/GOTEntityNPC.getQuestInfo:()Lgot/common/entity/other/info/GOTQuestInfo;
+     153: invokevirtual #586                // Method got/common/entity/other/info/GOTQuestInfo.getClientOfferColor:()I
+     156: istore        15
+     158: new           #588                // class java/awt/Color
+     161: dup
+     162: iload         15
+     164: invokespecial #590                // Method java/awt/Color."<init>":(I)V
+     167: aconst_null
+     168: invokevirtual #594                // Method java/awt/Color.getColorComponents:([F)[F
+     171: astore        16
+     173: invokestatic  #27                 // Method org/lwjgl/opengl/GL11.glPushMatrix:()V
+     176: dload_1
+     177: d2f
+     178: dload_3
+     179: d2f
+     180: aload_0
+     181: getfield      #523                // Field got/common/entity/other/GOTEntityNPC.field_70131_O:F
+     184: fadd
+     185: fconst_1
+     186: fadd
+     187: dload         5
+     189: d2f
+     190: invokestatic  #210                // Method org/lwjgl/opengl/GL11.glTranslatef:(FFF)V
+     193: fconst_0
+     194: fconst_1
+     195: fconst_0
+     196: invokestatic  #213                // Method org/lwjgl/opengl/GL11.glNormal3f:(FFF)V
+     199: aload         11
+     201: getfield      #216                // Field net/minecraft/client/renderer/entity/RenderManager.field_78735_i:F
+     204: fneg
+     205: fconst_0
+     206: fconst_1
+     207: fconst_0
+     208: invokestatic  #220                // Method org/lwjgl/opengl/GL11.glRotatef:(FFFF)V
+     211: aload         11
+     213: getfield      #223                // Field net/minecraft/client/renderer/entity/RenderManager.field_78732_j:F
+     216: fconst_1
+     217: fconst_0
+     218: fconst_0
+     219: invokestatic  #220                // Method org/lwjgl/opengl/GL11.glRotatef:(FFFF)V
+     222: fload         13
+     224: fload         13
+     226: fload         13
+     228: invokestatic  #226                // Method org/lwjgl/opengl/GL11.glScalef:(FFF)V
+     231: sipush        2896
+     234: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     237: sipush        3042
+     240: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     243: sipush        770
+     246: sipush        771
+     249: iconst_1
+     250: iconst_0
+     251: invokestatic  #369                // Method net/minecraft/client/renderer/OpenGlHelper.func_148821_a:(IIII)V
+     254: aload         10
+     256: getstatic     #409                // Field net/minecraft/client/renderer/texture/TextureMap.field_110576_c:Lnet/minecraft/util/ResourceLocation;
+     259: invokevirtual #413                // Method net/minecraft/client/renderer/texture/TextureManager.func_110577_a:(Lnet/minecraft/util/ResourceLocation;)V
+     262: getstatic     #372                // Field net/minecraft/client/renderer/OpenGlHelper.field_77476_b:I
+     265: ldc_w         #373                // float 240.0f
+     268: ldc_w         #373                // float 240.0f
+     271: invokestatic  #377                // Method net/minecraft/client/renderer/OpenGlHelper.func_77475_a:(IFF)V
+     274: fconst_1
+     275: fconst_1
+     276: fconst_1
+     277: fload         14
+     279: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     282: fconst_1
+     283: fconst_1
+     284: fconst_1
+     285: fload         14
+     287: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     290: ldc_w         #402                // float -1.0f
+     293: ldc_w         #402                // float -1.0f
+     296: fconst_1
+     297: invokestatic  #226                // Method org/lwjgl/opengl/GL11.glScalef:(FFF)V
+     300: ldc_w         #534                // float 0.0625f
+     303: fstore        17
+     305: fload         17
+     307: fload         17
+     309: fload         17
+     311: invokestatic  #226                // Method org/lwjgl/opengl/GL11.glScalef:(FFF)V
+     314: aload         10
+     316: getstatic     #409                // Field net/minecraft/client/renderer/texture/TextureMap.field_110576_c:Lnet/minecraft/util/ResourceLocation;
+     319: invokevirtual #413                // Method net/minecraft/client/renderer/texture/TextureManager.func_110577_a:(Lnet/minecraft/util/ResourceLocation;)V
+     322: aload         16
+     324: iconst_0
+     325: faload
+     326: aload         16
+     328: iconst_1
+     329: faload
+     330: aload         16
+     332: iconst_2
+     333: faload
+     334: fload         14
+     336: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     339: getstatic     #415                // Field ITEM_RENDERER:Lnet/minecraft/client/renderer/entity/RenderItem;
+     342: bipush        -8
+     344: bipush        -8
+     346: aload         12
+     348: bipush        16
+     350: bipush        16
+     352: invokevirtual #425                // Method net/minecraft/client/renderer/entity/RenderItem.func_94149_a:(IILnet/minecraft/util/IIcon;II)V
+     355: sipush        3042
+     358: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     361: sipush        2896
+     364: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     367: fconst_1
+     368: fconst_1
+     369: fconst_1
+     370: fconst_1
+     371: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     374: invokestatic  #139                // Method org/lwjgl/opengl/GL11.glPopMatrix:()V
+     377: aload         7
+     379: getfield      #174                // Field net/minecraft/client/multiplayer/WorldClient.field_72984_F:Lnet/minecraft/profiler/Profiler;
+     382: invokevirtual #302                // Method net/minecraft/profiler/Profiler.func_76319_b:()V
+     385: return
+
+  private static void renderSpeech(net.minecraft.entity.EntityLivingBase, java.lang.String, float, double, double, double);
+    Code:
+       0: getstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+       3: getfield      #168                // Field net/minecraft/client/Minecraft.field_71441_e:Lnet/minecraft/client/multiplayer/WorldClient;
+       6: astore        9
+       8: aload         9
+      10: getfield      #174                // Field net/minecraft/client/multiplayer/WorldClient.field_72984_F:Lnet/minecraft/profiler/Profiler;
+      13: ldc_w         #599                // String renderNPCSpeech
+      16: invokevirtual #181                // Method net/minecraft/profiler/Profiler.func_76320_a:(Ljava/lang/String;)V
+      19: getstatic     #185                // Field net/minecraft/client/renderer/entity/RenderManager.field_78727_a:Lnet/minecraft/client/renderer/entity/RenderManager;
+      22: astore        10
+      24: getstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+      27: getfield      #382                // Field net/minecraft/client/Minecraft.field_71466_p:Lnet/minecraft/client/gui/FontRenderer;
+      30: astore        11
+      32: getstatic     #190                // Field net/minecraft/client/renderer/entity/RendererLivingEntity.NAME_TAG_RANGE:F
+      35: f2d
+      36: dstore        12
+      38: aload_0
+      39: aload         10
+      41: getfield      #194                // Field net/minecraft/client/renderer/entity/RenderManager.field_78734_h:Lnet/minecraft/entity/EntityLivingBase;
+      44: invokevirtual #200                // Method net/minecraft/entity/EntityLivingBase.func_70068_e:(Lnet/minecraft/entity/Entity;)D
+      47: dstore        14
+      49: dload         14
+      51: dload         12
+      53: dload         12
+      55: dmul
+      56: dcmpg
+      57: ifgt          616
+      60: new           #601                // class java/lang/StringBuilder
+      63: dup
+      64: invokespecial #602                // Method java/lang/StringBuilder."<init>":()V
+      67: getstatic     #608                // Field net/minecraft/util/EnumChatFormatting.YELLOW:Lnet/minecraft/util/EnumChatFormatting;
+      70: invokevirtual #612                // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+      73: aload_0
+      74: invokevirtual #615                // Method net/minecraft/entity/EntityLivingBase.func_70005_c_:()Ljava/lang/String;
+      77: invokevirtual #618                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      80: invokevirtual #621                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      83: astore        16
+      85: aload         11
+      87: getfield      #624                // Field net/minecraft/client/gui/FontRenderer.field_78288_b:I
+      90: istore        17
+      92: sipush        150
+      95: istore        18
+      97: aload         11
+      99: aload_1
+     100: iload         18
+     102: invokevirtual #628                // Method net/minecraft/client/gui/FontRenderer.func_78271_c:(Ljava/lang/String;I)Ljava/util/List;
+     105: astore        19
+     107: ldc_w         #629                // float 0.8f
+     110: fstore        20
+     112: fload_2
+     113: ldc           #123                // float 0.1f
+     115: fcmpg
+     116: ifge          128
+     119: fload         20
+     121: fload_2
+     122: ldc           #123                // float 0.1f
+     124: fdiv
+     125: fmul
+     126: fstore        20
+     128: fload         20
+     130: ldc_w         #630                // float 255.0f
+     133: fmul
+     134: f2i
+     135: istore        21
+     137: invokestatic  #27                 // Method org/lwjgl/opengl/GL11.glPushMatrix:()V
+     140: dload_3
+     141: d2f
+     142: dload         5
+     144: d2f
+     145: aload_0
+     146: getfield      #205                // Field net/minecraft/entity/EntityLivingBase.field_70131_O:F
+     149: fadd
+     150: ldc_w         #378                // float 0.3f
+     153: fadd
+     154: dload         7
+     156: d2f
+     157: invokestatic  #210                // Method org/lwjgl/opengl/GL11.glTranslatef:(FFF)V
+     160: fconst_0
+     161: fconst_1
+     162: fconst_0
+     163: invokestatic  #213                // Method org/lwjgl/opengl/GL11.glNormal3f:(FFF)V
+     166: aload         10
+     168: getfield      #216                // Field net/minecraft/client/renderer/entity/RenderManager.field_78735_i:F
+     171: fneg
+     172: fconst_0
+     173: fconst_1
+     174: fconst_0
+     175: invokestatic  #220                // Method org/lwjgl/opengl/GL11.glRotatef:(FFFF)V
+     178: aload         10
+     180: getfield      #223                // Field net/minecraft/client/renderer/entity/RenderManager.field_78732_j:F
+     183: fconst_1
+     184: fconst_0
+     185: fconst_0
+     186: invokestatic  #220                // Method org/lwjgl/opengl/GL11.glRotatef:(FFFF)V
+     189: sipush        2896
+     192: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     195: iconst_0
+     196: invokestatic  #234                // Method org/lwjgl/opengl/GL11.glDepthMask:(Z)V
+     199: sipush        2929
+     202: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     205: sipush        3042
+     208: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     211: sipush        770
+     214: sipush        771
+     217: iconst_1
+     218: iconst_0
+     219: invokestatic  #369                // Method net/minecraft/client/renderer/OpenGlHelper.func_148821_a:(IIII)V
+     222: getstatic     #372                // Field net/minecraft/client/renderer/OpenGlHelper.field_77476_b:I
+     225: ldc_w         #373                // float 240.0f
+     228: ldc_w         #373                // float 240.0f
+     231: invokestatic  #377                // Method net/minecraft/client/renderer/OpenGlHelper.func_77475_a:(IFF)V
+     234: fconst_1
+     235: fconst_1
+     236: fconst_1
+     237: fconst_1
+     238: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     241: fconst_1
+     242: fconst_1
+     243: fconst_1
+     244: fconst_1
+     245: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     248: getstatic     #247                // Field net/minecraft/client/renderer/Tessellator.field_78398_a:Lnet/minecraft/client/renderer/Tessellator;
+     251: astore        22
+     253: ldc_w         #389                // float 0.015f
+     256: fstore        23
+     258: fload         23
+     260: fneg
+     261: fload         23
+     263: fneg
+     264: fload         23
+     266: invokestatic  #226                // Method org/lwjgl/opengl/GL11.glScalef:(FFF)V
+     269: fconst_0
+     270: iload         17
+     272: ineg
+     273: iconst_3
+     274: aload         19
+     276: invokeinterface #633,  1          // InterfaceMethod java/util/List.size:()I
+     281: iadd
+     282: imul
+     283: i2f
+     284: fconst_0
+     285: invokestatic  #210                // Method org/lwjgl/opengl/GL11.glTranslatef:(FFF)V
+     288: sipush        3553
+     291: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     294: aload         22
+     296: invokevirtual #250                // Method net/minecraft/client/renderer/Tessellator.func_78382_b:()V
+     299: aload         22
+     301: fconst_0
+     302: fconst_0
+     303: fconst_0
+     304: ldc_w         #390                // float 0.25f
+     307: fload         20
+     309: fmul
+     310: invokevirtual #393                // Method net/minecraft/client/renderer/Tessellator.func_78369_a:(FFFF)V
+     313: aload         11
+     315: aload         16
+     317: invokevirtual #388                // Method net/minecraft/client/gui/FontRenderer.func_78256_a:(Ljava/lang/String;)I
+     320: iconst_2
+     321: idiv
+     322: istore        24
+     324: aload         22
+     326: iload         24
+     328: ineg
+     329: iconst_1
+     330: isub
+     331: i2d
+     332: dconst_0
+     333: dconst_0
+     334: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     337: aload         22
+     339: iload         24
+     341: ineg
+     342: iconst_1
+     343: isub
+     344: i2d
+     345: iload         17
+     347: i2d
+     348: dconst_0
+     349: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     352: aload         22
+     354: iload         24
+     356: iconst_1
+     357: iadd
+     358: i2d
+     359: iload         17
+     361: i2d
+     362: dconst_0
+     363: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     366: aload         22
+     368: iload         24
+     370: iconst_1
+     371: iadd
+     372: i2d
+     373: dconst_0
+     374: dconst_0
+     375: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     378: aload         22
+     380: invokevirtual #269                // Method net/minecraft/client/renderer/Tessellator.func_78381_a:()I
+     383: pop
+     384: sipush        3553
+     387: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     390: aload         11
+     392: aload         16
+     394: iload         24
+     396: ineg
+     397: iconst_0
+     398: iload         21
+     400: bipush        24
+     402: ishl
+     403: ldc_w         #634                // int 16777215
+     406: ior
+     407: invokevirtual #400                // Method net/minecraft/client/gui/FontRenderer.func_78276_b:(Ljava/lang/String;III)I
+     410: pop
+     411: fconst_0
+     412: iload         17
+     414: i2f
+     415: fconst_0
+     416: invokestatic  #210                // Method org/lwjgl/opengl/GL11.glTranslatef:(FFF)V
+     419: aload         19
+     421: invokeinterface #61,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+     426: astore        25
+     428: aload         25
+     430: invokeinterface #69,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+     435: ifeq          584
+     438: aload         25
+     440: invokeinterface #73,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     445: checkcast     #363                // class java/lang/String
+     448: astore        26
+     450: fconst_0
+     451: iload         17
+     453: i2f
+     454: fconst_0
+     455: invokestatic  #210                // Method org/lwjgl/opengl/GL11.glTranslatef:(FFF)V
+     458: sipush        3553
+     461: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     464: aload         22
+     466: invokevirtual #250                // Method net/minecraft/client/renderer/Tessellator.func_78382_b:()V
+     469: aload         22
+     471: fconst_0
+     472: fconst_0
+     473: fconst_0
+     474: ldc_w         #390                // float 0.25f
+     477: fload         20
+     479: fmul
+     480: invokevirtual #393                // Method net/minecraft/client/renderer/Tessellator.func_78369_a:(FFFF)V
+     483: aload         11
+     485: aload         26
+     487: invokevirtual #388                // Method net/minecraft/client/gui/FontRenderer.func_78256_a:(Ljava/lang/String;)I
+     490: iconst_2
+     491: idiv
+     492: istore        27
+     494: aload         22
+     496: iload         27
+     498: ineg
+     499: iconst_1
+     500: isub
+     501: i2d
+     502: dconst_0
+     503: dconst_0
+     504: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     507: aload         22
+     509: iload         27
+     511: ineg
+     512: iconst_1
+     513: isub
+     514: i2d
+     515: iload         17
+     517: i2d
+     518: dconst_0
+     519: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     522: aload         22
+     524: iload         27
+     526: iconst_1
+     527: iadd
+     528: i2d
+     529: iload         17
+     531: i2d
+     532: dconst_0
+     533: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     536: aload         22
+     538: iload         27
+     540: iconst_1
+     541: iadd
+     542: i2d
+     543: dconst_0
+     544: dconst_0
+     545: invokevirtual #261                // Method net/minecraft/client/renderer/Tessellator.func_78377_a:(DDD)V
+     548: aload         22
+     550: invokevirtual #269                // Method net/minecraft/client/renderer/Tessellator.func_78381_a:()I
+     553: pop
+     554: sipush        3553
+     557: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     560: aload         11
+     562: aload         26
+     564: iload         27
+     566: ineg
+     567: iconst_0
+     568: iload         21
+     570: bipush        24
+     572: ishl
+     573: ldc_w         #634                // int 16777215
+     576: ior
+     577: invokevirtual #400                // Method net/minecraft/client/gui/FontRenderer.func_78276_b:(Ljava/lang/String;III)I
+     580: pop
+     581: goto          428
+     584: sipush        3042
+     587: invokestatic  #230                // Method org/lwjgl/opengl/GL11.glDisable:(I)V
+     590: sipush        2929
+     593: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     596: iconst_1
+     597: invokestatic  #234                // Method org/lwjgl/opengl/GL11.glDepthMask:(Z)V
+     600: sipush        2896
+     603: invokestatic  #237                // Method org/lwjgl/opengl/GL11.glEnable:(I)V
+     606: fconst_1
+     607: fconst_1
+     608: fconst_1
+     609: fconst_1
+     610: invokestatic  #299                // Method org/lwjgl/opengl/GL11.glColor4f:(FFFF)V
+     613: invokestatic  #139                // Method org/lwjgl/opengl/GL11.glPopMatrix:()V
+     616: aload         9
+     618: getfield      #174                // Field net/minecraft/client/multiplayer/WorldClient.field_72984_F:Lnet/minecraft/profiler/Profiler;
+     621: invokevirtual #302                // Method net/minecraft/profiler/Profiler.func_76319_b:()V
+     624: return
+
+  static {};
+    Code:
+       0: new           #421                // class net/minecraft/client/renderer/entity/RenderItem
+       3: dup
+       4: invokespecial #647                // Method net/minecraft/client/renderer/entity/RenderItem."<init>":()V
+       7: putstatic     #415                // Field ITEM_RENDERER:Lnet/minecraft/client/renderer/entity/RenderItem;
+      10: invokestatic  #651                // Method net/minecraft/client/Minecraft.func_71410_x:()Lnet/minecraft/client/Minecraft;
+      13: putstatic     #164                // Field MINECRAFT:Lnet/minecraft/client/Minecraft;
+      16: return
+}

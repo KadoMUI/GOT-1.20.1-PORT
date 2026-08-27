@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#got:spawns_walruses",
+  "spawners": [
+    {
+      "type": "got:walrus",
+      "weight": 10,
+      "minCount": 2,
+      "maxCount": 5
+    }
+  ]
+}

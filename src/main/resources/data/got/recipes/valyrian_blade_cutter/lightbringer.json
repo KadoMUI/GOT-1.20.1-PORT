@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:valyrian_longsword"
+  },
+  "result": "got:lightbringer",
+  "count": 1
+}

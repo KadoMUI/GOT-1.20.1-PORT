@@ -35,14 +35,14 @@ public final class GOTQuestParityLedger {
             new Entry("Quest tracking", Status.COMPLETE, "Tracked quest UUID synced to client"),
             new Entry("Quest Book / tracker presentation", Status.MODERN_EQUIVALENT,
                     "Existing 1.20.1 quest UI and legacy assets"),
-            new Entry("Legendary quest content", Status.DEFERRED_CONTENT,
-                    "Pass 2/3: recover named-character definitions and exact rewards"),
-            new Entry("Jaqen welcome/tutorial quest", Status.DEFERRED_CONTENT,
-                    "Original GOTMiniQuestWelcome is stateful and will be recovered separately"),
-            new Entry("Player bounty quests", Status.DEFERRED_SYSTEM,
-                    "Requires player-bounty/crime subsystem"),
-            new Entry("Pickpocket quests", Status.DEFERRED_SYSTEM,
-                    "Requires pickpocket/crime subsystem")
+            new Entry("Legendary quest content", Status.MODERN_EQUIVALENT,
+                    "Named legendary quest definitions, rewards, offer bindings, and speech are implemented"),
+            new Entry("Jaqen welcome/tutorial quest", Status.MODERN_EQUIVALENT,
+                    "Jaqen tutorial sequence, rewards, interface milestones, dialogue, and despawn flow are implemented"),
+            new Entry("Player bounty quests", Status.MODERN_EQUIVALENT,
+                    "Faction bounty ledger, target selection and bounty-claim hooks restored"),
+            new Entry("Pickpocket quests", Status.MODERN_EQUIVALENT,
+                    "Sneak-interact pickpocket runtime restored; quest event hook is got:pickpocket")
         );
     }
 }

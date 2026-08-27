@@ -14,18 +14,27 @@ public final class GOTHiringRuleService {
     private GOTHiringRuleService() {}
 
     @Nullable
-    public static GOTHireDefinition definitionFor(Entity entity) {
+    public static GOTHireDefinition definitionFor(Entity entity) { return definitionFor(entity, false); }
+
+    @Nullable
+    public static GOTHireDefinition definitionFor(Entity entity, boolean mounted) {
         String roleId = GOTHiringRoleResolver.roleId(entity);
         if (roleId == null || roleId.isBlank()) return null;
-
+        GOTHireDefinition fallback = null;
         for (GOTHireDefinition definition : GOTHiringCatalog.all()) {
-            if (definition.roleIds().contains(roleId)) return definition;
+            if (!definition.roleIds().contains(roleId)) continue;
+            if (definition.mounted() == mounted) return definition;
+            if (fallback == null) fallback = definition;
         }
-        return null;
+        return mounted ? null : fallback;
     }
 
-    public static Result evaluate(ServerPlayer player, Entity entity) {
-        GOTHireDefinition definition = definitionFor(entity);
+    public static boolean hasMountedVariant(Entity entity) { return definitionFor(entity, true) != null; }
+
+    public static Result evaluate(ServerPlayer player, Entity entity) { return evaluate(player, entity, false); }
+
+    public static Result evaluate(ServerPlayer player, Entity entity, boolean mounted) {
+        GOTHireDefinition definition = definitionFor(entity, mounted);
         if (definition == null) {
             return Result.fail(Component.literal("This NPC is not available for hire."));
         }

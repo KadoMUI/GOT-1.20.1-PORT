@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S",
+    "S"
+  ],
+  "key": {
+    "S": {
+      "item": "got:basalt_brick_slab"
+    }
+  },
+  "result": {
+    "item": "got:carved_basalt_bricks",
+    "count": 1
+  }
+}

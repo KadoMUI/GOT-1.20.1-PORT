@@ -20,7 +20,12 @@ public final class GOTGuiHire extends GOTGuiHireBase {
                     C2SHiredNpcActionPacket.Action.HIRE, "", 0)
             ));
         hire.active=snapshot.hireAllowed();
-        button("Cancel", 92, 132, 66, b -> onClose());
+        if (snapshot.mountedVariant()) {
+            var mounted=button("Hire Mounted", 92, 132, 76, b ->
+                GOTNetwork.CHANNEL.sendToServer(new C2SHiredNpcActionPacket(snapshot.entityId(),
+                    C2SHiredNpcActionPacket.Action.HIRE, "mounted", 0)));
+            mounted.active=snapshot.mountedHireAllowed();
+        } else button("Cancel", 92, 132, 66, b -> onClose());
     }
 
     @Override

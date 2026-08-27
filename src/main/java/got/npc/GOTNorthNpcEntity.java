@@ -149,9 +149,9 @@ public class GOTNorthNpcEntity extends PathfinderMob implements net.minecraft.wo
         if (spawnType == MobSpawnType.NATURAL || spawnType == MobSpawnType.CHUNK_GENERATION) {
             GOTBiomeMetadata metadata = PlanetosBiomeManager.getMetadata(blockPosition().getX(), blockPosition().getZ());
             NorthNpcRole role = metadata != null && (metadata.id().equals("north_wild") || metadata.id().equals("skagos"))
-                    ? randomHillmanFighter(random) : NorthNpcRole.NORTH_MAN;
-            boolean child = role == NorthNpcRole.NORTH_MAN && random.nextInt(7) == 0;
-            prepareForSpawn(role, null, child, blockPosition(), 24, "");
+                    ? randomHillmanFighter(random)
+                    : (random.nextInt(15) < 10 ? NorthNpcRole.NORTH_LEVYMAN : NorthNpcRole.NORTH_LEVYMAN_ARCHER);
+            prepareForSpawn(role, false, false, blockPosition(), 24, "");
         } else if (getCustomName() == null) {
             prepareForSpawn(getRole(), null, false, blockPosition(), 24, "");
         }

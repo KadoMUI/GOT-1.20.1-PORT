@@ -1,0 +1,14 @@
+{
+  "roles": [
+    "dothraki_archer"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 60.0,
+  "pledge_exclusive": false,
+  "initial_cost": 15,
+  "legacy_entity": "GOTEntityDothrakiArcher",
+  "legacy_group": "DOTHRAKI",
+  "mount_type": "GOTEntityHorse",
+  "mount_name": "Rider",
+  "mount_armor": ""
+}

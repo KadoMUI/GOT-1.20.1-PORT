@@ -1,0 +1,119 @@
+Compiled from "GOTMiniQuestKillEntity.java"
+public class got.common.quest.GOTMiniQuestKillEntity extends got.common.quest.GOTMiniQuestKill {
+  private java.lang.Class<? extends net.minecraft.entity.Entity> entityType;
+
+  public got.common.quest.GOTMiniQuestKillEntity(got.common.GOTPlayerData);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #15                 // Method got/common/quest/GOTMiniQuestKill."<init>":(Lgot/common/GOTPlayerData;)V
+       5: return
+
+  public void handleEvent(got.common.quest.GOTMiniQuestEvent);
+    Code:
+       0: return
+
+  public java.lang.String getKillTargetName();
+    Code:
+       0: aload_0
+       1: getfield      #27                 // Field entityType:Ljava/lang/Class;
+       4: invokestatic  #33                 // Method got/common/entity/GOTEntityRegistry.getStringFromClass:(Ljava/lang/Class;)Ljava/lang/String;
+       7: astore_1
+       8: new           #35                 // class java/lang/StringBuilder
+      11: dup
+      12: invokespecial #38                 // Method java/lang/StringBuilder."<init>":()V
+      15: ldc           #40                 // String entity.
+      17: invokevirtual #44                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      20: aload_1
+      21: invokevirtual #44                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      24: ldc           #46                 // String .name
+      26: invokevirtual #44                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      29: invokevirtual #49                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      32: invokestatic  #55                 // Method net/minecraft/util/StatCollector.func_74838_a:(Ljava/lang/String;)Ljava/lang/String;
+      35: areturn
+
+  public boolean isValidQuest();
+    Code:
+       0: aload_0
+       1: invokespecial #61                 // Method got/common/quest/GOTMiniQuestKill.isValidQuest:()Z
+       4: ifeq          30
+       7: aload_0
+       8: getfield      #27                 // Field entityType:Ljava/lang/Class;
+      11: ifnull        30
+      14: ldc           #63                 // class net/minecraft/entity/EntityLivingBase
+      16: aload_0
+      17: getfield      #27                 // Field entityType:Ljava/lang/Class;
+      20: invokevirtual #69                 // Method java/lang/Class.isAssignableFrom:(Ljava/lang/Class;)Z
+      23: ifeq          30
+      26: iconst_1
+      27: goto          31
+      30: iconst_0
+      31: ireturn
+
+  public void onKill(net.minecraft.entity.player.EntityPlayer, net.minecraft.entity.EntityLivingBase);
+    Code:
+       0: aload_0
+       1: getfield      #75                 // Field killCount:I
+       4: aload_0
+       5: getfield      #78                 // Field killTarget:I
+       8: if_icmpge     43
+      11: aload_0
+      12: getfield      #27                 // Field entityType:Ljava/lang/Class;
+      15: aload_2
+      16: invokevirtual #84                 // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      19: invokevirtual #69                 // Method java/lang/Class.isAssignableFrom:(Ljava/lang/Class;)Z
+      22: ifeq          43
+      25: aload_0
+      26: dup
+      27: getfield      #75                 // Field killCount:I
+      30: iconst_1
+      31: iadd
+      32: putfield      #75                 // Field killCount:I
+      35: aload_0
+      36: getfield      #87                 // Field playerData:Lgot/common/GOTPlayerData;
+      39: aload_0
+      40: invokevirtual #93                 // Method got/common/GOTPlayerData.updateMiniQuest:(Lgot/common/quest/GOTMiniQuest;)V
+      43: return
+
+  public void onKilledByPlayer(net.minecraft.entity.player.EntityPlayer, net.minecraft.entity.player.EntityPlayer);
+    Code:
+       0: return
+
+  public void onPlayerTick();
+    Code:
+       0: return
+
+  public void readFromNBT(net.minecraft.nbt.NBTTagCompound);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #105                // Method got/common/quest/GOTMiniQuestKill.readFromNBT:(Lnet/minecraft/nbt/NBTTagCompound;)V
+       5: aload_0
+       6: aload_1
+       7: ldc           #107                // String KillClass
+       9: invokevirtual #112                // Method net/minecraft/nbt/NBTTagCompound.func_74779_i:(Ljava/lang/String;)Ljava/lang/String;
+      12: invokestatic  #116                // Method got/common/entity/GOTEntityRegistry.getClassFromString:(Ljava/lang/String;)Ljava/lang/Class;
+      15: putfield      #27                 // Field entityType:Ljava/lang/Class;
+      18: return
+
+  public void writeToNBT(net.minecraft.nbt.NBTTagCompound);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #121                // Method got/common/quest/GOTMiniQuestKill.writeToNBT:(Lnet/minecraft/nbt/NBTTagCompound;)V
+       5: aload_1
+       6: ldc           #107                // String KillClass
+       8: aload_0
+       9: getfield      #27                 // Field entityType:Ljava/lang/Class;
+      12: invokestatic  #33                 // Method got/common/entity/GOTEntityRegistry.getStringFromClass:(Ljava/lang/Class;)Ljava/lang/String;
+      15: invokevirtual #125                // Method net/minecraft/nbt/NBTTagCompound.func_74778_a:(Ljava/lang/String;Ljava/lang/String;)V
+      18: return
+
+  static java.lang.Class access$002(got.common.quest.GOTMiniQuestKillEntity, java.lang.Class);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: dup_x1
+       3: putfield      #27                 // Field entityType:Ljava/lang/Class;
+       6: areturn
+}

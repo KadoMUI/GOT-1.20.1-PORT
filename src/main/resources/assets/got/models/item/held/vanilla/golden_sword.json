@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "got:item/vlarge-2x/swordgold"
+    "layer0": "got:item/vlarge-2x/swordGold"
   }
 }

@@ -1,5 +1,7 @@
 package got.npc.hiring.command;
 
+import got.npc.hiring.GOTHiredMountController;
+
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.PathfinderMob;
@@ -45,8 +47,7 @@ public final class GOTCommandHornService {
                     affected++;
                 }
                 case SUMMON -> {
-                    mob.teleportTo(player.getX(), player.getY(), player.getZ());
-                    mob.getNavigation().stop();
+                    GOTHiredMountController.teleportUnit(mob, player.getX(), player.getY(), player.getZ());
                     affected++;
                 }
                 default -> {}

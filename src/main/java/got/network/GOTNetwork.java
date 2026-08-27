@@ -6,7 +6,7 @@ import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.simple.SimpleChannel;
 
 public final class GOTNetwork {
-    private static final String PROTOCOL = "11";
+    private static final String PROTOCOL = "20";
 
     public static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(
             ResourceLocation.fromNamespaceAndPath(GOTMod.MOD_ID, "main"),
@@ -47,6 +47,18 @@ public final class GOTNetwork {
                 C2SFastTravelPacket::encode,
                 C2SFastTravelPacket::decode,
                 C2SFastTravelPacket::handle);
+        CHANNEL.registerMessage(id++, C2SMapTeleportPacket.class,
+                C2SMapTeleportPacket::encode,
+                C2SMapTeleportPacket::decode,
+                C2SMapTeleportPacket::handle);
+        CHANNEL.registerMessage(id++, S2CFastTravelDataPacket.class,
+                S2CFastTravelDataPacket::encode, S2CFastTravelDataPacket::decode, S2CFastTravelDataPacket::handle);
+        CHANNEL.registerMessage(id++, C2SCreateCustomWaypointPacket.class,
+                C2SCreateCustomWaypointPacket::encode, C2SCreateCustomWaypointPacket::decode, C2SCreateCustomWaypointPacket::handle);
+        CHANNEL.registerMessage(id++, C2SRenameCustomWaypointPacket.class,
+                C2SRenameCustomWaypointPacket::encode, C2SRenameCustomWaypointPacket::decode, C2SRenameCustomWaypointPacket::handle);
+        CHANNEL.registerMessage(id++, C2SDeleteCustomWaypointPacket.class,
+                C2SDeleteCustomWaypointPacket::encode, C2SDeleteCustomWaypointPacket::decode, C2SDeleteCustomWaypointPacket::handle);
         CHANNEL.registerMessage(id++, S2CFactionDataPacket.class,
                 S2CFactionDataPacket::encode,
                 S2CFactionDataPacket::decode,
@@ -75,6 +87,12 @@ public final class GOTNetwork {
                 C2SQuestActionPacket::encode,
                 C2SQuestActionPacket::decode,
                 C2SQuestActionPacket::handle);
+        CHANNEL.registerMessage(id++, C2SJaqenTutorialPacket.class,
+                C2SJaqenTutorialPacket::encode, C2SJaqenTutorialPacket::decode, C2SJaqenTutorialPacket::handle);
+        CHANNEL.registerMessage(id++, S2CJaqenTutorialOfferPacket.class,
+                S2CJaqenTutorialOfferPacket::encode, S2CJaqenTutorialOfferPacket::decode, S2CJaqenTutorialOfferPacket::handle);
+        CHANNEL.registerMessage(id++, S2CQuestOfferIndicatorPacket.class,
+                S2CQuestOfferIndicatorPacket::encode, S2CQuestOfferIndicatorPacket::decode, S2CQuestOfferIndicatorPacket::handle);
         CHANNEL.registerMessage(id++, S2CBannerClaimDataPacket.class,
                 S2CBannerClaimDataPacket::encode,
                 S2CBannerClaimDataPacket::decode,
@@ -127,9 +145,29 @@ public final class GOTNetwork {
                 S2CAchievementDataPacket::encode,
                 S2CAchievementDataPacket::decode,
                 S2CAchievementDataPacket::handle);
+        CHANNEL.registerMessage(id++, C2SRequestLoreDataPacket.class,
+                C2SRequestLoreDataPacket::encode, C2SRequestLoreDataPacket::decode, C2SRequestLoreDataPacket::handle);
+        CHANNEL.registerMessage(id++, S2CLoreDataPacket.class,
+                S2CLoreDataPacket::encode, S2CLoreDataPacket::decode, S2CLoreDataPacket::handle);
         CHANNEL.registerMessage(id++, S2CNpcSpeechPacket.class,
                 S2CNpcSpeechPacket::encode,
                 S2CNpcSpeechPacket::decode,
                 S2CNpcSpeechPacket::handle);
+        CHANNEL.registerMessage(id++, C2SBrandingNamePacket.class,
+                C2SBrandingNamePacket::encode, C2SBrandingNamePacket::decode, C2SBrandingNamePacket::handle);
+        CHANNEL.registerMessage(id++, S2CInvasionWatchPacket.class,
+                S2CInvasionWatchPacket::encode,
+                S2CInvasionWatchPacket::decode,
+                S2CInvasionWatchPacket::handle);
+        CHANNEL.registerMessage(id++, S2COpenGOTMapPacket.class,
+                S2COpenGOTMapPacket::encode, S2COpenGOTMapPacket::decode, S2COpenGOTMapPacket::handle);
+        CHANNEL.registerMessage(id++, C2SRequestCapeDataPacket.class,
+                C2SRequestCapeDataPacket::encode, C2SRequestCapeDataPacket::decode, C2SRequestCapeDataPacket::handle);
+        CHANNEL.registerMessage(id++, C2SSelectCapePacket.class,
+                C2SSelectCapePacket::encode, C2SSelectCapePacket::decode, C2SSelectCapePacket::handle);
+        CHANNEL.registerMessage(id++, S2CCapeDataPacket.class,
+                S2CCapeDataPacket::encode, S2CCapeDataPacket::decode, S2CCapeDataPacket::handle);
+        CHANNEL.registerMessage(id++, S2CPlayerCapePacket.class,
+                S2CPlayerCapePacket::encode, S2CPlayerCapePacket::decode, S2CPlayerCapePacket::handle);
     }
 }

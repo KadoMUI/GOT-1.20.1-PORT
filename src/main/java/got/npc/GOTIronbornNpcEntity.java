@@ -146,9 +146,10 @@ public class GOTIronbornNpcEntity extends PathfinderMob implements net.minecraft
         if (spawnType == MobSpawnType.NATURAL || spawnType == MobSpawnType.CHUNK_GENERATION) {
             GOTBiomeMetadata metadata = PlanetosBiomeManager.getMetadata(blockPosition().getX(), blockPosition().getZ());
             if (metadata != null && metadata.id().startsWith("iron_islands")) {
-                boolean child = random.nextInt(7) == 0;
-                prepareForSpawn(IronbornNpcRole.IRONBORN_MAN, null, child,
-                        blockPosition(), 24, "");
+                IronbornNpcRole role = random.nextInt(15) < 10
+                        ? IronbornNpcRole.IRONBORN_LEVYMAN
+                        : IronbornNpcRole.IRONBORN_LEVYMAN_ARCHER;
+                prepareForSpawn(role, false, false, blockPosition(), 24, "");
             }
         } else if (getCustomName() == null) {
             prepareForSpawn(getRole(), null, false, blockPosition(), 24, "");

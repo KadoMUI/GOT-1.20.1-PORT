@@ -13,7 +13,7 @@ import net.minecraft.world.InteractionHand;
 
 public final class GOTGuiSquadronItem extends Screen {
     private static final ResourceLocation TEX =
-        new ResourceLocation("got", "textures/gui/squadronItem.png");
+        new ResourceLocation("got", "textures/gui/squadronitem.png");
 
     private final InteractionHand hand;
     private EditBox squadronName;

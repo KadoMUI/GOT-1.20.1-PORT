@@ -1,0 +1,38 @@
+{
+  "title": "quest.got.catelyn_theon.title",
+  "description": "quest.got.catelyn_theon.description",
+  "offer": "quest.got.catelyn_theon.offer",
+  "progress": "quest.got.catelyn_theon.progress",
+  "complete": "quest.got.catelyn_theon.complete",
+  "icon": "minecraft:iron_sword",
+  "color": "#7A5C3E",
+  "weight": 1,
+  "repeatable": false,
+  "legendary": true,
+  "legacy_reward_factor": 100,
+  "giver": {
+    "roles": [
+      "catelyn_stark"
+    ],
+    "factions": [
+      "north"
+    ],
+    "entity_types": [
+      "got:north_npc"
+    ],
+    "maximum_active_for_faction": 5
+  },
+  "objectives": [
+    {
+      "type": "kill_entity",
+      "target": "got:ironborn_npc",
+      "count": 1,
+      "label": "quest.got.catelyn_theon.objective.0",
+      "role": "theon_greyjoy"
+    }
+  ],
+  "rewards": {
+    "coins": 0,
+    "experience": 0
+  }
+}

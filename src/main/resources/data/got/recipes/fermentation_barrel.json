@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "W W",
+    " B ",
+    " U "
+  ],
+  "key": {
+    "W": { "item": "minecraft:wheat" },
+    "B": { "item": "minecraft:barrel" },
+    "U": { "item": "minecraft:water_bucket" }
+  },
+  "result": { "item": "got:fermentation_barrel", "count": 1 }
+}

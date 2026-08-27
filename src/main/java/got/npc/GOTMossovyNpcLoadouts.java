@@ -47,6 +47,7 @@ final class GOTMossovyNpcLoadouts {
                 sell(offers, 5, "got:mug_mead", 1);
             }
             case BLACKSMITH -> {
+                sell(offers, 8, "got:blacksmith_hammer", 1);
                 buy(offers, "minecraft:coal", 16, 2);
                 buy(offers, "minecraft:iron_ingot", 8, 4);
                 sell(offers, 8, "minecraft:iron_sword", 1);

@@ -54,6 +54,9 @@ public final class GOTItems {
     public static final RegistryObject<Item> ORYX_HIDE = simple("oryx_hide");
     public static final RegistryObject<Item> ORYX_HORN = simple("oryx_horn");
     public static final RegistryObject<Item> PEBBLE = simple("pebble");
+    public static final RegistryObject<Item> POUCH_SMALL = ITEMS.register("pouch_small", () -> new GOTPouchItem(9, new Item.Properties()));
+    public static final RegistryObject<Item> POUCH_MEDIUM = ITEMS.register("pouch_medium", () -> new GOTPouchItem(18, new Item.Properties()));
+    public static final RegistryObject<Item> POUCH_LARGE = ITEMS.register("pouch_large", () -> new GOTPouchItem(27, new Item.Properties()));
     public static final RegistryObject<Item> PIPE = simple("pipe");
     public static final RegistryObject<Item> RED_CLAY_BALL = simple("red_clay_ball");
     public static final RegistryObject<Item> RHINO_HORN = simple("rhino_horn");
@@ -382,6 +385,7 @@ public final class GOTItems {
     public static final List<RegistryObject<? extends Item>> MISC_ITEMS = List.of(
             MUG, PIPE, SULFUR_MATCH, WATERSKIN, WHEEL,
             BLOOD_OF_TRUE_KINGS, BOTTLE_POISON, LEATHER_HAT, MYSTERY_WEB, QUEST_BOOK,
+            POUCH_SMALL, POUCH_MEDIUM, POUCH_LARGE,
             GOTEquipment.COMMAND_HORN, SQUADRON_ITEM
     );
 

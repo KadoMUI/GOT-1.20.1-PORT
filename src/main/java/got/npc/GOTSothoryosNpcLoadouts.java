@@ -50,6 +50,7 @@ final class GOTSothoryosNpcLoadouts {
                 npc.setWeapons(hammer, hammer);
             }
         }
+        GOTNpcShieldLoadouts.equip(npc, npc.getRole(), "got:sothoryos_shield");
         npc.updateHeldItem();
     }
 

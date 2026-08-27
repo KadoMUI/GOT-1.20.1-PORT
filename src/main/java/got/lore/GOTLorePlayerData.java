@@ -48,4 +48,18 @@ public final class GOTLorePlayerData {
         root.remove(DISCOVERED + "_" + id);
         player.getPersistentData().put(ROOT, root);
     }
+
+    public static Set<String> snapshot(ServerPlayer player) {
+        CompoundTag root = player.getPersistentData().getCompound(ROOT);
+        Set<String> out = new HashSet<>();
+        for (String key : root.getAllKeys()) if (key.startsWith(DISCOVERED + "_") && root.getBoolean(key))
+            out.add(key.substring((DISCOVERED + "_").length()));
+        return Collections.unmodifiableSet(out);
+    }
+
+    public static void copyPersisted(net.minecraft.world.entity.player.Player oldPlayer,
+                                     net.minecraft.world.entity.player.Player newPlayer) {
+        if (oldPlayer.getPersistentData().contains(ROOT))
+            newPlayer.getPersistentData().put(ROOT, oldPlayer.getPersistentData().getCompound(ROOT).copy());
+    }
 }

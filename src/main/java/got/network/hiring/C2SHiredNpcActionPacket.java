@@ -49,7 +49,7 @@ public record C2SHiredNpcActionPacket(int entityId, Action action, String text, 
             if (entity == null || player.distanceToSqr(entity) > 256.0D) return;
 
             if (p.action == Action.HIRE) {
-                GOTHiringTransactionService.hire(player, entity);
+                GOTHiringTransactionService.hire(player, entity, "mounted".equals(p.text));
             } else {
                 if (!GOTHiredData.isOwner(entity, player.getUUID())) return;
 

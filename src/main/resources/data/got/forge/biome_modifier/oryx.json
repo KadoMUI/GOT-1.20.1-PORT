@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#got:spawns_oryx",
+  "spawners": [
+    {
+      "type": "got:oryx",
+      "weight": 18,
+      "minCount": 2,
+      "maxCount": 5
+    }
+  ]
+}

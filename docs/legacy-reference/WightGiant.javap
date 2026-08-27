@@ -1,0 +1,87 @@
+Compiled from "GOTEntityWightGiant.java"
+public class got.common.entity.westeros.ice.GOTEntityWightGiant extends got.common.entity.other.GOTEntityGiantBase {
+  public got.common.entity.westeros.ice.GOTEntityWightGiant(net.minecraft.world.World);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #9                  // Method got/common/entity/other/GOTEntityGiantBase."<init>":(Lnet/minecraft/world/World;)V
+       5: aload_0
+       6: iconst_1
+       7: ldc           #11                 // class got/common/entity/ai/GOTEntityAINearestAttackableTargetPatriot
+       9: invokevirtual #15                 // Method addTargetTasks:(ZLjava/lang/Class;)I
+      12: pop
+      13: return
+
+  public boolean isSpawnsInDarkness();
+    Code:
+       0: iconst_1
+       1: ireturn
+
+  public got.common.faction.GOTFaction getFaction();
+    Code:
+       0: getstatic     #29                 // Field got/common/faction/GOTFaction.WHITE_WALKER:Lgot/common/faction/GOTFaction;
+       3: areturn
+
+  public float getAlignmentBonus();
+    Code:
+       0: ldc           #32                 // float 3.0f
+       2: freturn
+
+  public got.common.database.GOTAchievement getKillAchievement();
+    Code:
+       0: getstatic     #40                 // Field got/common/database/GOTAchievement.killWightGiant:Lgot/common/database/GOTAchievement;
+       3: areturn
+
+  public void func_110147_ax();
+    Code:
+       0: aload_0
+       1: invokespecial #44                 // Method got/common/entity/other/GOTEntityGiantBase.func_110147_ax:()V
+       4: aload_0
+       5: getstatic     #50                 // Field net/minecraft/entity/SharedMonsterAttributes.field_111267_a:Lnet/minecraft/entity/ai/attributes/IAttribute;
+       8: invokevirtual #54                 // Method func_110148_a:(Lnet/minecraft/entity/ai/attributes/IAttribute;)Lnet/minecraft/entity/ai/attributes/IAttributeInstance;
+      11: dconst_1
+      12: invokeinterface #60,  3           // InterfaceMethod net/minecraft/entity/ai/attributes/IAttributeInstance.func_111128_a:(D)V
+      17: return
+
+  public boolean func_70652_k(net.minecraft.entity.Entity);
+    Code:
+       0: aload_1
+       1: aload_0
+       2: aload_1
+       3: invokespecial #64                 // Method got/common/entity/other/GOTEntityGiantBase.func_70652_k:(Lnet/minecraft/entity/Entity;)Z
+       6: invokestatic  #70                 // Method got/common/entity/other/utils/IceUtils.attackWithFrost:(Lnet/minecraft/entity/Entity;Z)Z
+       9: ireturn
+
+  public boolean func_70097_a(net.minecraft.util.DamageSource, float);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: iconst_1
+       3: invokestatic  #78                 // Method got/common/entity/other/utils/IceUtils.calculateDamage:(Lgot/common/entity/other/GOTEntityNPC;Lnet/minecraft/util/DamageSource;Z)Z
+       6: istore_3
+       7: aload_0
+       8: aload_1
+       9: iload_3
+      10: ifeq          17
+      13: fload_2
+      14: goto          18
+      17: fconst_0
+      18: invokespecial #82                 // Method got/common/entity/other/GOTEntityGiantBase.func_70097_a:(Lnet/minecraft/util/DamageSource;F)Z
+      21: ireturn
+
+  public void func_70628_a(boolean, int);
+    Code:
+       0: return
+
+  public void func_70074_a(net.minecraft.entity.EntityLivingBase);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #97                 // Method got/common/entity/other/GOTEntityGiantBase.func_70074_a:(Lnet/minecraft/entity/EntityLivingBase;)V
+       5: aload_0
+       6: aload_1
+       7: aload_0
+       8: getfield      #100                // Field field_70170_p:Lnet/minecraft/world/World;
+      11: invokestatic  #104                // Method got/common/entity/other/utils/IceUtils.createNewWight:(Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/world/World;)V
+      14: return
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "ingredient": {
+    "item": "got:chestnut"
+  },
+  "result": "got:chestnut_roast",
+  "experience": 0.1,
+  "cookingtime": 100
+}

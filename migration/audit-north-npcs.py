@@ -77,12 +77,18 @@ assert "insideClip(pos)" in marker_method
 generator = (JAVA / "world/structure/north/PlanetosNorthStructureGenerator.java").read_text()
 assert generator.count("GOTNorthNpcPopulation.spawnMarkers") == 3
 for named in (
-    "barbrey_dustin", "ramsay_bolton", "roose_bolton", "howland_reed",
-    "rickard_karstark", "john_umber", "maege_mormont", "rodrik_ryswel",
-    "cley_cerwyn", "helman_tallhart", "wyman_manderly", "robb_stark",
-    "hodor", "arya_stark", "bran_stark", "rickon_stark", "maester_luwin", "osha",
+    "ramsay_bolton", "roose_bolton", "rickard_karstark", "john_umber",
+    "maege_mormont", "rodrik_ryswel", "cley_cerwyn", "helman_tallhart",
+    "robb_stark", "hodor", "arya_stark", "bran_stark", "rickon_stark", "maester_luwin", "osha",
 ):
     assert f'"{named}"' in generator, named
+for token in (
+    "GOTWaypoint.BARROWTOWN, NorthNpcRole.BARBREY_DUSTIN, 0, 3",
+    "GOTWaypoint.GREYWATER_WATCH, NorthNpcRole.HOWLAND_REED, 0, 5",
+    "GOTWaypoint.WHITE_HARBOUR, NorthNpcRole.WYMAN_MANDERLY, 0, 5",
+    "GOTNamedNpcRespawnData.get(level).register",
+):
+    assert token in population, token
 
 riverlands_population = (JAVA / "npc/GOTRiverlandsNpcPopulation.java").read_text()
 for named in ("CATELYN_STARK", "RODRIK_CASSEL"):

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "N N",
+    "I I"
+  ],
+  "key": {
+    "I": {
+      "item": "got:valyrian_steel_ingot"
+    },
+    "N": {
+      "item": "got:valyrian_steel_nugget"
+    }
+  },
+  "result": {
+    "item": "got:valyrian_chainmail_boots"
+  }
+}

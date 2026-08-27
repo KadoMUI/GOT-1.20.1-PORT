@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:valyrian_dagger"
+  },
+  "result": "got:petyr_baelish_dagger",
+  "count": 1
+}

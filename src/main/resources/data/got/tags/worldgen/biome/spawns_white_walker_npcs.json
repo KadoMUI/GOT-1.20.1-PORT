@@ -1,1 +1,6 @@
-{"replace":false,"values":["got:frozen_shore","got:haunted_forest","got:thenn_land"]}
+{
+  "replace": false,
+  "values": [
+    "got:haunted_forest"
+  ]
+}

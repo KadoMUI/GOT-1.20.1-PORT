@@ -1,0 +1,3 @@
+package got.client.special;
+import got.GOTMod; import net.minecraft.client.model.HumanoidModel; import net.minecraft.client.renderer.entity.*; import net.minecraft.resources.ResourceLocation; import net.minecraft.world.entity.Mob;
+public final class GOTWraithRenderer<T extends Mob> extends HumanoidMobRenderer<T,HumanoidModel<T>> { private final ResourceLocation texture; public GOTWraithRenderer(EntityRendererProvider.Context c,String tex,float shadow){super(c,new HumanoidModel<>(c.bakeLayer(GOTWraithLayers.HUMANOID)),shadow);texture=new ResourceLocation(GOTMod.MOD_ID,tex);} public ResourceLocation getTextureLocation(T e){return texture;} }

@@ -145,17 +145,23 @@ public class GOTWildlingNpcEntity extends PathfinderMob implements net.minecraft
         SpawnGroupData result = super.finalizeSpawn(level, difficulty, spawnType, spawnData, dataTag);
         if (spawnType == MobSpawnType.NATURAL || spawnType == MobSpawnType.CHUNK_GENERATION) {
             GOTBiomeMetadata metadata = PlanetosBiomeManager.getMetadata(blockPosition().getX(), blockPosition().getZ());
-            if (metadata != null && (metadata.id().equals("frozen_shore")
-                    || metadata.id().equals("haunted_forest") || metadata.id().equals("thenn_land"))) {
+            if (metadata != null && isLegacyWildlingBiome(metadata.id())) {
                 boolean child = random.nextInt(7) == 0;
                 WildlingNpcRole role = naturalRole(metadata.id().equals("thenn_land"));
-                prepareForSpawn(role, null, child,
-                        blockPosition(), 24, "");
+                prepareForSpawn(role, null, child, blockPosition(), 24, "");
             }
         } else if (getCustomName() == null) {
             prepareForSpawn(getRole(), null, false, blockPosition(), 24, "");
         }
         return result;
+    }
+
+    private static boolean isLegacyWildlingBiome(String biome) {
+        return switch (biome) {
+            case "haunted_forest", "gift_new", "skagos", "stoney_shore", "frozen_shore",
+                    "north", "north_town", "gift_old", "north_wild", "thenn_land" -> true;
+            default -> false;
+        };
     }
 
     public void prepareForSpawn(WildlingNpcRole role, @Nullable Boolean female, boolean child,

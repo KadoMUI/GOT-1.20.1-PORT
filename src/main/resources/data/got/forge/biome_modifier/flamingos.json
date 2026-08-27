@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#got:spawns_flamingos",
+  "spawners": [
+    {
+      "type": "got:flamingo",
+      "weight": 12,
+      "minCount": 2,
+      "maxCount": 4
+    }
+  ]
+}

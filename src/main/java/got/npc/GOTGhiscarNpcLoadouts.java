@@ -125,6 +125,7 @@ final class GOTGhiscarNpcLoadouts {
                     npc.setItemSlot(EquipmentSlot.HEAD, stack("got:robes_helmet"));
             default -> { }
         }
+        GOTNpcShieldLoadouts.equip(npc, npc.getRole(), "got:ghiscar_shield");
         npc.updateHeldItem();
     }
 
@@ -143,6 +144,7 @@ final class GOTGhiscarNpcLoadouts {
                 sell(offers, 5, "got:mug_mead", 1);
             }
             case BLACKSMITH -> {
+                sell(offers, 8, "got:blacksmith_hammer", 1);
                 buy(offers, "minecraft:coal", 16, 2);
                 buy(offers, "minecraft:iron_ingot", 8, 4);
                 sell(offers, 8, "minecraft:iron_sword", 1);
@@ -161,6 +163,9 @@ final class GOTGhiscarNpcLoadouts {
                 sell(offers, 3, "minecraft:cooked_porkchop", 5);
             }
             case FARMER -> {
+                sell(offers, 4, "got:branding_iron", 1);
+                // Guaranteed Farmer utility trade.
+                sell(offers, 8, "got:millstone", 1);
                 buy(offers, "minecraft:wheat", 20, 2);
                 buy(offers, "minecraft:carrot", 18, 2);
                 sell(offers, 2, "minecraft:wheat_seeds", 12);
@@ -200,6 +205,7 @@ final class GOTGhiscarNpcLoadouts {
                 sell(offers, 8, "minecraft:iron_pickaxe", 1);
             }
             case UNITS -> {
+                sell(offers, 16, "got:warhorn", 1);
                 sell(offers, 12, "got:command_horn", 1);
                 sell(offers, 16, "got:ghiscar_chestplate", 1);
                 sell(offers, 12, "got:ghiscar_helmet", 1);

@@ -1,9 +1,6 @@
 {
   "replace": false,
   "values": [
-    "got:yi_ti",
-    "got:yi_ti_border_zone",
-    "got:yi_ti_marshes",
-    "got:yi_ti_tropical_forest"
+    "got:yi_ti"
   ]
 }

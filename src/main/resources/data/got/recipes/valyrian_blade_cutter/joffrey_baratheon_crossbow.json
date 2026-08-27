@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:valyrian_crossbow"
+  },
+  "result": "got:joffrey_baratheon_crossbow",
+  "count": 1
+}

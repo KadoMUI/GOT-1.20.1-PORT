@@ -4,6 +4,8 @@ import got.client.quest.GOTClientQuestState;
 import got.network.C2SQuestActionPacket;
 import got.network.C2SRequestQuestDataPacket;
 import got.network.GOTNetwork;
+import got.network.C2SJaqenTutorialPacket;
+import got.quest.GOTJaqenQuestSequence;
 import got.quest.GOTQuestState;
 import got.quest.GOTQuestView;
 import net.minecraft.ChatFormatting;
@@ -21,7 +23,7 @@ import java.util.List;
 /** Functional Scarlet Book journal using the original 420x256 artwork. */
 public final class GOTGuiQuestBook extends Screen {
     private static final ResourceLocation TEXTURE =
-            ResourceLocation.fromNamespaceAndPath("got", "textures/gui/quest/questBook.png");
+            ResourceLocation.fromNamespaceAndPath("got", "textures/gui/quest/questbook.png");
     private static final int PAGE_COLOR = 0x7A5C3E;
     private boolean completed;
     private int selectedIndex = -1;
@@ -37,6 +39,7 @@ public final class GOTGuiQuestBook extends Screen {
 
     @Override
     protected void init() {
+        GOTNetwork.CHANNEL.sendToServer(C2SJaqenTutorialPacket.action(GOTJaqenQuestSequence.Action.OPEN_BOOK));
         guiLeft = (width - 420) / 2;
         guiTop = (height - 256) / 2;
         addRenderableWidget(Button.builder(Component.translatable("got.gui.redBook.mq.viewActive"), button -> {

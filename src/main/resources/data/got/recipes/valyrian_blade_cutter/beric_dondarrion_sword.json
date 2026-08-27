@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "got:valyrian_longsword"
+  },
+  "result": "got:beric_dondarrion_sword",
+  "count": 1
+}

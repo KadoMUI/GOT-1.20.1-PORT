@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#got:spawns_midges",
+  "spawners": [
+    {
+      "type": "got:midges",
+      "weight": 18,
+      "minCount": 1,
+      "maxCount": 3
+    }
+  ]
+}

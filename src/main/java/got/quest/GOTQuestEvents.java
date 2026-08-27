@@ -1,6 +1,10 @@
 package got.quest;
 
 import got.GOTMod;
+import got.npc.GOTJaqenHgharEntity;
+import got.network.GOTNetwork;
+import got.network.S2CQuestOfferIndicatorPacket;
+import net.minecraftforge.network.PacketDistributor;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -19,6 +23,12 @@ public final class GOTQuestEvents {
     @SubscribeEvent
     public static void onEntityInteract(PlayerInteractEvent.EntityInteract event) {
         if (event.getHand() != InteractionHand.MAIN_HAND || event.getLevel().isClientSide) return;
+        if (event.getEntity() instanceof ServerPlayer player && event.getTarget() instanceof GOTJaqenHgharEntity jaqen) {
+            if (GOTJaqenQuestSequence.interact(player, jaqen)) {
+                event.setCancellationResult(InteractionResult.SUCCESS); event.setCanceled(true);
+            }
+            return;
+        }
         if (!(event.getEntity() instanceof ServerPlayer player)
                 || !(event.getTarget() instanceof Mob npc)
                 || !(event.getTarget() instanceof GOTQuestGiver giver)) return;
@@ -68,6 +78,26 @@ public final class GOTQuestEvents {
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if (event.phase == TickEvent.Phase.END && event.player instanceof ServerPlayer player) {
             GOTQuestService.onPlayerTick(player);
+            if (player.tickCount % 20 == 0) syncQuestOfferIndicators(player);
+        }
+    }
+
+    private static void syncQuestOfferIndicators(ServerPlayer player) {
+        for (Mob npc : player.level().getEntitiesOfClass(Mob.class, player.getBoundingBox().inflate(16.0D),
+                mob -> mob instanceof GOTQuestGiver)) {
+            boolean offering;
+            int color;
+            if (npc instanceof GOTJaqenHgharEntity jaqen) {
+                offering = !GOTJaqenQuestSequence.completed(player) && GOTJaqenQuestSequence.stage(player) == 0;
+                color = got.faction.GOTFaction.LORATH.color();
+            } else {
+                GOTQuestGiver giver = (GOTQuestGiver) npc;
+                offering = GOTQuestService.hasAvailableQuest(player, npc, giver);
+                color = giver.getQuestFaction().color();
+                if (color == 0) color = 0xFFFFFF;
+            }
+            GOTNetwork.CHANNEL.send(PacketDistributor.PLAYER.with(() -> player),
+                    new S2CQuestOfferIndicatorPacket(npc.getId(), offering, color));
         }
     }
 }

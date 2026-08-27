@@ -80,6 +80,8 @@ public final class GOTQuestDefinitionManager extends SimpleJsonResourceReloadLis
         int cooldown = Math.max(0, GsonHelper.getAsInt(json, "cooldown_ticks", 0));
         boolean sequential = GsonHelper.getAsBoolean(json, "sequential", false);
         boolean autoComplete = GsonHelper.getAsBoolean(json, "auto_complete", false);
+        boolean legendary = GsonHelper.getAsBoolean(json, "legendary", false);
+        float legacyRewardFactor = GsonHelper.getAsFloat(json, "legacy_reward_factor", -1.0F);
 
         List<ResourceLocation> prerequisites = new ArrayList<>();
         for (JsonElement element : array(json, "prerequisites")) {
@@ -99,7 +101,7 @@ public final class GOTQuestDefinitionManager extends SimpleJsonResourceReloadLis
         GOTQuestDefinition.Reward reward = parseReward(json.has("rewards")
                 ? GsonHelper.getAsJsonObject(json, "rewards") : new JsonObject());
         return new GOTQuestDefinition(id, title, description, offer, progress, complete,
-                icon, color, weight, repeatable, cooldown, sequential, autoComplete,
+                icon, color, weight, repeatable, cooldown, sequential, autoComplete, legendary, legacyRewardFactor,
                 prerequisites, giver, objectives, reward);
     }
 
@@ -131,6 +133,8 @@ public final class GOTQuestDefinitionManager extends SimpleJsonResourceReloadLis
         String target = GsonHelper.getAsString(json, "target", "");
         String role = GsonHelper.getAsString(json, "role", "");
         int count = Math.max(1, GsonHelper.getAsInt(json, "count", 1));
+        int minimumCount = Math.max(1, GsonHelper.getAsInt(json, "count_min", count));
+        int maximumCount = Math.max(minimumCount, GsonHelper.getAsInt(json, "count_max", count));
         ResourceLocation dimension = resource(GsonHelper.getAsString(json,
                 "dimension", "minecraft:overworld"), "objective dimension");
         BlockPos position = BlockPos.ZERO;
@@ -143,7 +147,7 @@ public final class GOTQuestDefinitionManager extends SimpleJsonResourceReloadLis
         boolean consume = GsonHelper.getAsBoolean(json, "consume", type == GOTQuestObjectiveType.COLLECT);
         String label = GsonHelper.getAsString(json, "label", prefix + ".objective." + index);
         validateObjective(type, target, position, radius);
-        return new GOTQuestDefinition.Objective(type, target, role, count, dimension,
+        return new GOTQuestDefinition.Objective(type, target, role, count, minimumCount, maximumCount, dimension,
                 position, radius, consume, label);
     }
 
@@ -181,7 +185,9 @@ public final class GOTQuestDefinitionManager extends SimpleJsonResourceReloadLis
         }
         return new GOTQuestDefinition.Reward(alignment, items,
                 Math.max(0, GsonHelper.getAsInt(json, "coins", 0)),
-                Math.max(0, GsonHelper.getAsInt(json, "experience", 0)));
+                Math.max(0, GsonHelper.getAsInt(json, "experience", 0)),
+                GsonHelper.getAsBoolean(json, "hire_giver", false),
+                Math.max(0, GsonHelper.getAsInt(json, "hire_alignment", 100)));
     }
 
     private static JsonArray array(JsonObject object, String name) {

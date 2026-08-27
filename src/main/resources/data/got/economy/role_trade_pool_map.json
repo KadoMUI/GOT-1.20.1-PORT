@@ -68,11 +68,75 @@
     },
     "davos_seaworth": {
       "sells": "DAVOS_SELLS",
-      "buys": "EMPTY_BUYS"
+      "buys": "MAESTER_BUYS"
     },
     "tobho_mott": {
       "sells": "TOBHO_SELLS",
       "buys": "EMPTY_BUYS"
+    },
+    "aemon_targaryen": {
+      "sells": "MAESTER_SELLS",
+      "buys": "MAESTER_BUYS"
+    },
+    "aeron_greyjoy": {
+      "sells": "ALCHEMIST_SELLS",
+      "buys": "ALCHEMIST_BUYS"
+    },
+    "craster": {
+      "sells": "BUTCHER_SELLS",
+      "buys": "BUTCHER_BUYS"
+    },
+    "ebrose": {
+      "sells": "MAESTER_SELLS",
+      "buys": "MAESTER_BUYS"
+    },
+    "gendry_baratheon": {
+      "sells": "BLACKSMITH_SELLS",
+      "buys": "BLACKSMITH_BUYS"
+    },
+    "harmune": {
+      "sells": "MAESTER_SELLS",
+      "buys": "MAESTER_BUYS"
+    },
+    "high_septon": {
+      "sells": "MAESTER_SELLS",
+      "buys": "MAESTER_BUYS"
+    },
+    "hot_pie": {
+      "sells": "BAKER_SELLS",
+      "buys": "BAKER_BUYS"
+    },
+    "maester_luwin": {
+      "sells": "MAESTER_SELLS",
+      "buys": "MAESTER_BUYS"
+    },
+    "mullin": {
+      "sells": "MAESTER_SELLS",
+      "buys": "MAESTER_BUYS"
+    },
+    "pycelle": {
+      "sells": "MAESTER_SELLS",
+      "buys": "MAESTER_BUYS"
+    },
+    "qyburn": {
+      "sells": "MAESTER_SELLS",
+      "buys": "MAESTER_BUYS"
+    },
+    "illyrio_mopatis": {
+      "sells": "GOLDSMITH_SELLS",
+      "buys": "GOLDSMITH_BUYS"
+    },
+    "moqorro": {
+      "sells": "ALCHEMIST_SELLS",
+      "buys": "ALCHEMIST_BUYS"
+    },
+    "tycho_nestoris": {
+      "sells": "GOLDSMITH_SELLS",
+      "buys": "GOLDSMITH_BUYS"
+    },
+    "xaro_xhoan_daxos": {
+      "sells": "GOLDSMITH_SELLS",
+      "buys": "GOLDSMITH_BUYS"
     }
   }
 }

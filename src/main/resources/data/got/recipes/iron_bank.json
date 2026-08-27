@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "III",
-    "ICI",
-    "III"
+    "CCC",
+    "CXC",
+    "CCC"
   ],
   "key": {
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
     "C": {
-      "item": "got:coin_1"
+      "item": "minecraft:cobblestone"
+    },
+    "X": {
+      "tag": "got:coins"
     }
   },
   "result": {

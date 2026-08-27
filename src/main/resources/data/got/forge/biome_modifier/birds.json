@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#got:spawns_birds",
+  "spawners": [
+    {
+      "type": "got:bird",
+      "weight": 24,
+      "minCount": 2,
+      "maxCount": 5
+    }
+  ]
+}

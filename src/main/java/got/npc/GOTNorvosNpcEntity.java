@@ -145,7 +145,7 @@ public class GOTNorvosNpcEntity extends PathfinderMob implements net.minecraft.w
         SpawnGroupData result = super.finalizeSpawn(level, difficulty, spawnType, spawnData, dataTag);
         if (spawnType == MobSpawnType.NATURAL || spawnType == MobSpawnType.CHUNK_GENERATION) {
             GOTBiomeMetadata metadata = PlanetosBiomeManager.getMetadata(blockPosition().getX(), blockPosition().getZ());
-            if (metadata != null && metadata.id().equals("norvos")) {
+            if (metadata != null && (metadata.id().equals("norvos") || metadata.id().equals("volantis"))) {
                 NorvosNpcRole role = random.nextInt(15) < 10
                         ? NorvosNpcRole.NORVOS_SOLDIER
                         : NorvosNpcRole.NORVOS_SOLDIER_ARCHER;

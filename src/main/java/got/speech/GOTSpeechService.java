@@ -38,6 +38,16 @@ public final class GOTSpeechService {
         GOTSpeechBehaviorData.markSpoken(npc);
     }
 
+    public static void speakLine(Entity npc, ServerPlayer player, String bank, int line) {
+        String raw = GOTSpeechBankRegistry.at(bank, line);
+        String speech = GOTSpeechFormatter.format(raw, player, null, null);
+        GOTNetwork.CHANNEL.send(
+            PacketDistributor.PLAYER.with(() -> player),
+            new S2CNpcSpeechPacket(npc.getId(), npc.getUUID(), npc.getDisplayName().getString(), speech, false)
+        );
+        GOTSpeechBehaviorData.markSpoken(npc);
+    }
+
     public static void speakDefault(Entity npc, ServerPlayer player) {
         speak(npc, player, GOTSpeechSelector.defaultBank(npc, player));
     }

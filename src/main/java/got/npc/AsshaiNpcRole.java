@@ -14,7 +14,8 @@ public enum AsshaiNpcRole {
     ASSHAI_BANNER_BEARER("asshai_banner_bearer", "Asshai Banner Bearer", Gender.MALE, Combat.MELEE, Trade.NONE, 2, false, null, 1.0F, 1.0F),
     ASSHAI_CAPTAIN("asshai_captain", "Asshai Captain", Gender.MALE, Combat.MELEE, Trade.UNITS, 5, false, null, 1.0F, 1.0F),
     ASSHAI_ALCHEMIST("asshai_alchemist", "Asshai Alchemist", Gender.RANDOM, Combat.PASSIVE, Trade.ALCHEMIST, 2, false, null, 1.0F, 1.0F),
-    ASSHAI_ARCHMAG("asshai_archmag", "Asshai Archmag", Gender.MALE, Combat.ARCHER, Trade.NONE, 500, true, "archmag", 1.0F, 1.0F);
+    ASSHAI_ARCHMAG("asshai_archmag", "Asshai Archmag", Gender.MALE, Combat.ARCHER, Trade.NONE, 500, true, "archmag", 1.0F, 1.0F),
+    MOQORRO("moqorro", "Moqorro", Gender.MALE, Combat.PASSIVE, Trade.ALCHEMIST, 100, true, "moqorro", "_1", "_2", 1.0F, 1.0F);
 
     public enum Gender { RANDOM, MALE, FEMALE }
     public enum Combat { PASSIVE, MELEE, ARCHER, HYBRID }
@@ -30,11 +31,20 @@ public enum AsshaiNpcRole {
     private final int alignmentBonus;
     private final boolean legendary;
     private final String legendaryTexture;
+    private final String legendaryBaseSuffix;
+    private final String legendaryOverlaySuffix;
     private final float scale;
     private final float collisionScale;
 
     AsshaiNpcRole(String id, String displayName, Gender gender, Combat combat, Trade trade,
                   int alignmentBonus, boolean legendary, String legendaryTexture,
+                  float scale, float collisionScale) {
+        this(id, displayName, gender, combat, trade, alignmentBonus, legendary, legendaryTexture, "", "", scale, collisionScale);
+    }
+
+    AsshaiNpcRole(String id, String displayName, Gender gender, Combat combat, Trade trade,
+                  int alignmentBonus, boolean legendary, String legendaryTexture,
+                  String legendaryBaseSuffix, String legendaryOverlaySuffix,
                   float scale, float collisionScale) {
         this.id = id;
         this.displayName = displayName;
@@ -44,6 +54,8 @@ public enum AsshaiNpcRole {
         this.alignmentBonus = alignmentBonus;
         this.legendary = legendary;
         this.legendaryTexture = legendaryTexture;
+        this.legendaryBaseSuffix = legendaryBaseSuffix;
+        this.legendaryOverlaySuffix = legendaryOverlaySuffix;
         this.scale = scale;
         this.collisionScale = collisionScale;
     }
@@ -56,9 +68,9 @@ public enum AsshaiNpcRole {
     public int alignmentBonus() { return alignmentBonus; }
     public boolean legendary() { return legendary; }
     public String legendaryTexture() { return legendaryTexture; }
-    public String legendaryBaseSuffix() { return ""; }
-    public String legendaryOverlaySuffix() { return ""; }
-    public boolean hasLegendaryOverlay() { return false; }
+    public String legendaryBaseSuffix() { return legendaryBaseSuffix; }
+    public String legendaryOverlaySuffix() { return legendaryOverlaySuffix; }
+    public boolean hasLegendaryOverlay() { return !legendaryOverlaySuffix.isEmpty(); }
     public float scale() { return scale; }
     public float collisionScale() { return collisionScale; }
     public boolean ordinaryCivilian() { return this == ASSHAI_MAN; }

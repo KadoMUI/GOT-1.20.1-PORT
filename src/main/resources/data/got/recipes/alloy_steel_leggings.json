@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "I I",
+    "I I"
+  ],
+  "key": {
+    "I": {
+      "item": "got:alloy_steel_ingot"
+    }
+  },
+  "result": {
+    "item": "got:alloy_steel_leggings"
+  }
+}

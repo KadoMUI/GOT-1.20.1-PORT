@@ -1,1 +1,15 @@
-{"replace":false,"values":["got:frozen_shore","got:haunted_forest","got:thenn_land"]}
+{
+  "replace": false,
+  "values": [
+    "got:haunted_forest",
+    "got:gift_new",
+    "got:skagos",
+    "got:stoney_shore",
+    "got:frozen_shore",
+    "got:north",
+    "got:north_town",
+    "got:gift_old",
+    "got:north_wild",
+    "got:thenn_land"
+  ]
+}

@@ -13,10 +13,13 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -50,6 +53,7 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.item.trading.MerchantOffers;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
 
@@ -146,8 +150,7 @@ public class GOTWhiteWalkerNpcEntity extends PathfinderMob implements net.minecr
         SpawnGroupData result = super.finalizeSpawn(level, difficulty, spawnType, spawnData, dataTag);
         if (spawnType == MobSpawnType.NATURAL || spawnType == MobSpawnType.CHUNK_GENERATION) {
             GOTBiomeMetadata metadata = PlanetosBiomeManager.getMetadata(blockPosition().getX(), blockPosition().getZ());
-            if (metadata != null && (metadata.id().equals("frozen_shore")
-                    || metadata.id().equals("haunted_forest") || metadata.id().equals("thenn_land"))) {
+            if (metadata != null && metadata.id().equals("haunted_forest")) {
                 int roll = random.nextInt(20);
                 WhiteWalkerNpcRole role = roll < 15 ? WhiteWalkerNpcRole.WIGHT
                         : roll < 19 ? WhiteWalkerNpcRole.WHITE_WALKER : WhiteWalkerNpcRole.WIGHT_GIANT;
@@ -279,7 +282,7 @@ public class GOTWhiteWalkerNpcEntity extends PathfinderMob implements net.minecr
 
     void setCombatWeapon(ItemStack stack) { combatWeapon = stack; }
     void setRangedWeapon(ItemStack stack) { rangedWeapon = stack; }
-    void setWeapons(ItemStack combat, ItemStack idle) {
+    public void setWeapons(ItemStack combat, ItemStack idle) {
         combatWeapon = combat;
         idleItem = idle;
     }
@@ -300,7 +303,8 @@ public class GOTWhiteWalkerNpcEntity extends PathfinderMob implements net.minecr
     private void applyRoleAttributes() {
         double health = getRole().giant() ? 100.0D
                 : getRole() == WhiteWalkerNpcRole.NIGHT_KING ? 60.0D
-                : getRole() == WhiteWalkerNpcRole.WHITE_WALKER ? 30.0D : 20.0D;
+                : getRole() == WhiteWalkerNpcRole.WHITE_WALKER ? 30.0D
+                : getRole() == WhiteWalkerNpcRole.WIGHT ? 1.0D : 20.0D;
         if (getAttribute(Attributes.MAX_HEALTH) != null) {
             getAttribute(Attributes.MAX_HEALTH).setBaseValue(health);
             setHealth((float)health);
@@ -313,6 +317,27 @@ public class GOTWhiteWalkerNpcEntity extends PathfinderMob implements net.minecr
             getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(getRole().giant() ? 12.0D
                     : getRole() == WhiteWalkerNpcRole.NIGHT_KING ? 8.0D : 4.0D);
         }
+    }
+
+    /** Legacy ice-undead combat: Wights and White Walkers frost targets and reject ordinary damage. */
+    @Override
+    public boolean doHurtTarget(net.minecraft.world.entity.Entity target) {
+        boolean hit = super.doHurtTarget(target);
+        if (hit && (getRole() == WhiteWalkerNpcRole.WIGHT || getRole() == WhiteWalkerNpcRole.WHITE_WALKER
+                || getRole() == WhiteWalkerNpcRole.NIGHT_KING) && target instanceof LivingEntity living) {
+            living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 1), this);
+        }
+        return hit;
+    }
+
+    @Override
+    public boolean hurt(DamageSource source, float amount) {
+        if (getRole() == WhiteWalkerNpcRole.NIGHT_KING) {
+            if (!got.special.GOTIceUndeadDamageRules.canDamageNightKing(source)) return false;
+        } else if (getRole() == WhiteWalkerNpcRole.WIGHT || getRole() == WhiteWalkerNpcRole.WHITE_WALKER) {
+            if (!got.special.GOTIceUndeadDamageRules.canDamageWightOrWalker(source)) return false;
+        }
+        return super.hurt(source, amount);
     }
 
     @Override

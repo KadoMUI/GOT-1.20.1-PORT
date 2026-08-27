@@ -1,4 +1,6 @@
 {
   "replace": false,
-  "values": ["got:myr", "got:myr_forest"]
+  "values": [
+    "got:myr"
+  ]
 }

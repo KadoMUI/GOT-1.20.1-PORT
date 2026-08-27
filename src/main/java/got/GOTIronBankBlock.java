@@ -1,8 +1,6 @@
 package got;
 
-import got.economy.GOTCoinValueService;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -12,7 +10,13 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
-/** Iron Bank coin consolidation using the shared legacy-value economy service. */
+/**
+ * Placeable Iron Bank / Coin Exchange block.
+ *
+ * Uses the same coin-exchange menu as eligible GOT traders, but without a
+ * backing trader entity. A negative entity id tells the menu that the block
+ * access should remain valid without an NPC proximity check.
+ */
 public class GOTIronBankBlock extends Block {
     public GOTIronBankBlock(Properties properties) {
         super(properties);
@@ -24,16 +28,7 @@ public class GOTIronBankBlock extends Block {
         if (level.isClientSide) return InteractionResult.SUCCESS;
         if (!(player instanceof ServerPlayer serverPlayer)) return InteractionResult.PASS;
 
-        int total = GOTCoinValueService.inventoryValue(serverPlayer);
-        if (total > 0) {
-            GOTCoinValueService.take(serverPlayer, total);
-            GOTCoinValueService.give(serverPlayer, total);
-        }
-
-        player.displayClientMessage(
-            Component.translatable("message.got.iron_bank_balance", total),
-            true
-        );
+        GOTCoinExchangeMenu.open(serverPlayer, -1);
         return InteractionResult.CONSUME;
     }
 }

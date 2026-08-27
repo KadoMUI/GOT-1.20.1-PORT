@@ -1,0 +1,39 @@
+{
+  "title": "quest.got.arya_wooden_sword.title",
+  "description": "quest.got.arya_wooden_sword.description",
+  "offer": "quest.got.arya_wooden_sword.offer",
+  "progress": "quest.got.arya_wooden_sword.progress",
+  "complete": "quest.got.arya_wooden_sword.complete",
+  "icon": "minecraft:wooden_sword",
+  "color": "#7A5C3E",
+  "weight": 1,
+  "repeatable": false,
+  "legendary": true,
+  "legacy_reward_factor": 1,
+  "giver": {
+    "roles": [
+      "arya_stark"
+    ],
+    "factions": [
+      "north"
+    ],
+    "entity_types": [
+      "got:north_npc"
+    ],
+    "maximum_active_for_faction": 5
+  },
+  "objectives": [
+    {
+      "type": "collect",
+      "target": "minecraft:wooden_sword",
+      "count": 1,
+      "label": "quest.got.arya_wooden_sword.objective.0"
+    }
+  ],
+  "rewards": {
+    "coins": 0,
+    "experience": 0,
+    "hire_giver": true,
+    "hire_alignment": 100
+  }
+}

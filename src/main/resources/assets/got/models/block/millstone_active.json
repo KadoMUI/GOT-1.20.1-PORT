@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "got:block/millstone_top_active",
+    "up": "got:block/millstone_top_active",
+    "north": "got:block/millstone_side_active",
+    "south": "got:block/millstone_side_active",
+    "west": "got:block/millstone_side_active",
+    "east": "got:block/millstone_side_active",
+    "particle": "got:block/millstone_side_active"
+  }
+}

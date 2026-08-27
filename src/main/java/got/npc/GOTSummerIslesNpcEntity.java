@@ -86,6 +86,16 @@ public final class GOTSummerIslesNpcEntity extends GOTNorvosNpcEntity {
     @Override public boolean isActiveCombatant() { return getSummerRole().activeCombatant(); }
 
     @Override
+    public void aiStep() {
+        super.aiStep();
+        if (!level().isClientSide && summerOffers != null
+                && got.economy.GOTNpcTraderRuntime.tick(this, summerOffers)) {
+            summerOffers = null;
+        }
+        got.economy.GOTTraderAdvertisement.tick(this);
+    }
+
+    @Override
     public void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
         tag.putString("SummerRole", getSummerRole().id());

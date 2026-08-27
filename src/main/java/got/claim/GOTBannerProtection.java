@@ -112,6 +112,7 @@ public final class GOTBannerProtection {
         if (player.getAbilities().instabuild) return true;
         UUID owner = banner.getOwnerUUID();
         if (owner != null && owner.equals(player.getUUID())) return true;
+        if (owner != null && player.getServer() != null && got.pact.GOTPactService.samePact(player.getServer(), owner, player.getUUID())) return true;
 
         GOTBannerClaim claim = banner.getClaim();
         if (claim.structureProtection()) return player.hasPermissions(2);

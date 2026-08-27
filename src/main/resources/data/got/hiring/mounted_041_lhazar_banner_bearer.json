@@ -1,0 +1,14 @@
+{
+  "roles": [
+    "lhazar_banner_bearer"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 65.0,
+  "pledge_exclusive": false,
+  "initial_cost": 15,
+  "legacy_entity": "GOTEntityLhazarBannerBearer",
+  "legacy_group": "LHAZAR",
+  "mount_type": "GOTEntityHorse",
+  "mount_name": "Rider",
+  "mount_armor": "got/common/database/GOTItems.ironHorseArmor"
+}

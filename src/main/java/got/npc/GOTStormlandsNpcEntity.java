@@ -146,9 +146,10 @@ public class GOTStormlandsNpcEntity extends PathfinderMob implements net.minecra
         if (spawnType == MobSpawnType.NATURAL || spawnType == MobSpawnType.CHUNK_GENERATION) {
             GOTBiomeMetadata metadata = PlanetosBiomeManager.getMetadata(blockPosition().getX(), blockPosition().getZ());
             if (metadata != null && metadata.id().startsWith("stormlands")) {
-                boolean child = random.nextInt(7) == 0;
-                prepareForSpawn(StormlandsNpcRole.STORMLANDS_MAN, null, child,
-                        blockPosition(), 24, "");
+                StormlandsNpcRole role = random.nextInt(15) < 10
+                        ? StormlandsNpcRole.STORMLANDS_LEVYMAN
+                        : StormlandsNpcRole.STORMLANDS_LEVYMAN_ARCHER;
+                prepareForSpawn(role, false, false, blockPosition(), 24, "");
             }
         } else if (getCustomName() == null) {
             prepareForSpawn(getRole(), null, false, blockPosition(), 24, "");

@@ -78,6 +78,7 @@ public final class GOTFactionService {
         }
 
         data.setMembership(faction);
+        got.achievement.GOTAchievementHooks.award(player, "PLEDGE_SERVICE");
         player.level().playSound(null, player.blockPosition(),
                 net.minecraft.sounds.SoundEvents.PLAYER_LEVELUP,
                 net.minecraft.sounds.SoundSource.PLAYERS, 0.8F, 0.9F);

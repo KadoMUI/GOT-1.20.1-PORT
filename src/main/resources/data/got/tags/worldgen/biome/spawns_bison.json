@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "got:north",
+    "got:north_barrows",
+    "got:north_hills",
+    "got:north_wild",
+    "got:gift_new",
+    "got:gift_old",
+    "got:riverlands",
+    "got:reach",
+    "got:reach_hills",
+    "got:stormlands",
+    "got:arryn_mountains_foothills",
+    "got:westerlands",
+    "got:dothraki_sea",
+    "got:dothraki_sea_hills"
+  ]
+}

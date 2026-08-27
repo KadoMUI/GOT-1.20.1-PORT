@@ -95,6 +95,7 @@ public final class GOTCreativeTabs {
                         .filter(item -> !GOTEquipment.LORE_ITEMS.contains(item))
                         .filter(item -> !isTool(item))
                         .forEach(item -> acceptItem(output, item));
+                GOTEquipment.SHIELDS.forEach(item -> acceptItem(output, item));
             })
             .build());
 
@@ -230,6 +231,8 @@ public final class GOTCreativeTabs {
                 java.util.Arrays.stream(got.npc.GOTUlthosCreatureSpawnerItem.UlthosCreature.values())
                         .map(got.npc.GOTUlthosCreatureSpawnerItem::createStack)
                         .forEach(output::accept);
+                output.accept(GOTEquipment.BARROW_WRAITH_SPAWN_EGG.get());
+                output.accept(GOTEquipment.MARSH_WRAITH_SPAWN_EGG.get());
             })
             .build());
 

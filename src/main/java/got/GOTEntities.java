@@ -1,6 +1,11 @@
 package got;
 
 import got.npc.GOTNorthNpcEntity;
+import got.mount.*;
+import got.wildlife.*;
+import got.special.*;
+import net.minecraft.world.entity.animal.horse.Horse;
+import net.minecraft.world.entity.animal.Parrot;
 import got.npc.GOTRiverlandsNpcEntity;
 import got.npc.GOTThrownAxeEntity;
 import got.npc.GOTWesterlandsNpcEntity;
@@ -15,6 +20,7 @@ import got.npc.GOTWildlingNpcEntity;
 import got.npc.GOTNightWatchNpcEntity;
 import got.npc.GOTWhiteWalkerNpcEntity;
 import got.npc.GOTBraavosNpcEntity;
+import got.npc.GOTJaqenHgharEntity;
 import got.npc.GOTPentosNpcEntity;
 import got.npc.GOTVolantisNpcEntity;
 import got.npc.GOTLysNpcEntity;
@@ -35,6 +41,7 @@ import got.npc.GOTMossovyNpcEntity;
 import got.npc.GOTGoldenCompanyNpcEntity;
 import got.npc.GOTSummerIslesNpcEntity;
 import got.npc.GOTSothoryosNpcEntity;
+import got.npc.GOTCrocodileEntity;
 import got.npc.GOTUlthosSpiderEntity;
 import got.npc.GOTBlizzardEntity;
 import net.minecraft.world.entity.SpawnPlacements;
@@ -161,6 +168,12 @@ public final class GOTEntities {
                     .sized(0.6F, 1.8F).clientTrackingRange(10).updateInterval(3)
                     .build("braavos_npc"));
 
+    public static final RegistryObject<EntityType<GOTJaqenHgharEntity>> JAQEN_HGHAR =
+            ENTITIES.register("jaqen_hghar", () -> EntityType.Builder
+                    .of(GOTJaqenHgharEntity::new, MobCategory.CREATURE)
+                    .sized(0.6F, 1.8F).clientTrackingRange(12).updateInterval(3)
+                    .build("jaqen_hghar"));
+
     public static final RegistryObject<EntityType<GOTPentosNpcEntity>> PENTOS_NPC =
             ENTITIES.register("pentos_npc", () -> EntityType.Builder
                     .of(GOTPentosNpcEntity::new, MobCategory.CREATURE)
@@ -281,6 +294,12 @@ public final class GOTEntities {
                     .sized(0.6F, 1.8F).clientTrackingRange(10).updateInterval(3)
                     .build("sothoryos_npc"));
 
+    public static final RegistryObject<EntityType<GOTCrocodileEntity>> CROCODILE =
+            ENTITIES.register("crocodile", () -> EntityType.Builder
+                    .of(GOTCrocodileEntity::new, MobCategory.MONSTER)
+                    .sized(2.1F, 0.7F).clientTrackingRange(8).updateInterval(3)
+                    .build("crocodile"));
+
     public static final RegistryObject<EntityType<GOTUlthosSpiderEntity>> ULTHOS_SPIDER =
             ENTITIES.register("ulthos_spider", () -> EntityType.Builder
                     .of(GOTUlthosSpiderEntity::new, MobCategory.MONSTER)
@@ -293,6 +312,11 @@ public final class GOTEntities {
                     .sized(0.6F, 1.8F).fireImmune().clientTrackingRange(10).updateInterval(3)
                     .build("blizzard"));
 
+    public static final RegistryObject<EntityType<GOTPebbleEntity>> PEBBLE_PROJECTILE =
+            ENTITIES.register("pebble_projectile", () -> EntityType.Builder.<GOTPebbleEntity>of(GOTPebbleEntity::new, MobCategory.MISC).sized(0.25F,0.25F).clientTrackingRange(4).updateInterval(10).build("pebble_projectile"));
+    public static final RegistryObject<EntityType<GOTDartEntity>> DART_PROJECTILE =
+            ENTITIES.register("dart_projectile", () -> EntityType.Builder.<GOTDartEntity>of(GOTDartEntity::new, MobCategory.MISC).sized(0.2F,0.2F).clientTrackingRange(4).updateInterval(10).build("dart_projectile"));
+
     public static final RegistryObject<EntityType<GOTThrownAxeEntity>> THROWN_AXE =
             ENTITIES.register("thrown_axe", () -> EntityType.Builder
                     .<GOTThrownAxeEntity>of(GOTThrownAxeEntity::new, MobCategory.MISC)
@@ -300,6 +324,88 @@ public final class GOTEntities {
                     .clientTrackingRange(4)
                     .updateInterval(10)
                     .build("thrown_axe"));
+
+    public static final RegistryObject<EntityType<GOTLegacySpearEntity>> SPEAR_PROJECTILE =
+            ENTITIES.register("spear_projectile", () -> EntityType.Builder
+                    .<GOTLegacySpearEntity>of(GOTLegacySpearEntity::new, MobCategory.MISC)
+                    .sized(0.25F, 0.25F).clientTrackingRange(6).updateInterval(10).build("spear_projectile"));
+
+    public static final RegistryObject<EntityType<GOTFirePotEntity>> FIRE_POT_PROJECTILE =
+            ENTITIES.register("fire_pot_projectile", () -> EntityType.Builder
+                    .<GOTFirePotEntity>of(GOTFirePotEntity::new, MobCategory.MISC)
+                    .sized(0.35F, 0.35F).clientTrackingRange(6).updateInterval(10).build("fire_pot_projectile"));
+
+    public static final RegistryObject<EntityType<GOTLegacyArrowEntity>> LEGACY_ARROW_PROJECTILE =
+            ENTITIES.register("legacy_arrow_projectile", () -> EntityType.Builder
+                    .<GOTLegacyArrowEntity>of(GOTLegacyArrowEntity::new, MobCategory.MISC)
+                    .sized(0.5F, 0.5F).clientTrackingRange(8).updateInterval(20).build("legacy_arrow_projectile"));
+
+    public static final RegistryObject<EntityType<GOTMountEntity>> GOT_HORSE =
+            ENTITIES.register("horse", () -> EntityType.Builder.<GOTMountEntity>of(GOTMountEntity::new, MobCategory.CREATURE).sized(1.3965F, 1.6F).clientTrackingRange(10).build("horse"));
+    public static final RegistryObject<EntityType<GOTZebraEntity>> ZEBRA =
+            ENTITIES.register("zebra", () -> EntityType.Builder.<GOTZebraEntity>of(GOTZebraEntity::new, MobCategory.CREATURE).sized(1.3965F, 1.6F).clientTrackingRange(10).build("zebra"));
+    public static final RegistryObject<EntityType<GOTRhinoEntity>> RHINO =
+            ENTITIES.register("rhino", () -> EntityType.Builder.<GOTRhinoEntity>of(GOTRhinoEntity::new, MobCategory.CREATURE).sized(1.7F, 1.8F).clientTrackingRange(10).build("rhino"));
+    public static final RegistryObject<EntityType<GOTWoolyRhinoEntity>> WOOLY_RHINO =
+            ENTITIES.register("wooly_rhino", () -> EntityType.Builder.<GOTWoolyRhinoEntity>of(GOTWoolyRhinoEntity::new, MobCategory.CREATURE).sized(1.7F, 1.8F).clientTrackingRange(10).build("wooly_rhino"));
+    public static final RegistryObject<EntityType<GOTCamelEntity>> CAMEL =
+            ENTITIES.register("camel", () -> EntityType.Builder.<GOTCamelEntity>of(GOTCamelEntity::new, MobCategory.CREATURE).sized(1.5F, 2.0F).clientTrackingRange(10).build("camel"));
+    public static final RegistryObject<EntityType<GOTBoarEntity>> BOAR =
+            ENTITIES.register("boar", () -> EntityType.Builder.<GOTBoarEntity>of(GOTBoarEntity::new, MobCategory.CREATURE).sized(1.2F, 1.1F).clientTrackingRange(10).build("boar"));
+    public static final RegistryObject<EntityType<GOTDeerEntity>> DEER =
+            ENTITIES.register("deer", () -> EntityType.Builder.<GOTDeerEntity>of(GOTDeerEntity::new, MobCategory.CREATURE).sized(1.1F, 1.6F).clientTrackingRange(10).build("deer"));
+    public static final RegistryObject<EntityType<GOTBearEntity>> BEAR =
+            ENTITIES.register("bear", () -> EntityType.Builder.<GOTBearEntity>of(GOTBearEntity::new, MobCategory.CREATURE).sized(1.6F, 1.8F).clientTrackingRange(10).build("bear"));
+    public static final RegistryObject<EntityType<GOTSnowBearEntity>> SNOW_BEAR =
+            ENTITIES.register("snow_bear", () -> EntityType.Builder.<GOTSnowBearEntity>of(GOTSnowBearEntity::new, MobCategory.CREATURE).sized(1.6F, 1.8F).clientTrackingRange(10).build("snow_bear"));
+    public static final RegistryObject<EntityType<GOTBisonEntity>> BISON =
+            ENTITIES.register("bison", () -> EntityType.Builder.<GOTBisonEntity>of(GOTBisonEntity::new, MobCategory.CREATURE).sized(1.5F, 1.7F).clientTrackingRange(10).build("bison"));
+    public static final RegistryObject<EntityType<GOTWhiteBisonEntity>> WHITE_BISON =
+            ENTITIES.register("white_bison", () -> EntityType.Builder.<GOTWhiteBisonEntity>of(GOTWhiteBisonEntity::new, MobCategory.CREATURE).sized(1.5F, 1.7F).clientTrackingRange(10).build("white_bison"));
+    public static final RegistryObject<EntityType<GOTDirewolfEntity>> DIREWOLF =
+            ENTITIES.register("direwolf", () -> EntityType.Builder.<GOTDirewolfEntity>of(GOTDirewolfEntity::new, MobCategory.CREATURE).sized(0.9F, 1.1F).clientTrackingRange(10).build("direwolf"));
+    public static final RegistryObject<EntityType<GOTElephantEntity>> ELEPHANT =
+            ENTITIES.register("elephant", () -> EntityType.Builder.<GOTElephantEntity>of(GOTElephantEntity::new, MobCategory.CREATURE).sized(2.4F, 2.8F).clientTrackingRange(12).build("elephant"));
+    public static final RegistryObject<EntityType<GOTMammothEntity>> MAMMOTH =
+            ENTITIES.register("mammoth", () -> EntityType.Builder.<GOTMammothEntity>of(GOTMammothEntity::new, MobCategory.CREATURE).sized(2.6F, 3.2F).clientTrackingRange(12).build("mammoth"));
+    public static final RegistryObject<EntityType<GOTGiraffeEntity>> GIRAFFE =
+            ENTITIES.register("giraffe", () -> EntityType.Builder.<GOTGiraffeEntity>of(GOTGiraffeEntity::new, MobCategory.CREATURE).sized(1.4F, 3.4F).clientTrackingRange(12).build("giraffe"));
+    public static final RegistryObject<EntityType<GOTLionEntity>> LION =
+            ENTITIES.register("lion", () -> EntityType.Builder.<GOTLionEntity>of(GOTLionEntity::new, MobCategory.CREATURE).sized(1.2F, 1.2F).clientTrackingRange(10).build("lion"));
+    public static final RegistryObject<EntityType<GOTLionessEntity>> LIONESS =
+            ENTITIES.register("lioness", () -> EntityType.Builder.<GOTLionessEntity>of(GOTLionessEntity::new, MobCategory.CREATURE).sized(1.15F, 1.15F).clientTrackingRange(10).build("lioness"));
+    public static final RegistryObject<EntityType<GOTOryxEntity>> ORYX =
+            ENTITIES.register("oryx", () -> EntityType.Builder.<GOTOryxEntity>of(GOTOryxEntity::new, MobCategory.CREATURE).sized(1.0F, 1.45F).clientTrackingRange(10).build("oryx"));
+    public static final RegistryObject<EntityType<GOTWhiteOryxEntity>> WHITE_ORYX =
+            ENTITIES.register("white_oryx", () -> EntityType.Builder.<GOTWhiteOryxEntity>of(GOTWhiteOryxEntity::new, MobCategory.CREATURE).sized(1.0F, 1.45F).clientTrackingRange(10).build("white_oryx"));
+    public static final RegistryObject<EntityType<GOTDikDikEntity>> DIKDIK =
+            ENTITIES.register("dik_dik", () -> EntityType.Builder.<GOTDikDikEntity>of(GOTDikDikEntity::new, MobCategory.CREATURE).sized(0.55F, 0.75F).clientTrackingRange(8).build("dik_dik"));
+    public static final RegistryObject<EntityType<GOTWalrusEntity>> WALRUS =
+            ENTITIES.register("walrus", () -> EntityType.Builder.<GOTWalrusEntity>of(GOTWalrusEntity::new, MobCategory.CREATURE).sized(1.8F, 1.25F).clientTrackingRange(10).build("walrus"));
+    public static final RegistryObject<EntityType<GOTBeaverEntity>> BEAVER =
+            ENTITIES.register("beaver", () -> EntityType.Builder.<GOTBeaverEntity>of(GOTBeaverEntity::new, MobCategory.CREATURE).sized(0.85F, 0.65F).clientTrackingRange(8).build("beaver"));
+    public static final RegistryObject<EntityType<GOTShadowcatEntity>> SHADOWCAT =
+            ENTITIES.register("shadowcat", () -> EntityType.Builder.<GOTShadowcatEntity>of(GOTShadowcatEntity::new, MobCategory.CREATURE).sized(1.25F, 1.2F).clientTrackingRange(10).build("shadowcat"));
+
+    public static final RegistryObject<EntityType<GOTBirdEntity>> BIRD = ENTITIES.register("bird", () -> EntityType.Builder.<GOTBirdEntity>of(GOTBirdEntity::new, MobCategory.CREATURE).sized(.5F,.5F).clientTrackingRange(8).build("bird"));
+    public static final RegistryObject<EntityType<GOTSeagullEntity>> SEAGULL = ENTITIES.register("seagull", () -> EntityType.Builder.<GOTSeagullEntity>of(GOTSeagullEntity::new, MobCategory.CREATURE).sized(.6F,.6F).clientTrackingRange(8).build("seagull"));
+    public static final RegistryObject<EntityType<GOTGorcrowEntity>> GORCROW = ENTITIES.register("gorcrow", () -> EntityType.Builder.<GOTGorcrowEntity>of(GOTGorcrowEntity::new, MobCategory.CREATURE).sized(.7F,.7F).clientTrackingRange(8).build("gorcrow"));
+    public static final RegistryObject<EntityType<GOTButterflyEntity>> BUTTERFLY = ENTITIES.register("butterfly", () -> EntityType.Builder.<GOTButterflyEntity>of(GOTButterflyEntity::new, MobCategory.AMBIENT).sized(.5F,.5F).clientTrackingRange(6).build("butterfly"));
+    public static final RegistryObject<EntityType<GOTFlamingoEntity>> FLAMINGO = ENTITIES.register("flamingo", () -> EntityType.Builder.<GOTFlamingoEntity>of(GOTFlamingoEntity::new, MobCategory.CREATURE).sized(.6F,1.8F).clientTrackingRange(8).build("flamingo"));
+    public static final RegistryObject<EntityType<GOTSwanEntity>> SWAN = ENTITIES.register("swan", () -> EntityType.Builder.<GOTSwanEntity>of(GOTSwanEntity::new, MobCategory.CREATURE).sized(.7F,.8F).clientTrackingRange(8).build("swan"));
+    public static final RegistryObject<EntityType<GOTMidgesEntity>> MIDGES = ENTITIES.register("midges", () -> EntityType.Builder.<GOTMidgesEntity>of(GOTMidgesEntity::new, MobCategory.AMBIENT).sized(.5F,.35F).clientTrackingRange(6).build("midges"));
+    public static final RegistryObject<EntityType<GOTDesertScorpionEntity>> DESERT_SCORPION = ENTITIES.register("desert_scorpion", () -> EntityType.Builder.<GOTDesertScorpionEntity>of(GOTDesertScorpionEntity::new, MobCategory.MONSTER).sized(.8F,.45F).clientTrackingRange(8).build("desert_scorpion"));
+    public static final RegistryObject<EntityType<GOTJungleScorpionEntity>> JUNGLE_SCORPION = ENTITIES.register("jungle_scorpion", () -> EntityType.Builder.<GOTJungleScorpionEntity>of(GOTJungleScorpionEntity::new, MobCategory.MONSTER).sized(.8F,.45F).clientTrackingRange(8).build("jungle_scorpion"));
+    public static final RegistryObject<EntityType<GOTRedScorpionEntity>> RED_SCORPION = ENTITIES.register("red_scorpion", () -> EntityType.Builder.<GOTRedScorpionEntity>of(GOTRedScorpionEntity::new, MobCategory.MONSTER).sized(1.0F,.55F).clientTrackingRange(8).build("red_scorpion"));
+    public static final RegistryObject<EntityType<GOTManticoreEntity>> MANTICORE = ENTITIES.register("manticore", () -> EntityType.Builder.<GOTManticoreEntity>of(GOTManticoreEntity::new, MobCategory.MONSTER).sized(.45F,.3F).clientTrackingRange(8).build("manticore"));
+    public static final RegistryObject<EntityType<GOTStoneManEntity>> STONE_MAN = ENTITIES.register("stone_man", () -> EntityType.Builder.<GOTStoneManEntity>of(GOTStoneManEntity::new, MobCategory.MONSTER).sized(.6F,1.8F).clientTrackingRange(10).updateInterval(3).build("stone_man"));
+    public static final RegistryObject<EntityType<GOTWerewolfEntity>> WEREWOLF = ENTITIES.register("werewolf", () -> EntityType.Builder.<GOTWerewolfEntity>of(GOTWerewolfEntity::new, MobCategory.MONSTER).sized(.8F,1.9F).clientTrackingRange(10).updateInterval(3).build("werewolf"));
+    public static final RegistryObject<EntityType<GOTGiantEntity>> GIANT = ENTITIES.register("giant", () -> EntityType.Builder.<GOTGiantEntity>of(GOTGiantEntity::new, MobCategory.CREATURE).sized(2.56F,5.12F).clientTrackingRange(16).updateInterval(3).build("giant"));
+    public static final RegistryObject<EntityType<GOTWightGiantEntity>> WIGHT_GIANT = ENTITIES.register("wight_giant", () -> EntityType.Builder.<GOTWightGiantEntity>of(GOTWightGiantEntity::new, MobCategory.MONSTER).sized(2.56F,5.12F).clientTrackingRange(16).updateInterval(3).build("wight_giant"));
+    public static final RegistryObject<EntityType<GOTThrownRockEntity>> THROWN_ROCK = ENTITIES.register("thrown_rock", () -> EntityType.Builder.<GOTThrownRockEntity>of(GOTThrownRockEntity::new, MobCategory.MISC).sized(.75F,.75F).clientTrackingRange(12).updateInterval(10).build("thrown_rock"));
+    public static final RegistryObject<EntityType<GOTBarrowWraithEntity>> BARROW_WRAITH = ENTITIES.register("barrow_wraith", () -> EntityType.Builder.<GOTBarrowWraithEntity>of(GOTBarrowWraithEntity::new, MobCategory.MONSTER).sized(.8F,2.5F).clientTrackingRange(10).updateInterval(3).build("barrow_wraith"));
+    public static final RegistryObject<EntityType<GOTMarshWraithEntity>> MARSH_WRAITH = ENTITIES.register("marsh_wraith", () -> EntityType.Builder.<GOTMarshWraithEntity>of(GOTMarshWraithEntity::new, MobCategory.MONSTER).sized(.6F,1.8F).clientTrackingRange(12).updateInterval(3).build("marsh_wraith"));
+    public static final RegistryObject<EntityType<GOTMarshWraithBallEntity>> MARSH_WRAITH_BALL = ENTITIES.register("marsh_wraith_ball", () -> EntityType.Builder.<GOTMarshWraithBallEntity>of(GOTMarshWraithBallEntity::new, MobCategory.MISC).sized(.75F,.75F).clientTrackingRange(12).updateInterval(10).build("marsh_wraith_ball"));
 
     private GOTEntities() {}
 
@@ -310,6 +416,47 @@ public final class GOTEntities {
     }
 
     private static void createAttributes(EntityAttributeCreationEvent event) {
+        event.put(GOT_HORSE.get(), GOTMountEntity.createGOTMountAttributes().build());
+        event.put(ZEBRA.get(), GOTMountEntity.createGOTMountAttributes().build());
+        event.put(RHINO.get(), GOTMountEntity.createGOTMountAttributes().build());
+        event.put(WOOLY_RHINO.get(), GOTMountEntity.createGOTMountAttributes().build());
+        event.put(CAMEL.get(), GOTMountEntity.createGOTMountAttributes().build());
+        event.put(BOAR.get(), GOTMountEntity.createGOTMountAttributes().build());
+        event.put(DEER.get(), GOTDeerEntity.createAttributes().build());
+        event.put(BEAR.get(), GOTBearEntity.createAttributes().build());
+        event.put(SNOW_BEAR.get(), GOTSnowBearEntity.createAttributes().build());
+        event.put(BISON.get(), GOTBisonEntity.createAttributes().build());
+        event.put(WHITE_BISON.get(), GOTBisonEntity.createAttributes().build());
+        event.put(DIREWOLF.get(), GOTDirewolfEntity.createAttributes().build());
+        event.put(ELEPHANT.get(), GOTElephantEntity.createAttributes().build());
+        event.put(MAMMOTH.get(), GOTMammothEntity.createAttributes().build());
+        event.put(GIRAFFE.get(), GOTGiraffeEntity.createAttributes().build());
+        event.put(LION.get(), GOTLionEntity.createAttributes().build());
+        event.put(LIONESS.get(), GOTLionEntity.createAttributes().build());
+        event.put(ORYX.get(), GOTOryxEntity.createAttributes().build());
+        event.put(WHITE_ORYX.get(), GOTWhiteOryxEntity.createWhiteAttributes().build());
+        event.put(DIKDIK.get(), GOTDikDikEntity.createAttributes().build());
+        event.put(WALRUS.get(), GOTWalrusEntity.createAttributes().build());
+        event.put(BEAVER.get(), GOTBeaverEntity.createAttributes().build());
+        event.put(SHADOWCAT.get(), GOTShadowcatEntity.createAttributes().build());
+        event.put(BIRD.get(), Parrot.createAttributes().build());
+        event.put(SEAGULL.get(), Parrot.createAttributes().build());
+        event.put(GORCROW.get(), Parrot.createAttributes().build());
+        event.put(BUTTERFLY.get(), GOTButterflyEntity.createAttributes().build());
+        event.put(FLAMINGO.get(), GOTFlamingoEntity.createAttributes().build());
+        event.put(SWAN.get(), GOTSwanEntity.createAttributes().build());
+        event.put(MIDGES.get(), GOTMidgesEntity.createAttributes().build());
+        event.put(DESERT_SCORPION.get(), GOTScorpionEntity.createAttributes().build());
+        event.put(JUNGLE_SCORPION.get(), GOTScorpionEntity.createAttributes().build());
+        event.put(RED_SCORPION.get(), GOTRedScorpionEntity.createRedAttributes().build());
+        event.put(MANTICORE.get(), GOTManticoreEntity.createAttributes().build());
+        event.put(STONE_MAN.get(), GOTStoneManEntity.createAttributes().build());
+        event.put(WEREWOLF.get(), GOTWerewolfEntity.createAttributes().build());
+        event.put(GIANT.get(), GOTGiantBaseEntity.giantAttributes().build());
+        event.put(WIGHT_GIANT.get(), GOTWightGiantEntity.createWightAttributes().build());
+        event.put(BARROW_WRAITH.get(), GOTBarrowWraithEntity.createAttributes().build());
+        event.put(MARSH_WRAITH.get(), GOTMarshWraithEntity.createAttributes().build());
+
         event.put(NORTH_NPC.get(), GOTNorthNpcEntity.createAttributes().build());
         event.put(WESTERLANDS_NPC.get(), GOTWesterlandsNpcEntity.createAttributes().build());
         event.put(RIVERLANDS_NPC.get(), GOTRiverlandsNpcEntity.createAttributes().build());
@@ -324,6 +471,7 @@ public final class GOTEntities {
         event.put(NIGHT_WATCH_NPC.get(), GOTNightWatchNpcEntity.createAttributes().build());
         event.put(WHITE_WALKER_NPC.get(), GOTWhiteWalkerNpcEntity.createAttributes().build());
         event.put(BRAAVOS_NPC.get(), GOTBraavosNpcEntity.createAttributes().build());
+        event.put(JAQEN_HGHAR.get(), GOTBraavosNpcEntity.createAttributes().build());
         event.put(PENTOS_NPC.get(), GOTPentosNpcEntity.createAttributes().build());
         event.put(VOLANTIS_NPC.get(), GOTVolantisNpcEntity.createAttributes().build());
         event.put(LYS_NPC.get(), GOTLysNpcEntity.createAttributes().build());
@@ -344,11 +492,43 @@ public final class GOTEntities {
         event.put(GOLDEN_COMPANY_NPC.get(), GOTGoldenCompanyNpcEntity.createAttributes().build());
         event.put(SUMMER_ISLES_NPC.get(), GOTSummerIslesNpcEntity.createAttributes().build());
         event.put(SOTHORYOS_NPC.get(), GOTSothoryosNpcEntity.createAttributes().build());
+        event.put(CROCODILE.get(), GOTCrocodileEntity.createAttributes().build());
         event.put(ULTHOS_SPIDER.get(), GOTUlthosSpiderEntity.createAttributes().build());
         event.put(BLIZZARD.get(), GOTBlizzardEntity.createAttributes().build());
     }
 
     private static void commonSetup(FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            SpawnPlacements.register(DEER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(BEAR.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(SNOW_BEAR.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(BISON.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(WHITE_BISON.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(DIREWOLF.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(ELEPHANT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(MAMMOTH.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(GIRAFFE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(LION.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(LIONESS.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(ORYX.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(WHITE_ORYX.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(DIKDIK.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(WALRUS.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(BEAVER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(SHADOWCAT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(FLAMINGO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(SWAN.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.animal.Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(DESERT_SCORPION.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.monster.Monster::checkMonsterSpawnRules);
+            SpawnPlacements.register(JUNGLE_SCORPION.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.monster.Monster::checkMonsterSpawnRules);
+            SpawnPlacements.register(RED_SCORPION.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.monster.Monster::checkMonsterSpawnRules);
+            SpawnPlacements.register(MANTICORE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.monster.Monster::checkMonsterSpawnRules);
+            SpawnPlacements.register(STONE_MAN.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.monster.Monster::checkMonsterSpawnRules);
+            SpawnPlacements.register(WEREWOLF.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.monster.Monster::checkMonsterSpawnRules);
+            SpawnPlacements.register(GIANT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (type, level, spawnType, pos, random) -> level.getBlockState(pos.below()).isValidSpawn(level,pos.below(),type) && level.getBlockState(pos).getCollisionShape(level,pos).isEmpty());
+            SpawnPlacements.register(WIGHT_GIANT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.monster.Monster::checkMonsterSpawnRules);
+            SpawnPlacements.register(BARROW_WRAITH.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.monster.Monster::checkMonsterSpawnRules);
+            SpawnPlacements.register(MARSH_WRAITH.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, net.minecraft.world.entity.monster.Monster::checkMonsterSpawnRules);
+        });
         event.enqueueWork(() -> SpawnPlacements.register(NORTH_NPC.get(),
                 SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 (type, level, spawnType, pos, random) ->
@@ -553,6 +733,9 @@ public final class GOTEntities {
                         level.getBlockState(pos.below()).isValidSpawn(level, pos.below(), type)
                                 && level.getBlockState(pos).getCollisionShape(level, pos).isEmpty()
                                 && level.getBlockState(pos.above()).getCollisionShape(level, pos.above()).isEmpty()));
+        event.enqueueWork(() -> SpawnPlacements.register(CROCODILE.get(),
+                SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                GOTCrocodileEntity::canSpawn));
         event.enqueueWork(() -> SpawnPlacements.register(ULTHOS_SPIDER.get(),
                 SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 net.minecraft.world.entity.monster.Monster::checkMonsterSpawnRules));

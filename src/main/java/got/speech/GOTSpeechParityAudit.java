@@ -51,10 +51,10 @@ public final class GOTSpeechParityAudit {
                 "New player target, LoS, 1/3 chance, 16-block crowd suppression"),
             new Entry("NPC-to-NPC random ambient chatter", Status.NOT_PRESENT_IN_ORIGINAL,
                 "Not invented for the port"),
-            new Entry("Jaqen state-sequence dialogue", Status.DEFERRED_TO_QUEST_SYSTEM,
-                "Banks preserved; must use real quest/state progression"),
-            new Entry("Miniquest start/progress/complete speech", Status.DEFERRED_TO_QUEST_SYSTEM,
-                "Banks preserved; Quest Fidelity will bind states"),
+            new Entry("Jaqen state-sequence dialogue", Status.COMPLETE_MODERN_EQUIVALENT,
+                "Bound to the modern Jaqen tutorial state sequence"),
+            new Entry("Miniquest start/progress/complete speech", Status.COMPLETE_MODERN_EQUIVALENT,
+                "Bound through the modern quest offer/progress/completion lifecycle"),
             new Entry("Drunken NPC speech distortion", Status.DEFERRED_MISSING_NPC_STATE,
                 "Original algorithm recovered, but current NPC family/drunk state is not yet ported")
         );

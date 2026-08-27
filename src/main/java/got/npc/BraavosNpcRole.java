@@ -31,7 +31,9 @@ public enum BraavosNpcRole {
     BRAAVOS_BAKER("braavos_baker", "Braavos Baker", Gender.RANDOM, Combat.PASSIVE, Trade.BAKER, 2, false, null, "", "", 1.0F, 1.0F),
 
     TYCHO_NESTORIS("tycho_nestoris", "Tycho Nestoris", Gender.MALE, Combat.PASSIVE,
-            Trade.GOLDSMITH, 300, true, "tycho_nestoris", "", "", 1.0F, 1.0F);
+            Trade.GOLDSMITH, 300, true, "tycho_nestoris", "", "", 1.0F, 1.0F),
+    JAQEN_HGHAR("jaqen_hghar", "Jaqen H'Ghar", Gender.MALE, Combat.MELEE,
+            Trade.NONE, 300, true, "jaqen_hghar", "", "", 1.0F, 1.0F);
 
     public enum Gender { RANDOM, MALE, FEMALE }
     public enum Combat { PASSIVE, MELEE, ARCHER, HYBRID }

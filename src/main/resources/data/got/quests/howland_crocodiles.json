@@ -1,0 +1,37 @@
+{
+  "title": "quest.got.howland_crocodiles.title",
+  "description": "quest.got.howland_crocodiles.description",
+  "offer": "quest.got.howland_crocodiles.offer",
+  "progress": "quest.got.howland_crocodiles.progress",
+  "complete": "quest.got.howland_crocodiles.complete",
+  "icon": "minecraft:iron_sword",
+  "color": "#7A5C3E",
+  "weight": 1,
+  "repeatable": false,
+  "legendary": true,
+  "legacy_reward_factor": 50,
+  "giver": {
+    "roles": [
+      "howland_reed"
+    ],
+    "factions": [
+      "north"
+    ],
+    "entity_types": [
+      "got:north_npc"
+    ],
+    "maximum_active_for_faction": 5
+  },
+  "objectives": [
+    {
+      "type": "kill_entity",
+      "target": "got:crocodile",
+      "count": 50,
+      "label": "quest.got.howland_crocodiles.objective.0"
+    }
+  ],
+  "rewards": {
+    "coins": 0,
+    "experience": 0
+  }
+}

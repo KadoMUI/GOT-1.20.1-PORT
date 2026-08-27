@@ -1,4 +1,6 @@
 {
   "replace": false,
-  "values": ["got:dorne", "got:dorne_desert", "got:dorne_forest", "got:dorne_mesa", "got:dorne_mountains"]
+  "values": [
+    "got:dorne"
+  ]
 }

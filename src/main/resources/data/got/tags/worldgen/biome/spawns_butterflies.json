@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "got:reach_forest",
+    "got:stormlands_forest",
+    "got:riverlands_forest",
+    "got:essos_forest",
+    "got:qohor_forest",
+    "got:volantis_forest",
+    "got:ulthos_forest",
+    "got:sothoryos_forest",
+    "got:sothoryos_bushland"
+  ]
+}

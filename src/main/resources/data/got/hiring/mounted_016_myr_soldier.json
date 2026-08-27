@@ -1,0 +1,14 @@
+{
+  "roles": [
+    "myr_soldier"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 65.0,
+  "pledge_exclusive": false,
+  "initial_cost": 15,
+  "legacy_entity": "GOTEntityMyrSoldier",
+  "legacy_group": "MYR",
+  "mount_type": "GOTEntityHorse",
+  "mount_name": "Rider",
+  "mount_armor": "got/common/database/GOTItems.ironHorseArmor"
+}

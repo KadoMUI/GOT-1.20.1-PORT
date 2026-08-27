@@ -45,6 +45,7 @@ final class GOTGoldenCompanyNpcLoadouts {
                 npc.setWeapons(sword, sword);
             }
         }
+        GOTNpcShieldLoadouts.equip(npc, npc.getRole(), "got:golden_company_shield");
         npc.updateHeldItem();
     }
 

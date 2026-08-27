@@ -146,9 +146,10 @@ public class GOTReachNpcEntity extends PathfinderMob implements net.minecraft.wo
         if (spawnType == MobSpawnType.NATURAL || spawnType == MobSpawnType.CHUNK_GENERATION) {
             GOTBiomeMetadata metadata = PlanetosBiomeManager.getMetadata(blockPosition().getX(), blockPosition().getZ());
             if (metadata != null && metadata.id().startsWith("reach")) {
-                boolean child = random.nextInt(7) == 0;
-                prepareForSpawn(ReachNpcRole.REACH_MAN, null, child,
-                        blockPosition(), 24, "");
+                ReachNpcRole role = random.nextInt(15) < 10
+                        ? ReachNpcRole.REACH_LEVYMAN
+                        : ReachNpcRole.REACH_LEVYMAN_ARCHER;
+                prepareForSpawn(role, false, false, blockPosition(), 24, "");
             }
         } else if (getCustomName() == null) {
             prepareForSpawn(getRole(), null, false, blockPosition(), 24, "");

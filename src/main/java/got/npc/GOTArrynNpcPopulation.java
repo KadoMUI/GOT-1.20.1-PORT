@@ -228,6 +228,12 @@ public final class GOTArrynNpcPopulation {
             case "arryn_butcher" -> ArrynNpcRole.ARRYN_BUTCHER;
             case "arryn_fishmonger" -> ArrynNpcRole.ARRYN_FISHMONGER;
             case "arryn_baker" -> ArrynNpcRole.ARRYN_BAKER;
+            case "hillman_warrior" -> ArrynNpcRole.HILLMAN_WARRIOR;
+            case "hillman_archer" -> ArrynNpcRole.HILLMAN_ARCHER;
+            case "hillman_axe_thrower" -> ArrynNpcRole.HILLMAN_AXE_THROWER;
+            case "hillman_banner_bearer" -> ArrynNpcRole.HILLMAN_BANNER_BEARER;
+            case "hillman_berserker" -> ArrynNpcRole.HILLMAN_BERSERKER;
+            case "prostitute", "arryn_prostitute" -> ArrynNpcRole.PROSTITUTE;
             default -> ArrynNpcRole.findById(role);
         };
     }

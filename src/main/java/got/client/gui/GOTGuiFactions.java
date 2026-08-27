@@ -9,6 +9,8 @@ import got.faction.GOTFactionService;
 import got.network.C2SFactionMembershipPacket;
 import got.network.C2SRequestFactionDataPacket;
 import got.network.GOTNetwork;
+import got.network.C2SJaqenTutorialPacket;
+import got.quest.GOTJaqenQuestSequence;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -48,6 +50,7 @@ public final class GOTGuiFactions extends GOTGuiMenuBaseReturn {
 
     @Override
     protected void init() {
+        GOTNetwork.CHANNEL.sendToServer(C2SJaqenTutorialPacket.action(GOTJaqenQuestSequence.Action.VIEW_FACTIONS));
         super.init();
         int panelY = guiTop + 42;
         previous = addRenderableWidget(Button.builder(Component.literal("<"), button -> select(-1))

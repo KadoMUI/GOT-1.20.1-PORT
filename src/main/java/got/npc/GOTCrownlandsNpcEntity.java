@@ -147,9 +147,10 @@ public class GOTCrownlandsNpcEntity extends PathfinderMob implements net.minecra
             GOTBiomeMetadata metadata = PlanetosBiomeManager.getMetadata(blockPosition().getX(), blockPosition().getZ());
             if (metadata != null && (metadata.id().startsWith("crownlands")
                     || metadata.id().startsWith("kingswood"))) {
-                boolean child = random.nextInt(7) == 0;
-                prepareForSpawn(CrownlandsNpcRole.CROWNLANDS_MAN, null, child,
-                        blockPosition(), 24, "");
+                CrownlandsNpcRole role = random.nextInt(15) < 10
+                        ? CrownlandsNpcRole.CROWNLANDS_LEVYMAN
+                        : CrownlandsNpcRole.CROWNLANDS_LEVYMAN_ARCHER;
+                prepareForSpawn(role, false, false, blockPosition(), 24, "");
             }
         } else if (getCustomName() == null) {
             prepareForSpawn(getRole(), null, false, blockPosition(), 24, "");
@@ -245,6 +246,13 @@ public class GOTCrownlandsNpcEntity extends PathfinderMob implements net.minecra
     @Override
     protected InteractionResult mobInteract(Player player, InteractionHand hand) {
         if (getRole().trade() != CrownlandsNpcRole.Trade.NONE && !isBaby() && isAlive()) {
+            if (getRole() == CrownlandsNpcRole.PETYR_BAELISH) {
+                if (getPersistentData().getBoolean("GOTPetyrDaggerSold")) return super.mobInteract(player, hand);
+                if (player instanceof net.minecraft.server.level.ServerPlayer serverPlayer
+                        && got.faction.GOTFactionPlayerData.get(serverPlayer).alignment(getFaction()) < 0.0F) {
+                    return InteractionResult.FAIL;
+                }
+            }
             if (!level().isClientSide) {
                 setTradingPlayer(player);
                 openTradingScreen(player, getDisplayName(), getRole().ordinal());
@@ -271,7 +279,13 @@ public class GOTCrownlandsNpcEntity extends PathfinderMob implements net.minecra
         switch (getRole()) {
             case SANDOR_CLEGANE -> spawnAtLocation(GOTCrownlandsNpcLoadouts.stack("got:sandor_clegane_sword"));
             case JOFFREY_BARATHEON -> spawnAtLocation(GOTCrownlandsNpcLoadouts.stack("got:joffrey_baratheon_crossbow"));
-            case PETYR_BAELISH -> spawnAtLocation(GOTCrownlandsNpcLoadouts.stack("got:petyr_baelish_brooch"));
+            case PETYR_BAELISH -> {
+                spawnAtLocation(GOTCrownlandsNpcLoadouts.stack("got:petyr_baelish_brooch"));
+                if (!getPersistentData().getBoolean("GOTPetyrDaggerSold"))
+                    spawnAtLocation(GOTCrownlandsNpcLoadouts.stack("got:petyr_baelish_dagger"));
+            }
+            case GENDRY_BARATHEON -> spawnAtLocation(GOTCrownlandsNpcLoadouts.stack("got:blood_of_true_kings"));
+            case PYCELLE -> spawnAtLocation(GOTCrownlandsNpcLoadouts.stack("got:bottle_poison"));
             default -> { }
         }
     }
@@ -356,6 +370,8 @@ public class GOTCrownlandsNpcEntity extends PathfinderMob implements net.minecra
     @Override public void setTradingPlayer(@Nullable Player player) { tradingPlayer = player; }
     @Override @Nullable public Player getTradingPlayer() { return tradingPlayer; }
     @Override public MerchantOffers getOffers() {
+        if (getRole() == CrownlandsNpcRole.PETYR_BAELISH
+                && getPersistentData().getBoolean("GOTPetyrDaggerSold")) return new MerchantOffers();
         if (offers == null) offers = GOTCrownlandsNpcLoadouts.createOffers(getRole());
         return offers;
     }
@@ -363,6 +379,11 @@ public class GOTCrownlandsNpcEntity extends PathfinderMob implements net.minecra
     @Override public void notifyTrade(MerchantOffer offer) {
         villagerXp += offer.getXp();
         got.economy.GOTNpcTraderRuntime.onTrade(this, getOffers(), offer);
+        if (getRole() == CrownlandsNpcRole.PETYR_BAELISH
+                && offer.getResult().is(got.GOTEquipment.PETYR_BAELISH_DAGGER.get())) {
+            getPersistentData().putBoolean("GOTPetyrDaggerSold", true);
+            offers = new MerchantOffers();
+        }
         if (tradingPlayer instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
             got.economy.GOTTradeProgress.record(serverPlayer, getFaction());
         }

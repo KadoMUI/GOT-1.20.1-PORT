@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#got:spawns_beavers",
+  "spawners": [
+    {
+      "type": "got:beaver",
+      "weight": 16,
+      "minCount": 1,
+      "maxCount": 4
+    }
+  ]
+}

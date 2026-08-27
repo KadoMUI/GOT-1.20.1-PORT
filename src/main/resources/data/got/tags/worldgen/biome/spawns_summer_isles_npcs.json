@@ -1,4 +1,7 @@
 {
   "replace": false,
-  "values": ["got:summer_islands", "got:summer_colony"]
+  "values": [
+    "got:summer_islands",
+    "got:summer_colony"
+  ]
 }

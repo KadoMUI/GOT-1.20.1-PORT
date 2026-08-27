@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#got:spawns_vanilla_cod",
+  "spawners": [
+    {
+      "type": "minecraft:cod",
+      "weight": 12,
+      "minCount": 3,
+      "maxCount": 6
+    }
+  ]
+}

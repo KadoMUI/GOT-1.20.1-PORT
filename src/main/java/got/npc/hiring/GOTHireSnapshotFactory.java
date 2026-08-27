@@ -13,6 +13,8 @@ public final class GOTHireSnapshotFactory {
     public static GOTHireSnapshot build(ServerPlayer player, Entity entity) {
         GOTHireDefinition def = GOTHiringRuleService.definitionFor(entity);
         GOTHiringRuleService.Result result = GOTHiringRuleService.evaluate(player, entity);
+        boolean mountedVariant = GOTHiringRuleService.hasMountedVariant(entity);
+        GOTHiringRuleService.Result mountedResult = mountedVariant ? GOTHiringRuleService.evaluate(player, entity, true) : null;
 
         String role = GOTHiringRoleResolver.roleId(entity);
         if (role == null || role.isBlank()) role = entity.getType().toString();
@@ -62,6 +64,8 @@ public final class GOTHireSnapshotFactory {
             hired ? GOTHiredData.xp(entity) : 0,
             hired ? GOTHiredData.mobKills(entity) : 0,
             !hired && result.allowed(),
+            !hired && mountedVariant,
+            !hired && mountedResult != null && mountedResult.allowed(),
             !hired && !result.allowed() ? result.message().getString() : "",
             requiredAlign,
             reqText,

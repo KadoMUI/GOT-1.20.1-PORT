@@ -18,5 +18,10 @@ public record GOTHireDefinition(
     boolean pledgeExclusive,
     int initialCost,
     String legacyEntity,
-    String legacyGroup
-) {}
+    String legacyGroup,
+    String mountType,
+    String mountName,
+    String mountArmor
+) {
+    public boolean mounted() { return mountType != null && !mountType.isBlank(); }
+}

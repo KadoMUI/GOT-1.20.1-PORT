@@ -1,0 +1,289 @@
+Compiled from "IceUtils.java"
+public class got.common.entity.other.utils.IceUtils {
+  private static final java.util.Collection<net.minecraft.item.Item$ToolMaterial> CAUSE_DAMAGE_MATERIALS;
+
+  private static final java.util.Collection<net.minecraft.item.Item> SPECIAL_ITEMS;
+
+  private got.common.entity.other.utils.IceUtils();
+    Code:
+       0: aload_0
+       1: invokespecial #19                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void createNewWight(net.minecraft.entity.Entity, net.minecraft.entity.EntityLivingBase, net.minecraft.world.World);
+    Code:
+       0: aload_1
+       1: instanceof    #25                 // class got/common/entity/other/GOTEntityHumanBase
+       4: ifeq          200
+       7: aload_1
+       8: checkcast     #25                 // class got/common/entity/other/GOTEntityHumanBase
+      11: astore_3
+      12: aload_0
+      13: instanceof    #27                 // class got/common/entity/westeros/legendary/warrior/GOTEntityNightKing
+      16: ifeq          65
+      19: new           #29                 // class got/common/entity/westeros/ice/GOTEntityWhiteWalker
+      22: dup
+      23: aload_2
+      24: invokespecial #32                 // Method got/common/entity/westeros/ice/GOTEntityWhiteWalker."<init>":(Lnet/minecraft/world/World;)V
+      27: astore        4
+      29: aload         4
+      31: aload_3
+      32: invokevirtual #38                 // Method got/common/entity/other/GOTEntityNPC.func_82149_j:(Lnet/minecraft/entity/Entity;)V
+      35: aload         4
+      37: invokevirtual #42                 // Method got/common/entity/other/GOTEntityNPC.getFamilyInfo:()Lgot/common/entity/other/info/GOTFamilyInfo;
+      40: aload_3
+      41: invokevirtual #43                 // Method got/common/entity/other/GOTEntityHumanBase.getFamilyInfo:()Lgot/common/entity/other/info/GOTFamilyInfo;
+      44: invokevirtual #49                 // Method got/common/entity/other/info/GOTFamilyInfo.getAge:()I
+      47: invokevirtual #53                 // Method got/common/entity/other/info/GOTFamilyInfo.setAge:(I)V
+      50: aload_2
+      51: aload_3
+      52: invokevirtual #58                 // Method net/minecraft/world/World.func_72900_e:(Lnet/minecraft/entity/Entity;)V
+      55: aload_2
+      56: aload         4
+      58: invokevirtual #62                 // Method net/minecraft/world/World.func_72838_d:(Lnet/minecraft/entity/Entity;)Z
+      61: pop
+      62: goto          197
+      65: new           #64                 // class got/common/entity/westeros/ice/GOTEntityWight
+      68: dup
+      69: aload_2
+      70: invokespecial #65                 // Method got/common/entity/westeros/ice/GOTEntityWight."<init>":(Lnet/minecraft/world/World;)V
+      73: astore        4
+      75: aload         4
+      77: aload_3
+      78: invokevirtual #38                 // Method got/common/entity/other/GOTEntityNPC.func_82149_j:(Lnet/minecraft/entity/Entity;)V
+      81: aload         4
+      83: invokevirtual #42                 // Method got/common/entity/other/GOTEntityNPC.getFamilyInfo:()Lgot/common/entity/other/info/GOTFamilyInfo;
+      86: aload_3
+      87: invokevirtual #43                 // Method got/common/entity/other/GOTEntityHumanBase.getFamilyInfo:()Lgot/common/entity/other/info/GOTFamilyInfo;
+      90: invokevirtual #49                 // Method got/common/entity/other/info/GOTFamilyInfo.getAge:()I
+      93: invokevirtual #53                 // Method got/common/entity/other/info/GOTFamilyInfo.setAge:(I)V
+      96: aload         4
+      98: invokevirtual #42                 // Method got/common/entity/other/GOTEntityNPC.getFamilyInfo:()Lgot/common/entity/other/info/GOTFamilyInfo;
+     101: aload_3
+     102: invokevirtual #43                 // Method got/common/entity/other/GOTEntityHumanBase.getFamilyInfo:()Lgot/common/entity/other/info/GOTFamilyInfo;
+     105: invokevirtual #69                 // Method got/common/entity/other/info/GOTFamilyInfo.isMale:()Z
+     108: invokevirtual #73                 // Method got/common/entity/other/info/GOTFamilyInfo.setMale:(Z)V
+     111: aload         4
+     113: invokevirtual #77                 // Method got/common/entity/other/GOTEntityNPC.getNpcItemsInv:()Lgot/common/entity/other/utils/GOTInventoryNPCItems;
+     116: aload_3
+     117: invokevirtual #78                 // Method got/common/entity/other/GOTEntityHumanBase.getNpcItemsInv:()Lgot/common/entity/other/utils/GOTInventoryNPCItems;
+     120: invokevirtual #84                 // Method got/common/entity/other/utils/GOTInventoryNPCItems.getMeleeWeapon:()Lnet/minecraft/item/ItemStack;
+     123: invokevirtual #88                 // Method got/common/entity/other/utils/GOTInventoryNPCItems.setMeleeWeapon:(Lnet/minecraft/item/ItemStack;)V
+     126: aload         4
+     128: invokevirtual #77                 // Method got/common/entity/other/GOTEntityNPC.getNpcItemsInv:()Lgot/common/entity/other/utils/GOTInventoryNPCItems;
+     131: aload_3
+     132: invokevirtual #78                 // Method got/common/entity/other/GOTEntityHumanBase.getNpcItemsInv:()Lgot/common/entity/other/utils/GOTInventoryNPCItems;
+     135: invokevirtual #84                 // Method got/common/entity/other/utils/GOTInventoryNPCItems.getMeleeWeapon:()Lnet/minecraft/item/ItemStack;
+     138: invokevirtual #91                 // Method got/common/entity/other/utils/GOTInventoryNPCItems.setIdleItem:(Lnet/minecraft/item/ItemStack;)V
+     141: aload         4
+     143: iconst_1
+     144: aload_3
+     145: iconst_1
+     146: invokevirtual #95                 // Method got/common/entity/other/GOTEntityHumanBase.func_71124_b:(I)Lnet/minecraft/item/ItemStack;
+     149: invokevirtual #99                 // Method got/common/entity/other/GOTEntityNPC.func_70062_b:(ILnet/minecraft/item/ItemStack;)V
+     152: aload         4
+     154: iconst_2
+     155: aload_3
+     156: iconst_2
+     157: invokevirtual #95                 // Method got/common/entity/other/GOTEntityHumanBase.func_71124_b:(I)Lnet/minecraft/item/ItemStack;
+     160: invokevirtual #99                 // Method got/common/entity/other/GOTEntityNPC.func_70062_b:(ILnet/minecraft/item/ItemStack;)V
+     163: aload         4
+     165: iconst_3
+     166: aload_3
+     167: iconst_3
+     168: invokevirtual #95                 // Method got/common/entity/other/GOTEntityHumanBase.func_71124_b:(I)Lnet/minecraft/item/ItemStack;
+     171: invokevirtual #99                 // Method got/common/entity/other/GOTEntityNPC.func_70062_b:(ILnet/minecraft/item/ItemStack;)V
+     174: aload         4
+     176: iconst_4
+     177: aload_3
+     178: iconst_4
+     179: invokevirtual #95                 // Method got/common/entity/other/GOTEntityHumanBase.func_71124_b:(I)Lnet/minecraft/item/ItemStack;
+     182: invokevirtual #99                 // Method got/common/entity/other/GOTEntityNPC.func_70062_b:(ILnet/minecraft/item/ItemStack;)V
+     185: aload_2
+     186: aload_3
+     187: invokevirtual #58                 // Method net/minecraft/world/World.func_72900_e:(Lnet/minecraft/entity/Entity;)V
+     190: aload_2
+     191: aload         4
+     193: invokevirtual #62                 // Method net/minecraft/world/World.func_72838_d:(Lnet/minecraft/entity/Entity;)Z
+     196: pop
+     197: goto          283
+     200: aload_1
+     201: instanceof    #101                // class got/common/entity/other/GOTEntityGiantBase
+     204: ifeq          243
+     207: aload_1
+     208: checkcast     #101                // class got/common/entity/other/GOTEntityGiantBase
+     211: astore_3
+     212: new           #103                // class got/common/entity/westeros/ice/GOTEntityWightGiant
+     215: dup
+     216: aload_2
+     217: invokespecial #104                // Method got/common/entity/westeros/ice/GOTEntityWightGiant."<init>":(Lnet/minecraft/world/World;)V
+     220: astore        4
+     222: aload         4
+     224: aload_3
+     225: invokevirtual #38                 // Method got/common/entity/other/GOTEntityNPC.func_82149_j:(Lnet/minecraft/entity/Entity;)V
+     228: aload_2
+     229: aload_3
+     230: invokevirtual #58                 // Method net/minecraft/world/World.func_72900_e:(Lnet/minecraft/entity/Entity;)V
+     233: aload_2
+     234: aload         4
+     236: invokevirtual #62                 // Method net/minecraft/world/World.func_72838_d:(Lnet/minecraft/entity/Entity;)Z
+     239: pop
+     240: goto          283
+     243: aload_1
+     244: instanceof    #106                // class got/common/entity/other/GOTEntitySpiderBase
+     247: ifeq          283
+     250: aload_1
+     251: checkcast     #106                // class got/common/entity/other/GOTEntitySpiderBase
+     254: astore_3
+     255: new           #108                // class got/common/entity/westeros/ice/GOTEntityIceSpider
+     258: dup
+     259: aload_2
+     260: invokespecial #109                // Method got/common/entity/westeros/ice/GOTEntityIceSpider."<init>":(Lnet/minecraft/world/World;)V
+     263: astore        4
+     265: aload         4
+     267: aload_3
+     268: invokevirtual #38                 // Method got/common/entity/other/GOTEntityNPC.func_82149_j:(Lnet/minecraft/entity/Entity;)V
+     271: aload_2
+     272: aload_3
+     273: invokevirtual #58                 // Method net/minecraft/world/World.func_72900_e:(Lnet/minecraft/entity/Entity;)V
+     276: aload_2
+     277: aload         4
+     279: invokevirtual #62                 // Method net/minecraft/world/World.func_72838_d:(Lnet/minecraft/entity/Entity;)Z
+     282: pop
+     283: return
+
+  public static boolean calculateDamage(got.common.entity.other.GOTEntityNPC, net.minecraft.util.DamageSource, boolean);
+    Code:
+       0: iload_2
+       1: ifeq          13
+       4: aload_1
+       5: invokevirtual #131                // Method net/minecraft/util/DamageSource.func_76347_k:()Z
+       8: ifeq          13
+      11: iconst_1
+      12: ireturn
+      13: aload_1
+      14: invokevirtual #135                // Method net/minecraft/util/DamageSource.func_76346_g:()Lnet/minecraft/entity/Entity;
+      17: astore_3
+      18: aload_1
+      19: invokevirtual #138                // Method net/minecraft/util/DamageSource.func_76364_f:()Lnet/minecraft/entity/Entity;
+      22: astore        4
+      24: aload_3
+      25: instanceof    #140                // class net/minecraft/entity/EntityLivingBase
+      28: ifeq          113
+      31: aload_3
+      32: aload_1
+      33: invokevirtual #138                // Method net/minecraft/util/DamageSource.func_76364_f:()Lnet/minecraft/entity/Entity;
+      36: if_acmpne     113
+      39: aload_3
+      40: checkcast     #140                // class net/minecraft/entity/EntityLivingBase
+      43: invokevirtual #143                // Method net/minecraft/entity/EntityLivingBase.func_70694_bm:()Lnet/minecraft/item/ItemStack;
+      46: astore        5
+      48: aload         5
+      50: ifnull        113
+      53: aload         5
+      55: invokevirtual #149                // Method net/minecraft/item/ItemStack.func_77973_b:()Lnet/minecraft/item/Item;
+      58: astore        6
+      60: aload         6
+      62: instanceof    #151                // class got/common/item/GOTMaterialFinder
+      65: ifeq          98
+      68: getstatic     #153                // Field CAUSE_DAMAGE_MATERIALS:Ljava/util/Collection;
+      71: aload         6
+      73: checkcast     #151                // class got/common/item/GOTMaterialFinder
+      76: invokeinterface #157,  1          // InterfaceMethod got/common/item/GOTMaterialFinder.getMaterial:()Lnet/minecraft/item/Item$ToolMaterial;
+      81: invokeinterface #163,  2          // InterfaceMethod java/util/Collection.contains:(Ljava/lang/Object;)Z
+      86: ifeq          98
+      89: aload_0
+      90: instanceof    #27                 // class got/common/entity/westeros/legendary/warrior/GOTEntityNightKing
+      93: ifne          98
+      96: iconst_1
+      97: ireturn
+      98: getstatic     #167                // Field SPECIAL_ITEMS:Ljava/util/Collection;
+     101: aload         6
+     103: invokeinterface #163,  2          // InterfaceMethod java/util/Collection.contains:(Ljava/lang/Object;)Z
+     108: ifeq          113
+     111: iconst_1
+     112: ireturn
+     113: aload         4
+     115: instanceof    #169                // class got/common/entity/other/inanimate/GOTEntityProjectileBase
+     118: ifeq          187
+     121: aload         4
+     123: checkcast     #169                // class got/common/entity/other/inanimate/GOTEntityProjectileBase
+     126: invokevirtual #172                // Method got/common/entity/other/inanimate/GOTEntityProjectileBase.getProjectileItem:()Lnet/minecraft/item/ItemStack;
+     129: invokevirtual #149                // Method net/minecraft/item/ItemStack.func_77973_b:()Lnet/minecraft/item/Item;
+     132: astore        5
+     134: aload         5
+     136: instanceof    #151                // class got/common/item/GOTMaterialFinder
+     139: ifeq          172
+     142: getstatic     #153                // Field CAUSE_DAMAGE_MATERIALS:Ljava/util/Collection;
+     145: aload         5
+     147: checkcast     #151                // class got/common/item/GOTMaterialFinder
+     150: invokeinterface #157,  1          // InterfaceMethod got/common/item/GOTMaterialFinder.getMaterial:()Lnet/minecraft/item/Item$ToolMaterial;
+     155: invokeinterface #163,  2          // InterfaceMethod java/util/Collection.contains:(Ljava/lang/Object;)Z
+     160: ifeq          172
+     163: aload_0
+     164: instanceof    #27                 // class got/common/entity/westeros/legendary/warrior/GOTEntityNightKing
+     167: ifne          172
+     170: iconst_1
+     171: ireturn
+     172: getstatic     #167                // Field SPECIAL_ITEMS:Ljava/util/Collection;
+     175: aload         5
+     177: invokeinterface #163,  2          // InterfaceMethod java/util/Collection.contains:(Ljava/lang/Object;)Z
+     182: ifeq          187
+     185: iconst_1
+     186: ireturn
+     187: aload_3
+     188: instanceof    #174                // class got/common/entity/westeros/legendary/reborn/GOTEntityGregorClegane
+     191: ifne          201
+     194: aload_3
+     195: instanceof    #176                // class got/common/entity/essos/legendary/boss/GOTEntityAsshaiArchmag
+     198: ifeq          212
+     201: aload_0
+     202: instanceof    #27                 // class got/common/entity/westeros/legendary/warrior/GOTEntityNightKing
+     205: ifne          212
+     208: iconst_1
+     209: goto          213
+     212: iconst_0
+     213: ireturn
+
+  public static boolean attackWithFrost(net.minecraft.entity.Entity, boolean);
+    Code:
+       0: iload_1
+       1: ifeq          20
+       4: aload_0
+       5: instanceof    #189                // class net/minecraft/entity/player/EntityPlayerMP
+       8: ifeq          18
+      11: aload_0
+      12: checkcast     #189                // class net/minecraft/entity/player/EntityPlayerMP
+      15: invokestatic  #195                // Method got/common/GOTDamage.doFrostDamage:(Lnet/minecraft/entity/player/EntityPlayerMP;)V
+      18: iconst_1
+      19: ireturn
+      20: iconst_0
+      21: ireturn
+
+  static {};
+    Code:
+       0: ldc           #7                  // class net/minecraft/item/Item$ToolMaterial
+       2: invokestatic  #203                // Method java/util/EnumSet.noneOf:(Ljava/lang/Class;)Ljava/util/EnumSet;
+       5: putstatic     #153                // Field CAUSE_DAMAGE_MATERIALS:Ljava/util/Collection;
+       8: new           #205                // class java/util/HashSet
+      11: dup
+      12: invokespecial #206                // Method java/util/HashSet."<init>":()V
+      15: putstatic     #167                // Field SPECIAL_ITEMS:Ljava/util/Collection;
+      18: getstatic     #153                // Field CAUSE_DAMAGE_MATERIALS:Ljava/util/Collection;
+      21: getstatic     #212                // Field got/common/database/GOTMaterial.VALYRIAN_TOOL:Lnet/minecraft/item/Item$ToolMaterial;
+      24: invokeinterface #215,  2          // InterfaceMethod java/util/Collection.add:(Ljava/lang/Object;)Z
+      29: pop
+      30: getstatic     #153                // Field CAUSE_DAMAGE_MATERIALS:Ljava/util/Collection;
+      33: getstatic     #218                // Field got/common/database/GOTMaterial.OBSIDIAN_TOOL:Lnet/minecraft/item/Item$ToolMaterial;
+      36: invokeinterface #215,  2          // InterfaceMethod java/util/Collection.add:(Ljava/lang/Object;)Z
+      41: pop
+      42: getstatic     #167                // Field SPECIAL_ITEMS:Ljava/util/Collection;
+      45: getstatic     #223                // Field got/common/database/GOTItems.crowbar:Lnet/minecraft/item/Item;
+      48: invokeinterface #215,  2          // InterfaceMethod java/util/Collection.add:(Ljava/lang/Object;)Z
+      53: pop
+      54: getstatic     #167                // Field SPECIAL_ITEMS:Ljava/util/Collection;
+      57: getstatic     #226                // Field got/common/database/GOTItems.petyrBaelishDagger:Lnet/minecraft/item/Item;
+      60: invokeinterface #215,  2          // InterfaceMethod java/util/Collection.add:(Ljava/lang/Object;)Z
+      65: pop
+      66: return
+}

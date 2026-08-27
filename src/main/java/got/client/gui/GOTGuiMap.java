@@ -1,9 +1,16 @@
 package got.client.gui;
 
+import got.network.GOTNetwork;
+import got.network.C2SJaqenTutorialPacket;
+import got.network.C2SMapTeleportPacket;
+import got.quest.GOTJaqenQuestSequence;
 import got.GOTMod;
 import got.world.GOTDimensions;
 import got.world.PlanetosMapSystem;
 import got.common.world.map.GOTWaypoint;
+import got.common.fasttravel.GOTFastTravelData;
+import got.client.fasttravel.GOTClientFastTravelState;
+import net.minecraft.client.gui.components.Button;
 import got.common.world.map.GOTMapLabels;
 import got.common.world.map.GOTMapRegionNames;
 import got.common.world.map.GOTBeziers;
@@ -27,11 +34,11 @@ import org.lwjgl.glfw.GLFW;
  */
 public final class GOTGuiMap extends Screen {
     public static final ResourceLocation MAP_ICONS_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(GOTMod.MOD_ID, "textures/map/mapScreen.png");
+            ResourceLocation.fromNamespaceAndPath(GOTMod.MOD_ID, "textures/map/mapscreen.png");
     private static final ResourceLocation MAP_TEXTURE =
             ResourceLocation.fromNamespaceAndPath(GOTMod.MOD_ID, "textures/map/map.png");
     private static final ResourceLocation MAP_OVERLAY_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(GOTMod.MOD_ID, "textures/map/mapOverlay.png");
+            ResourceLocation.fromNamespaceAndPath(GOTMod.MOD_ID, "textures/map/mapoverlay.png");
 
     private static final int WINDOWED_MAP_WIDTH = 312;
     private static final int WINDOWED_MAP_HEIGHT = 200;
@@ -112,6 +119,7 @@ public final class GOTGuiMap extends Screen {
 
     @Override
     protected void init() {
+        GOTNetwork.CHANNEL.sendToServer(C2SJaqenTutorialPacket.action(GOTJaqenQuestSequence.Action.VIEW_MAP));
         setupMapDimensions();
 
         // The original map opens on the player when a valid location is available.
@@ -124,6 +132,9 @@ public final class GOTGuiMap extends Screen {
         }
 
         clampPosition();
+        addRenderableWidget(Button.builder(Component.translatable("got.fastTravel.custom.add"), b -> {
+            if (minecraft != null) minecraft.setScreen(new GOTGuiCreateWaypoint(this));
+        }).bounds(Math.max(34, width - 142), 6, 108, 20).build());
     }
 
     private void setupMapDimensions() {
@@ -327,8 +338,7 @@ public final class GOTGuiMap extends Screen {
 
             int size = renderZoom >= 2.0F ? 5 : 3;
             int half = size / 2;
-            int colour = waypoint.hasPlayerUnlocked(minecraft == null ? null : minecraft.player)
-                    ? 0xFFFFB52E : 0xFF7A6A58;
+            int colour = GOTClientFastTravelState.isUnlocked(waypoint) ? 0xFFFFB52E : 0xFF7A6A58;
             graphics.fill(x - half, y - half, x - half + size, y - half + size, 0xFF2B1608);
             if (size > 2) graphics.fill(x - half + 1, y - half + 1, x - half + size - 1, y - half + size - 1, colour);
 
@@ -340,6 +350,16 @@ public final class GOTGuiMap extends Screen {
                 nearest = distance;
                 hovered = waypoint;
             }
+        }
+
+        for (GOTFastTravelData.Custom waypoint : GOTClientFastTravelState.custom()) {
+            float mapPointX = (float) PlanetosMapSystem.worldToMapX(waypoint.x());
+            float mapPointY = (float) PlanetosMapSystem.worldToMapY(waypoint.z());
+            int x = Math.round(drawX + mapPointX * renderZoom);
+            int y = Math.round(drawY + mapPointY * renderZoom);
+            if (x < renderXMin - 4 || x > renderXMax + 4 || y < renderYMin - 4 || y > renderYMax + 4) continue;
+            graphics.fill(x - 2, y - 2, x + 3, y + 3, 0xFF2B1608);
+            graphics.fill(x - 1, y - 1, x + 2, y + 2, 0xFF66D9E8);
         }
 
         if (showLabels) {
@@ -477,21 +497,24 @@ void renderPactMembers(GuiGraphics graphics) {
     }
 
     private void renderCoordinateReadout(GuiGraphics graphics, int mouseX, int mouseY) {
-        boolean mouseWithinMap = isInside(mouseX, mouseY, mapXMin, mapYMin, mapWidth, mapHeight);
-        float mapPixelX = mouseWithinMap
-                ? posX + (mouseX - (mapXMin + mapWidth / 2.0F)) / zoomScale
-                : posX;
-        float mapPixelY = mouseWithinMap
-                ? posY + (mouseY - (mapYMin + mapHeight / 2.0F)) / zoomScale
-                : posY;
-
-        mouseXCoord = (int) Math.round(PlanetosMapSystem.mapToWorldX(mapPixelX));
-        mouseZCoord = (int) Math.round(PlanetosMapSystem.mapToWorldZ(mapPixelY));
+        if (isInside(mouseX, mouseY, mapXMin, mapYMin, mapWidth, mapHeight)) {
+            int[] target = worldCoordinatesAtCursor();
+            mouseXCoord = target[0];
+            mouseZCoord = target[1];
+        } else {
+            mouseXCoord = (int) Math.round(PlanetosMapSystem.mapToWorldX(posX));
+            mouseZCoord = (int) Math.round(PlanetosMapSystem.mapToWorldZ(posY));
+        }
 
         Component coordinates = Component.translatable("got.gui.map.coords", mouseXCoord, mouseZCoord);
         graphics.drawCenteredString(font, coordinates, width / 2, mapYMax + 9, 0xFFFFFF);
         Component regionName = GOTMapRegionNames.atWorldPosition(mouseXCoord, mouseZCoord);
         graphics.drawCenteredString(font, regionName, width / 2, mapYMax + 21, 0xFFFFFF);
+        if (isCursorInsideMap()) {
+            graphics.drawCenteredString(font,
+                    Component.translatable("got.gui.map.adminTeleport"),
+                    width / 2, mapYMax + 33, 0xA0A0A0);
+        }
     }
 
     private void renderReturnTab(GuiGraphics graphics, int mouseX, int mouseY) {
@@ -501,6 +524,42 @@ void renderPactMembers(GuiGraphics graphics) {
         graphics.fill(tabX, tabY, 58, tabY + 36, hovered ? 0xFFE2C08F : 0xFFCDA978);
         graphics.fill(56, tabY, 58, tabY + 36, 0xFF701B16);
         graphics.drawString(font, Component.literal("Menu"), 10, tabY + 14, 0xFF4A170E, false);
+    }
+
+    /**
+     * Cheat/admin map teleport.
+     *
+     * F only acts while the cursor is actually over the atlas viewport. The
+     * server independently verifies permission level 2+, so modified clients
+     * cannot use this as an unrestricted teleport packet.
+     */
+    @Override
+    public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
+        if (keyCode == GLFW.GLFW_KEY_F && isCursorInsideMap()) {
+            int[] target = worldCoordinatesAtCursor();
+            GOTNetwork.CHANNEL.sendToServer(new C2SMapTeleportPacket(target[0], target[1]));
+            return true;
+        }
+        return super.keyPressed(keyCode, scanCode, modifiers);
+    }
+
+    private boolean isCursorInsideMap() {
+        return isInside(currentMouseX, currentMouseY, mapXMin, mapYMin, mapWidth, mapHeight);
+    }
+
+    private int[] worldCoordinatesAtCursor() {
+        float activeZoom = zoomScale > 0.0F
+                ? zoomScale
+                : (float) Math.pow(2.0D, zoomPower);
+
+        float mapPixelX = posX
+                + (currentMouseX - (mapXMin + mapWidth / 2.0F)) / activeZoom;
+        float mapPixelY = posY
+                + (currentMouseY - (mapYMin + mapHeight / 2.0F)) / activeZoom;
+
+        int worldX = (int) Math.round(PlanetosMapSystem.mapToWorldX(mapPixelX));
+        int worldZ = (int) Math.round(PlanetosMapSystem.mapToWorldZ(mapPixelY));
+        return new int[]{worldX, worldZ};
     }
 
     @Override
@@ -532,8 +591,10 @@ void renderPactMembers(GuiGraphics graphics) {
                 return true;
             }
             if (isInside(mouseX, mouseY, mapXMin, mapYMin, mapWidth, mapHeight)) {
+                GOTFastTravelData.Custom clickedCustom = getCustomWaypointAt(mouseX, mouseY);
+                if (clickedCustom != null) { if (minecraft != null) minecraft.setScreen(new GOTGuiFastTravel(this, clickedCustom)); return true; }
                 GOTWaypoint clickedWaypoint = getWaypointAt(mouseX, mouseY);
-                if (clickedWaypoint != null && clickedWaypoint.hasPlayerUnlocked(minecraft == null ? null : minecraft.player)) {
+                if (clickedWaypoint != null && GOTClientFastTravelState.isUnlocked(clickedWaypoint)) {
                     if (minecraft != null) minecraft.setScreen(new GOTGuiFastTravel(this, clickedWaypoint));
                     return true;
                 }
@@ -544,6 +605,18 @@ void renderPactMembers(GuiGraphics graphics) {
             }
         }
         return super.mouseClicked(mouseX, mouseY, button);
+    }
+
+    private GOTFastTravelData.Custom getCustomWaypointAt(double mouseX, double mouseY) {
+        float drawX = mapXMin + mapWidth / 2.0F - posX * zoomScale;
+        float drawY = mapYMin + mapHeight / 2.0F - posY * zoomScale;
+        GOTFastTravelData.Custom nearest = null; double nearestDistance = Double.MAX_VALUE;
+        for (GOTFastTravelData.Custom waypoint : GOTClientFastTravelState.custom()) {
+            int x = Math.round(drawX + (float)PlanetosMapSystem.worldToMapX(waypoint.x()) * zoomScale);
+            int y = Math.round(drawY + (float)PlanetosMapSystem.worldToMapY(waypoint.z()) * zoomScale);
+            double dx=mouseX-x,dy=mouseY-y,d=dx*dx+dy*dy; if(d<=36.0D&&d<nearestDistance){nearestDistance=d;nearest=waypoint;}
+        }
+        return nearest;
     }
 
     private GOTWaypoint getWaypointAt(double mouseX, double mouseY) {

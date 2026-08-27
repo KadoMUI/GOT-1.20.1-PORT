@@ -1,0 +1,38 @@
+{
+  "title": "quest.got.varys_daenerys.title",
+  "description": "quest.got.varys_daenerys.description",
+  "offer": "quest.got.varys_daenerys.offer",
+  "progress": "quest.got.varys_daenerys.progress",
+  "complete": "quest.got.varys_daenerys.complete",
+  "icon": "minecraft:iron_sword",
+  "color": "#7A5C3E",
+  "weight": 1,
+  "repeatable": false,
+  "legendary": true,
+  "legacy_reward_factor": 100,
+  "giver": {
+    "roles": [
+      "varys"
+    ],
+    "factions": [
+      "crownlands"
+    ],
+    "entity_types": [
+      "got:crownlands_npc"
+    ],
+    "maximum_active_for_faction": 5
+  },
+  "objectives": [
+    {
+      "type": "kill_entity",
+      "target": "got:dothraki_npc",
+      "count": 1,
+      "label": "quest.got.varys_daenerys.objective.0",
+      "role": "daenerys_targaryen"
+    }
+  ],
+  "rewards": {
+    "coins": 0,
+    "experience": 0
+  }
+}

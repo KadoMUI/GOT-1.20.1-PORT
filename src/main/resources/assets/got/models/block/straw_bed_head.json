@@ -19,10 +19,12 @@
       ],
       "faces": {
         "down": {
-          "texture": "#top"
+          "texture": "#top",
+          "rotation": 90
         },
         "up": {
-          "texture": "#top"
+          "texture": "#top",
+          "rotation": 90
         },
         "north": {
           "texture": "#end"

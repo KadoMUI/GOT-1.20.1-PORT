@@ -1,0 +1,49 @@
+{
+  "types": [
+    "HILL_TRIBES",
+    "WILDLING",
+    "THENN",
+    "GIANT",
+    "DOTHRAKI",
+    "JOGOS_NHAI",
+    "YI_TI",
+    "IBBEN",
+    "VOLANTIS",
+    "GHISCAR",
+    "BRAAVOS",
+    "LORATH",
+    "NORVOS",
+    "TYROSH",
+    "MYR",
+    "LYS",
+    "PENTOS",
+    "IRONBORN",
+    "WESTERLANDS",
+    "RIVERLANDS",
+    "ARRYN",
+    "DRAGONSTONE",
+    "STORMLANDS",
+    "REACH",
+    "DORNE",
+    "NORTH",
+    "SOTHORYOS"
+  ],
+  "type_count": 27,
+  "default_size": [
+    30,
+    70
+  ],
+  "range": 80,
+  "active_cap": 16,
+  "wave_chance": "1/160 per tick with nearby player",
+  "wave_size": [
+    1,
+    6
+  ],
+  "spawn_attempts": 40,
+  "failed_wave_abort": 16,
+  "deferred": [
+    "automatic biome invasion event tables",
+    "warhorn trigger item/status HUD"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "title": "quest.got.balon_euron.title",
+  "description": "quest.got.balon_euron.description",
+  "offer": "quest.got.balon_euron.offer",
+  "progress": "quest.got.balon_euron.progress",
+  "complete": "quest.got.balon_euron.complete",
+  "icon": "minecraft:iron_sword",
+  "color": "#7A5C3E",
+  "weight": 1,
+  "repeatable": false,
+  "legendary": true,
+  "legacy_reward_factor": 100,
+  "giver": {
+    "roles": [
+      "balon_greyjoy"
+    ],
+    "factions": [
+      "ironborn"
+    ],
+    "entity_types": [
+      "got:ironborn_npc"
+    ],
+    "maximum_active_for_faction": 5
+  },
+  "objectives": [
+    {
+      "type": "kill_entity",
+      "target": "got:ironborn_npc",
+      "count": 1,
+      "label": "quest.got.balon_euron.objective.0",
+      "role": "euron_greyjoy"
+    }
+  ],
+  "rewards": {
+    "coins": 0,
+    "experience": 0
+  }
+}

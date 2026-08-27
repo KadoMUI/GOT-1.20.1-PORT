@@ -1,0 +1,18 @@
+package got.client.ambient;
+import net.minecraft.client.model.HierarchicalModel;
+import net.minecraft.client.model.geom.*;
+import net.minecraft.client.model.geom.builders.*;
+import net.minecraft.util.Mth;
+import net.minecraft.world.entity.Entity;
+public final class GOTAmbientModel<T extends Entity> extends HierarchicalModel<T> {
+ public enum Kind { BIRD, BUTTERFLY, FLAMINGO, SWAN, MIDGES }
+ private final ModelPart root, body, head, wingL, wingR, legL, legR; private final Kind kind;
+ public GOTAmbientModel(ModelPart root,Kind kind){this.root=root;this.kind=kind;body=root.getChild("body");head=root.getChild("head");wingL=root.getChild("wingL");wingR=root.getChild("wingR");legL=root.getChild("legL");legR=root.getChild("legR");}
+ public static LayerDefinition bird(){return make(Kind.BIRD);} public static LayerDefinition butterfly(){return make(Kind.BUTTERFLY);} public static LayerDefinition flamingo(){return make(Kind.FLAMINGO);} public static LayerDefinition swan(){return make(Kind.SWAN);} public static LayerDefinition midges(){return make(Kind.MIDGES);}
+ private static LayerDefinition make(Kind k){MeshDefinition m=new MeshDefinition();PartDefinition r=m.getRoot();
+  if(k==Kind.BUTTERFLY||k==Kind.MIDGES){r.addOrReplaceChild("body",CubeListBuilder.create().texOffs(0,0).addBox(-1,-1,-2,2,2,4),PartPose.offset(0,16,0));r.addOrReplaceChild("head",CubeListBuilder.create().texOffs(0,8).addBox(-1,-1,-1,2,2,2),PartPose.offset(0,16,-2));r.addOrReplaceChild("wingL",CubeListBuilder.create().texOffs(8,0).addBox(0,0,-2,5,1,5),PartPose.offset(1,15,0));r.addOrReplaceChild("wingR",CubeListBuilder.create().texOffs(8,0).mirror().addBox(-5,0,-2,5,1,5),PartPose.offset(-1,15,0));r.addOrReplaceChild("legL",CubeListBuilder.create(),PartPose.ZERO);r.addOrReplaceChild("legR",CubeListBuilder.create(),PartPose.ZERO);
+  } else if(k==Kind.FLAMINGO){r.addOrReplaceChild("body",CubeListBuilder.create().texOffs(0,18).addBox(-4,-4,-5,8,8,10),PartPose.offset(0,11,0));r.addOrReplaceChild("head",CubeListBuilder.create().texOffs(0,0).addBox(-2,-3,-3,4,5,5).texOffs(18,0).addBox(-1,-1,-7,2,2,5),PartPose.offset(0,2,-4));r.addOrReplaceChild("wingL",CubeListBuilder.create().texOffs(36,0).addBox(0,-3,-4,1,6,8),PartPose.offset(4,10,0));r.addOrReplaceChild("wingR",CubeListBuilder.create().texOffs(36,0).addBox(-1,-3,-4,1,6,8),PartPose.offset(-4,10,0));r.addOrReplaceChild("legL",CubeListBuilder.create().texOffs(0,36).addBox(-1,0,-1,2,12,2),PartPose.offset(2,14,0));r.addOrReplaceChild("legR",CubeListBuilder.create().texOffs(0,36).addBox(-1,0,-1,2,12,2),PartPose.offset(-2,14,0));
+  } else {float sw=k==Kind.SWAN?1.3f:1f;r.addOrReplaceChild("body",CubeListBuilder.create().texOffs(0,16).addBox(-4*sw,-3,-5*sw,8*sw,6,10*sw),PartPose.offset(0,15,0));r.addOrReplaceChild("head",CubeListBuilder.create().texOffs(0,0).addBox(-2,-3,-3,4,5,5).texOffs(18,0).addBox(-1,-1,-7,2,2,5),PartPose.offset(0,10,-5*sw));r.addOrReplaceChild("wingL",CubeListBuilder.create().texOffs(36,0).addBox(0,-2,-4,1,5,8),PartPose.offset(4*sw,14,0));r.addOrReplaceChild("wingR",CubeListBuilder.create().texOffs(36,0).addBox(-1,-2,-4,1,5,8),PartPose.offset(-4*sw,14,0));r.addOrReplaceChild("legL",CubeListBuilder.create().texOffs(0,36).addBox(-1,0,-1,2,5,2),PartPose.offset(2,18,0));r.addOrReplaceChild("legR",CubeListBuilder.create().texOffs(0,36).addBox(-1,0,-1,2,5,2),PartPose.offset(-2,18,0));}
+  return LayerDefinition.create(m,64,64);}
+ public ModelPart root(){return root;} public void setupAnim(T e,float swing,float amount,float age,float yaw,float pitch){head.yRot=yaw*Mth.DEG_TO_RAD;head.xRot=pitch*Mth.DEG_TO_RAD;float flap=Mth.sin(age*.9f)*.8f;wingL.zRot=flap;wingR.zRot=-flap;legL.xRot=Mth.cos(swing*.6662f)*1.2f*amount;legR.xRot=-legL.xRot;}
+}

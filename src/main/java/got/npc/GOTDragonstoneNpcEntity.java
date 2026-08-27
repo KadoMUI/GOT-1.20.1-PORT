@@ -146,9 +146,10 @@ public class GOTDragonstoneNpcEntity extends PathfinderMob implements net.minecr
         if (spawnType == MobSpawnType.NATURAL || spawnType == MobSpawnType.CHUNK_GENERATION) {
             GOTBiomeMetadata metadata = PlanetosBiomeManager.getMetadata(blockPosition().getX(), blockPosition().getZ());
             if (metadata != null && metadata.id().startsWith("dragonstone")) {
-                boolean child = random.nextInt(7) == 0;
-                prepareForSpawn(DragonstoneNpcRole.DRAGONSTONE_MAN, null, child,
-                        blockPosition(), 24, "");
+                DragonstoneNpcRole role = random.nextInt(15) < 10
+                        ? DragonstoneNpcRole.DRAGONSTONE_LEVYMAN
+                        : DragonstoneNpcRole.DRAGONSTONE_LEVYMAN_ARCHER;
+                prepareForSpawn(role, false, false, blockPosition(), 24, "");
             }
         } else if (getCustomName() == null) {
             prepareForSpawn(getRole(), null, false, blockPosition(), 24, "");

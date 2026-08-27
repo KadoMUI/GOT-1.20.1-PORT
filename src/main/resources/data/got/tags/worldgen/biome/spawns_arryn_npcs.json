@@ -2,9 +2,7 @@
   "replace": false,
   "values": [
     "got:arryn",
-    "got:arryn_forest",
-    "got:arryn_mountains",
-    "got:arryn_mountains_foothills",
-    "got:arryn_town"
+    "got:arryn_town",
+    "got:arryn_mountains_foothills"
   ]
 }

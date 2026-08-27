@@ -1,5 +1,7 @@
 {
   "replace": false,
-  "values": ["got:qarth", "got:qarth_colony"]
+  "values": [
+    "got:qarth",
+    "got:qarth_colony"
+  ]
 }
-

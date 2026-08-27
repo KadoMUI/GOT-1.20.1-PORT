@@ -1,0 +1,216 @@
+Compiled from "GOTMiniQuestKill.java"
+public abstract class got.common.quest.GOTMiniQuestKill extends got.common.quest.GOTMiniQuest {
+  protected int killTarget;
+
+  protected int killCount;
+
+  protected got.common.quest.GOTMiniQuestKill(got.common.GOTPlayerData);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #15                 // Method got/common/quest/GOTMiniQuest."<init>":(Lgot/common/GOTPlayerData;)V
+       5: return
+
+  public float getAlignmentBonus();
+    Code:
+       0: aload_0
+       1: getfield      #23                 // Field killTarget:I
+       4: i2f
+       5: aload_0
+       6: getfield      #27                 // Field rewardFactor:F
+       9: fmul
+      10: freturn
+
+  public int getCoinBonus();
+    Code:
+       0: aload_0
+       1: getfield      #23                 // Field killTarget:I
+       4: i2f
+       5: fconst_2
+       6: fmul
+       7: aload_0
+       8: getfield      #27                 // Field rewardFactor:F
+      11: fmul
+      12: invokestatic  #35                 // Method java/lang/Math.round:(F)I
+      15: ireturn
+
+  public float getCompletionFactor();
+    Code:
+       0: aload_0
+       1: getfield      #38                 // Field killCount:I
+       4: i2f
+       5: aload_0
+       6: getfield      #23                 // Field killTarget:I
+       9: i2f
+      10: fdiv
+      11: freturn
+
+  protected abstract java.lang.String getKillTargetName();
+
+  public java.lang.String getObjectiveInSpeech();
+    Code:
+       0: new           #43                 // class java/lang/StringBuilder
+       3: dup
+       4: invokespecial #46                 // Method java/lang/StringBuilder."<init>":()V
+       7: aload_0
+       8: getfield      #23                 // Field killTarget:I
+      11: invokevirtual #50                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+      14: ldc           #52                 // String
+      16: invokevirtual #55                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      19: aload_0
+      20: invokevirtual #57                 // Method getKillTargetName:()Ljava/lang/String;
+      23: invokevirtual #55                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      26: invokevirtual #60                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      29: areturn
+
+  public java.lang.String getProgressedObjectiveInSpeech();
+    Code:
+       0: new           #43                 // class java/lang/StringBuilder
+       3: dup
+       4: invokespecial #46                 // Method java/lang/StringBuilder."<init>":()V
+       7: aload_0
+       8: getfield      #23                 // Field killTarget:I
+      11: aload_0
+      12: getfield      #38                 // Field killCount:I
+      15: isub
+      16: invokevirtual #50                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+      19: ldc           #52                 // String
+      21: invokevirtual #55                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      24: aload_0
+      25: invokevirtual #57                 // Method getKillTargetName:()Ljava/lang/String;
+      28: invokevirtual #55                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      31: invokevirtual #60                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      34: areturn
+
+  public net.minecraft.item.ItemStack getQuestIcon();
+    Code:
+       0: new           #65                 // class net/minecraft/item/ItemStack
+       3: dup
+       4: getstatic     #71                 // Field net/minecraft/init/Items.field_151040_l:Lnet/minecraft/item/Item;
+       7: invokespecial #74                 // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/item/Item;)V
+      10: areturn
+
+  public java.lang.String getQuestObjective();
+    Code:
+       0: ldc           #77                 // String got.miniquest.kill
+       2: iconst_2
+       3: anewarray     #79                 // class java/lang/Object
+       6: dup
+       7: iconst_0
+       8: aload_0
+       9: getfield      #23                 // Field killTarget:I
+      12: invokestatic  #85                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      15: aastore
+      16: dup
+      17: iconst_1
+      18: aload_0
+      19: invokevirtual #57                 // Method getKillTargetName:()Ljava/lang/String;
+      22: aastore
+      23: invokestatic  #91                 // Method net/minecraft/util/StatCollector.func_74837_a:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+      26: areturn
+
+  public java.lang.String getQuestProgress();
+    Code:
+       0: ldc           #94                 // String got.miniquest.kill.progress
+       2: iconst_2
+       3: anewarray     #79                 // class java/lang/Object
+       6: dup
+       7: iconst_0
+       8: aload_0
+       9: getfield      #38                 // Field killCount:I
+      12: invokestatic  #85                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      15: aastore
+      16: dup
+      17: iconst_1
+      18: aload_0
+      19: getfield      #23                 // Field killTarget:I
+      22: invokestatic  #85                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      25: aastore
+      26: invokestatic  #91                 // Method net/minecraft/util/StatCollector.func_74837_a:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+      29: areturn
+
+  public java.lang.String getQuestProgressShorthand();
+    Code:
+       0: ldc           #97                 // String got.miniquest.progressShort
+       2: iconst_2
+       3: anewarray     #79                 // class java/lang/Object
+       6: dup
+       7: iconst_0
+       8: aload_0
+       9: getfield      #38                 // Field killCount:I
+      12: invokestatic  #85                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      15: aastore
+      16: dup
+      17: iconst_1
+      18: aload_0
+      19: getfield      #23                 // Field killTarget:I
+      22: invokestatic  #85                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      25: aastore
+      26: invokestatic  #91                 // Method net/minecraft/util/StatCollector.func_74837_a:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+      29: areturn
+
+  public boolean isValidQuest();
+    Code:
+       0: aload_0
+       1: invokespecial #101                // Method got/common/quest/GOTMiniQuest.isValidQuest:()Z
+       4: ifeq          18
+       7: aload_0
+       8: getfield      #23                 // Field killTarget:I
+      11: ifle          18
+      14: iconst_1
+      15: goto          19
+      18: iconst_0
+      19: ireturn
+
+  public void onInteract(net.minecraft.entity.player.EntityPlayer, got.common.entity.other.GOTEntityNPC);
+    Code:
+       0: aload_0
+       1: getfield      #38                 // Field killCount:I
+       4: aload_0
+       5: getfield      #23                 // Field killTarget:I
+       8: if_icmplt     20
+      11: aload_0
+      12: aload_1
+      13: aload_2
+      14: invokevirtual #106                // Method complete:(Lnet/minecraft/entity/player/EntityPlayer;Lgot/common/entity/other/GOTEntityNPC;)V
+      17: goto          26
+      20: aload_0
+      21: aload_1
+      22: aload_2
+      23: invokevirtual #109                // Method sendProgressSpeechbank:(Lnet/minecraft/entity/player/EntityPlayer;Lgot/common/entity/other/GOTEntityNPC;)V
+      26: return
+
+  public void readFromNBT(net.minecraft.nbt.NBTTagCompound);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #117                // Method got/common/quest/GOTMiniQuest.readFromNBT:(Lnet/minecraft/nbt/NBTTagCompound;)V
+       5: aload_0
+       6: aload_1
+       7: ldc           #119                // String Target
+       9: invokevirtual #125                // Method net/minecraft/nbt/NBTTagCompound.func_74762_e:(Ljava/lang/String;)I
+      12: putfield      #23                 // Field killTarget:I
+      15: aload_0
+      16: aload_1
+      17: ldc           #127                // String Count
+      19: invokevirtual #125                // Method net/minecraft/nbt/NBTTagCompound.func_74762_e:(Ljava/lang/String;)I
+      22: putfield      #38                 // Field killCount:I
+      25: return
+
+  public void writeToNBT(net.minecraft.nbt.NBTTagCompound);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #132                // Method got/common/quest/GOTMiniQuest.writeToNBT:(Lnet/minecraft/nbt/NBTTagCompound;)V
+       5: aload_1
+       6: ldc           #119                // String Target
+       8: aload_0
+       9: getfield      #23                 // Field killTarget:I
+      12: invokevirtual #136                // Method net/minecraft/nbt/NBTTagCompound.func_74768_a:(Ljava/lang/String;I)V
+      15: aload_1
+      16: ldc           #127                // String Count
+      18: aload_0
+      19: getfield      #38                 // Field killCount:I
+      22: invokevirtual #136                // Method net/minecraft/nbt/NBTTagCompound.func_74768_a:(Ljava/lang/String;I)V
+      25: return
+}

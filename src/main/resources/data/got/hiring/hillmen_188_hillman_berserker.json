@@ -1,0 +1,11 @@
+{
+  "roles": [
+    "hillman_berserker"
+  ],
+  "task": "WARRIOR",
+  "required_alignment": 70.0,
+  "pledge_exclusive": true,
+  "initial_cost": 20,
+  "legacy_entity": "GOTEntityHillmanBerserker",
+  "legacy_group": "HILLMEN"
+}

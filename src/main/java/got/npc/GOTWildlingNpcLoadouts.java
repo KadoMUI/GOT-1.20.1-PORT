@@ -48,10 +48,15 @@ final class GOTWildlingNpcLoadouts {
     }
 
     static MerchantOffers createOffers(WildlingNpcRole role) {
+        MerchantOffers legendary = got.economy.GOTLegendaryTraderOffers.forRole(role.id());
+        if (legendary != null) return legendary;
         MerchantOffers offers = new MerchantOffers();
         switch (role.trade()) {
-            case BLACKSMITH -> { buy(offers,"minecraft:coal",16,2);buy(offers,"minecraft:iron_ingot",8,4);sell(offers,8,"minecraft:iron_axe",1);sell(offers,10,"got:iron_throwing_axe",3); }
-            case UNITS -> { sell(offers,10,"got:fur_chestplate",1);sell(offers,8,"got:fur_helmet",1);sell(offers,12,"got:command_horn",1); }
+            case BLACKSMITH -> {
+                sell(offers, 8, "got:blacksmith_hammer", 1); buy(offers,"minecraft:coal",16,2);buy(offers,"minecraft:iron_ingot",8,4);sell(offers,8,"minecraft:iron_axe",1);sell(offers,10,"got:iron_throwing_axe",3); }
+            case UNITS -> {
+                sell(offers, 16, "got:warhorn", 1);
+                sell(offers, 12, "got:command_horn", 1); sell(offers,10,"got:fur_chestplate",1);sell(offers,8,"got:fur_helmet",1);sell(offers,12,"got:command_horn",1); }
             case THENN_UNITS -> { sell(offers,10,"got:fur_chestplate",1);sell(offers,10,"got:skull_staff",1);sell(offers,12,"got:command_horn",1); }
             case CRASTER -> { buy(offers,"minecraft:rabbit_hide",8,3);buy(offers,"minecraft:mutton",8,3);sell(offers,5,"got:fur",4);sell(offers,4,"minecraft:cooked_mutton",4); }
             default -> { }

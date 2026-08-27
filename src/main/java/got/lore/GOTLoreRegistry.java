@@ -42,7 +42,8 @@ public final class GOTLoreRegistry {
         List<String> body = new ArrayList<>();
 
         for (String raw : lines) {
-            String s = raw.trim();
+            String s = raw.replace("\uFEFF", "").trim();
+            if (s.startsWith("#")) s = s.substring(1).trim();
             String lower = s.toLowerCase(Locale.ROOT);
             if (lower.startsWith("title:")) title = s.substring(s.indexOf(':') + 1).trim();
             else if (lower.startsWith("author:")) author = s.substring(s.indexOf(':') + 1).trim();

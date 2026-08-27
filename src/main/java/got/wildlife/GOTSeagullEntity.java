@@ -1,0 +1,1 @@
+package got.wildlife; import net.minecraft.world.entity.EntityType; import net.minecraft.world.entity.animal.Parrot; import net.minecraft.world.level.Level; public final class GOTSeagullEntity extends GOTBirdEntity { public GOTSeagullEntity(EntityType<? extends Parrot> t,Level l){super(t,l);setBirdType(BirdType.COMMON);} }

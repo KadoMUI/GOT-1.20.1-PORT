@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "got:north",
+    "got:north_forest",
+    "got:wolfswood",
+    "got:riverlands",
+    "got:riverlands_forest",
+    "got:reach",
+    "got:reach_forest",
+    "got:stormlands",
+    "got:stormlands_forest",
+    "got:crownlands",
+    "got:crownlands_forest",
+    "got:arryn_forest",
+    "got:braavos_forest",
+    "got:essos_forest",
+    "got:volantis_forest",
+    "got:norvos_forest",
+    "got:ulthos_forest",
+    "got:sothoryos_forest",
+    "got:sothoryos_bushland"
+  ]
+}

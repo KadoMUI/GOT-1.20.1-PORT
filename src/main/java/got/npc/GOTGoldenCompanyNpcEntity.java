@@ -190,6 +190,16 @@ public class GOTGoldenCompanyNpcEntity extends PathfinderMob implements
         return (attacker == null || !isHiredAlly(attacker)) && super.hurt(source, amount);
     }
 
+    @Override
+    public void aiStep() {
+        super.aiStep();
+        if (!level().isClientSide && offers != null
+                && got.economy.GOTNpcTraderRuntime.tick(this, offers)) {
+            offers = null;
+        }
+        got.economy.GOTTraderAdvertisement.tick(this);
+    }
+
     void clearLoadout() {
         combatWeapon = ItemStack.EMPTY;
         idleItem = ItemStack.EMPTY;

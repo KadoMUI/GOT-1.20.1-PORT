@@ -1,4 +1,7 @@
 {
   "replace": false,
-  "values": ["got:sothoryos_bushland", "got:ulthos_bushland"]
+  "values": [
+    "got:sothoryos_bushland",
+    "got:ulthos_bushland"
+  ]
 }

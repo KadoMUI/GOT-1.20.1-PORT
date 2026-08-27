@@ -12,14 +12,70 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
+import java.util.Map;
+import java.util.LinkedHashMap;
+import java.util.Collections;
 
 public final class GOTEquipment {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, GOTMod.MOD_ID);
+
+    // Shared regional faction-table weapons. Armor remains faction-specific.
+    public static final RegistryObject<Item> WESTEROS_SWORD = ITEMS.register("westeros_sword", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
+    public static final RegistryObject<Item> WESTEROS_SPEAR = ITEMS.register("westeros_spear", () -> new GOTRegionalSpearItem(Tiers.STONE, new Item.Properties()));
+    public static final RegistryObject<Item> WESTEROS_HAMMER = ITEMS.register("westeros_hammer", () -> new SwordItem(Tiers.IRON, 7, -3.0F, new Item.Properties()));
+
+    public static final RegistryObject<Item> ESSOS_SWORD = ITEMS.register("essos_sword", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
+    public static final RegistryObject<Item> ESSOS_SPEAR = ITEMS.register("essos_spear", () -> new GOTRegionalSpearItem(Tiers.STONE, new Item.Properties()));
+    public static final RegistryObject<Item> ESSOS_HAMMER = ITEMS.register("essos_hammer", () -> new SwordItem(Tiers.IRON, 7, -3.0F, new Item.Properties()));
+    public static final RegistryObject<Item> ESSOS_POLEARM = ITEMS.register("essos_polearm", () -> new GOTRegionalSpearItem(Tiers.STONE, new Item.Properties()));
+
+    // Real item-based GOT shields. These replace the legacy selector/menu system.
+    public static final RegistryObject<Item> NORTH_SHIELD = ITEMS.register("north_shield", () -> new GOTFactionShieldItem("north"));
+    public static final RegistryObject<Item> NORTHGUARD_SHIELD = ITEMS.register("northguard_shield", () -> new GOTFactionShieldItem("northguard"));
+    public static final RegistryObject<Item> RIVERLANDS_SHIELD = ITEMS.register("riverlands_shield", () -> new GOTFactionShieldItem("riverlands"));
+    public static final RegistryObject<Item> ARRYN_SHIELD = ITEMS.register("arryn_shield", () -> new GOTFactionShieldItem("arryn"));
+    public static final RegistryObject<Item> ARRYNGUARD_SHIELD = ITEMS.register("arrynguard_shield", () -> new GOTFactionShieldItem("arrynguard"));
+    public static final RegistryObject<Item> HILLMEN_SHIELD = ITEMS.register("hillmen_shield", () -> new GOTFactionShieldItem("hillmen"));
+    public static final RegistryObject<Item> IRONBORN_SHIELD = ITEMS.register("ironborn_shield", () -> new GOTFactionShieldItem("ironborn"));
+    public static final RegistryObject<Item> WESTERLANDS_SHIELD = ITEMS.register("westerlands_shield", () -> new GOTFactionShieldItem("westerlands"));
+    public static final RegistryObject<Item> WESTERLANDSGUARD_SHIELD = ITEMS.register("westerlandsguard_shield", () -> new GOTFactionShieldItem("westerlandsguard"));
+    public static final RegistryObject<Item> DRAGONSTONE_SHIELD = ITEMS.register("dragonstone_shield", () -> new GOTFactionShieldItem("dragonstone"));
+    public static final RegistryObject<Item> CROWNLANDS_SHIELD = ITEMS.register("crownlands_shield", () -> new GOTFactionShieldItem("crownlands"));
+    public static final RegistryObject<Item> STORMLANDS_SHIELD = ITEMS.register("stormlands_shield", () -> new GOTFactionShieldItem("stormlands"));
+    public static final RegistryObject<Item> REACH_SHIELD = ITEMS.register("reach_shield", () -> new GOTFactionShieldItem("reach"));
+    public static final RegistryObject<Item> REACHGUARD_SHIELD = ITEMS.register("reachguard_shield", () -> new GOTFactionShieldItem("reachguard"));
+    public static final RegistryObject<Item> DORNE_SHIELD = ITEMS.register("dorne_shield", () -> new GOTFactionShieldItem("dorne"));
+    public static final RegistryObject<Item> VOLANTIS_SHIELD = ITEMS.register("volantis_shield", () -> new GOTFactionShieldItem("volantis"));
+    public static final RegistryObject<Item> PENTOS_SHIELD = ITEMS.register("pentos_shield", () -> new GOTFactionShieldItem("pentos"));
+    public static final RegistryObject<Item> NORVOS_SHIELD = ITEMS.register("norvos_shield", () -> new GOTFactionShieldItem("norvos"));
+    public static final RegistryObject<Item> BRAAVOS_SHIELD = ITEMS.register("braavos_shield", () -> new GOTFactionShieldItem("braavos"));
+    public static final RegistryObject<Item> TYROSH_SHIELD = ITEMS.register("tyrosh_shield", () -> new GOTFactionShieldItem("tyrosh"));
+    public static final RegistryObject<Item> LORATH_SHIELD = ITEMS.register("lorath_shield", () -> new GOTFactionShieldItem("lorath"));
+    public static final RegistryObject<Item> QOHOR_SHIELD = ITEMS.register("qohor_shield", () -> new GOTFactionShieldItem("qohor"));
+    public static final RegistryObject<Item> LYS_SHIELD = ITEMS.register("lys_shield", () -> new GOTFactionShieldItem("lys"));
+    public static final RegistryObject<Item> MYR_SHIELD = ITEMS.register("myr_shield", () -> new GOTFactionShieldItem("myr"));
+    public static final RegistryObject<Item> QARTH_SHIELD = ITEMS.register("qarth_shield", () -> new GOTFactionShieldItem("qarth"));
+    public static final RegistryObject<Item> GHISCAR_SHIELD = ITEMS.register("ghiscar_shield", () -> new GOTFactionShieldItem("ghiscar"));
+    public static final RegistryObject<Item> UNSULLIED_SHIELD = ITEMS.register("unsullied_shield", () -> new GOTFactionShieldItem("unsullied"));
+    public static final RegistryObject<Item> YI_TI_SHIELD = ITEMS.register("yi_ti_shield", () -> new GOTFactionShieldItem("yi_ti"));
+    public static final RegistryObject<Item> YI_TI_BOMBARDIER_SHIELD = ITEMS.register("yi_ti_bombardier_shield", () -> new GOTFactionShieldItem("yi_ti_bombardier"));
+    public static final RegistryObject<Item> YI_TI_SAMURAI_SHIELD = ITEMS.register("yi_ti_samurai_shield", () -> new GOTFactionShieldItem("yi_ti_samurai"));
+    public static final RegistryObject<Item> ASSHAI_SHIELD = ITEMS.register("asshai_shield", () -> new GOTFactionShieldItem("asshai"));
+    public static final RegistryObject<Item> SUMMER_SHIELD = ITEMS.register("summer_shield", () -> new GOTFactionShieldItem("summer"));
+    public static final RegistryObject<Item> SOTHORYOS_SHIELD = ITEMS.register("sothoryos_shield", () -> new GOTFactionShieldItem("sothoryos"));
+    public static final RegistryObject<Item> GOLDEN_COMPANY_SHIELD = ITEMS.register("golden_company_shield", () -> new GOTFactionShieldItem("golden_company"));
+    public static final RegistryObject<Item> TARGARYEN_SHIELD = ITEMS.register("targaryen_shield", () -> new GOTFactionShieldItem("targaryen"));
+    public static final RegistryObject<Item> ALCOHOLIC_SHIELD = ITEMS.register("alcoholic_shield", () -> new GOTFactionShieldItem("alcoholic"));
+    public static final RegistryObject<Item> ACHIEVEMENT_BRONZE_SHIELD = ITEMS.register("achievement_bronze_shield", () -> new GOTFactionShieldItem("achievement_bronze"));
+    public static final RegistryObject<Item> ACHIEVEMENT_SILVER_SHIELD = ITEMS.register("achievement_silver_shield", () -> new GOTFactionShieldItem("achievement_silver"));
+    public static final RegistryObject<Item> ACHIEVEMENT_GOLD_SHIELD = ITEMS.register("achievement_gold_shield", () -> new GOTFactionShieldItem("achievement_gold"));
+    public static final RegistryObject<Item> ACHIEVEMENT_VALYRIAN_SHIELD = ITEMS.register("achievement_valyrian_shield", () -> new GOTFactionShieldItem("achievement_valyrian"));
 
     // Milestone 4.5.1: missing legacy tools
     public static final RegistryObject<Item> ALLOY_STEEL_AXE = ITEMS.register("alloy_steel_axe", () -> new AxeItem(Tiers.DIAMOND, 5.0F, -3.0F, new Item.Properties()));
@@ -42,7 +98,7 @@ public final class GOTEquipment {
     public static final RegistryObject<Item> VALYRIAN_HOE = ITEMS.register("valyrian_hoe", () -> new HoeItem(Tiers.NETHERITE, -4, 0.0F, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> VALYRIAN_PICKAXE = ITEMS.register("valyrian_pickaxe", () -> new PickaxeItem(Tiers.NETHERITE, 1, -2.8F, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> VALYRIAN_SHOVEL = ITEMS.register("valyrian_shovel", () -> new ShovelItem(Tiers.NETHERITE, 1.5F, -3.0F, new Item.Properties().fireResistant()));
-    public static final RegistryObject<Item> BRANDING_IRON = ITEMS.register("branding_iron", () -> new Item(new Item.Properties().stacksTo(1).durability(128)));
+    public static final RegistryObject<Item> BRANDING_IRON = ITEMS.register("branding_iron", () -> new GOTBrandingIronItem(new Item.Properties()));
     public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel", () -> new Item(new Item.Properties().stacksTo(1).durability(256)));
     public static final RegistryObject<Item> VALYRIAN_CHISEL = ITEMS.register("valyrian_chisel", () -> new Item(new Item.Properties().stacksTo(1).durability(2031).fireResistant()));
 
@@ -61,23 +117,24 @@ public final class GOTEquipment {
     public static final RegistryObject<Item> ICON_SWORD = ITEMS.register("icon_sword", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> RHINO_ARMOR = ITEMS.register("rhino_armor", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ROBES_HELMET = ITEMS.register("robes_helmet", () -> new ArmorItem(GOTArmorMaterials.of("robes"), ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<Item> SLING = ITEMS.register("sling", () -> new Item(new Item.Properties().stacksTo(1).durability(250)));
+    public static final RegistryObject<Item> SLING = ITEMS.register("sling", () -> new GOTSlingItem(new Item.Properties()));
     public static final RegistryObject<Item> VALYRIAN_HORSE_ARMOR = ITEMS.register("valyrian_horse_armor", () -> new HorseArmorItem(15, "valyrian", new Item.Properties().stacksTo(1).fireResistant()));
-    public static final RegistryObject<Item> WARHORN = ITEMS.register("warhorn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> WARHORN = ITEMS.register("warhorn", () -> new got.invasion.GOTWarhornItem(new Item.Properties()));
 
     public static final RegistryObject<Item> ALLOY_STEEL_BATTLEAXE = ITEMS.register("alloy_steel_battleaxe", () -> new SwordItem(Tiers.DIAMOND, 6, -3.1F, new Item.Properties()));
-    public static final RegistryObject<Item> ALLOY_STEEL_CROSSBOW = ITEMS.register("alloy_steel_crossbow", () -> new CrossbowItem(new Item.Properties().durability(465)));
-    public static final RegistryObject<Item> ALLOY_STEEL_DAGGER_POISONED = ITEMS.register("alloy_steel_dagger_poisoned", () -> new SwordItem(Tiers.DIAMOND, 2, -1.7F, new Item.Properties()));
+    public static final RegistryObject<Item> ALLOY_STEEL_CROSSBOW = ITEMS.register("alloy_steel_crossbow", () -> new GOTLegacyCrossbowItem(new Item.Properties().durability(465)));
+    public static final RegistryObject<Item> ALLOY_STEEL_DAGGER_POISONED = ITEMS.register("alloy_steel_dagger_poisoned", () -> new GOTPoisonedDaggerItem(Tiers.DIAMOND, new Item.Properties()));
     public static final RegistryObject<Item> ALLOY_STEEL_HAMMER = ITEMS.register("alloy_steel_hammer", () -> new SwordItem(Tiers.DIAMOND, 7, -3.2F, new Item.Properties()));
     public static final RegistryObject<Item> ALLOY_STEEL_MATTOCK = ITEMS.register("alloy_steel_mattock", () -> new SwordItem(Tiers.DIAMOND, 7, -3.2F, new Item.Properties()));
-    public static final RegistryObject<Item> ALLOY_STEEL_PIKE = ITEMS.register("alloy_steel_pike", () -> new SwordItem(Tiers.DIAMOND, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> ALLOY_STEEL_PIKE = ITEMS.register("alloy_steel_pike", () -> new GOTLegacyPikeItem(Tiers.DIAMOND, new Item.Properties()));
+    public static final RegistryObject<Item> ALLOY_STEEL_POLEARM = ITEMS.register("alloy_steel_polearm", () -> new GOTRegionalSpearItem(Tiers.DIAMOND, new Item.Properties()));
     public static final RegistryObject<Item> ALLOY_STEEL_SCIMITAR = ITEMS.register("alloy_steel_scimitar", () -> new SwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> ALLOY_STEEL_SPEAR = ITEMS.register("alloy_steel_spear", () -> new SwordItem(Tiers.DIAMOND, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> ALLOY_STEEL_SPEAR = ITEMS.register("alloy_steel_spear", () -> new GOTLegacySpearItem(Tiers.DIAMOND, new Item.Properties()));
     public static final RegistryObject<Item> ALLOY_STEEL_SWORD = ITEMS.register("alloy_steel_sword", () -> new SwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> ALLOY_STEEL_THROWING_AXE = ITEMS.register("alloy_steel_throwing_axe", () -> new SwordItem(Tiers.DIAMOND, 5, -2.9F, new Item.Properties()));
+    public static final RegistryObject<Item> ALLOY_STEEL_THROWING_AXE = ITEMS.register("alloy_steel_throwing_axe", () -> new GOTThrowingAxeItem(Tiers.DIAMOND, new Item.Properties()));
     public static final RegistryObject<Item> ARDRIAN_CELTIGAR_AXE = ITEMS.register("ardrian_celtigar_axe", () -> new SwordItem(Tiers.IRON, 6, -3.1F, new Item.Properties()));
-    public static final RegistryObject<Item> ARROW_FIRE = ITEMS.register("arrow_fire", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ARROW_POISONED = ITEMS.register("arrow_poisoned", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ARROW_FIRE = ITEMS.register("arrow_fire", () -> new GOTLegacyArrowItem(GOTLegacyArrowEntity.Kind.FIRE_ARROW, new Item.Properties()));
+    public static final RegistryObject<Item> ARROW_POISONED = ITEMS.register("arrow_poisoned", () -> new GOTLegacyArrowItem(GOTLegacyArrowEntity.Kind.POISON_ARROW, new Item.Properties()));
     public static final RegistryObject<Item> ASSHAI_ARCHMAG_STAFF = ITEMS.register("asshai_archmag_staff", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> ASSHAI_SHADOWBINDER_STAFF = ITEMS.register("asshai_shadowbinder_staff", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> BANE = ITEMS.register("bane", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
@@ -87,32 +144,32 @@ public final class GOTEquipment {
     public static final RegistryObject<Item> BLACKSMITH_HAMMER = ITEMS.register("blacksmith_hammer", () -> new SwordItem(Tiers.IRON, 7, -3.2F, new Item.Properties()));
     public static final RegistryObject<Item> BRIGHTROAR = ITEMS.register("brightroar", () -> new SwordItem(Tiers.NETHERITE, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> BRONZE_BATTLEAXE = ITEMS.register("bronze_battleaxe", () -> new SwordItem(Tiers.IRON, 6, -3.1F, new Item.Properties()));
-    public static final RegistryObject<Item> BRONZE_CROSSBOW = ITEMS.register("bronze_crossbow", () -> new CrossbowItem(new Item.Properties().durability(465)));
-    public static final RegistryObject<Item> BRONZE_DAGGER_POISONED = ITEMS.register("bronze_dagger_poisoned", () -> new SwordItem(Tiers.IRON, 2, -1.7F, new Item.Properties()));
+    public static final RegistryObject<Item> BRONZE_CROSSBOW = ITEMS.register("bronze_crossbow", () -> new GOTLegacyCrossbowItem(new Item.Properties().durability(465)));
+    public static final RegistryObject<Item> BRONZE_DAGGER_POISONED = ITEMS.register("bronze_dagger_poisoned", () -> new GOTPoisonedDaggerItem(Tiers.IRON, new Item.Properties()));
     public static final RegistryObject<Item> BRONZE_HAMMER = ITEMS.register("bronze_hammer", () -> new SwordItem(Tiers.IRON, 7, -3.2F, new Item.Properties()));
     public static final RegistryObject<Item> BRONZE_MATTOCK = ITEMS.register("bronze_mattock", () -> new SwordItem(Tiers.IRON, 7, -3.2F, new Item.Properties()));
-    public static final RegistryObject<Item> BRONZE_PIKE = ITEMS.register("bronze_pike", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> BRONZE_PIKE = ITEMS.register("bronze_pike", () -> new GOTLegacyPikeItem(Tiers.IRON, new Item.Properties()));
     public static final RegistryObject<Item> BRONZE_SCIMITAR = ITEMS.register("bronze_scimitar", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> BRONZE_SPEAR = ITEMS.register("bronze_spear", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> BRONZE_SPEAR = ITEMS.register("bronze_spear", () -> new GOTLegacySpearItem(Tiers.IRON, new Item.Properties()));
     public static final RegistryObject<Item> BRONZE_SWORD = ITEMS.register("bronze_sword", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> BRONZE_THROWING_AXE = ITEMS.register("bronze_throwing_axe", () -> new SwordItem(Tiers.IRON, 5, -2.9F, new Item.Properties()));
+    public static final RegistryObject<Item> BRONZE_THROWING_AXE = ITEMS.register("bronze_throwing_axe", () -> new GOTThrowingAxeItem(Tiers.IRON, new Item.Properties()));
     public static final RegistryObject<Item> CLUB = ITEMS.register("club", () -> new SwordItem(Tiers.WOOD, 7, -3.2F, new Item.Properties()));
     public static final RegistryObject<Item> COMMAND_SWORD = ITEMS.register("command_sword", () -> new GOTCommandSwordItem(new Item.Properties()));
     public static final RegistryObject<Item> COPPER_BATTLEAXE = ITEMS.register("copper_battleaxe", () -> new SwordItem(Tiers.IRON, 6, -3.1F, new Item.Properties()));
-    public static final RegistryObject<Item> COPPER_CROSSBOW = ITEMS.register("copper_crossbow", () -> new CrossbowItem(new Item.Properties().durability(465)));
-    public static final RegistryObject<Item> COPPER_DAGGER = ITEMS.register("copper_dagger", () -> new SwordItem(Tiers.IRON, 2, -1.7F, new Item.Properties()));
-    public static final RegistryObject<Item> COPPER_DAGGER_POISONED = ITEMS.register("copper_dagger_poisoned", () -> new SwordItem(Tiers.IRON, 2, -1.7F, new Item.Properties()));
+    public static final RegistryObject<Item> COPPER_CROSSBOW = ITEMS.register("copper_crossbow", () -> new GOTLegacyCrossbowItem(new Item.Properties().durability(465)));
+    public static final RegistryObject<Item> COPPER_DAGGER = ITEMS.register("copper_dagger", () -> new GOTLegacyDaggerItem(Tiers.IRON, new Item.Properties()));
+    public static final RegistryObject<Item> COPPER_DAGGER_POISONED = ITEMS.register("copper_dagger_poisoned", () -> new GOTPoisonedDaggerItem(Tiers.IRON, new Item.Properties()));
     public static final RegistryObject<Item> COPPER_GREATSWORD = ITEMS.register("copper_greatsword", () -> new SwordItem(Tiers.IRON, 6, -3.0F, new Item.Properties()));
     public static final RegistryObject<Item> COPPER_HAMMER = ITEMS.register("copper_hammer", () -> new SwordItem(Tiers.IRON, 7, -3.2F, new Item.Properties()));
     public static final RegistryObject<Item> COPPER_LONGSWORD = ITEMS.register("copper_longsword", () -> new SwordItem(Tiers.IRON, 4, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> COPPER_MATTOCK = ITEMS.register("copper_mattock", () -> new SwordItem(Tiers.IRON, 7, -3.2F, new Item.Properties()));
-    public static final RegistryObject<Item> COPPER_PIKE = ITEMS.register("copper_pike", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> COPPER_PIKE = ITEMS.register("copper_pike", () -> new GOTLegacyPikeItem(Tiers.IRON, new Item.Properties()));
     public static final RegistryObject<Item> COPPER_SCIMITAR = ITEMS.register("copper_scimitar", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> COPPER_SPEAR = ITEMS.register("copper_spear", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> COPPER_SPEAR = ITEMS.register("copper_spear", () -> new GOTLegacySpearItem(Tiers.IRON, new Item.Properties()));
     public static final RegistryObject<Item> COPPER_SWORD = ITEMS.register("copper_sword", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> COPPER_THROWING_AXE = ITEMS.register("copper_throwing_axe", () -> new SwordItem(Tiers.IRON, 5, -2.9F, new Item.Properties()));
-    public static final RegistryObject<Item> CROSSBOW_BOLT = ITEMS.register("crossbow_bolt", () -> new CrossbowItem(new Item.Properties().durability(465)));
-    public static final RegistryObject<Item> CROSSBOW_BOLT_POISONED = ITEMS.register("crossbow_bolt_poisoned", () -> new CrossbowItem(new Item.Properties().durability(465)));
+    public static final RegistryObject<Item> COPPER_THROWING_AXE = ITEMS.register("copper_throwing_axe", () -> new GOTThrowingAxeItem(Tiers.IRON, new Item.Properties()));
+    public static final RegistryObject<Item> CROSSBOW_BOLT = ITEMS.register("crossbow_bolt", () -> new GOTLegacyArrowItem(GOTLegacyArrowEntity.Kind.BOLT, new Item.Properties()));
+    public static final RegistryObject<Item> CROSSBOW_BOLT_POISONED = ITEMS.register("crossbow_bolt_poisoned", () -> new GOTLegacyArrowItem(GOTLegacyArrowEntity.Kind.POISON_BOLT, new Item.Properties()));
     public static final RegistryObject<Item> CROWBAR = ITEMS.register("crowbar", () -> new SwordItem(Tiers.IRON, 7, -3.2F, new Item.Properties()));
     public static final RegistryObject<Item> CUTWAVE = ITEMS.register("cutwave", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> DARK_SISTER = ITEMS.register("dark_sister", () -> new SwordItem(Tiers.NETHERITE, 3, -2.4F, new Item.Properties()));
@@ -120,42 +177,43 @@ public final class GOTEquipment {
     public static final RegistryObject<Item> DAWN = ITEMS.register("dawn", () -> new SwordItem(Tiers.NETHERITE, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> DIAMOND_MATTOCK = ITEMS.register("diamond_mattock", () -> new SwordItem(Tiers.DIAMOND, 7, -3.2F, new Item.Properties()));
     public static final RegistryObject<Item> FIN = ITEMS.register("fin", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> FIRE_POT = ITEMS.register("fire_pot", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> FIRE_POT = ITEMS.register("fire_pot", () -> new GOTFirePotItem(new Item.Properties()));
     public static final RegistryObject<Item> GOLD_BATTLEAXE = ITEMS.register("gold_battleaxe", () -> new SwordItem(Tiers.GOLD, 6, -3.1F, new Item.Properties()));
-    public static final RegistryObject<Item> GOLD_CROSSBOW = ITEMS.register("gold_crossbow", () -> new CrossbowItem(new Item.Properties().durability(465)));
-    public static final RegistryObject<Item> GOLD_DAGGER = ITEMS.register("gold_dagger", () -> new SwordItem(Tiers.GOLD, 2, -1.7F, new Item.Properties()));
-    public static final RegistryObject<Item> GOLD_DAGGER_POISONED = ITEMS.register("gold_dagger_poisoned", () -> new SwordItem(Tiers.GOLD, 2, -1.7F, new Item.Properties()));
+    public static final RegistryObject<Item> GOLD_CROSSBOW = ITEMS.register("gold_crossbow", () -> new GOTLegacyCrossbowItem(new Item.Properties().durability(465)));
+    public static final RegistryObject<Item> GOLD_DAGGER = ITEMS.register("gold_dagger", () -> new GOTLegacyDaggerItem(Tiers.GOLD, new Item.Properties()));
+    public static final RegistryObject<Item> GOLD_DAGGER_POISONED = ITEMS.register("gold_dagger_poisoned", () -> new GOTPoisonedDaggerItem(Tiers.GOLD, new Item.Properties()));
     public static final RegistryObject<Item> GOLD_GREATSWORD = ITEMS.register("gold_greatsword", () -> new SwordItem(Tiers.GOLD, 6, -3.0F, new Item.Properties()));
     public static final RegistryObject<Item> GOLD_HAMMER = ITEMS.register("gold_hammer", () -> new SwordItem(Tiers.GOLD, 7, -3.2F, new Item.Properties()));
     public static final RegistryObject<Item> GOLD_LONGSWORD = ITEMS.register("gold_longsword", () -> new SwordItem(Tiers.GOLD, 4, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> GOLD_MATTOCK = ITEMS.register("gold_mattock", () -> new SwordItem(Tiers.GOLD, 7, -3.2F, new Item.Properties()));
-    public static final RegistryObject<Item> GOLD_PIKE = ITEMS.register("gold_pike", () -> new SwordItem(Tiers.GOLD, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> GOLD_PIKE = ITEMS.register("gold_pike", () -> new GOTLegacyPikeItem(Tiers.GOLD, new Item.Properties()));
     public static final RegistryObject<Item> GOLD_SCIMITAR = ITEMS.register("gold_scimitar", () -> new SwordItem(Tiers.GOLD, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> GOLD_SPEAR = ITEMS.register("gold_spear", () -> new SwordItem(Tiers.GOLD, 4, -2.8F, new Item.Properties()));
-    public static final RegistryObject<Item> GOLD_THROWING_AXE = ITEMS.register("gold_throwing_axe", () -> new SwordItem(Tiers.GOLD, 5, -2.9F, new Item.Properties()));
+    public static final RegistryObject<Item> GOLD_SPEAR = ITEMS.register("gold_spear", () -> new GOTLegacySpearItem(Tiers.GOLD, new Item.Properties()));
+    public static final RegistryObject<Item> GOLD_THROWING_AXE = ITEMS.register("gold_throwing_axe", () -> new GOTThrowingAxeItem(Tiers.GOLD, new Item.Properties()));
     public static final RegistryObject<Item> GREGOR_CLEGANE_SWORD = ITEMS.register("gregor_clegane_sword", () -> new SwordItem(Tiers.IRON, 6, -3.0F, new Item.Properties()));
-    public static final RegistryObject<Item> HARPOON = ITEMS.register("harpoon", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> HARPOON = ITEMS.register("harpoon", () -> new GOTLegacySpearItem(Tiers.IRON, new Item.Properties()));
     public static final RegistryObject<Item> HEARTEATER = ITEMS.register("hearteater", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> HEARTSBANE = ITEMS.register("heartsbane", () -> new SwordItem(Tiers.NETHERITE, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> HONOR = ITEMS.register("honor", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> ICE = ITEMS.register("ice", () -> new SwordItem(Tiers.NETHERITE, 6, -3.0F, new Item.Properties()));
     public static final RegistryObject<Item> ICE_HEAVY_SWORD = ITEMS.register("ice_heavy_sword", () -> new SwordItem(Tiers.NETHERITE, 6, -3.1F, new Item.Properties()));
-    public static final RegistryObject<Item> ICE_SPEAR = ITEMS.register("ice_spear", () -> new SwordItem(Tiers.NETHERITE, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> ICE_SPEAR = ITEMS.register("ice_spear", () -> new GOTLegacySpearItem(Tiers.NETHERITE, new Item.Properties()));
     public static final RegistryObject<Item> ICE_SWORD = ITEMS.register("ice_sword", () -> new SwordItem(Tiers.NETHERITE, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> INDOMITABLE = ITEMS.register("indomitable", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> IRON_BATTLEAXE = ITEMS.register("iron_battleaxe", () -> new SwordItem(Tiers.IRON, 6, -3.1F, new Item.Properties()));
-    public static final RegistryObject<Item> IRON_CROSSBOW = ITEMS.register("iron_crossbow", () -> new CrossbowItem(new Item.Properties().durability(465)));
-    public static final RegistryObject<Item> IRON_DAGGER = ITEMS.register("iron_dagger", () -> new SwordItem(Tiers.IRON, 2, -1.7F, new Item.Properties()));
-    public static final RegistryObject<Item> IRON_DAGGER_POISONED = ITEMS.register("iron_dagger_poisoned", () -> new SwordItem(Tiers.IRON, 2, -1.7F, new Item.Properties()));
+    public static final RegistryObject<Item> IRON_CROSSBOW = ITEMS.register("iron_crossbow", () -> new GOTLegacyCrossbowItem(new Item.Properties().durability(465)));
+    public static final RegistryObject<Item> IRON_DAGGER = ITEMS.register("iron_dagger", () -> new GOTLegacyDaggerItem(Tiers.IRON, new Item.Properties()));
+    public static final RegistryObject<Item> IRON_DAGGER_POISONED = ITEMS.register("iron_dagger_poisoned", () -> new GOTPoisonedDaggerItem(Tiers.IRON, new Item.Properties()));
     public static final RegistryObject<Item> IRON_GREATSWORD = ITEMS.register("iron_greatsword", () -> new SwordItem(Tiers.IRON, 6, -3.0F, new Item.Properties()));
     public static final RegistryObject<Item> IRON_HAMMER = ITEMS.register("iron_hammer", () -> new SwordItem(Tiers.IRON, 7, -3.2F, new Item.Properties()));
     public static final RegistryObject<Item> IRON_LONGSWORD = ITEMS.register("iron_longsword", () -> new SwordItem(Tiers.IRON, 4, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> IRON_MATTOCK = ITEMS.register("iron_mattock", () -> new SwordItem(Tiers.IRON, 7, -3.2F, new Item.Properties()));
-    public static final RegistryObject<Item> IRON_PIKE = ITEMS.register("iron_pike", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> IRON_PIKE = ITEMS.register("iron_pike", () -> new GOTLegacyPikeItem(Tiers.IRON, new Item.Properties()));
+    public static final RegistryObject<Item> IRON_POLEARM = ITEMS.register("iron_polearm", () -> new GOTRegionalSpearItem(Tiers.IRON, new Item.Properties()));
     public static final RegistryObject<Item> IRON_SCIMITAR = ITEMS.register("iron_scimitar", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> IRON_SPEAR = ITEMS.register("iron_spear", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
-    public static final RegistryObject<Item> IRON_THROWING_AXE = ITEMS.register("iron_throwing_axe", () -> new SwordItem(Tiers.IRON, 5, -2.9F, new Item.Properties()));
-    public static final RegistryObject<Item> JOFFREY_BARATHEON_CROSSBOW = ITEMS.register("joffrey_baratheon_crossbow", () -> new CrossbowItem(new Item.Properties().durability(465)));
+    public static final RegistryObject<Item> IRON_SPEAR = ITEMS.register("iron_spear", () -> new GOTLegacySpearItem(Tiers.IRON, new Item.Properties()));
+    public static final RegistryObject<Item> IRON_THROWING_AXE = ITEMS.register("iron_throwing_axe", () -> new GOTThrowingAxeItem(Tiers.IRON, new Item.Properties()));
+    public static final RegistryObject<Item> JOFFREY_BARATHEON_CROSSBOW = ITEMS.register("joffrey_baratheon_crossbow", () -> new GOTLegacyCrossbowItem(new Item.Properties().durability(465)));
     public static final RegistryObject<Item> JUST_MAID = ITEMS.register("just_maid", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> KATANA = ITEMS.register("katana", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> LADY_FORLORN = ITEMS.register("lady_forlorn", () -> new SwordItem(Tiers.NETHERITE, 3, -2.4F, new Item.Properties()));
@@ -169,64 +227,70 @@ public final class GOTEquipment {
     public static final RegistryObject<Item> NIGHTFALL = ITEMS.register("nightfall", () -> new SwordItem(Tiers.NETHERITE, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> OATHKEEPER = ITEMS.register("oathkeeper", () -> new SwordItem(Tiers.NETHERITE, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> OBSIDIAN_BATTLEAXE = ITEMS.register("obsidian_battleaxe", () -> new SwordItem(Tiers.IRON, 6, -3.1F, new Item.Properties()));
-    public static final RegistryObject<Item> OBSIDIAN_DAGGER = ITEMS.register("obsidian_dagger", () -> new SwordItem(Tiers.IRON, 2, -1.7F, new Item.Properties()));
-    public static final RegistryObject<Item> OBSIDIAN_DAGGER_POISONED = ITEMS.register("obsidian_dagger_poisoned", () -> new SwordItem(Tiers.IRON, 2, -1.7F, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_DAGGER = ITEMS.register("obsidian_dagger", () -> new GOTLegacyDaggerItem(Tiers.IRON, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_DAGGER_POISONED = ITEMS.register("obsidian_dagger_poisoned", () -> new GOTPoisonedDaggerItem(Tiers.IRON, new Item.Properties()));
     public static final RegistryObject<Item> OBSIDIAN_HAMMER = ITEMS.register("obsidian_hammer", () -> new SwordItem(Tiers.IRON, 7, -3.2F, new Item.Properties()));
     public static final RegistryObject<Item> OBSIDIAN_MATTOCK = ITEMS.register("obsidian_mattock", () -> new SwordItem(Tiers.IRON, 7, -3.2F, new Item.Properties()));
-    public static final RegistryObject<Item> OBSIDIAN_PIKE = ITEMS.register("obsidian_pike", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_PIKE = ITEMS.register("obsidian_pike", () -> new GOTLegacyPikeItem(Tiers.IRON, new Item.Properties()));
     public static final RegistryObject<Item> OBSIDIAN_SCIMITAR = ITEMS.register("obsidian_scimitar", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> OBSIDIAN_SPEAR = ITEMS.register("obsidian_spear", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_SPEAR = ITEMS.register("obsidian_spear", () -> new GOTLegacySpearItem(Tiers.IRON, new Item.Properties()));
     public static final RegistryObject<Item> OBSIDIAN_SWORD = ITEMS.register("obsidian_sword", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> OBSIDIAN_THROWING_AXE = ITEMS.register("obsidian_throwing_axe", () -> new SwordItem(Tiers.IRON, 5, -2.9F, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_THROWING_AXE = ITEMS.register("obsidian_throwing_axe", () -> new GOTThrowingAxeItem(Tiers.IRON, new Item.Properties()));
     public static final RegistryObject<Item> ORPHAN_MAKER = ITEMS.register("orphan_maker", () -> new SwordItem(Tiers.NETHERITE, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> PETYR_BAELISH_DAGGER = ITEMS.register("petyr_baelish_dagger", () -> new SwordItem(Tiers.IRON, 2, -1.7F, new Item.Properties()));
+
+    // Special-mob spawn eggs used for testing and creative placement.
+    public static final RegistryObject<Item> BARROW_WRAITH_SPAWN_EGG = ITEMS.register("barrow_wraith_spawn_egg",
+            () -> new ForgeSpawnEggItem(GOTEntities.BARROW_WRAITH, 0x1B1B22, 0x7C7C8A, new Item.Properties()));
+    public static final RegistryObject<Item> MARSH_WRAITH_SPAWN_EGG = ITEMS.register("marsh_wraith_spawn_egg",
+            () -> new ForgeSpawnEggItem(GOTEntities.MARSH_WRAITH, 0x425C45, 0xA0B89A, new Item.Properties()));
     public static final RegistryObject<Item> PRUNER = ITEMS.register("pruner", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> RED_RAIN = ITEMS.register("red_rain", () -> new SwordItem(Tiers.NETHERITE, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> REMINDER = ITEMS.register("reminder", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> ROBERT_BARATHEON_HAMMER = ITEMS.register("robert_baratheon_hammer", () -> new SwordItem(Tiers.IRON, 7, -3.2F, new Item.Properties()));
     public static final RegistryObject<Item> ROLLING_PIN = ITEMS.register("rolling_pin", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> SANDOR_CLEGANE_SWORD = ITEMS.register("sandor_clegane_sword", () -> new SwordItem(Tiers.IRON, 4, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> SARBACANE = ITEMS.register("sarbacane", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> SARBACANE = ITEMS.register("sarbacane", () -> new GOTSarbacaneItem(new Item.Properties()));
     public static final RegistryObject<Item> SKULL_STAFF = ITEMS.register("skull_staff", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> STONE_BATTLEAXE = ITEMS.register("stone_battleaxe", () -> new SwordItem(Tiers.STONE, 6, -3.1F, new Item.Properties()));
-    public static final RegistryObject<Item> STONE_DAGGER = ITEMS.register("stone_dagger", () -> new SwordItem(Tiers.STONE, 2, -1.7F, new Item.Properties()));
-    public static final RegistryObject<Item> STONE_DAGGER_POISONED = ITEMS.register("stone_dagger_poisoned", () -> new SwordItem(Tiers.STONE, 2, -1.7F, new Item.Properties()));
+    public static final RegistryObject<Item> STONE_DAGGER = ITEMS.register("stone_dagger", () -> new GOTLegacyDaggerItem(Tiers.STONE, new Item.Properties()));
+    public static final RegistryObject<Item> STONE_DAGGER_POISONED = ITEMS.register("stone_dagger_poisoned", () -> new GOTPoisonedDaggerItem(Tiers.STONE, new Item.Properties()));
     public static final RegistryObject<Item> STONE_HAMMER = ITEMS.register("stone_hammer", () -> new SwordItem(Tiers.STONE, 7, -3.2F, new Item.Properties()));
     public static final RegistryObject<Item> STONE_MATTOCK = ITEMS.register("stone_mattock", () -> new SwordItem(Tiers.STONE, 7, -3.2F, new Item.Properties()));
-    public static final RegistryObject<Item> STONE_PIKE = ITEMS.register("stone_pike", () -> new SwordItem(Tiers.STONE, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> STONE_PIKE = ITEMS.register("stone_pike", () -> new GOTLegacyPikeItem(Tiers.STONE, new Item.Properties()));
     public static final RegistryObject<Item> STONE_SCIMITAR = ITEMS.register("stone_scimitar", () -> new SwordItem(Tiers.STONE, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> STONE_SPEAR = ITEMS.register("stone_spear", () -> new SwordItem(Tiers.STONE, 4, -2.8F, new Item.Properties()));
-    public static final RegistryObject<Item> STONE_THROWING_AXE = ITEMS.register("stone_throwing_axe", () -> new SwordItem(Tiers.STONE, 5, -2.9F, new Item.Properties()));
+    public static final RegistryObject<Item> STONE_SPEAR = ITEMS.register("stone_spear", () -> new GOTLegacySpearItem(Tiers.STONE, new Item.Properties()));
+    public static final RegistryObject<Item> STONE_THROWING_AXE = ITEMS.register("stone_throwing_axe", () -> new GOTThrowingAxeItem(Tiers.STONE, new Item.Properties()));
     public static final RegistryObject<Item> SUNSPEAR = ITEMS.register("sunspear", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> TERMITE = ITEMS.register("termite", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TIDEWINGS = ITEMS.register("tidewings", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> TRIDENT = ITEMS.register("trident", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> TRUTH = ITEMS.register("truth", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> VALYRIAN_BATTLEAXE = ITEMS.register("valyrian_battleaxe", () -> new SwordItem(Tiers.NETHERITE, 6, -3.1F, new Item.Properties()));
-    public static final RegistryObject<Item> VALYRIAN_CROSSBOW = ITEMS.register("valyrian_crossbow", () -> new CrossbowItem(new Item.Properties().durability(465)));
-    public static final RegistryObject<Item> VALYRIAN_DAGGER = ITEMS.register("valyrian_dagger", () -> new SwordItem(Tiers.NETHERITE, 2, -1.7F, new Item.Properties()));
-    public static final RegistryObject<Item> VALYRIAN_DAGGER_POISONED = ITEMS.register("valyrian_dagger_poisoned", () -> new SwordItem(Tiers.NETHERITE, 2, -1.7F, new Item.Properties()));
+    public static final RegistryObject<Item> VALYRIAN_CROSSBOW = ITEMS.register("valyrian_crossbow", () -> new GOTLegacyCrossbowItem(new Item.Properties().durability(465)));
+    public static final RegistryObject<Item> VALYRIAN_DAGGER = ITEMS.register("valyrian_dagger", () -> new GOTLegacyDaggerItem(Tiers.NETHERITE, new Item.Properties()));
+    public static final RegistryObject<Item> VALYRIAN_DAGGER_POISONED = ITEMS.register("valyrian_dagger_poisoned", () -> new GOTPoisonedDaggerItem(Tiers.NETHERITE, new Item.Properties()));
     public static final RegistryObject<Item> VALYRIAN_GREATSWORD = ITEMS.register("valyrian_greatsword", () -> new SwordItem(Tiers.NETHERITE, 6, -3.0F, new Item.Properties()));
     public static final RegistryObject<Item> VALYRIAN_HAMMER = ITEMS.register("valyrian_hammer", () -> new SwordItem(Tiers.NETHERITE, 7, -3.2F, new Item.Properties()));
     public static final RegistryObject<Item> VALYRIAN_LONGSWORD = ITEMS.register("valyrian_longsword", () -> new SwordItem(Tiers.NETHERITE, 4, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> VALYRIAN_MATTOCK = ITEMS.register("valyrian_mattock", () -> new SwordItem(Tiers.NETHERITE, 7, -3.2F, new Item.Properties()));
-    public static final RegistryObject<Item> VALYRIAN_PIKE = ITEMS.register("valyrian_pike", () -> new SwordItem(Tiers.NETHERITE, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> VALYRIAN_PIKE = ITEMS.register("valyrian_pike", () -> new GOTLegacyPikeItem(Tiers.NETHERITE, new Item.Properties()));
     public static final RegistryObject<Item> VALYRIAN_SCIMITAR = ITEMS.register("valyrian_scimitar", () -> new SwordItem(Tiers.NETHERITE, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> VALYRIAN_SPEAR = ITEMS.register("valyrian_spear", () -> new SwordItem(Tiers.NETHERITE, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> VALYRIAN_SPEAR = ITEMS.register("valyrian_spear", () -> new GOTLegacySpearItem(Tiers.NETHERITE, new Item.Properties()));
     public static final RegistryObject<Item> VALYRIAN_SWORD = ITEMS.register("valyrian_sword", () -> new SwordItem(Tiers.NETHERITE, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> VALYRIAN_THROWING_AXE = ITEMS.register("valyrian_throwing_axe", () -> new SwordItem(Tiers.NETHERITE, 5, -2.9F, new Item.Properties()));
+    public static final RegistryObject<Item> VALYRIAN_THROWING_AXE = ITEMS.register("valyrian_throwing_axe", () -> new GOTThrowingAxeItem(Tiers.NETHERITE, new Item.Properties()));
     public static final RegistryObject<Item> VIGILANCE = ITEMS.register("vigilance", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> WALKING_STICK = ITEMS.register("walking_stick", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> WIDOW_WAIL = ITEMS.register("widow_wail", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> WOOD_BATTLEAXE = ITEMS.register("wood_battleaxe", () -> new SwordItem(Tiers.WOOD, 6, -3.1F, new Item.Properties()));
-    public static final RegistryObject<Item> WOOD_DAGGER = ITEMS.register("wood_dagger", () -> new SwordItem(Tiers.WOOD, 2, -1.7F, new Item.Properties()));
-    public static final RegistryObject<Item> WOOD_DAGGER_POISONED = ITEMS.register("wood_dagger_poisoned", () -> new SwordItem(Tiers.WOOD, 2, -1.7F, new Item.Properties()));
+    public static final RegistryObject<Item> WOOD_DAGGER = ITEMS.register("wood_dagger", () -> new GOTLegacyDaggerItem(Tiers.WOOD, new Item.Properties()));
+    public static final RegistryObject<Item> WOOD_DAGGER_POISONED = ITEMS.register("wood_dagger_poisoned", () -> new GOTPoisonedDaggerItem(Tiers.WOOD, new Item.Properties()));
     public static final RegistryObject<Item> WOOD_HAMMER = ITEMS.register("wood_hammer", () -> new SwordItem(Tiers.WOOD, 7, -3.2F, new Item.Properties()));
     public static final RegistryObject<Item> WOOD_MATTOCK = ITEMS.register("wood_mattock", () -> new SwordItem(Tiers.WOOD, 7, -3.2F, new Item.Properties()));
-    public static final RegistryObject<Item> WOOD_PIKE = ITEMS.register("wood_pike", () -> new SwordItem(Tiers.WOOD, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> WOOD_PIKE = ITEMS.register("wood_pike", () -> new GOTLegacyPikeItem(Tiers.WOOD, new Item.Properties()));
     public static final RegistryObject<Item> WOOD_SCIMITAR = ITEMS.register("wood_scimitar", () -> new SwordItem(Tiers.WOOD, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<Item> WOOD_SPEAR = ITEMS.register("wood_spear", () -> new SwordItem(Tiers.WOOD, 4, -2.8F, new Item.Properties()));
-    public static final RegistryObject<Item> WOOD_THROWING_AXE = ITEMS.register("wood_throwing_axe", () -> new SwordItem(Tiers.WOOD, 5, -2.9F, new Item.Properties()));
+    public static final RegistryObject<Item> WOOD_SPEAR = ITEMS.register("wood_spear", () -> new GOTLegacySpearItem(Tiers.WOOD, new Item.Properties()));
+    public static final RegistryObject<Item> WOOD_THROWING_AXE = ITEMS.register("wood_throwing_axe", () -> new GOTThrowingAxeItem(Tiers.WOOD, new Item.Properties()));
     public static final RegistryObject<Item> ALLOY_STEEL_BOOTS = ITEMS.register("alloy_steel_boots", () -> new ArmorItem(GOTArmorMaterials.of("alloy_steel"), ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> ALLOY_STEEL_CHAINMAIL_BOOTS = ITEMS.register("alloy_steel_chainmail_boots", () -> new ArmorItem(GOTArmorMaterials.of("alloy_steel_chainmail"), ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> ALLOY_STEEL_CHAINMAIL_CHESTPLATE = ITEMS.register("alloy_steel_chainmail_chestplate", () -> new ArmorItem(GOTArmorMaterials.of("alloy_steel_chainmail"), ArmorItem.Type.CHESTPLATE, new Item.Properties()));
@@ -357,7 +421,7 @@ public final class GOTEquipment {
     public static final RegistryObject<Item> MYR_LEGGINGS = ITEMS.register("myr_leggings", () -> new ArmorItem(GOTArmorMaterials.of("myr"), ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> NORTH_BOOTS = ITEMS.register("north_boots", () -> new ArmorItem(GOTArmorMaterials.of("north"), ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> NORTH_CHESTPLATE = ITEMS.register("north_chestplate", () -> new ArmorItem(GOTArmorMaterials.of("north"), ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-    public static final RegistryObject<Item> NORTH_HELMET = ITEMS.register("north_helmet", () -> new ArmorItem(GOTArmorMaterials.of("north"), ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> NORTH_HELMET = ITEMS.register("north_helmet", () -> new GOTLegacyHelmetItem(GOTArmorMaterials.of("north"), new Item.Properties(), GOTLegacyHelmetItem.Shape.NORTH));
     public static final RegistryObject<Item> NORTH_LEGGINGS = ITEMS.register("north_leggings", () -> new ArmorItem(GOTArmorMaterials.of("north"), ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> NORTHGUARD_BOOTS = ITEMS.register("northguard_boots", () -> new ArmorItem(GOTArmorMaterials.of("northguard"), ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> NORTHGUARD_CHESTPLATE = ITEMS.register("northguard_chestplate", () -> new ArmorItem(GOTArmorMaterials.of("northguard"), ArmorItem.Type.CHESTPLATE, new Item.Properties()));
@@ -386,7 +450,7 @@ public final class GOTEquipment {
     public static final RegistryObject<Item> QOHOR_LEGGINGS = ITEMS.register("qohor_leggings", () -> new ArmorItem(GOTArmorMaterials.of("qohor"), ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> REACH_BOOTS = ITEMS.register("reach_boots", () -> new ArmorItem(GOTArmorMaterials.of("reach"), ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> REACH_CHESTPLATE = ITEMS.register("reach_chestplate", () -> new ArmorItem(GOTArmorMaterials.of("reach"), ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-    public static final RegistryObject<Item> REACH_HELMET = ITEMS.register("reach_helmet", () -> new ArmorItem(GOTArmorMaterials.of("reach"), ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> REACH_HELMET = ITEMS.register("reach_helmet", () -> new GOTLegacyHelmetItem(GOTArmorMaterials.of("reach"), new Item.Properties(), GOTLegacyHelmetItem.Shape.REACH));
     public static final RegistryObject<Item> REACH_LEGGINGS = ITEMS.register("reach_leggings", () -> new ArmorItem(GOTArmorMaterials.of("reach"), ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> REACHGUARD_BOOTS = ITEMS.register("reachguard_boots", () -> new ArmorItem(GOTArmorMaterials.of("reachguard"), ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> REACHGUARD_CHESTPLATE = ITEMS.register("reachguard_chestplate", () -> new ArmorItem(GOTArmorMaterials.of("reachguard"), ArmorItem.Type.CHESTPLATE, new Item.Properties()));
@@ -515,7 +579,52 @@ public final class GOTEquipment {
             TYRION_LANNISTER_BROOCH
     );
 
+    public static final List<RegistryObject<? extends Item>> SHIELDS = List.of(
+            NORTH_SHIELD,
+            NORTHGUARD_SHIELD,
+            RIVERLANDS_SHIELD,
+            ARRYN_SHIELD,
+            ARRYNGUARD_SHIELD,
+            HILLMEN_SHIELD,
+            IRONBORN_SHIELD,
+            WESTERLANDS_SHIELD,
+            WESTERLANDSGUARD_SHIELD,
+            DRAGONSTONE_SHIELD,
+            CROWNLANDS_SHIELD,
+            STORMLANDS_SHIELD,
+            REACH_SHIELD,
+            REACHGUARD_SHIELD,
+            DORNE_SHIELD,
+            VOLANTIS_SHIELD,
+            PENTOS_SHIELD,
+            NORVOS_SHIELD,
+            BRAAVOS_SHIELD,
+            TYROSH_SHIELD,
+            LORATH_SHIELD,
+            QOHOR_SHIELD,
+            LYS_SHIELD,
+            MYR_SHIELD,
+            QARTH_SHIELD,
+            GHISCAR_SHIELD,
+            UNSULLIED_SHIELD,
+            YI_TI_SHIELD,
+            YI_TI_BOMBARDIER_SHIELD,
+            YI_TI_SAMURAI_SHIELD,
+            ASSHAI_SHIELD,
+            SUMMER_SHIELD,
+            SOTHORYOS_SHIELD,
+            GOLDEN_COMPANY_SHIELD,
+            TARGARYEN_SHIELD,
+            ALCOHOLIC_SHIELD,
+            ACHIEVEMENT_BRONZE_SHIELD,
+            ACHIEVEMENT_SILVER_SHIELD,
+            ACHIEVEMENT_GOLD_SHIELD,
+            ACHIEVEMENT_VALYRIAN_SHIELD
+    );
+
     public static final List<RegistryObject<? extends Item>> ALL = List.of(
+            WESTEROS_SWORD, WESTEROS_SPEAR, WESTEROS_HAMMER,
+            ESSOS_SWORD, ESSOS_SPEAR, ESSOS_HAMMER, ESSOS_POLEARM,
             ALLOY_STEEL_HALBERD,
             ARMOR_STAND,
             COMMAND_HORN,

@@ -2,6 +2,7 @@ package got.npc;
 
 import got.GOTEntities;
 import got.GOTMod;
+import got.npc.hiring.GOTHiredData;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
@@ -72,11 +73,13 @@ public final class GOTNpcRespawnerData extends SavedData {
         AABB box = new AABB(anchor.position).inflate(Math.max(24, anchor.homeRadius + 8));
         return switch (anchor.family) {
             case "wildling" -> !level.getEntitiesOfClass(GOTWildlingNpcEntity.class, box,
-                    npc -> anchor.populationKey.equals(npc.getPopulationKey())).isEmpty();
+                    npc -> anchor.populationKey.equals(npc.getPopulationKey()) && !GOTHiredData.isHired(npc)).isEmpty();
             case "night_watch" -> !level.getEntitiesOfClass(GOTNightWatchNpcEntity.class, box,
-                    npc -> anchor.populationKey.equals(npc.getPopulationKey())).isEmpty();
+                    npc -> anchor.populationKey.equals(npc.getPopulationKey()) && !GOTHiredData.isHired(npc)).isEmpty();
+            case "dothraki" -> !level.getEntitiesOfClass(GOTDothrakiNpcEntity.class, box,
+                    npc -> anchor.populationKey.equals(npc.getPopulationKey()) && !GOTHiredData.isHired(npc)).isEmpty();
             default -> !level.getEntitiesOfClass(GOTWhiteWalkerNpcEntity.class, box,
-                    npc -> anchor.populationKey.equals(npc.getPopulationKey())).isEmpty();
+                    npc -> anchor.populationKey.equals(npc.getPopulationKey()) && !GOTHiredData.isHired(npc)).isEmpty();
         };
     }
 
@@ -95,6 +98,15 @@ public final class GOTNpcRespawnerData extends SavedData {
             npc.moveTo(anchor.position.getX()+0.5D,anchor.position.getY(),anchor.position.getZ()+0.5D,anchor.yaw,0.0F);
             npc.prepareForSpawn(NightWatchNpcRole.byId(anchor.role),female,anchor.child,anchor.position,anchor.homeRadius,anchor.populationKey);
             return level.noCollision(npc) && level.addFreshEntity(npc);
+        }
+        if (anchor.family.equals("dothraki")) {
+            GOTDothrakiNpcEntity npc = GOTEntities.DOTHRAKI_NPC.get().create(level);
+            if (npc == null) return false;
+            npc.moveTo(anchor.position.getX()+0.5D,anchor.position.getY(),anchor.position.getZ()+0.5D,anchor.yaw,0.0F);
+            npc.prepareForSpawn(DothrakiNpcRole.byId(anchor.role),female,anchor.child,anchor.position,anchor.homeRadius,anchor.populationKey);
+            if (!level.noCollision(npc) || !level.addFreshEntity(npc)) return false;
+            if (npc.rollWorldMount()) npc.requestDothrakiHorse();
+            return true;
         }
         GOTWhiteWalkerNpcEntity npc = GOTEntities.WHITE_WALKER_NPC.get().create(level);
         if (npc == null) return false;

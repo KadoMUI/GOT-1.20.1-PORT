@@ -1,0 +1,38 @@
+{
+  "title": "quest.got.bugai_tugar_khan.title",
+  "description": "quest.got.bugai_tugar_khan.description",
+  "offer": "quest.got.bugai_tugar_khan.offer",
+  "progress": "quest.got.bugai_tugar_khan.progress",
+  "complete": "quest.got.bugai_tugar_khan.complete",
+  "icon": "minecraft:iron_sword",
+  "color": "#7A5C3E",
+  "weight": 1,
+  "repeatable": false,
+  "legendary": true,
+  "legacy_reward_factor": 100,
+  "giver": {
+    "roles": [
+      "bu_gai"
+    ],
+    "factions": [
+      "yi_ti"
+    ],
+    "entity_types": [
+      "got:yi_ti_npc"
+    ],
+    "maximum_active_for_faction": 5
+  },
+  "objectives": [
+    {
+      "type": "kill_entity",
+      "target": "got:jogos_nhai_npc",
+      "count": 1,
+      "label": "quest.got.bugai_tugar_khan.objective.0",
+      "role": "tugar_khan"
+    }
+  ],
+  "rewards": {
+    "coins": 0,
+    "experience": 0
+  }
+}

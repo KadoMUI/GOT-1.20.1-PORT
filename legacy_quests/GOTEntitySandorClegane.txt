@@ -1,0 +1,121 @@
+Compiled from "GOTEntitySandorClegane.java"
+public class got.common.entity.westeros.legendary.warrior.GOTEntitySandorClegane extends got.common.entity.other.GOTEntityHumanBase {
+  public got.common.entity.westeros.legendary.warrior.GOTEntitySandorClegane(net.minecraft.world.World);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #9                  // Method got/common/entity/other/GOTEntityHumanBase."<init>":(Lnet/minecraft/world/World;)V
+       5: aload_0
+       6: invokespecial #13                 // Method addTargetTasks:()V
+       9: aload_0
+      10: iconst_1
+      11: invokevirtual #17                 // Method setupLegendaryNPC:(Z)V
+      14: return
+
+  public got.common.faction.GOTFaction getFaction();
+    Code:
+       0: getstatic     #29                 // Field got/common/faction/GOTFaction.CROWNLANDS:Lgot/common/faction/GOTFaction;
+       3: areturn
+
+  public got.common.quest.GOTMiniQuestFactory getMiniQuestFactory();
+    Code:
+       0: getstatic     #37                 // Field got/common/quest/GOTMiniQuestFactory.SANDOR:Lgot/common/quest/GOTMiniQuestFactory;
+       3: areturn
+
+  public float getAlignmentBonus();
+    Code:
+       0: ldc           #40                 // float 200.0f
+       2: freturn
+
+  public got.common.database.GOTAchievement getKillAchievement();
+    Code:
+       0: getstatic     #48                 // Field got/common/database/GOTAchievement.killSandorClegane:Lgot/common/database/GOTAchievement;
+       3: areturn
+
+  private void addTargetTasks();
+    Code:
+       0: aload_0
+       1: iconst_1
+       2: invokevirtual #51                 // Method addTargetTasks:(Z)I
+       5: istore_1
+       6: aload_0
+       7: getfield      #55                 // Field field_70715_bh:Lnet/minecraft/entity/ai/EntityAITasks;
+      10: iload_1
+      11: iconst_1
+      12: iadd
+      13: new           #57                 // class got/common/entity/ai/GOTEntityAINearestAttackableTargetBasic
+      16: dup
+      17: aload_0
+      18: ldc           #59                 // class got/common/entity/westeros/legendary/reborn/GOTEntityGregorClegane
+      20: iconst_0
+      21: iconst_1
+      22: invokespecial #62                 // Method got/common/entity/ai/GOTEntityAINearestAttackableTargetBasic."<init>":(Lnet/minecraft/entity/EntityCreature;Ljava/lang/Class;IZ)V
+      25: invokevirtual #68                 // Method net/minecraft/entity/ai/EntityAITasks.func_75776_a:(ILnet/minecraft/entity/ai/EntityAIBase;)V
+      28: return
+
+  public void func_110147_ax();
+    Code:
+       0: aload_0
+       1: invokespecial #73                 // Method got/common/entity/other/GOTEntityHumanBase.func_110147_ax:()V
+       4: aload_0
+       5: getstatic     #79                 // Field net/minecraft/entity/SharedMonsterAttributes.field_111267_a:Lnet/minecraft/entity/ai/attributes/IAttribute;
+       8: invokevirtual #83                 // Method func_110148_a:(Lnet/minecraft/entity/ai/attributes/IAttribute;)Lnet/minecraft/entity/ai/attributes/IAttributeInstance;
+      11: ldc2_w        #84                 // double 40.0d
+      14: invokeinterface #91,  3           // InterfaceMethod net/minecraft/entity/ai/attributes/IAttributeInstance.func_111128_a:(D)V
+      19: return
+
+  public void func_70628_a(boolean, int);
+    Code:
+       0: aload_0
+       1: getstatic     #99                 // Field got/common/database/GOTItems.sandorCleganeHelmet:Lnet/minecraft/item/Item;
+       4: iconst_1
+       5: invokevirtual #103                // Method func_145779_a:(Lnet/minecraft/item/Item;I)Lnet/minecraft/entity/item/EntityItem;
+       8: pop
+       9: aload_0
+      10: getstatic     #106                // Field got/common/database/GOTItems.sandorCleganeSword:Lnet/minecraft/item/Item;
+      13: iconst_1
+      14: invokevirtual #103                // Method func_145779_a:(Lnet/minecraft/item/Item;I)Lnet/minecraft/entity/item/EntityItem;
+      17: pop
+      18: return
+
+  public java.lang.String getSpeechBank(got.common.entity.other.GOTEntityNPC, net.minecraft.entity.player.EntityPlayer);
+    Code:
+       0: aload_1
+       1: aload_2
+       2: invokevirtual #117                // Method got/common/entity/other/GOTEntityNPC.isFriendly:(Lnet/minecraft/entity/player/EntityPlayer;)Z
+       5: ifeq          11
+       8: ldc           #119                // String legendary/sandor_friendly
+      10: areturn
+      11: ldc           #121                // String legendary/sandor_hostile
+      13: areturn
+
+  public net.minecraft.entity.IEntityLivingData func_110161_a(net.minecraft.entity.IEntityLivingData);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #129                // Method got/common/entity/other/GOTEntityHumanBase.func_110161_a:(Lnet/minecraft/entity/IEntityLivingData;)Lnet/minecraft/entity/IEntityLivingData;
+       5: astore_2
+       6: aload_0
+       7: getfield      #133                // Field npcItemsInv:Lgot/common/entity/other/utils/GOTInventoryNPCItems;
+      10: new           #135                // class net/minecraft/item/ItemStack
+      13: dup
+      14: getstatic     #106                // Field got/common/database/GOTItems.sandorCleganeSword:Lnet/minecraft/item/Item;
+      17: invokespecial #138                // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/item/Item;)V
+      20: invokevirtual #144                // Method got/common/entity/other/utils/GOTInventoryNPCItems.setMeleeWeapon:(Lnet/minecraft/item/ItemStack;)V
+      23: aload_0
+      24: getfield      #133                // Field npcItemsInv:Lgot/common/entity/other/utils/GOTInventoryNPCItems;
+      27: aload_0
+      28: getfield      #133                // Field npcItemsInv:Lgot/common/entity/other/utils/GOTInventoryNPCItems;
+      31: invokevirtual #148                // Method got/common/entity/other/utils/GOTInventoryNPCItems.getMeleeWeapon:()Lnet/minecraft/item/ItemStack;
+      34: invokevirtual #151                // Method got/common/entity/other/utils/GOTInventoryNPCItems.setIdleItem:(Lnet/minecraft/item/ItemStack;)V
+      37: aload_2
+      38: areturn
+
+  public void setupNPCGender();
+    Code:
+       0: aload_0
+       1: getfield      #159                // Field familyInfo:Lgot/common/entity/other/info/GOTFamilyInfo;
+       4: iconst_1
+       5: invokevirtual #164                // Method got/common/entity/other/info/GOTFamilyInfo.setMale:(Z)V
+       8: return
+}

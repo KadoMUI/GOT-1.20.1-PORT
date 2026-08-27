@@ -31,6 +31,8 @@ public enum RiverlandsNpcRole {
     RIVERLANDS_FISHMONGER("riverlands_fishmonger", "Riverlands Fishmonger", Gender.RANDOM, Combat.PASSIVE, Trade.FISHMONGER, 2, false, null, "", "", 1.0F, 1.0F),
     RIVERLANDS_BAKER("riverlands_baker", "Riverlands Baker", Gender.RANDOM, Combat.PASSIVE, Trade.BAKER, 2, false, null, "", "", 1.0F, 1.0F),
 
+    HOT_PIE("hot_pie", "Hot Pie", Gender.MALE, Combat.PASSIVE, Trade.BAKER, 1, true, "hot_pie", "_1", "_2", 0.9F, 0.9F),
+
     WILLIAM_MOOTON("william_mooton", "William Mooton", Gender.MALE, Combat.MELEE, Trade.UNITS, 100, true, "william_mooton", "", "", 1.0F, 1.0F),
     CLEMENT_PIPER("clement_piper", "Clement Piper", Gender.MALE, Combat.MELEE, Trade.UNITS, 100, true, "clement_piper", "", "", 1.0F, 1.0F),
     TYTOS_BLACKWOOD("tytos_blackwood", "Tytos Blackwood", Gender.MALE, Combat.MELEE, Trade.UNITS, 100, true, "tytos_blackwood", "", "", 1.0F, 1.0F),

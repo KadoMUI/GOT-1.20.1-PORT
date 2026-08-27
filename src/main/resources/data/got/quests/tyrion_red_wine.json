@@ -1,0 +1,39 @@
+{
+  "title": "quest.got.tyrion_red_wine.title",
+  "description": "quest.got.tyrion_red_wine.description",
+  "offer": "quest.got.tyrion_red_wine.offer",
+  "progress": "quest.got.tyrion_red_wine.progress",
+  "complete": "quest.got.tyrion_red_wine.complete",
+  "icon": "got:mug_red_wine",
+  "color": "#7A5C3E",
+  "weight": 1,
+  "repeatable": false,
+  "legendary": true,
+  "legacy_reward_factor": 5,
+  "giver": {
+    "roles": [
+      "tyrion_lannister"
+    ],
+    "factions": [
+      "crownlands"
+    ],
+    "entity_types": [
+      "got:crownlands_npc"
+    ],
+    "maximum_active_for_faction": 5
+  },
+  "objectives": [
+    {
+      "type": "collect",
+      "target": "got:mug_red_wine",
+      "count": 10,
+      "label": "quest.got.tyrion_red_wine.objective.0",
+      "count_min": 1,
+      "count_max": 10
+    }
+  ],
+  "rewards": {
+    "coins": 0,
+    "experience": 0
+  }
+}

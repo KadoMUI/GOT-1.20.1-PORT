@@ -1,4 +1,7 @@
 {
   "replace": false,
-  "values": ["got:ibben", "got:ibben_colony"]
+  "values": [
+    "got:ibben",
+    "got:ibben_colony"
+  ]
 }

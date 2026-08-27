@@ -1,0 +1,37 @@
+{
+  "title": "quest.got.daenerys_dragon_eggs.title",
+  "description": "quest.got.daenerys_dragon_eggs.description",
+  "offer": "quest.got.daenerys_dragon_eggs.offer",
+  "progress": "quest.got.daenerys_dragon_eggs.progress",
+  "complete": "quest.got.daenerys_dragon_eggs.complete",
+  "icon": "minecraft:dragon_egg",
+  "color": "#7A5C3E",
+  "weight": 1,
+  "repeatable": false,
+  "legendary": true,
+  "legacy_reward_factor": 100,
+  "giver": {
+    "roles": [
+      "daenerys_targaryen"
+    ],
+    "factions": [
+      "dothraki"
+    ],
+    "entity_types": [
+      "got:dothraki_npc"
+    ],
+    "maximum_active_for_faction": 5
+  },
+  "objectives": [
+    {
+      "type": "collect",
+      "target": "minecraft:dragon_egg",
+      "count": 3,
+      "label": "quest.got.daenerys_dragon_eggs.objective.0"
+    }
+  ],
+  "rewards": {
+    "coins": 0,
+    "experience": 0
+  }
+}

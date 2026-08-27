@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "got:north_forest",
+    "got:north_forest_irontree",
+    "got:north_wild",
+    "got:wolfswood",
+    "got:haunted_forest",
+    "got:gift_new",
+    "got:gift_old",
+    "got:skagos",
+    "got:arryn_forest",
+    "got:mossovy",
+    "got:mossovy_taiga",
+    "got:ibben",
+    "got:ibben_taiga",
+    "got:ibben_colony_forest",
+    "got:ifekevron_forest"
+  ]
+}

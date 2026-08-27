@@ -27,6 +27,7 @@ public final class GOTPactService {
         if (data.pactFor(owner.getUUID()).isPresent()) return Result.fail("You are already in a Pact.");
         GOTPact pact = new GOTPact(UUID.randomUUID(), owner.getUUID(), name);
         data.put(pact);
+        GOTPactSharing.importPlayer(owner);
         notify(pact, owner.server, Component.literal(owner.getGameProfile().getName() + " founded the Pact " + pact.name() + "."));
         return Result.ok(pact);
     }
@@ -56,6 +57,8 @@ public final class GOTPactService {
         data.indexPlayer(player.getUUID(), pact.id());
         data.clearInvite(player.getUUID());
         data.setDirty();
+        GOTPactSharing.importPlayer(player);
+        GOTPactSharing.syncOnline(pact, player);
         notify(pact, player.server, Component.literal(player.getGameProfile().getName() + " joined the Pact."));
         return Result.ok(pact);
     }
@@ -75,6 +78,8 @@ public final class GOTPactService {
         pact.removeMember(player.getUUID());
         data.unindexPlayer(player.getUUID());
         data.setDirty();
+        GOTPactSharing.syncOnline(pact, player);
+        got.common.fasttravel.GOTFastTravelManager.sync(player);
         notify(pact, player.server, Component.literal(player.getGameProfile().getName() + " left the Pact."));
         return Result.ok(pact);
     }
@@ -89,8 +94,9 @@ public final class GOTPactService {
         pact.removeMember(target);
         data.unindexPlayer(target);
         data.setDirty();
+        GOTPactSharing.syncOnline(pact, actor);
         ServerPlayer online = actor.server.getPlayerList().getPlayer(target);
-        if (online != null) online.sendSystemMessage(Component.literal("You were removed from " + pact.name() + "."));
+        if (online != null) { got.common.fasttravel.GOTFastTravelManager.sync(online); online.sendSystemMessage(Component.literal("You were removed from " + pact.name() + ".")); }
         notify(pact, actor.server, Component.literal("A member was removed from the Pact."));
         return Result.ok(pact);
     }
@@ -160,8 +166,10 @@ public final class GOTPactService {
         GOTPactSavedData data = GOTPactSavedData.get(actor.server);
         GOTPact pact = data.pactFor(actor.getUUID()).orElse(null);
         if (pact == null || !pact.isOwner(actor.getUUID())) return Result.fail("Only the Pact owner can disband it.");
+        java.util.List<UUID> formerMembers = java.util.List.copyOf(pact.members());
         notify(pact, actor.server, Component.literal(pact.name() + " has been disbanded."));
         data.removePact(pact.id());
+        for (UUID id : formerMembers) { ServerPlayer online = actor.server.getPlayerList().getPlayer(id); if (online != null) got.common.fasttravel.GOTFastTravelManager.sync(online); }
         return Result.ok(null);
     }
 

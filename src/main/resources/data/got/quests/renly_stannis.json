@@ -1,0 +1,38 @@
+{
+  "title": "quest.got.renly_stannis.title",
+  "description": "quest.got.renly_stannis.description",
+  "offer": "quest.got.renly_stannis.offer",
+  "progress": "quest.got.renly_stannis.progress",
+  "complete": "quest.got.renly_stannis.complete",
+  "icon": "minecraft:iron_sword",
+  "color": "#7A5C3E",
+  "weight": 1,
+  "repeatable": false,
+  "legendary": true,
+  "legacy_reward_factor": 100,
+  "giver": {
+    "roles": [
+      "renly_baratheon"
+    ],
+    "factions": [
+      "stormlands"
+    ],
+    "entity_types": [
+      "got:stormlands_npc"
+    ],
+    "maximum_active_for_faction": 5
+  },
+  "objectives": [
+    {
+      "type": "kill_entity",
+      "target": "got:dragonstone_npc",
+      "count": 1,
+      "label": "quest.got.renly_stannis.objective.0",
+      "role": "stannis_baratheon"
+    }
+  ],
+  "rewards": {
+    "coins": 0,
+    "experience": 0
+  }
+}

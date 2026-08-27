@@ -23,6 +23,11 @@ public final class GOTHiringService {
     public static boolean hire(ServerPlayer player, Entity entity, GOTHiredTask task) {
         if (!canBeHired(entity)) return false;
         GOTHiredData.hire(entity, player.getUUID(), task);
+        var stats=player.getPersistentData().getCompound("GOTAchievementStats");
+        int hires=stats.getInt("UnitsHired")+1; stats.putInt("UnitsHired",hires); player.getPersistentData().put("GOTAchievementStats",stats);
+        if (hires >= 100) got.achievement.GOTAchievementHooks.award(player, "HUNDREDS");
+        if (entity instanceof GOTFactionNpc factionNpc && "golden_company".equals(factionNpc.getFactionId()))
+            got.achievement.GOTAchievementHooks.award(player, "HIRE_GOLDEN_COMPANY");
         player.displayClientMessage(
             Component.literal("Hired " + entity.getDisplayName().getString() + "."),
             false

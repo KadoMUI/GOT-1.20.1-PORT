@@ -1,0 +1,11 @@
+{
+  "roles": [
+    "prostitute"
+  ],
+  "task": "PROSTITUTE",
+  "required_alignment": 0.0,
+  "pledge_exclusive": false,
+  "initial_cost": 10,
+  "legacy_entity": "GOTEntityProstitute",
+  "legacy_group": "PROSTITUTE_KEEPER"
+}

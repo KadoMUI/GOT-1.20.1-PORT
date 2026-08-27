@@ -103,6 +103,42 @@ final class GOTArrynNpcLoadouts {
             case ARRYN_BAKER ->
                     npc.setWeapons(stack("got:rolling_pin"), new ItemStack(Items.BREAD));
 
+            case HILLMAN_WARRIOR -> {
+                npc.setCombatWeapon(randomHillmanWeapon(npc));
+                hillmanArmor(npc);
+            }
+            case HILLMAN_ARCHER -> {
+                ItemStack melee = randomHillmanWeapon(npc);
+                ItemStack bow = stack("got:longbow");
+                npc.setWeapons(melee, bow);
+                npc.setRangedWeapon(bow);
+                hillmanArmor(npc);
+            }
+            case HILLMAN_AXE_THROWER -> {
+                ItemStack melee = randomHillmanWeapon(npc);
+                ItemStack throwingAxe = stack("got:iron_throwing_axe");
+                npc.setWeapons(melee, throwingAxe);
+                npc.setRangedWeapon(throwingAxe);
+                hillmanArmor(npc);
+            }
+            case HILLMAN_BANNER_BEARER -> {
+                ItemStack dagger = stack("got:iron_dagger");
+                npc.setWeapons(dagger, dagger);
+                hillmanArmor(npc);
+                npc.setItemSlot(EquipmentSlot.OFFHAND,
+                        GOTBannerItem.createStack(GOTBannerType.byName("hillmen")));
+            }
+            case HILLMAN_BERSERKER -> {
+                // Original berserker uses an iron battleaxe and no helmet.
+                ItemStack axe = stack("got:iron_battleaxe");
+                npc.setWeapons(axe, axe);
+                hillmanArmor(npc);
+                npc.setItemSlot(EquipmentSlot.HEAD, ItemStack.EMPTY);
+            }
+            case PROSTITUTE -> {
+                // The original prostitute is unarmoured and unarmed.
+            }
+
             case LYN_CORBRAY -> npc.setCombatWeapon(stack("got:lady_forlorn"));
             case HARROLD_HARDYNG -> npc.setCombatWeapon(stack("got:honor"));
             case YOHN_ROYCE -> {
@@ -115,6 +151,7 @@ final class GOTArrynNpcLoadouts {
                 npc.setWeapons(sword, sword);
             }
         }
+        GOTNpcShieldLoadouts.equip(npc, npc.getRole(), "got:arryn_shield");
         npc.updateHeldItem();
     }
 
@@ -133,6 +170,7 @@ final class GOTArrynNpcLoadouts {
                 sell(offers, 5, "got:mug_mead", 1);
             }
             case BLACKSMITH -> {
+                sell(offers, 8, "got:blacksmith_hammer", 1);
                 buy(offers, "minecraft:coal", 16, 2);
                 buy(offers, "minecraft:iron_ingot", 8, 4);
                 sell(offers, 8, "minecraft:iron_sword", 1);
@@ -151,6 +189,9 @@ final class GOTArrynNpcLoadouts {
                 sell(offers, 3, "minecraft:cooked_porkchop", 5);
             }
             case FARMER -> {
+                sell(offers, 4, "got:branding_iron", 1);
+                // Guaranteed Farmer utility trade.
+                sell(offers, 8, "got:millstone", 1);
                 buy(offers, "minecraft:wheat", 20, 2);
                 buy(offers, "minecraft:carrot", 18, 2);
                 sell(offers, 2, "minecraft:wheat_seeds", 12);
@@ -190,6 +231,7 @@ final class GOTArrynNpcLoadouts {
                 sell(offers, 8, "minecraft:iron_pickaxe", 1);
             }
             case UNITS -> {
+                sell(offers, 16, "got:warhorn", 1);
                 sell(offers, 12, "got:command_horn", 1);
                 sell(offers, 16, "got:arryn_chestplate", 1);
                 sell(offers, 12, "got:arryn_helmet", 1);
@@ -233,6 +275,24 @@ final class GOTArrynNpcLoadouts {
         npc.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Items.LEATHER_LEGGINGS));
         npc.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Items.LEATHER_CHESTPLATE));
         npc.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Items.LEATHER_HELMET));
+    }
+
+    private static ItemStack randomHillmanWeapon(GOTArrynNpcEntity npc) {
+        return switch (npc.getRandom().nextInt(4)) {
+            case 0 -> stack("got:iron_sword");
+            case 1 -> stack("got:iron_axe");
+            case 2 -> stack("got:iron_spear");
+            default -> stack("got:iron_dagger");
+        };
+    }
+
+    private static void hillmanArmor(GOTArrynNpcEntity npc) {
+        npc.setItemSlot(EquipmentSlot.FEET, stack("got:hillmen_boots"));
+        npc.setItemSlot(EquipmentSlot.LEGS, stack("got:hillmen_leggings"));
+        npc.setItemSlot(EquipmentSlot.CHEST, stack("got:hillmen_chestplate"));
+        if (npc.getRandom().nextBoolean()) {
+            npc.setItemSlot(EquipmentSlot.HEAD, stack("got:hillmen_helmet"));
+        }
     }
 
     private static ItemStack randomIronWeapon(GOTArrynNpcEntity npc) {

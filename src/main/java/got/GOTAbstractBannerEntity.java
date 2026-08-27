@@ -100,6 +100,8 @@ public abstract class GOTAbstractBannerEntity extends Entity {
 
     public boolean canPlayerEditClaim(Player player) {
         if (owner != null && owner.equals(player.getUUID())) return true;
+        if (owner != null && player instanceof net.minecraft.server.level.ServerPlayer sp && sp.getServer() != null
+                && got.pact.GOTPactService.samePact(sp.getServer(), owner, player.getUUID())) return true;
         return !claim.structureProtection()
                 && player.getAbilities().instabuild && player.hasPermissions(2);
     }
