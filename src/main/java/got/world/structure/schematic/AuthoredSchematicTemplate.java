@@ -26,7 +26,7 @@ import java.util.*;
 
 /** Reusable Sponge-v2 template placer. Schematic air is always ignored. */
 public final class AuthoredSchematicTemplate {
-    private static final String ROOT = "/data/got/structures/templates/";
+    private static final String ROOT = "/data/got/structures/";
     private static final Map<String, SoftReference<Schematic>> CACHE = new HashMap<>();
 
     private AuthoredSchematicTemplate() {}
@@ -34,7 +34,15 @@ public final class AuthoredSchematicTemplate {
     public static boolean place(NorthStructureBuilder builder, String file) {
         Schematic schematic = load(file);
         if (schematic == null) return false;
-        schematic.place(builder);
+        schematic.place(builder, true);
+        return true;
+    }
+
+    /** Places an authored structure without terracing or feathering nearby terrain. */
+    public static boolean placePreservingTerrain(NorthStructureBuilder builder, String file) {
+        Schematic schematic = load(file);
+        if (schematic == null) return false;
+        schematic.place(builder, false);
         return true;
     }
 
@@ -44,8 +52,9 @@ public final class AuthoredSchematicTemplate {
             SoftReference<Schematic> ref = CACHE.get(file);
             Schematic cached = ref == null ? null : ref.get();
             if (cached != null) return cached;
-            try (InputStream in = AuthoredSchematicTemplate.class.getResourceAsStream(ROOT + file)) {
-                if (in == null) throw new IOException("missing template " + file);
+            String resource = file.contains("/") ? file : "templates/" + file;
+            try (InputStream in = AuthoredSchematicTemplate.class.getResourceAsStream(ROOT + resource)) {
+                if (in == null) throw new IOException("missing template " + resource);
                 Schematic loaded = Schematic.read(in);
                 CACHE.put(file, new SoftReference<>(loaded));
                 GOTMod.LOGGER.info("Loaded authored reusable template {} ({}x{}x{})",
@@ -95,8 +104,10 @@ public final class AuthoredSchematicTemplate {
             return new Schematic(width,height,length,ox,oy,oz,palette,data,readBEs(root),readEntities(root),ground);
         }
 
-        void place(NorthStructureBuilder b) {
-            b.fitAuthoredTerrain(offsetX,offsetZ,offsetX+width-1,offsetZ+length-1,offsetY+groundLayer);
+        void place(NorthStructureBuilder b, boolean fitTerrain) {
+            if (fitTerrain) {
+                b.fitAuthoredTerrain(offsetX,offsetZ,offsetX+width-1,offsetZ+length-1,offsetY+groundLayer);
+            }
             int[] cursor={0};
             for(int y=0;y<height;y++) for(int z=0;z<length;z++) for(int x=0;x<width;x++) {
                 int id=readVarInt(blockData,cursor);

@@ -1,0 +1,62 @@
+{
+  "pass": "Conquest Pass 3 - Legendary Recruitment",
+  "status": "STATIC_AUDIT_PASS",
+  "schema_version_3": true,
+  "legendary_persistence_list": true,
+  "canonical_seed_roles": 23,
+  "recruit_gesture": true,
+  "hero_alignment_gate_500": true,
+  "manager_gate": true,
+  "ordinary_death_membership_hook_absent": true,
+  "player_pact_package_untouched": true,
+  "named_respawn_system_untouched": true,
+  "epic_fight_untouched": true,
+  "epic_fight_capabilities_untouched": true,
+  "better_combat_mappings_untouched": true,
+  "pentos_schematic_untouched": true,
+  "pentos_generator_untouched": true,
+  "pentos_offset_present": true,
+  "new_legendary_classes": [
+    "GOTLegendaryNpcService.java",
+    "GOTLegendaryPactMembership.java",
+    "GOTLegendaryPactService.java",
+    "GOTLegendaryRecruitmentEvents.java",
+    "GOTLegendaryRecruitmentService.java"
+  ],
+  "preservation": {
+    "src/main/java/got/pact": {
+      "same": true,
+      "hash": "b09fbaddfda8993a2b02547d217a64c583c7568dad685750561e1ad0c5a82382",
+      "files": 10
+    },
+    "src/main/java/got/compat/epicfight": {
+      "same": true,
+      "hash": "4cf6cf0d8db77481fa49ad8b06969715a7d5b399baceb043ae516301a83f724c",
+      "files": 4
+    },
+    "src/main/resources/data/got/capabilities": {
+      "same": true,
+      "hash": "ab057b157e2fb62db502857d02a83e7e1f8bbd673240611f5bdba34b69ec58d7",
+      "files": 224
+    },
+    "src/main/resources/data/got/weapon_attributes": {
+      "same": true,
+      "hash": "16f83a1be8764ce4b34eb3f3f0347ecb5bd64b6e69f74d3cc1d88a3a116e64ca",
+      "files": 174
+    },
+    "src/main/java/got/npc/GOTNamedNpcRespawnData.java": {
+      "same": true,
+      "hash": "a5cf4ab0eb3feda880f262d0969347666ec5b84861d8d483a0d4b135dac0a943"
+    },
+    "src/main/resources/data/got/structures/major/Pentos.schem": {
+      "same": true,
+      "hash": "29171ae3e47989b3286226c6fcc9f814ae8ee05b2cdc019ce2c9ed9cbef29cbb"
+    },
+    "src/main/java/got/world/structure/major/MajorSchematicStructureGenerator.java": {
+      "same": true,
+      "hash": "14b58832ada16768ef750999577360f252b5451580496f0336b8937f912cf727"
+    }
+  },
+  "gradle_compile": "BLOCKED_NO_NETWORK_SERVICES_GRADLE_ORG",
+  "javac_parse_syntax_diagnostics": 0
+}

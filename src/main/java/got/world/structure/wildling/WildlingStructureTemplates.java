@@ -17,7 +17,7 @@ public final class WildlingStructureTemplates {
 
     public static void generate(NorthStructureBuilder b, WildlingStructureType type) {
         switch (type) {
-            case HOUSE -> got.world.structure.schematic.AuthoredSchematicTemplate.place(b, "Wildling_House.schem");
+            case HOUSE -> got.world.structure.schematic.AuthoredSchematicTemplate.placePreservingTerrain(b, "Wildling_House.schem");
             case CHIEFTAIN_HOUSE -> got.world.structure.legacy.generated.GOTStructureWildlingChieftainHouse.place(b, 0);
             case THENN_HOUSE -> got.world.structure.legacy.generated.GOTStructureThennHouse.place(b, 0);
             case THENN_CHIEFTAIN_HOUSE -> got.world.structure.legacy.generated.GOTStructureThennChieftainHouse.place(b, 0);

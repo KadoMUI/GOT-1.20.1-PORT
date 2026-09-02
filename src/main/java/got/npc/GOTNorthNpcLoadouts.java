@@ -20,34 +20,47 @@ final class GOTNorthNpcLoadouts {
         switch (role) {
             case NORTH_MAN, NORTH_HILLMAN -> npc.setCombatWeapon(stack("got:iron_dagger"));
             case NORTH_LEVYMAN -> {
-                npc.setCombatWeapon(randomIronWeapon(npc));
+                ItemStack weapon = randomIronWeapon(npc);
+                npc.setWeapons(weapon, weapon);
                 leatherArmor(npc, true);
             }
             case NORTH_LEVYMAN_ARCHER -> {
-                npc.setCombatWeapon(randomIronWeapon(npc));
-                npc.setRangedWeapon(stack("got:longbow"));
+                ItemStack melee = randomIronWeapon(npc);
+                ItemStack bow = stack("got:longbow");
+                npc.setWeapons(melee, melee);
+                npc.setRangedWeapon(bow);
                 leatherArmor(npc, true);
             }
             case NORTH_SOLDIER -> {
-                npc.setCombatWeapon(randomIronWeapon(npc));
+                ItemStack weapon = randomNorthSoldierWeapon(npc);
+                npc.setWeapons(weapon, weapon);
                 northArmor(npc);
             }
             case NORTH_SOLDIER_ARCHER -> {
-                npc.setCombatWeapon(randomIronWeapon(npc));
-                npc.setRangedWeapon(stack("got:longbow"));
+                ItemStack melee = randomNorthSoldierWeapon(npc);
+                ItemStack bow = stack("got:longbow");
+                npc.setWeapons(melee, melee);
+                npc.setRangedWeapon(bow);
                 northArmor(npc);
             }
             case NORTH_GUARD -> {
-                npc.setCombatWeapon(stack("got:iron_pike"));
+                ItemStack weapon = npc.getRandom().nextBoolean()
+                        ? stack("got:westeros_spear")
+                        : stack("got:alloy_steel_spear");
+                npc.setWeapons(weapon, weapon);
                 northGuardArmor(npc);
             }
             case NORTH_BANNER_BEARER -> {
-                npc.setCombatWeapon(stack("got:iron_dagger"));
+                ItemStack weapon = stack("got:westeros_sword");
+                npc.setWeapons(weapon, weapon);
                 northArmor(npc);
                 npc.setItemSlot(EquipmentSlot.OFFHAND, GOTBannerItem.createStack(GOTBannerType.byName("robb")));
             }
             case NORTH_CAPTAIN -> {
-                npc.setCombatWeapon(new ItemStack(net.minecraft.world.item.Items.IRON_SWORD));
+                ItemStack weapon = npc.getRandom().nextBoolean()
+                        ? stack("got:alloy_steel_sword")
+                        : stack("got:westeros_hammer");
+                npc.setWeapons(weapon, weapon);
                 northArmorWithoutHelmet(npc);
             }
             case NORTH_BLACKSMITH -> npc.setWeapons(stack("got:blacksmith_hammer"), stack("got:blacksmith_hammer"));
@@ -243,6 +256,22 @@ final class GOTNorthNpcLoadouts {
             case 1 -> stack("got:iron_spear");
             case 2 -> stack("got:iron_battleaxe");
             default -> stack("got:iron_pike");
+        };
+    }
+
+    /**
+     * Northern professional troops use the current 1.20.1 weapon families.
+     * Do not reintroduce removed legacy faction weapons such as north_sword.
+     */
+    private static ItemStack randomNorthSoldierWeapon(GOTNorthNpcEntity npc) {
+        return switch (npc.getRandom().nextInt(8)) {
+            case 0 -> new ItemStack(net.minecraft.world.item.Items.IRON_SWORD);
+            case 1 -> stack("got:iron_spear");
+            case 2 -> stack("got:iron_battleaxe");
+            case 3, 4 -> stack("got:westeros_sword");
+            case 5 -> stack("got:westeros_spear");
+            case 6 -> stack("got:westeros_hammer");
+            default -> stack("got:alloy_steel_sword");
         };
     }
 

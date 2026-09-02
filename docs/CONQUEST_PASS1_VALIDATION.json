@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "schema_version": 1,
+  "waypoint_records_expected": 474,
+  "external_java_hooks": [
+    "src/main/java/got/command/GOTLegacyCommands.java"
+  ],
+  "prior_pass_critical_files": {
+    "src/main/resources/data/got/structures/major/Pentos.schem": {
+      "unchanged": true,
+      "sha256": "29171ae3e47989b3286226c6fcc9f814ae8ee05b2cdc019ce2c9ed9cbef29cbb"
+    },
+    "src/main/java/got/world/structure/major/MajorSchematicStructureGenerator.java": {
+      "unchanged": true,
+      "sha256": "14b58832ada16768ef750999577360f252b5451580496f0336b8937f912cf727"
+    },
+    "src/main/java/got/compat/epicfight/GOTEpicFightCompat.java": {
+      "unchanged": true,
+      "sha256": "7864ffe98dcc51b6ac7ab6188bf5d09f9744d724db0f255b768ddb2676c55822"
+    },
+    "src/main/resources/META-INF/mods.toml": {
+      "unchanged": true,
+      "sha256": "3f573bb540b6dabc4440a5866b954e0a798ae2d3599d2688bfca50c46959a499"
+    }
+  },
+  "better_combat_mapping_tree_unchanged": true,
+  "pentos_placement": "X -347, Z 0, Y -11, Rotation.NONE",
+  "gradle_compile": "NOT_RUN: wrapper distribution unavailable offline; services.gradle.org unreachable",
+  "javac_syntax_probe": "No syntax-like parser diagnostics; dependency symbols unavailable without Forge/Brigadier classpath"
+}

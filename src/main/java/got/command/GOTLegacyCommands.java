@@ -7,6 +7,7 @@ import got.faction.GOTFaction;
 import got.faction.GOTFactionPlayerData;
 import got.player.GOTPlayerTitleData;
 import got.calendar.GOTCalendarApi;
+import got.conquest.GOTConquestCommands;
 import got.common.fasttravel.GOTFastTravelManager;
 import got.common.world.map.GOTWaypoint;
 import net.minecraft.ChatFormatting;
@@ -85,6 +86,7 @@ public final class GOTLegacyCommands {
                             () -> Component.translatable("commands.got.calendar.current", calendar.displayDate()), false);
                     return 1;
                 }))
+            .then(GOTConquestCommands.build())
         );
     }
 

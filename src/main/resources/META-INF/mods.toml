@@ -28,3 +28,21 @@ mandatory=true
 versionRange="[1.20.1,1.21)"
 ordering="NONE"
 side="BOTH"
+
+# Optional: Conquest of Westeros enables its integrated Epic Fight bridge only
+# when this mod is present. GOT remains fully loadable without Epic Fight.
+[[dependencies.${mod_id}]]
+modId="epicfight"
+mandatory=false
+versionRange="[20.14.17,20.15)"
+ordering="AFTER"
+side="BOTH"
+
+# Optional: Better Combat reads Conquest weapon attribute data only when installed.
+# These JSON resources are inert in vanilla/Forge and do not create a Java dependency.
+[[dependencies.${mod_id}]]
+modId="bettercombat"
+mandatory=false
+versionRange="[1.9.0,1.10)"
+ordering="AFTER"
+side="BOTH"

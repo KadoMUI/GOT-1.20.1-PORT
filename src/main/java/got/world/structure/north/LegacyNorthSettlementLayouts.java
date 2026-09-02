@@ -588,9 +588,9 @@ public final class LegacyNorthSettlementLayouts {
          case "RANDOM_HOUSE" -> {
             if (random.nextInt(5) == 0) switch (random.nextInt(3)) {
                case 0 -> got.world.structure.legacy.generated.GOTStructureWesterosStables.place(b, 0);
-               case 1 -> got.world.structure.legacy.generated.GOTStructureWesterosSmithy.place(b, 0);
+               case 1 -> NorthStructureTemplates.generate(b, NorthStructureType.SMITHY);
                default -> got.world.structure.legacy.generated.GOTStructureWesterosBarn.place(b, 0);
-            } else got.world.structure.legacy.generated.GOTStructureWesterosHouse.place(b, 0);
+            } else NorthStructureTemplates.generate(b, NorthStructureType.HOUSE_SMALL);
          }
          case "RANDOM_FARM" -> {
             int farm = random.nextBoolean() ? (random.nextBoolean() ? 1 : 0) : 2;
@@ -606,11 +606,11 @@ public final class LegacyNorthSettlementLayouts {
          case "WesterosTownGarden" -> got.world.structure.legacy.generated.GOTStructureWesterosTownGarden.place(b, 0);
          case "WesterosTownTrees" -> got.world.structure.legacy.generated.GOTStructureWesterosTownTrees.place(b, 0);
          case "WesterosVillageSign" -> got.world.structure.legacy.generated.GOTStructureWesterosVillageSign.place(b, 0);
-         case "NorthHouse" -> got.world.structure.legacy.generated.GOTStructureWesterosCottage.place(b, 0);
-         case "NorthHouseLarge" -> got.world.structure.legacy.generated.GOTStructureWesterosStoneHouse.place(b, 0);
-         case "NorthHouseSmall" -> got.world.structure.legacy.generated.GOTStructureWesterosHouse.place(b, 0);
+         case "NorthHouse" -> NorthStructureTemplates.generate(b, NorthStructureType.HOUSE);
+         case "NorthHouseLarge" -> NorthStructureTemplates.generate(b, NorthStructureType.HOUSE_LARGE);
+         case "NorthHouseSmall" -> NorthStructureTemplates.generate(b, NorthStructureType.HOUSE_SMALL);
          case "NorthTavern" -> got.world.structure.legacy.generated.GOTStructureWesterosTavern.place(b, 0);
-         case "NorthSmithy" -> got.world.structure.legacy.generated.GOTStructureWesterosSmithy.place(b, 0);
+         case "NorthSmithy" -> NorthStructureTemplates.generate(b, NorthStructureType.SMITHY);
          case "NorthBarn" -> got.world.structure.legacy.generated.GOTStructureWesterosBarn.place(b, 0);
          case "NorthBath" -> got.world.structure.legacy.generated.GOTStructureWesterosBath.place(b, 0);
          case "NorthGatehouse" -> got.world.structure.legacy.generated.GOTStructureWesterosGatehouse.place(b, 0);

@@ -7,6 +7,8 @@ import got.world.structure.north.NorthStructureType;
 import got.world.structure.north.PlanetosNorthStructureGenerator;
 import got.world.structure.wildling.PlanetosWildlingStructureGenerator;
 import got.world.structure.wildling.WildlingStructureType;
+import got.world.structure.schematic.AuthoredStructureType;
+import got.world.structure.schematic.PlanetosAuthoredStructureSpawner;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -76,6 +78,8 @@ public final class GOTStructureSpawnerItem extends Item {
             generated = PlanetosWildlingStructureGenerator.spawn(serverLevel, origin, wildling, rotation);
         } else if (type instanceof NightWatchStructureType nightWatch) {
             generated = PlanetosNightWatchStructureGenerator.spawn(serverLevel, origin, nightWatch, rotation);
+        } else if (type instanceof AuthoredStructureType authored) {
+            generated = PlanetosAuthoredStructureSpawner.spawn(serverLevel, origin, authored, rotation);
         } else {
             generated = PlanetosNorthStructureGenerator.spawn(serverLevel, origin, (NorthStructureType)type, rotation);
         }

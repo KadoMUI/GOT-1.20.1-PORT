@@ -17,11 +17,11 @@ public final class NorthStructureTemplates {
             case HILLMAN_CHIEFTAIN_HOUSE -> got.world.structure.legacy.generated.GOTStructureNorthHillmanChieftainHouse.place(b, 0);
             case BARN -> got.world.structure.legacy.generated.GOTStructureWesterosBarn.place(b, 0);
             case BATH -> got.world.structure.legacy.generated.GOTStructureWesterosBath.place(b, 0);
-            case FORTRESS -> got.world.structure.schematic.AuthoredSchematicTemplate.place(b, "WesterosCastleSmall.schem");
-            case HOUSE -> got.world.structure.legacy.generated.GOTStructureWesterosCottage.place(b, 0);
-            case HOUSE_LARGE -> got.world.structure.legacy.generated.GOTStructureWesterosStoneHouse.place(b, 0);
-            case HOUSE_SMALL -> got.world.structure.legacy.generated.GOTStructureWesterosHouse.place(b, 0);
-            case SMITHY -> got.world.structure.legacy.generated.GOTStructureWesterosSmithy.place(b, 0);
+            case FORTRESS -> authored(b, "WesterosCastleSmall.schem");
+            case HOUSE -> authored(b, "NorthHouse1.schem");
+            case HOUSE_LARGE -> authored(b, "NorthHouse4.schem");
+            case HOUSE_SMALL -> authored(b, "NorthHouse2.schem");
+            case SMITHY -> authored(b, "NorthSmithy.schem");
             case STABLES -> got.world.structure.legacy.generated.GOTStructureWesterosStables.place(b, 0);
             case TAVERN -> got.world.structure.legacy.generated.GOTStructureWesterosTavern.place(b, 0);
             case TOWER -> got.world.structure.legacy.generated.GOTStructureWesterosTower.place(b, 0);
@@ -30,6 +30,15 @@ public final class NorthStructureTemplates {
             case HILLMAN_SETTLEMENT, VILLAGE, FORT_SETTLEMENT, TOWN ->
                     throw new IllegalArgumentException("Settlement type requires NorthSettlementGenerator: " + type);
         }
+    }
+
+    /**
+     * North legacy IDs now delegate to the authored 1.0 schematic library when
+     * a direct modern replacement exists. Terrain-preserving placement avoids
+     * importing schematic air as destructive terrain cuts.
+     */
+    private static void authored(NorthStructureBuilder b, String schematic) {
+        got.world.structure.schematic.AuthoredSchematicTemplate.placePreservingTerrain(b, schematic);
     }
 
     private static void house(NorthStructureBuilder b, int halfWidth, int halfDepth,

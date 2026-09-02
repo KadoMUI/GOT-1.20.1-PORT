@@ -1,0 +1,53 @@
+{
+  "pass": "Conquest Pass 5 - Pact Economy",
+  "schema_version": 5,
+  "schema_source_ok": true,
+  "canonical_seed_count": 5,
+  "canonical_seeds": [
+    {
+      "key": "north_and_trident",
+      "starting": 6144,
+      "daily": 128
+    },
+    {
+      "key": "renly_tyrell",
+      "starting": 8192,
+      "daily": 192
+    },
+    {
+      "key": "stannis_velaryon",
+      "starting": 2048,
+      "daily": 64
+    },
+    {
+      "key": "iron_throne",
+      "starting": 12288,
+      "daily": 256
+    },
+    {
+      "key": "iron_islands",
+      "starting": 2048,
+      "daily": 48
+    }
+  ],
+  "coin_denominations_descending": [
+    16384,
+    4096,
+    1024,
+    256,
+    64,
+    16,
+    4,
+    1
+  ],
+  "player_deposit_command": "/pact treasury deposit <value> and all",
+  "no_player_withdrawal_command": true,
+  "income_period_ticks": 24000,
+  "income_stops_when_inactive": true,
+  "creative_requires_physical_coins": true,
+  "pentos_sha256": "29171ae3e47989b3286226c6fcc9f814ae8ee05b2cdc019ce2c9ed9cbef29cbb",
+  "pentos_expected": true,
+  "pentos_offset_preserved": true,
+  "treasury_state_unit_test": "PASS",
+  "full_gradle_compile": "BLOCKED_BY_SANDBOX_NETWORK"
+}

@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.CraftingTableBlock;
+import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.StonecutterBlock;
 import net.minecraft.world.level.block.LeavesBlock;
@@ -224,7 +225,7 @@ public final class GOTBlocks {
     public static final RegistryObject<Block> ROTTEN_PLANKS = registerBuildingBlock("rotten_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> CRACKED_RED_BRICKS = registerBuildingBlock("cracked_red_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
     public static final RegistryObject<Block> MOSSY_RED_BRICKS = registerBuildingBlock("mossy_red_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
-    public static final RegistryObject<Block> THATCH_FLOOR = registerBuildingBlock("thatch_floor", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> THATCH_FLOOR = registerBuildingBlock("thatch_floor", () -> new CarpetBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_CARPET)));
     public static final RegistryObject<Block> THATCH_REED = registerBuildingBlock("thatch_reed", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> THATCH_THATCH = registerBuildingBlock("thatch_thatch", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 

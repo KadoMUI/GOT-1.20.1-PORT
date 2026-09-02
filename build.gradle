@@ -38,10 +38,26 @@ minecraft {
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
-repositories {}
+repositories {
+    // Compile the optional Epic Fight bridge against the public 1.20.1 API.
+    // Forge/Gradle does not bundle this dependency into the GOT jar.
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        forRepositories(fg.repository)
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    compileOnly fg.deobf("maven.modrinth:${epicfight_modrinth_project}:${epicfight_modrinth_version}")
 }
 
 tasks.named('processResources', ProcessResources).configure {

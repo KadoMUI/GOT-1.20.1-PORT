@@ -126,6 +126,8 @@ public final class GOTCreativeTabs {
                         .forEach(type -> output.accept(GOTStructureSpawnerItem.createStack(type)));
                 java.util.Arrays.stream(NorthStructureType.values())
                         .forEach(type -> output.accept(GOTStructureSpawnerItem.createStack(type)));
+                java.util.Arrays.stream(got.world.structure.schematic.AuthoredStructureType.values())
+                        .forEach(type -> output.accept(GOTStructureSpawnerItem.createStack(type)));
                 got.npc.NorthNpcRole.spawnerOrder().stream()
                         .map(got.npc.GOTNorthNpcSpawnerItem::createStack)
                         .forEach(output::accept);

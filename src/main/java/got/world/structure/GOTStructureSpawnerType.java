@@ -3,6 +3,7 @@ package got.world.structure;
 import got.world.structure.nightwatch.NightWatchStructureType;
 import got.world.structure.north.NorthStructureType;
 import got.world.structure.wildling.WildlingStructureType;
+import got.world.structure.schematic.AuthoredStructureType;
 
 /** Shared legacy identity used by every regional structure-spawner catalogue. */
 public interface GOTStructureSpawnerType {
@@ -18,6 +19,8 @@ public interface GOTStructureSpawnerType {
         NightWatchStructureType nightWatch = NightWatchStructureType.findByLegacyId(id);
         if (nightWatch != null) return nightWatch;
         NorthStructureType north = NorthStructureType.findByLegacyId(id);
-        return north != null ? north : NorthStructureType.HOUSE;
+        if (north != null) return north;
+        AuthoredStructureType authored = AuthoredStructureType.findByLegacyId(id);
+        return authored != null ? authored : NorthStructureType.HOUSE;
     }
 }

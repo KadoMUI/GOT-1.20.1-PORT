@@ -68,7 +68,7 @@ public final class MajorSchematicStructureGenerator {
             site(GOTWaypoint.MOAT_KAILIN, "MoatCailin.schem"),
             site(GOTWaypoint.MYR, "Myr.schem"),
             site(GOTWaypoint.OLDTOWN, "OldTown.schem"),
-            site(GOTWaypoint.PENTOS, "Pentos.schem"),
+            adjustedSite(GOTWaypoint.PENTOS, "Pentos.schem", -347, 0, -11, Rotation.NONE),
             site(GOTWaypoint.PYKE, "Pyke.schem"),
             adjustedSite(GOTWaypoint.QARTH, "Qarth.schem", 0, 0, 21, Rotation.NONE),
             site(GOTWaypoint.RIVERRUN, "Riverrun.schem"),
