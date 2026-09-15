@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:labradorite"
-  },
-  "result": "got:stairs_labradorite",
-  "count": 1
-}

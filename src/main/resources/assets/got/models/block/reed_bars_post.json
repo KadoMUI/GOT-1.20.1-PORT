@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/template_glass_pane_post",
-  "render_type": "cutout",
-  "textures": {
-    "pane": "got:block/reed_bars",
-    "edge": "got:block/reed_bars"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "side": "got:block/table_dothraki_side",
-    "top": "got:block/table_dothraki_top",
-    "bottom": "got:block/table_dothraki_top"
-  }
-}

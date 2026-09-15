@@ -1,8 +1,0 @@
-{
-  "title": "quest.got.dorne_supplies.title", "description": "quest.got.dorne_supplies.description",
-  "offer": "quest.got.dorne_supplies.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.dorne_supplies.complete",
-  "icon": "minecraft:red_sand", "color": "#C76832", "weight": 5, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["dorne"], "roles": ["dorne_man", "dorne_farmhand"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "collect", "target": "minecraft:red_sand", "count": 20, "consume": true, "label": "quest.got.dorne_supplies.objective.0" }],
-  "rewards": { "alignment": { "dorne": 8.0 }, "coins": 16, "experience": 10 }
-}

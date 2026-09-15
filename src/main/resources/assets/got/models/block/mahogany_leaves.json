@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/leaves",
-  "render_type": "cutout_mipped",
-  "textures": {
-    "all": "got:block/mahogany_leaves"
-  }
-}

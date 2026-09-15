@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:mossy_sothoryos_bricks"
-  },
-  "result": "got:stairs_sothoryos_brick_mossy",
-  "count": 1
-}

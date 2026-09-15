@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "got:block/labradorite_bricks",
-    "side": "got:block/labradorite_bricks",
-    "top": "got:block/labradorite_bricks"
-  }
-}

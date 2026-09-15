@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "side": "got:block/holly_log",
-    "end": "got:block/holly_log_top"
-  }
-}

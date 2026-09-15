@@ -1,8 +1,0 @@
-{
-  "title":"quest.got.wildling_border_patrol.title","description":"quest.got.wildling_border_patrol.description",
-  "offer":"quest.got.wildling_border_patrol.offer","progress":"quest.got.standard.progress","complete":"quest.got.wildling_border_patrol.complete",
-  "weight":10,
-  "giver":{"factions":["wildling"],"roles":["wildling_warrior","wildling_archer","wildling_axe_thrower","thenn_warrior","thenn_archer","thenn_axe_thrower"],"maximum_active_for_faction":5},
-  "objectives":[{"type":"kill_faction","target":"night_watch","count":5,"label":"quest.got.wildling_border_patrol.objective.0"}],
-  "rewards":{"alignment":{"wildling":10.0},"coins":20,"experience":15}
-}

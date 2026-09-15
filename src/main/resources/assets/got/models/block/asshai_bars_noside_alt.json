@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/template_glass_pane_noside_alt",
-  "render_type": "cutout",
-  "textures": {
-    "pane": "got:block/asshai_bars",
-    "edge": "got:block/asshai_bars"
-  }
-}

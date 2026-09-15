@@ -1,8 +1,0 @@
-{
-  "title": "quest.got.lhazar_border_patrol.title", "description": "quest.got.lhazar_border_patrol.description",
-  "offer": "quest.got.lhazar_border_patrol.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.lhazar_border_patrol.complete",
-  "icon": "got:iron_scimitar", "color": "#9E4B1E", "weight": 2, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["lhazar"], "roles": ["lhazar_levyman", "lhazar_levyman_archer", "lhazar_soldier", "lhazar_soldier_archer", "lhazar_banner_bearer"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "kill_faction", "target": "dothraki", "count": 5, "label": "quest.got.lhazar_border_patrol.objective.0" }],
-  "rewards": { "alignment": { "lhazar": 10.0 }, "coins": 20, "experience": 15 }
-}

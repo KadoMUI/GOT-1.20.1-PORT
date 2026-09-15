@@ -1,8 +1,0 @@
-{
-  "title": "quest.got.jogos_nhai_border_patrol.title", "description": "quest.got.jogos_nhai_border_patrol.description",
-  "offer": "quest.got.jogos_nhai_border_patrol.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.jogos_nhai_border_patrol.complete",
-  "icon": "got:iron_scimitar", "color": "#985916", "weight": 2, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["jogos_nhai"], "roles": ["jogos_nhai_man", "jogos_nhai_archer"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "kill_faction", "target": "yi_ti", "count": 5, "label": "quest.got.jogos_nhai_border_patrol.objective.0" }],
-  "rewards": { "alignment": { "jogos_nhai": 10.0 }, "coins": 20, "experience": 15 }
-}

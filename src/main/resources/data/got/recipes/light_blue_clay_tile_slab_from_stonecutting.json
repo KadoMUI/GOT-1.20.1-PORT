@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:light_blue_terracotta_roof_tiles"
-  },
-  "result": "got:light_blue_clay_tile_slab",
-  "count": 2
-}

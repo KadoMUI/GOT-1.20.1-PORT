@@ -1,1 +1,0 @@
-package got.world.genlayer; public class GOTGenLayerExtractMapRivers extends GOTGenLayer {public GOTGenLayerExtractMapRivers(long s,GOTGenLayer p){super(s);gotParent=p;}public int[] getInts(int x,int z,int w,int h){int[] p=gotParent.getInts(x,z,w,h),o=new int[p.length];for(int i=0;i<p.length;i++)o[i]=GOTBiomeMapData.isRiver(p[i])?1:-1;return o;}}

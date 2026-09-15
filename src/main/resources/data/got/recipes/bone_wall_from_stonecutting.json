@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:bone_block"
-  },
-  "result": "got:bone_wall",
-  "count": 1
-}

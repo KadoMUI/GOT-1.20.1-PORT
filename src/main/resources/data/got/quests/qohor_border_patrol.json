@@ -1,9 +1,0 @@
-{
-  "title": "quest.got.qohor_border_patrol.title", "description": "quest.got.qohor_border_patrol.description",
-  "offer": "quest.got.qohor_border_patrol.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.qohor_border_patrol.complete",
-  "icon": "minecraft:iron_sword", "color": "#053246", "weight": 2, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["qohor"], "roles": ["qohor_levyman", "qohor_levyman_archer", "qohor_unsullied", "qohor_soldier", "qohor_soldier_archer", "qohor_banner_bearer"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "kill_faction", "target": "dothraki", "count": 5, "label": "quest.got.qohor_border_patrol.objective.0" }],
-  "rewards": { "alignment": { "qohor": 10.0 }, "coins": 20, "experience": 15 }
-}
-

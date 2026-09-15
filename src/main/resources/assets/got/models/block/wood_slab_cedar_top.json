@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "got:block/cedar_planks",
-    "side": "got:block/cedar_planks",
-    "top": "got:block/cedar_planks"
-  }
-}

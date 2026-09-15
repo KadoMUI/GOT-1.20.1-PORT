@@ -1,6 +1,0 @@
-{
-  "type":"minecraft:crafting_shaped",
-  "pattern":["L L","L L","LLL"],
-  "key":{"L":{"item":"minecraft:leather"}},
-  "result":{"item":"got:pouch_small","count":1}
-}

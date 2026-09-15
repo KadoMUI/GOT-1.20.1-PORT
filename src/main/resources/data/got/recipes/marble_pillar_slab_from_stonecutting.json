@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:marble_pillar"
-  },
-  "result": "got:marble_pillar_slab",
-  "count": 2
-}

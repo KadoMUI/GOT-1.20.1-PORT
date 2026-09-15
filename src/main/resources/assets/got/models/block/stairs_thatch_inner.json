@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "got:block/thatch_thatch",
-    "side": "got:block/thatch_thatch",
-    "top": "got:block/thatch_thatch"
-  }
-}

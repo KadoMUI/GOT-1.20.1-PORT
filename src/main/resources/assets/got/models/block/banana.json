@@ -1,9 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "render_type": "cutout",
-  "textures": {
-    "side": "got:block/banana_side",
-    "top": "got:block/banana_top",
-    "bottom": "got:block/banana_bottom"
-  }
-}

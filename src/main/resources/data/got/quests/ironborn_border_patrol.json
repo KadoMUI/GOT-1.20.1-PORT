@@ -1,8 +1,0 @@
-{
-  "title": "quest.got.ironborn_border_patrol.title", "description": "quest.got.ironborn_border_patrol.description",
-  "offer": "quest.got.ironborn_border_patrol.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.ironborn_border_patrol.complete",
-  "icon": "minecraft:iron_sword", "color": "#46505A", "weight": 2, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["ironborn"], "roles": ["ironborn_levyman", "ironborn_levyman_archer", "ironborn_soldier", "ironborn_soldier_archer", "ironborn_banner_bearer"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "kill_faction", "target": "north", "count": 5, "label": "quest.got.ironborn_border_patrol.objective.0" }],
-  "rewards": { "alignment": { "ironborn": 10.0 }, "coins": 20, "experience": 15 }
-}

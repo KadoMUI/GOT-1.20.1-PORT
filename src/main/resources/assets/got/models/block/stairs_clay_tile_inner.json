@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "got:block/terracotta_roof_tiles",
-    "side": "got:block/terracotta_roof_tiles",
-    "top": "got:block/terracotta_roof_tiles"
-  }
-}

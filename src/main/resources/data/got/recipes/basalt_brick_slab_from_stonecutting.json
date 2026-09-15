@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:basalt_westeros_bricks"
-  },
-  "result": "got:basalt_brick_slab",
-  "count": 2
-}

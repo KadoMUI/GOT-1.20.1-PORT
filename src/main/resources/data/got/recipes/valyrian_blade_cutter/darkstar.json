@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:valyrian_longsword"
-  },
-  "result": "got:darkstar",
-  "count": 1
-}

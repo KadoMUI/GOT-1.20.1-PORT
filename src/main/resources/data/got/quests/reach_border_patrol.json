@@ -1,8 +1,0 @@
-{
-  "title": "quest.got.reach_border_patrol.title", "description": "quest.got.reach_border_patrol.description",
-  "offer": "quest.got.reach_border_patrol.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.reach_border_patrol.complete",
-  "icon": "minecraft:iron_sword", "color": "#617AC6", "weight": 2, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["reach"], "roles": ["reach_levyman", "reach_levyman_archer", "reach_soldier", "reach_soldier_archer", "reach_guard", "reach_banner_bearer"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "kill_faction", "target": "dragonstone", "count": 5, "label": "quest.got.reach_border_patrol.objective.0" }],
-  "rewards": { "alignment": { "reach": 10.0 }, "coins": 20, "experience": 15 }
-}

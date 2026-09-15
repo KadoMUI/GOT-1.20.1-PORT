@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "got:block/carved_rhyolite_bricks"
-  }
-}

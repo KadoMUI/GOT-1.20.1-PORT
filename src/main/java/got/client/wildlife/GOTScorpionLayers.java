@@ -1,1 +1,0 @@
-package got.client.wildlife; import got.GOTMod; import net.minecraft.client.model.geom.ModelLayerLocation; import net.minecraft.resources.ResourceLocation; public final class GOTScorpionLayers { public static final ModelLayerLocation SCORPION=new ModelLayerLocation(new ResourceLocation(GOTMod.MOD_ID,"scorpion"),"main"); private GOTScorpionLayers(){} }

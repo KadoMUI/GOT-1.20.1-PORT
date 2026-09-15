@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "got:block/wood_beam1_ulthos_top",
-    "side": "got:block/wood_beam1_ulthos_side"
-  }
-}

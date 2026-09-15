@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column_horizontal",
-  "textures": {
-    "side": "got:block/fotinia_log",
-    "end": "got:block/fotinia_log_top"
-  }
-}

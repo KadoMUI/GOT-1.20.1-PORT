@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "front": "got:block/millstone_side",
-    "side": "got:block/millstone_side",
-    "top": "got:block/millstone_top"
-  }
-}

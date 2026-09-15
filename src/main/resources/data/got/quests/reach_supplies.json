@@ -1,8 +1,0 @@
-{
-  "title": "quest.got.reach_supplies.title", "description": "quest.got.reach_supplies.description",
-  "offer": "quest.got.reach_supplies.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.reach_supplies.complete",
-  "icon": "minecraft:wheat", "color": "#617AC6", "weight": 5, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["reach"], "roles": ["reach_man", "reach_farmhand"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "collect", "target": "minecraft:wheat", "count": 20, "consume": true, "label": "quest.got.reach_supplies.objective.0" }],
-  "rewards": { "alignment": { "reach": 8.0 }, "coins": 16, "experience": 10 }
-}

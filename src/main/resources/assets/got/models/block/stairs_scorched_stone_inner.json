@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "got:block/scorched_stone",
-    "side": "got:block/scorched_stone",
-    "top": "got:block/scorched_stone"
-  }
-}

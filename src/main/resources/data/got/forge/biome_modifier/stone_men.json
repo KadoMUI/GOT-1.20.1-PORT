@@ -1,1 +1,0 @@
-{"type":"forge:add_spawns","biomes":"#got:stone_men","spawners":[{"type":"got:stone_man","weight":5,"minCount":1,"maxCount":1}]}

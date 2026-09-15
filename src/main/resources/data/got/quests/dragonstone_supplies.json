@@ -1,8 +1,0 @@
-{
-  "title": "quest.got.dragonstone_supplies.title", "description": "quest.got.dragonstone_supplies.description",
-  "offer": "quest.got.dragonstone_supplies.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.dragonstone_supplies.complete",
-  "icon": "minecraft:coal", "color": "#6A6AAA", "weight": 5, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["dragonstone"], "roles": ["dragonstone_man", "dragonstone_farmhand"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "collect", "target": "minecraft:coal", "count": 16, "consume": true, "label": "quest.got.dragonstone_supplies.objective.0" }],
-  "rewards": { "alignment": { "dragonstone": 8.0 }, "coins": 16, "experience": 10 }
-}

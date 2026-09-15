@@ -1,1 +1,0 @@
-package got.wildlife; import net.minecraft.world.entity.EntityType; import net.minecraft.world.level.Level; public final class GOTJungleScorpionEntity extends GOTScorpionEntity { public GOTJungleScorpionEntity(EntityType<? extends GOTJungleScorpionEntity> t, Level l){super((EntityType)t,l,Species.JUNGLE);} }

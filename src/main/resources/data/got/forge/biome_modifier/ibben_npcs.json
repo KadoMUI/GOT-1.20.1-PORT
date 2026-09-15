@@ -1,5 +1,0 @@
-{
-  "type": "forge:add_spawns",
-  "biomes": "#got:spawns_ibben_npcs",
-  "spawners": [{ "type": "got:ibben_npc", "weight": 10, "minCount": 1, "maxCount": 2 }]
-}

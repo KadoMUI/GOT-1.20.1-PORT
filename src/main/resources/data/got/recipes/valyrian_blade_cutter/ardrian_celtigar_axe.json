@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:valyrian_battleaxe"
-  },
-  "result": "got:ardrian_celtigar_axe",
-  "count": 1
-}

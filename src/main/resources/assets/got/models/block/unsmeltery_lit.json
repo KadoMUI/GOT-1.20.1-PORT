@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "top": "got:block/model/unsmeltery/active",
-    "front": "got:block/model/unsmeltery/active",
-    "side": "got:block/model/unsmeltery/active"
-  }
-}

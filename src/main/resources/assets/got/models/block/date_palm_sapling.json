@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "render_type": "cutout",
-  "textures": {
-    "cross": "got:block/date_palm_sapling"
-  }
-}

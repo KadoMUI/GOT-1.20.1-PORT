@@ -1,2 +1,0 @@
-package got.world.genlayer;
-public class GOTGenLayerSmooth extends GOTGenLayer {public GOTGenLayerSmooth(long s,GOTGenLayer p){super(s);gotParent=p;}public int[] getInts(int x,int z,int w,int h){int[] p=gotParent.getInts(x-1,z-1,w+2,h+2),o=new int[w*h];for(int dz=0;dz<h;dz++)for(int dx=0;dx<w;dx++){int l=p[dx+(dz+1)*(w+2)],r=p[dx+2+(dz+1)*(w+2)],u=p[dx+1+dz*(w+2)],d=p[dx+1+(dz+2)*(w+2)],c=p[dx+1+(dz+1)*(w+2)];if(l==r&&u==d){initChunkSeed(dx+x,dz+z);c=nextInt(2)==0?l:u;}else if(l==r)c=l;else if(u==d)c=u;o[dx+dz*w]=c;}return o;}}

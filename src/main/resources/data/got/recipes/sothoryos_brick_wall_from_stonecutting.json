@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:sothoryos_bricks"
-  },
-  "result": "got:sothoryos_brick_wall",
-  "count": 1
-}

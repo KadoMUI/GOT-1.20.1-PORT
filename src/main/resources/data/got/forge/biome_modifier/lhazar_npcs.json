@@ -1,5 +1,0 @@
-{
-  "type": "forge:add_spawns",
-  "biomes": "#got:spawns_lhazar_npcs",
-  "spawners": [{ "type": "got:lhazar_npc", "weight": 10, "minCount": 1, "maxCount": 2 }]
-}

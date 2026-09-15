@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:yi_ti_granite_bricks"
-  },
-  "result": "got:granite_yi_ti_brick_wall",
-  "count": 1
-}

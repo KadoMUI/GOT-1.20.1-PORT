@@ -1,8 +1,0 @@
-{
-  "title": "quest.got.norvos_supplies.title", "description": "quest.got.norvos_supplies.description",
-  "offer": "quest.got.norvos_supplies.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.norvos_supplies.complete",
-  "icon": "minecraft:iron_ingot", "color": "#2D4D2F", "weight": 5, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["norvos"], "roles": ["norvos_man", "norvos_farmhand"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "collect", "target": "minecraft:iron_ingot", "count": 16, "consume": true, "label": "quest.got.norvos_supplies.objective.0" }],
-  "rewards": { "alignment": { "norvos": 8.0 }, "coins": 16, "experience": 10 }
-}

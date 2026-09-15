@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column_horizontal",
-  "textures": {
-    "side": "got:block/weirwood_log",
-    "end": "got:block/weirwood_log_top"
-  }
-}

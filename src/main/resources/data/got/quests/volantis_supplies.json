@@ -1,8 +1,0 @@
-{
-  "title": "quest.got.volantis_supplies.title", "description": "quest.got.volantis_supplies.description",
-  "offer": "quest.got.volantis_supplies.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.volantis_supplies.complete",
-  "icon": "minecraft:brick", "color": "#4C3A5F", "weight": 5, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["volantis"], "roles": ["volantis_man", "volantis_slave"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "collect", "target": "minecraft:brick", "count": 24, "consume": true, "label": "quest.got.volantis_supplies.objective.0" }],
-  "rewards": { "alignment": { "volantis": 8.0 }, "coins": 16, "experience": 10 }
-}

@@ -1,7 +1,0 @@
-Milestone 1A modernization
-- Removed registered got:copper_ingot and got:copper_nugget.
-- Removed copper dagger, longsword, and greatsword from the migrated content slice.
-- Vanilla minecraft:copper_ingot is the canonical copper material.
-- Added tin ingot, tin ore, deepslate tin ore, and tin storage block.
-- Added tin world generation, tags, loot tables, smelting, blasting, storage recipes, and bronze alloy recipe.
-- Bronze ratio: 3 copper + 1 tin = 4 bronze ingots.

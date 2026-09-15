@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:white_sandstone"
-  },
-  "result": "got:stairs_white_sandstone",
-  "count": 1
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "got:block/rock_labradorite",
-    "side": "got:block/rock_labradorite",
-    "top": "got:block/rock_labradorite"
-  }
-}

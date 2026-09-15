@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "got:block/kanuka_planks",
-    "side": "got:block/kanuka_planks",
-    "top": "got:block/kanuka_planks"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:rhyolite"
-  },
-  "result": "got:rhyolite_wall",
-  "count": 1
-}

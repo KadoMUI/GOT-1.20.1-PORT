@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "got:block/ibbinia_planks",
-    "side": "got:block/ibbinia_planks",
-    "top": "got:block/ibbinia_planks"
-  }
-}

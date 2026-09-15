@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:valyrian_sword"
-  },
-  "result": "got:needle",
-  "count": 1
-}

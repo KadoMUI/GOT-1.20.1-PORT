@@ -1,8 +1,0 @@
-[
-  "src/main/java/got/GOTEquipment.java",
-  "src/main/java/got/world/structure/north/PlanetosNorthStructureGenerator.java",
-  "src/main/resources/assets/got/textures/banner/florent.png",
-  "src/main/resources/assets/got/textures/banner/florentBook.png",
-  "src/main/resources/assets/got/textures/entity/banner/florent.png",
-  "src/main/resources/assets/got/textures/entity/banner/florentbook.png"
-]

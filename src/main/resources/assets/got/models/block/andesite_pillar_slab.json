@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "got:block/pillar1_andesite_face",
-    "side": "got:block/pillar1_andesite_side",
-    "top": "got:block/pillar1_andesite_face"
-  }
-}

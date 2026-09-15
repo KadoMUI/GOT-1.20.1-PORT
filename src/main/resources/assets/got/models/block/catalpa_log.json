@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "side": "got:block/catalpa_log",
-    "end": "got:block/catalpa_log_top"
-  }
-}

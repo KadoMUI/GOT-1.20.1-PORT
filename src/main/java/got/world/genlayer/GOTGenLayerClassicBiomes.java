@@ -1,1 +1,0 @@
-package got.world.genlayer; public class GOTGenLayerClassicBiomes extends GOTGenLayer {public GOTGenLayerClassicBiomes(long s,GOTGenLayer p){super(s);gotParent=p;}public int[] getInts(int x,int z,int w,int h){int[] o=gotParent.getInts(x,z,w,h);for(int dz=0;dz<h;dz++)for(int dx=0;dx<w;dx++){initChunkSeed(x+dx,z+dz);o[dx+dz*w]=o[dx+dz*w]==0?0:11+nextInt(174);}return o;}}

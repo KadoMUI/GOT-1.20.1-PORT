@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:sothoryos_obsidian_pillar"
-  },
-  "result": "got:sothoryos_obsidian_pillar_slab",
-  "count": 2
-}

@@ -1,1 +1,0 @@
-package got.wildlife; import net.minecraft.world.entity.EntityType; import net.minecraft.world.entity.animal.Animal; import net.minecraft.world.level.Level; public final class GOTLionessEntity extends GOTLionEntity { public GOTLionessEntity(EntityType<? extends Animal> t,Level l){super(t,l);} }

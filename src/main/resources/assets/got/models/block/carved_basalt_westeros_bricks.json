@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "got:block/carved_basalt_westeros_bricks"
-  }
-}

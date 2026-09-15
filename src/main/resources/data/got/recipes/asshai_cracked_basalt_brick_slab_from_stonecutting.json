@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:cracked_basalt_bricks"
-  },
-  "result": "got:asshai_cracked_basalt_brick_slab",
-  "count": 2
-}

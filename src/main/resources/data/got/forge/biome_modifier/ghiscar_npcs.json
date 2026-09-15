@@ -1,5 +1,0 @@
-{
-  "type": "forge:add_spawns",
-  "biomes": "#got:spawns_ghiscar_npcs",
-  "spawners": [{ "type": "got:ghiscar_npc", "weight": 10, "minCount": 1, "maxCount": 2 }]
-}

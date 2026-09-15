@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:valyrian_hammer"
-  },
-  "result": "got:robert_baratheon_hammer",
-  "count": 1
-}

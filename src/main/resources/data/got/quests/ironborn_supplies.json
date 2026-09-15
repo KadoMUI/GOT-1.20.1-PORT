@@ -1,8 +1,0 @@
-{
-  "title": "quest.got.ironborn_supplies.title", "description": "quest.got.ironborn_supplies.description",
-  "offer": "quest.got.ironborn_supplies.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.ironborn_supplies.complete",
-  "icon": "minecraft:cod", "color": "#46505A", "weight": 5, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["ironborn"], "roles": ["ironborn_man", "ironborn_farmhand"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "collect", "target": "minecraft:cod", "count": 16, "consume": true, "label": "quest.got.ironborn_supplies.objective.0" }],
-  "rewards": { "alignment": { "ironborn": 8.0 }, "coins": 16, "experience": 10 }
-}

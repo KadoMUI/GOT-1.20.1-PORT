@@ -1,8 +1,0 @@
-{
-  "title": "quest.got.braavos_border_patrol.title", "description": "quest.got.braavos_border_patrol.description",
-  "offer": "quest.got.braavos_border_patrol.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.braavos_border_patrol.complete",
-  "icon": "minecraft:iron_sword", "color": "#4A0C0C", "weight": 2, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["braavos"], "roles": ["braavos_levyman", "braavos_levyman_archer", "braavos_soldier", "braavos_soldier_archer", "braavos_banner_bearer"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "kill_faction", "target": "pentos", "count": 5, "label": "quest.got.braavos_border_patrol.objective.0" }],
-  "rewards": { "alignment": { "braavos": 10.0 }, "coins": 20, "experience": 15 }
-}

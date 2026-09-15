@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:marble"
-  },
-  "result": "got:stairs_chalk",
-  "count": 1
-}

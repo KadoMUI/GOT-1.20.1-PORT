@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:asshai_basalt_pillar"
-  },
-  "result": "got:asshai_basalt_pillar_slab",
-  "count": 2
-}

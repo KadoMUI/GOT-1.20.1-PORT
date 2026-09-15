@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "got:block/yi_ti_flowers_bricks",
-    "side": "got:block/yi_ti_flowers_bricks",
-    "top": "got:block/yi_ti_flowers_bricks"
-  }
-}

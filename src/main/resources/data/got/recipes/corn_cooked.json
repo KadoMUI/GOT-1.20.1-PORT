@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "got:corn"
-  },
-  "result": "got:corn_cooked",
-  "experience": 0.35,
-  "cookingtime": 100
-}

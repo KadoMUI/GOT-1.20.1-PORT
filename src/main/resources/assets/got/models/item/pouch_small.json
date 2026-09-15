@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "got:item/pouch_small",
-    "layer1": "got:item/pouch_small_overlay"
-  }
-}

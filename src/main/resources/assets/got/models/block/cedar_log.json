@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "side": "got:block/cedar_log",
-    "end": "got:block/cedar_log_top"
-  }
-}

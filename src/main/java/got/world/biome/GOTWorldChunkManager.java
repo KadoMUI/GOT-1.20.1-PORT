@@ -1,4 +1,0 @@
-package got.world.biome;
-import net.minecraft.resources.ResourceKey;import net.minecraft.world.level.biome.Biome;
-/** Coordinate-facing facade consumed by the future chunk generator. */
-public final class GOTWorldChunkManager{private final long seed;public GOTWorldChunkManager(long seed){this.seed=seed;PlanetosBiomeManager.initialize(seed);}public long seed(){return seed;}public ResourceKey<Biome> getBiome(int blockX,int blockZ){return PlanetosBiomeManager.getBiome(blockX,blockZ);}public GOTBiomeVariant getVariant(int blockX,int blockZ){return PlanetosBiomeManager.getVariant(blockX,blockZ);}public ResourceKey<Biome>[] getBiomes(int x,int z,int width,int height){@SuppressWarnings("unchecked") ResourceKey<Biome>[] out=new ResourceKey[width*height];for(int dz=0;dz<height;dz++)for(int dx=0;dx<width;dx++)out[dx+dz*width]=getBiome(x+dx,z+dz);return out;}}

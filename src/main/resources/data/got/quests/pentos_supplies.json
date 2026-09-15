@@ -1,8 +1,0 @@
-{
-  "title": "quest.got.pentos_supplies.title", "description": "quest.got.pentos_supplies.description",
-  "offer": "quest.got.pentos_supplies.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.pentos_supplies.complete",
-  "icon": "minecraft:wheat", "color": "#13425F", "weight": 5, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["pentos"], "roles": ["pentos_man", "pentos_farmhand"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "collect", "target": "minecraft:wheat", "count": 20, "consume": true, "label": "quest.got.pentos_supplies.objective.0" }],
-  "rewards": { "alignment": { "pentos": 8.0 }, "coins": 16, "experience": 10 }
-}

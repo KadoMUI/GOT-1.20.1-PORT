@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "got:block/pillar2_sothoryos_obsidian_face",
-    "side": "got:block/pillar2_sothoryos_obsidian_side_bottom"
-  }
-}

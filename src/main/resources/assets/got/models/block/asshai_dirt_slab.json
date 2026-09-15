@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "got:block/asshai_dirt",
-    "side": "got:block/asshai_dirt",
-    "top": "got:block/asshai_dirt"
-  }
-}

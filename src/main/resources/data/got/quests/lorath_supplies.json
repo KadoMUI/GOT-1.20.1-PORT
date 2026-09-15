@@ -1,9 +1,0 @@
-{
-  "title": "quest.got.lorath_supplies.title", "description": "quest.got.lorath_supplies.description",
-  "offer": "quest.got.lorath_supplies.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.lorath_supplies.complete",
-  "icon": "minecraft:stone_bricks", "color": "#E5E5E5", "weight": 5, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["lorath"], "roles": ["lorath_man", "lorath_farmhand"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "collect", "target": "minecraft:stone_bricks", "count": 24, "consume": true, "label": "quest.got.lorath_supplies.objective.0" }],
-  "rewards": { "alignment": { "lorath": 8.0 }, "coins": 16, "experience": 10 }
-}
-

@@ -1,8 +1,0 @@
-{
-  "title": "quest.got.ghiscar_border_patrol.title", "description": "quest.got.ghiscar_border_patrol.description",
-  "offer": "quest.got.ghiscar_border_patrol.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.ghiscar_border_patrol.complete",
-  "icon": "minecraft:iron_sword", "color": "#AB7731", "weight": 2, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["ghiscar"], "roles": ["ghiscar_levyman", "ghiscar_levyman_archer", "ghiscar_soldier", "ghiscar_soldier_archer", "ghiscar_banner_bearer"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "kill_faction", "target": "sothoryos", "count": 5, "label": "quest.got.ghiscar_border_patrol.objective.0" }],
-  "rewards": { "alignment": { "ghiscar": 10.0 }, "coins": 20, "experience": 15 }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "got:block/yellow_terracotta_roof_tiles",
-    "side": "got:block/yellow_terracotta_roof_tiles",
-    "top": "got:block/yellow_terracotta_roof_tiles"
-  }
-}

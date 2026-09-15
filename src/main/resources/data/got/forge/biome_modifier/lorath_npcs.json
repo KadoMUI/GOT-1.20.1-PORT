@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_spawns",
-  "biomes": "#got:spawns_lorath_npcs",
-  "spawners": [{ "type": "got:lorath_npc", "weight": 10, "minCount": 1, "maxCount": 2 }]
-}
-

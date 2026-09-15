@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:labradorite_pillar"
-  },
-  "result": "got:labradorite_pillar_slab",
-  "count": 2
-}

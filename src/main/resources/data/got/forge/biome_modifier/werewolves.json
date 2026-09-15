@@ -1,1 +1,0 @@
-{"type":"forge:add_spawns","biomes":"#got:werewolves","spawners":[{"type":"got:werewolf","weight":5,"minCount":1,"maxCount":1}]}

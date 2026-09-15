@@ -1,8 +1,0 @@
-{
-  "title": "quest.got.tyrosh_supplies.title", "description": "quest.got.tyrosh_supplies.description",
-  "offer": "quest.got.tyrosh_supplies.offer", "progress": "quest.got.standard.progress", "complete": "quest.got.tyrosh_supplies.complete",
-  "icon": "minecraft:purple_dye", "color": "#2E2E2E", "weight": 5, "repeatable": true, "cooldown_ticks": 24000,
-  "giver": { "factions": ["tyrosh"], "roles": ["tyrosh_man", "tyrosh_slave"], "maximum_active_for_faction": 5 },
-  "objectives": [{ "type": "collect", "target": "minecraft:purple_dye", "count": 16, "consume": true, "label": "quest.got.tyrosh_supplies.objective.0" }],
-  "rewards": { "alignment": { "tyrosh": 8.0 }, "coins": 16, "experience": 10 }
-}

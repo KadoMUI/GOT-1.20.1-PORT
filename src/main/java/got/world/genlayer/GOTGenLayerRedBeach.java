@@ -1,1 +1,0 @@
-package got.world.genlayer; public class GOTGenLayerRedBeach extends GOTGenLayerBeach {public GOTGenLayerRedBeach(long s,GOTGenLayer p,int ocean,int beach){super(s,p,ocean,beach);}}

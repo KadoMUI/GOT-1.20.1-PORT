@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "got:diorite_pillar"
-  },
-  "result": "got:diorite_pillar_slab",
-  "count": 2
-}

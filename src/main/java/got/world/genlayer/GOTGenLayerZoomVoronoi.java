@@ -1,1 +1,0 @@
-package got.world.genlayer; public class GOTGenLayerZoomVoronoi extends GOTGenLayerZoom {public GOTGenLayerZoomVoronoi(long s,GOTGenLayer p){super(s,p);}}
